@@ -11,7 +11,6 @@ define('PATH_THEME',     PATH_WEB   . 'themes/' . USERTHEME . '/');
 define('PATH_TXT',       PATH_UNIX  . 'content/');
 define('PATH_CODE',      PATH_UNIX  . 'code/');
 define('PATH_CLASSES',   PATH_UNIX  . 'classes/');
-define('PATH_FUNCTIONS', PATH_UNIX  . 'functions/');
 define('UNIX_JQTHEME',   PATH_UNIX  . 'lib/jqtouch/themes/' . THEME . '/');
 define('UNIX_THEME',     PATH_UNIX  . 'themes/' . USERTHEME . '/');
 define('UNIX_JS',        PATH_UNIX  . 'js/');
@@ -25,8 +24,8 @@ define('THEME_IMG',      PATH_THEME . 'img/');
 $messages = array();
 
 // Include core functions
-if (file_exists(PATH_FUNCTIONS . 'functions.php')) {
-	include PATH_FUNCTIONS . 'functions.php';
+if (file_exists(PATH_CODE . 'functions.php')) {
+	include PATH_CODE . 'functions.php';
 } else {
 	$messages[] = 'Core functions not found!';
 }

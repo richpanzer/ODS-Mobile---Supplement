@@ -1,5 +1,8 @@
 <?php
 
+include PATH_UNIX . 'includes/cssminphp.php';
+include PATH_UNIX . 'includes/jsminphp.php';
+
 // Get a full list of files by type for a given directory (non-recursive)
 function getContentList($dir, $type) {
    // open specified directory
@@ -26,5 +29,34 @@ function strip_ext($name) {
 	}
   	return $name;
 }
+
+function addjs() {
+
+}
+
+function addjsfile($file, $minify=true) {
+  $output = file_get_contents($file);
+  $output = str_replace('img/', dirname($file) . '/img/' , $output);
+  $output = str_replace(PATH_UNIX, PATH_WEB, $output);
+  if ($minify == true) {
+    JSMin::minify($output);
+  }
+  return $output;
+}
+
+function addcss() {
+
+}
+
+function addcssfile($file, $minify=true) {
+  $output = file_get_contents($file);
+  $output = str_replace('img/', dirname($file) . '/img/' , $output);
+  $output = str_replace(PATH_UNIX, PATH_WEB, $output);
+  if ($minify == true) {
+    $output = cssmin::minify($output);
+  }
+  return $output;
+}
+
 
 ?>
