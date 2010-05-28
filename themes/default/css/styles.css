@@ -1,0 +1,30 @@
+.reveal.in {
+  -webkit-animation-name: dontmove;
+  z-index: 0;
+}
+
+.reveal.out {
+  -webkit-animation-name: revealout;
+  z-index: 10;
+}
+
+.reveal.out.reverse {
+  z-index: 0;
+  -webkit-animation-name: dontmove;
+}
+
+.reveal.in.reverse {
+  z-index: 10;
+  -webkit-animation-name: revealin;
+}
+
+
+@-webkit-keyframes revealin {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(0); }
+}
+
+@-webkit-keyframes revealout {
+    from { -webkit-transform: translateX(0); }
+    to { -webkit-transform: translateX(100%); }
+}
