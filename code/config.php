@@ -1,6 +1,6 @@
 <?php
 
-define('SITENAME', 'ODS iPhone App 3');
+define('SITENAME', 'ODS iPhone App');
 define('PATH_UNIX', 'C:\wamp\www\ODS\iphone3\/');
 define('PATH_WEB', 'http://192.168.1.10/ODS/iphone3/');
 define('THEME',  'jqt'); // Select the iPhone base theme.
