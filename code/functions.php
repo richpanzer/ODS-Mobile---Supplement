@@ -34,12 +34,15 @@ function addjs() {
 
 }
 
-function addjsfile($file, $minify=true) {
+function addjsfile($file, $minify=true, $process=true) {
   $output = file_get_contents($file);
-  $output = str_replace('img/', dirname($file) . '/img/' , $output);
-  $output = str_replace(PATH_UNIX, PATH_WEB, $output);
-  if ($minify == true) {
-    JSMin::minify($output);
+  if ($process == true) {
+    $output = str_replace('#GACODE#', GACODE, $output);
+    $output = str_replace('img/', dirname($file) . '/img/' , $output);
+    $output = str_replace(PATH_UNIX, PATH_WEB, $output);
+    if ($minify == true) {
+      JSMin::minify($output);
+    }
   }
   return $output;
 }

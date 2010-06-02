@@ -8,7 +8,8 @@
     if ($filename == '0') {
       continue;
     }
-    echo '<li><a class="revealme" href="#page1">' . $filename . '</a></li>';
+    echo '<li><a class="revealme" href="#' . $filename . '">' . $filename .
+      '</a></li>';
   }
 ?>
 </ul>

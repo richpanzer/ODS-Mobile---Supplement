@@ -27,6 +27,11 @@
             selector: '.revealme'
         });
     });
+    <?php
+      if (USEGA == true) {
+        echo addjsfile(UNIX_JS . 'gacode.js');
+      }
+    ?>
   </script>
 </body>
 </html>
