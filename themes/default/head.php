@@ -16,7 +16,7 @@
          */
         echo addcssfile(JQTOUCH . 'jqtouch/jqtouch.css');
         echo addcssfile(UNIX_JQTHEME . 'theme.css');
-        echo cssmin::minify(file_get_contents(THEME_CSS . 'styles.css'));
+        echo addcssfile(THEME_CSS . 'styles.css');
       ?>
       </style>
   </head>
