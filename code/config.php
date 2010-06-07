@@ -7,6 +7,7 @@ define('THEME',  'jqt'); // Select the iPhone base theme.
 define('USERTHEME', 'default'); // User created addon theme.
 define('USEGA', true); // Turn on Google Analytics
 define('GACODE', "UA-xxx"); // Google Analytics Code
+define('MINIFY', true); // Globally turn on or off JS/CSS minification
 
 $db = array(
   'host' => 'localhost',

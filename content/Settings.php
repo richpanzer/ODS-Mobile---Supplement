@@ -1,6 +1,6 @@
 <div class="toolbar">
     <h1>Settings</h1>
-    <a href="#home" class="button">Done</a>
+    <a class="button goback" href="#home">Done</a>
 </div>
 <div class="info">
   <p><strong>A place to set stuff</strong></p>

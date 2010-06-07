@@ -1,8 +1,6 @@
   <script type="text/javascript">
     <?php
-      /*
-       * format default::: addjstofile($file, $minify=true);
-       */
+      // format default::: addjstofile($file, $minify=true);
       echo addjsfile(UNIX_JS . 'jquery-1.4.2.min.js');
       echo addjsfile(UNIX_JQ . 'jqtouch/jqtouch.min.js');
     ?>

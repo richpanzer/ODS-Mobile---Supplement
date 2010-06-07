@@ -11,9 +11,7 @@
       <title>iPhone Framework</title>
       <style type="text/css" media="screen">
       <?php
-        /*
-         * format default::: addcssfile($file, $minify=true);
-         */
+        // format default::: addcssfile($file, $minify=true);
         echo addcssfile(JQTOUCH . 'jqtouch/jqtouch.css');
         echo addcssfile(UNIX_JQTHEME . 'theme.css');
         echo addcssfile(THEME_CSS . 'styles.css');

@@ -36,7 +36,7 @@ function addjs() {
 
 function addjsfile($file, $minify=true, $process=true) {
   $output = file_get_contents($file);
-  if ($process == true) {
+  if (($process == true) && (MINIFY == true)) {
     $output = str_replace('#GACODE#', GACODE, $output);
     $output = str_replace('img/', dirname($file) . '/img/' , $output);
     $output = str_replace(PATH_UNIX, PATH_WEB, $output);
@@ -55,7 +55,7 @@ function addcssfile($file, $minify=true) {
   $output = file_get_contents($file);
   $output = str_replace('img/', dirname($file) . '/img/' , $output);
   $output = str_replace(PATH_UNIX, PATH_WEB, $output);
-  if ($minify == true) {
+  if (($minify == true) && (MINIFY == true)) {
     $output = cssmin::minify($output);
   }
   return $output;
