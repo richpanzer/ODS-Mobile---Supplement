@@ -11,3 +11,9 @@ function loadMainSettings() {
     $('#budget').val(localStorage.budget);
     $('#weight').val(localStorage.weight);
 }
+
+function dbQuery(query) {
+  thisdb.transaction(function(transaction){
+    transaction.executeSql(query);
+  });
+}

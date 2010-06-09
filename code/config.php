@@ -5,8 +5,7 @@ define('PATH_UNIX', 'C:\wamp\www\ODS\iphone3\/');
 define('PATH_WEB', 'http://192.168.1.10/ODS/iphone3/');
 define('THEME',  'jqt'); // Select the iPhone base theme.
 define('USERTHEME', 'default'); // User created addon theme.
-define('USEGA', true); // Turn on Google Analytics
-define('GACODE', "UA-xxx"); // Google Analytics Code
+define('USEGA', false); // Turn on Google Analytics
 define('MINIFY', true); // Globally turn on or off JS/CSS minification
 
 $db = array(
@@ -15,5 +14,7 @@ $db = array(
   'pass' => '',
   'name' => 'my_database_name'
 );
+
+include 'global.php';
 
 ?>

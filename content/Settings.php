@@ -10,9 +10,9 @@
 </div>
 <form id="mainSettings" method="post">
   <ul class="rounded">
-    <li><input placeholder="Age" style="float:right" type="text" name="age" id="age" /></li>
+    <li><input placeholder="Age" type="text" name="age" id="age" /></li>
     <li><input placeholder="Weight" type="text" name="weight" id="weight" /></li>
     <li><input placeholder="Start Date" type="text" name="date" id="date" /></li>
-    <li><input type="submit" class="submit" name="action" value="Save Changes" /></li>
+    <li><input type="submit" class="submit" name="action" value="Save" /></li>
   </ul>
 </form>

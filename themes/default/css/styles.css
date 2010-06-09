@@ -49,3 +49,10 @@ div.content p {
 }
 
 form label {border:1px solid red}
+
+/* please remove this and the html declaration for the real app */
+.thisisapage {
+  width:320px;
+  overflow:hidden;
+}
+/* end remove */

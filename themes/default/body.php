@@ -9,7 +9,7 @@ foreach ($filelist as $file) {
   if ($filename == '0') {
       $filename = 'home';
   }
-  echo '<div id="' , $filename , '">';
+  echo '<div id="' , $filename , '" class="thisisapage">';
   include PATH_TXT . $file;
   echo '</div>';
 }

@@ -30,14 +30,10 @@ function strip_ext($name) {
   	return $name;
 }
 
-function addjs() {
-
-}
-
+// Add JS files to footer and minify
 function addjsfile($file, $minify=true, $process=true) {
   $output = file_get_contents($file);
   if (($process == true) && (MINIFY == true)) {
-    $output = str_replace('#GACODE#', GACODE, $output);
     $output = str_replace('img/', dirname($file) . '/img/' , $output);
     $output = str_replace(PATH_UNIX, PATH_WEB, $output);
     if ($minify == true) {
@@ -47,10 +43,7 @@ function addjsfile($file, $minify=true, $process=true) {
   return $output;
 }
 
-function addcss() {
-
-}
-
+// Add CSS file to <head> and minify
 function addcssfile($file, $minify=true) {
   $output = file_get_contents($file);
   $output = str_replace('img/', dirname($file) . '/img/' , $output);
