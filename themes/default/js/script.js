@@ -2,13 +2,9 @@ var thisdb = openDatabase(dbInfo['name'],dbInfo['ver'],dbInfo['display'],dbInfo[
 
 $(document).ready(function() {
 
-  $("#mainSettings").submit(saveMainSettings);
-  $("#mainSettings").bind('pageAnimationStart', function(){
-    loadMainSettings();
-  });
-  
   var setupQuery = new Array();
-  setupQuery[0] = 'CREATE TABLE IF NOT EXISTS `user` (' +
+/* How this could go in a larger app...
+ *setupQuery[0] = 'CREATE TABLE IF NOT EXISTS `user` (' +
     '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
     '`user` CHAR NOT NULL)';
   setupQuery[1] = 'CREATE TABLE IF NOT EXISTS `supplement` (' +
@@ -22,10 +18,29 @@ $(document).ready(function() {
     '`unit` CHAR NOT NULL, ' +
     '`frequency` CHAR NOT NULL, ' +
     '`notes` CHAR NOT NULL, ' +
-    '`profile_id` CHAR NOT NULL)';
+    '`profile_id` CHAR NOT NULL)'; */
+
+  setupQuery[0] = 'CREATE TABLE IF NOT EXISTS `supplement` (' +
+    '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
+    '`user` CHAR NOT NULL, ' +
+    '`supplement` CHAR NOT NULL, ' +
+    '`amount` CHAR NOT NULL, ' +
+    '`unit` CHAR NOT NULL, ' +
+    '`frequency` CHAR NOT NULL, ' +
+    '`notes` CHAR, ' +
+    '`img1` CHAR, ' +
+    '`img2` CHAR)';
 
   for (var i=0;i<setupQuery.length;i++) {
     dbQuery(setupQuery[i]);
   }
+
+  $("#mainSettings").submit(saveMainSettings);
+  $("#mainSettings").bind('pageAnimationStart', function(){
+    loadMainSettings();
+  });
+
+  $("#singleSupplement").submit(saveSupplement);
+
 
 });

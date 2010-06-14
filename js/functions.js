@@ -17,3 +17,28 @@ function dbQuery(query) {
     transaction.executeSql(query);
   });
 }
+
+function saveSupplement() {
+  var user = $("#user").val();
+  var supplement = $("#supplement").val();
+  var ammount = $("#ammount").val();
+  var unit = $("#unit").val();
+  var frequency = $("#frequency").val();
+  var image1 = 'Image 1 Placeholder';
+  var image2 = 'Image 2 Placeholder';
+  db.transaction(
+    function(transaction) {
+      transaction.executeSql(
+        'INSERT INTO `supplement` (user, supplement, amount, unit, frequency, notes, img1, img2) VALUES (?,?,?,?,?,?,?);',
+        [user, supplement, amount, unit, frequency, notes, img1, img2],
+        function(){
+          refreshEntries();
+          jQT.goBack();
+        },
+        errorHandler
+      );
+    }
+  );
+    alert('Got here!');
+  return false;
+}
