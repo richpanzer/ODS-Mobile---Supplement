@@ -21,7 +21,6 @@
   </ul>
   <ul class="rounded">
     <li>
-      <label for="amount">Amount: </label>
       <select placeholder="Amount" name="amount" id="amount">
         <option>0.1</option>
         <option>0.2</option>
