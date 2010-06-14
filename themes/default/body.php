@@ -10,6 +10,9 @@ foreach ($filelist as $file) {
       $filename = 'home';
   }
   echo '<div id="' , $filename , '" class="thisisapage">';
+  echo '<div class="heading">';
+  echo '<h1>' . SITENAME . '</h1>';
+  echo '</div>';
   include PATH_TXT . $file;
   echo '</div>';
 }

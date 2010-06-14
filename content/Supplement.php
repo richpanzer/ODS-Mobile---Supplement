@@ -6,13 +6,14 @@
 <div class="info">
   <p>Add Supplement</p>
 </div>
-<form id="singleSupplement" method="post">
+<form id="saveSupplement" class="form" method="post">
   <ul class="rounded">
     <li>
       <select placeholder="User Name" name="user" id="user">
         <option>Rich</option>
         <option>James</option>
         <option>Paulina</option>
+        <option>Need to pre-populate this or add the following...</option>
         <option>No profiles have been added.</option>
       </select>
     </li>
@@ -20,6 +21,7 @@
   </ul>
   <ul class="rounded">
     <li>
+      <label for="amount">Amount: </label>
       <select placeholder="Amount" name="amount" id="amount">
         <option>0.1</option>
         <option>0.2</option>
@@ -81,7 +83,8 @@
   </ul>
   <ul class="rounded">
     <li>Add an image</li>
-    <li>Notes</li>
+    <li>Add an image</li>
+    <li><textarea placeholder="Notes" name="notes" id="notes"></textarea></li>
     <li><input type="submit" class="submit" name="action" value="Save" /></li>
   </ul>
 </form>

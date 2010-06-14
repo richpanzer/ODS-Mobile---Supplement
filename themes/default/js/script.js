@@ -1,46 +1,40 @@
-var thisdb = openDatabase(dbInfo['name'],dbInfo['ver'],dbInfo['display'],dbInfo['size']);
+var db;
+initDB();
 
 $(document).ready(function() {
 
   var setupQuery = new Array();
-/* How this could go in a larger app...
- *setupQuery[0] = 'CREATE TABLE IF NOT EXISTS `user` (' +
+  setupQuery[0] = 'CREATE TABLE IF NOT EXISTS `user` (' +
     '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
     '`user` CHAR NOT NULL)';
   setupQuery[1] = 'CREATE TABLE IF NOT EXISTS `supplement` (' +
     '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
-    '`name` CHAR NOT NULL, ' +
-    '`img_url` CHAR NOT NULL, ' +
-    '`img_url2` CHAR NOT NULL)';
-  setupQuery[2] = 'CREATE TABLE IF NOT EXISTS `supplement_profile` (' +
-    '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
+    '`name` CHAR NOT NULL)';
+  setupQuery[2] = 'CREATE TABLE IF NOT EXISTS `profile` (' +
+    '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' + // PK
+    '`user_id` INTEGER, ' +  // FK
+    '`supplement_id` INTEGER, ' + // FK
     '`amount` CHAR NOT NULL, ' +
     '`unit` CHAR NOT NULL, ' +
     '`frequency` CHAR NOT NULL, ' +
     '`notes` CHAR NOT NULL, ' +
-    '`profile_id` CHAR NOT NULL)'; */
+    '`myimg` CHAR NOT NULL, ' +
+    'FOREIGN KEY (user_id) REFERENCES user(id), ' +
+    'FOREIGN KEY (supplement_id) REFERENCES supplement(id))';
 
-  setupQuery[0] = 'CREATE TABLE IF NOT EXISTS `supplement` (' +
-    '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
-    '`user` CHAR NOT NULL, ' +
-    '`supplement` CHAR NOT NULL, ' +
-    '`amount` CHAR NOT NULL, ' +
-    '`unit` CHAR NOT NULL, ' +
-    '`frequency` CHAR NOT NULL, ' +
-    '`notes` CHAR, ' +
-    '`img1` CHAR, ' +
-    '`img2` CHAR)';
+  var resetQuery = new Array();
+  resetQuery[0] = 'DROP TABLE `profile`;';
+  resetQuery[1] = 'DROP TABLE `supplement`;';
+  resetQuery[2] = 'DROP TABLE `user`;';
 
-  for (var i=0;i<setupQuery.length;i++) {
-    dbQuery(setupQuery[i]);
-  }
+  queryArrays(resetQuery);
+  queryArrays(setupQuery);
 
   $("#mainSettings").submit(saveMainSettings);
-  $("#mainSettings").bind('pageAnimationStart', function(){
-    loadMainSettings();
-  });
+  $("#mainSettings").bind('pageAnimationStart', loadMainSettings);
 
-  $("#singleSupplement").submit(saveSupplement);
-
+  $("#saveSupplement").submit(createSupplement);
+  $("#updateSupplement").submit(updateSupplement);
+  $("#deleteSupplement").submit(deleteSupplement);
 
 });
