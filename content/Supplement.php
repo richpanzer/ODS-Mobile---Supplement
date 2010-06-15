@@ -9,12 +9,8 @@
 <form id="saveSupplement" class="form" method="post">
   <ul class="rounded">
     <li>
-      <select placeholder="User Name" name="user" id="user">
-        <option>Rich</option>
-        <option>James</option>
-        <option>Paulina</option>
-        <option>Need to pre-populate this or add the following...</option>
-        <option>No profiles have been added.</option>
+      <select placeholder="User Name" name="user_select" id="user_select">
+        <option>No users have been added.</option>
       </select>
     </li>
     <li><input placeholder="Supplement Name" type="text" name="supplement" id="supplement" /></li>

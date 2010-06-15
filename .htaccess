@@ -35,4 +35,6 @@ FileETag None
   Header unset Last-Modified
 </ifModule>
 
-AddType text/cache-manifest .manifest
+
+AddType application/x-httpd-php .manifest #Should work, else no dynamism by uncommenting next line and commenting this line
+#AddType text/cache-manifest .manifest

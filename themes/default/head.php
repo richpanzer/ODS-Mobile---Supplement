@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html manifest="<?php echo PATH_WEB; ?>demo.manifest" lang="en">
   <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />

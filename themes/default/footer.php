@@ -4,9 +4,9 @@
       include UNIX_JQ . 'jqtouch/jqtouch.min.js';
     ?>
     var jQT = new $.jQTouch({
-      icon: '<?php echo PATH_WEB; ?>jqtouch.png',
+      icon: '<?php echo THEME_IMG; ?>jqtouch.png',
       addGlossToIcon: false,
-      startupScreen: '<?php echo PATH_WEB; ?>jqt_startup.png',
+      startupScreen: '<?php echo THEME_IMG; ?>startup.png',
       statusBar: 'black',
       preloadImages: [
           '<?php echo JQTHEME; ?>img/back_button.png',
