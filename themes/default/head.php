@@ -21,3 +21,9 @@
       </style>
   </head>
   <body>
+  <?php /*
+   *
+   * It would be a great idea to create a pre-processor for all of this php/html
+   * and minify html as well as javascript/css.
+   */
+  ?>

@@ -2,7 +2,8 @@
     <?php
       include UNIX_JS . 'jquery-1.4.2.min.js';
       include UNIX_JQ . 'jqtouch/jqtouch.min.js';
-    ?>
+$freeformOutput = <<<EOD
+
     var jQT = new $.jQTouch({
       icon: '<?php echo THEME_IMG; ?>jqtouch.png',
       addGlossToIcon: false,
@@ -23,7 +24,9 @@
           selector: '.revealme'
       });
     });
-    <?php
+
+EOD;
+      echo addjstext($freeformOutput);
       // format default::: addjstofile($file, $minify=true);
       echo addjsfile(UNIX_JS . 'config.js');
       echo addjsfile(UNIX_JS . 'functions.js');

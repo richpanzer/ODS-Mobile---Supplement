@@ -72,13 +72,12 @@ function createSupplement() {
   var myimg = 'Image 1 Placeholder';
   //queries
   var query1 = "INSERT INTO supplement (name) VALUES ('" + supplement + "');";
-  var value2 = "1, 2, '" + amount + "', '" + unit + "', '" + frequency + "', '" + notes + "', '" + myimg + "'";
+  var value2 = "'" + user + ", " + supplement + ", '" + amount + "', '" + unit + "', '" +
+    frequency + "', '" + notes + "', '" + myimg + "'";
   //IF NOT EXISTS() // search for current supplement name.  if not exists, add.  if exists, grab id number.
   var query2 = "INSERT INTO profile " +
     "(user_id, supplement_id, amount, unit, frequency, notes, myimg) " +
     "VALUES (" + value2 + ");";
-
-
   allPurposeDBQuery(query1, callback, errorHandler);
   allPurposeDBQuery(query2, callback, errorHandler);
   return false;
@@ -91,39 +90,46 @@ function addUser() {
   allPurpouseDBQuery(query, callback, errorHandler);
 }
 
-// Generic function used for SELECT queries with a return argument
-function genericDBSelect(query) {
-  var queryResults = new Array();
-  db.transaction(function(transaction) {
-    transaction.executeSql(query,[],
-      function (transaction, results) {
-        for (var i=0; i<results.rows.length; i++) {
-          var row = results.rows.item(i);
-          queryResults[i] = row['user'];
-        }
-
-
-  if(queryResults[0]) {
-    $('#user_select').children().remove().end();
-    $.each(queryResults, function(key, value) {
-     $('#user_select').
+function listUsersAddSupplement(results) {
+  for (var i=0; i<results.rows.length; i++) {
+  if (i==0) $('#user_select').children().remove().end();
+  var row = results.rows.item(i);
+  $('#user_select').
       append($("<option></option>").
-      attr("value",key).
-      text(value));
-    });
+      attr("value",i).
+      attr("name",i).
+      text(row['user']));
   }
-
-
-      }, errorHandler);
-  });
 }
 
-// Get list of users with chosen profile pre-selected (if coming from profile page)
-function getUserList() {
-  var callback  = function(){jQT.goBack();};
+function listAllUsers(results) {
+  for (var i=0; i<results.rows.length; i++) {
+  if (i==0) $('#profile_list').children().remove().end();
+  var row = results.rows.item(i);
+  $('#profile_list').
+      append($("<li></li>").
+      attr("value",i).
+      text(row['user']));
+  }
+}
+
+// Generic function used for SELECT queries with a return argument
+function listUsers(whereSwitch) {
   var query = "SELECT * FROM `user`;";
-  var results = genericDBSelect(query);
-  return results;
+  db.transaction(function(transaction) {
+    transaction.executeSql(query, [], function(transaction, results) {
+      switch(whereSwitch) {
+      case 'addSupplement':
+        listUsersAddSupplement(results);
+        break;
+      case 'listUsers':
+        listAllUsers(results);
+        break;
+      default:
+        listUsersAddSupplement(results);
+      }
+    }, errorHandler);
+  });
 }
 
 // Delete a user

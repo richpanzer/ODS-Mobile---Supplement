@@ -13,17 +13,6 @@ $(document).ready(function() {
   setupQuery[1] = 'CREATE TABLE IF NOT EXISTS `supplement` (' +
     '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
     '`name` VARCHAR(32) NOT NULL)';
-  /*setupQuery[2] = 'CREATE TABLE IF NOT EXISTS `profile` (' +
-    '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' + // PK
-    '`user_id` INTEGER, ' +  // FK
-    '`supplement_id` INTEGER, ' + // FK
-    '`amount` CHAR NOT NULL, ' +
-    '`unit` CHAR NOT NULL, ' +
-    '`frequency` CHAR NOT NULL, ' +
-    '`notes` CHAR NOT NULL, ' +
-    '`myimg` CHAR NOT NULL, ' +
-    'FOREIGN KEY (user_id) REFERENCES user(id), ' +
-    'FOREIGN KEY (supplement_id) REFERENCES supplement(id))';*/
   setupQuery[2] = 'CREATE TABLE IF NOT EXISTS `profile` (' +
     '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' + // PK
     '`user_id` INTEGER NOT NULL CONSTRAINT fk_user_id REFERENCES user(id) ON DELETE CASCADE, ' +  // FK
@@ -71,25 +60,15 @@ $(document).ready(function() {
 
 
   // Get list of users and add to "Add Supplement" users drop down list
-  var userSelectValues = new Array();
-  userSelectValues = getUserList();
-  /*
-  userSelectValues[0] = 'Rich';
-  userSelectValues[1] = 'Paulina';
-  userSelectValues[2] = 'James';*/
-  
-  if(userSelectValues[0]) {
-    $('#user_select').children().remove().end();
-    $.each(userSelectValues, function(key, value) {
-     $('#user_select').
-      append($("<option></option>").
-      attr("value",key).
-      text(value));
-    });
-  }
+  listUsers('addSupplement');
+  listUsers('listUsers');
+
+  // Add users always needs to callback both of the above functions.
+   
 
 
 
+  /* CRUD Supplement Functionality */
   $("#saveSupplement").submit(createSupplement); // Needs work
   $("#updateSupplement").submit(updateSupplement); // Doesn't exist
   $("#deleteSupplement").submit(deleteSupplement); // Doesn't exist
