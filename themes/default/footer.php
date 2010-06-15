@@ -1,4 +1,5 @@
 <?php
+$const = get_defined_constants();
 $freeformOutput = <<<EOD
 var jQT = new $.jQTouch({
   icon: '{$const['THEME_IMG']}jqtouch.png',
@@ -26,7 +27,6 @@ EOD;
     <?php
       include UNIX_JS . 'jquery-1.4.2.min.js';
       include UNIX_JQ . 'jqtouch/jqtouch.min.js';
-      $const = get_defined_constants();
       echo addjstext($freeformOutput);
       // format default::: addjstofile($file, $minify=true);
       echo addjsfile(UNIX_JS . 'config.js');
