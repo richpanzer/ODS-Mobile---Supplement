@@ -7,7 +7,7 @@
 </div>
 <ul class="rounded">
 <?php
-  $pageExclusions = array('home');
+  $pageExclusions = array('home','Email','Add Profile');
   foreach ($filelist as $file) {
     $filename = strip_ext(basename($file));
     $cleaned_filename = str_replace($findme, $replaceme, $filename);

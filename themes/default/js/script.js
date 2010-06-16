@@ -36,41 +36,45 @@ $(document).ready(function() {
     "WHERE  NEW.supplement_id IS NOT NULL " +
     "AND (SELECT `id` FROM `supplement` WHERE `id` = NEW.supplement_id) IS NULL;" +
     "END;";
-  setupQuery[5] = "INSERT INTO `user` (user) VALUES ('Rich');";
+  /*setupQuery[5] = "INSERT INTO `user` (user) VALUES ('Rich');";
   setupQuery[6] = "INSERT INTO `user` (user) VALUES ('James');";
   setupQuery[7] = "INSERT INTO `supplement` (`name`) VALUES ('Aloe Vera');";
   setupQuery[8] = "INSERT INTO `supplement` (`name`) VALUES ('Antioxidants');";
-  setupQuery[9] = "INSERT INTO `supplement` (`name`) VALUES ('Berries');";
-
+  setupQuery[9] = "INSERT INTO `supplement` (`name`) VALUES ('Berries');";*/
 
   var resetQuery = new Array();
   resetQuery[0] = 'DROP TABLE `profile`;';
   resetQuery[1] = 'DROP TABLE `supplement`;';
   resetQuery[2] = 'DROP TABLE `user`;';
-
   queryArrays(resetQuery);
+
   queryArrays(setupQuery);
 
-
-  /* Main Execution */
+  /* Main Execution ::: Setting up Event Listeners */
 
   // Main Settings page execution
   $("#mainSettings").submit(saveMainSettings);
   $("#mainSettings").bind('pageAnimationStart', loadMainSettings);
 
 
-  // Get list of users and add to "Add Supplement" users drop down list
+  // Get list of users and add to "Add Supplement" users drop down list and to "Profiles" listing page
   listUsers('addSupplement');
   listUsers('listUsers');
 
-  // Add users always needs to callback both of the above functions.
-   
-
-
-
   /* CRUD Supplement Functionality */
-  $("#saveSupplement").submit(createSupplement); // Needs work
-  $("#updateSupplement").submit(updateSupplement); // Doesn't exist
-  $("#deleteSupplement").submit(deleteSupplement); // Doesn't exist
+  $(".submitSupplement").click(function(){
+    $("#saveSupplement").submit();
+  });
+  $("#saveSupplement").submit(createSupplement);
+  
+  /* CRUD User Functionality */
+  $(".submitUser").click(function(){
+    $("#saveUser").submit();
+  });
+  $("#saveUser").submit(function(){
+    insertUser();
+    //listUsers('addSupplement');
+    //listUsers('listUsers');
+  });
 
 });

@@ -96,7 +96,7 @@ function createSupplement() {
         // Get new supplement ID and insert profile row
         db.transaction(function(transaction) {
           transaction.executeSql(querySupplementID, [], function(transaction, result2) {
-            supplementID = supplementID = result2.rows.item(0)['id'];
+            supplementID = result2.rows.item(0)['id'];
             insertProfile(callback, userID, supplementID, amount, unit, frequency, notes, myimg);
           });
         });
@@ -107,10 +107,11 @@ function createSupplement() {
 }
 
 // Add a user
-function addUser() {
+function insertUser() {
+  alert('hello');
   var callback  = function(){jQT.goBack();};
-  var query = "INSERT INTO user (user) VALUES ('" + $("add_user").val() + "');";
-  allPurpouseDBQuery(query, callback, errorHandler);
+  var insertProfileQuery = "INSERT INTO user (user) VALUES ('Paulina');";
+  allPurposeDBQuery(insertProfileQuery, callback, errorHandler);
 }
 
 function listUsersAddSupplement(results) {
@@ -127,10 +128,12 @@ function listUsersAddSupplement(results) {
 
 function listAllUsers(results) {
   for (var i=0; i<results.rows.length; i++) {
-  if (i==0) $('#profile_list').children().remove().end();
-  var row = results.rows.item(i);
-  $('#profile_list').
-      append($("<li></li>").
+    if (i==0) $('#profile_list').children().remove().end();
+    var row = results.rows.item(i);
+    $('#profile_list').
+      append($('<ul class="rounded"></ul>'));
+    $('#profile_list ul').eq(i).
+      append($('<li></li>').
       attr("value",row['id']).
       text(row['user']));
   }

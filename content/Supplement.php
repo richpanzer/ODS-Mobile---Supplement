@@ -1,7 +1,7 @@
 <div class="toolbar">
-    <h1>Supplement Tracker</h1>
+    <h1>Add Dietary Supplement</h1>
     <a class="back goback" href="#Profile">Profile</a>
-    <a class="button goback" href="#home">Cancel</a>
+    <a class="button goback submitSupplement" href="#home">Save</a>
 </div>
 <div class="info">
   <p>Add Supplement</p>
@@ -79,6 +79,6 @@
   <ul class="rounded">
     <li>Add an image</li>
     <li><textarea placeholder="Notes" name="notes" id="notes"></textarea></li>
-    <li><input type="submit" class="submit" name="action" value="Save" /></li>
+    <!-- li><input type="submit" class="submit" name="action" value="Save" /></li -->
   </ul>
 </form>
