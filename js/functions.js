@@ -1,3 +1,4 @@
+// Initialize database if browser supports client side databases, else throw an error
 function initDB() {
   try {
     if(!window.openDatabase) {
@@ -60,26 +61,48 @@ function allPurposeDBQuery(query, nullHandler, errorHandler) {
   return false;
 }
 
+// Insert a profile row
+function insertProfile(callback, userID, supplementID, amount, unit, frequency, notes, myimg) {
+  var insertProfileValues = "'" + userID + "', '" + supplementID + "', '" + amount + "', '"
+    + unit + "', '" + frequency + "', '" + notes + "', '" + myimg + "'";
+  var insertProfileQuery = "INSERT INTO profile " +
+    "(user_id, supplement_id, amount, unit, frequency, notes, myimg) " +
+    "VALUES (" + insertProfileValues + ");";
+  allPurposeDBQuery(insertProfileQuery, callback, errorHandler);
+}
+
 // Save a single supplement to the database
 function createSupplement() {
   var callback  = function(){jQT.goBack();};
-  var user = $("#user_select").val(); // Select box only
+  var userID = $("#user_select option:selected").attr("name");
   var supplement = $("#supplement").val(); // User entered w/ Ajax DB suggestions
   var amount = $("#amount").val();
   var unit = $("#unit").val();
   var frequency = $("#frequency").val();
   var notes = $("#notes").val();
   var myimg = 'Image 1 Placeholder';
-  //queries
-  var query1 = "INSERT INTO supplement (name) VALUES ('" + supplement + "');";
-  var value2 = "'" + user + ", " + supplement + ", '" + amount + "', '" + unit + "', '" +
-    frequency + "', '" + notes + "', '" + myimg + "'";
-  //IF NOT EXISTS() // search for current supplement name.  if not exists, add.  if exists, grab id number.
-  var query2 = "INSERT INTO profile " +
-    "(user_id, supplement_id, amount, unit, frequency, notes, myimg) " +
-    "VALUES (" + value2 + ");";
-  allPurposeDBQuery(query1, callback, errorHandler);
-  allPurposeDBQuery(query2, callback, errorHandler);
+  var supplementInsertQuery = "INSERT INTO supplement (`name`) VALUES ('" + supplement + "');";
+  var querySupplementID = "SELECT `id` FROM `supplement` WHERE `name`='" + supplement + "' LIMIT 1;";
+
+  db.transaction(function(transaction) {
+    transaction.executeSql(querySupplementID, [], function(transaction, result1) {
+      if (result1.rows.length > 0) {
+        // Supplement already exists, so take id and add new profile row
+        supplementID = result1.rows.item(0)['id'];
+        insertProfile(callback, userID, supplementID, amount, unit, frequency, notes, myimg);
+      } else {
+        // Insert Supplement
+        allPurposeDBQuery(supplementInsertQuery, callback, errorHandler);
+        // Get new supplement ID and insert profile row
+        db.transaction(function(transaction) {
+          transaction.executeSql(querySupplementID, [], function(transaction, result2) {
+            supplementID = supplementID = result2.rows.item(0)['id'];
+            insertProfile(callback, userID, supplementID, amount, unit, frequency, notes, myimg);
+          });
+        });
+      }
+    }, errorHandler);
+  });
   return false;
 }
 
@@ -92,12 +115,12 @@ function addUser() {
 
 function listUsersAddSupplement(results) {
   for (var i=0; i<results.rows.length; i++) {
-  if (i==0) $('#user_select').children().remove().end();
-  var row = results.rows.item(i);
-  $('#user_select').
+    if (i==0) $('#user_select').children().remove().end();
+    var row = results.rows.item(i);
+    $('#user_select').
       append($("<option></option>").
-      attr("value",i).
-      attr("name",i).
+      attr("value",row['id']).
+      attr("name",row['id']).
       text(row['user']));
   }
 }
@@ -108,7 +131,7 @@ function listAllUsers(results) {
   var row = results.rows.item(i);
   $('#profile_list').
       append($("<li></li>").
-      attr("value",i).
+      attr("value",row['id']).
       text(row['user']));
   }
 }
@@ -130,33 +153,4 @@ function listUsers(whereSwitch) {
       }
     }, errorHandler);
   });
-}
-
-// Delete a user
-function deleteUser(uid) {
-
-}
-
-// Get list of profiles by user id
-function getProfileList() {
-  var callback  = function(){jQT.goBack();};
-  var query = "SELECT * FROM `profile`;";
-  allPurpouseDBQuery(query, callback, errorHandler);
-}
-
-// Get supplement
-function getProfile(pid) {
-  var callback  = function(){jQT.goBack();};
-  var query = "SELECT * FROM `user`;";
-  allPurpouseDBQuery(query, callback, errorHandler);
-}
-
-// Delete profile
-function deleteProfile(pid) {
-
-}
-
-// Update profile
-function updateProfile(pid) {
-
 }

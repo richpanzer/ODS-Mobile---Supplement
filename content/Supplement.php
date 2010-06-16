@@ -78,7 +78,6 @@
   </ul>
   <ul class="rounded">
     <li>Add an image</li>
-    <li>Add an image</li>
     <li><textarea placeholder="Notes" name="notes" id="notes"></textarea></li>
     <li><input type="submit" class="submit" name="action" value="Save" /></li>
   </ul>

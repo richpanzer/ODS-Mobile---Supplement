@@ -29,6 +29,7 @@ EOD;
       include UNIX_JQ . 'jqtouch/jqtouch.min.js';
       echo addjstext($freeformOutput);
       // format default::: addjstofile($file, $minify=true);
+      // echo addjsfile(PATH_UNIX . 'lib/jquery.autocomplete/jquery.autocomplete.js'); // Need to add this later for supplement name field
       echo addjsfile(UNIX_JS . 'config.js');
       echo addjsfile(UNIX_JS . 'functions.js');
       echo addjsfile(UNIX_THEME . 'js/script.js');
