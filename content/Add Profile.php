@@ -1,6 +1,6 @@
 <div class="toolbar">
     <h1>Add Profile</h1>
-    <a class="submitUser" href="#home">Save</a>
+    <a id="submitUser" class="button" href="#home">Save</a>
 </div>
 <form id="saveUser" class="form" method="post">
   <ul class="rounded">

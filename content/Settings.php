@@ -16,3 +16,7 @@
     <li><input type="submit" class="submit" name="action" value="Save" /></li>
   </ul>
 </form>
+<div class="content">
+  <p><a href="#home" id="resetUserData" class="pop whiteButton">Reset User Data</a></p>
+  <p><a href="#home" id="populateUserData" class="pop whiteButton">Prepopulate Database</a></p>
+</div>

@@ -7,3 +7,7 @@ dbInfo['size']    = 65536; // Maximum size
 
 // Google Analytics
 var GACode = 'UX-AAAAAA';
+
+// Error messages...
+
+var noUsersError = 'No profiles exist';

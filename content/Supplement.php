@@ -10,7 +10,6 @@
   <ul class="rounded">
     <li>
       <select placeholder="User Name" name="user_select" id="user_select">
-        <option>No users have been added.</option>
       </select>
     </li>
     <li><input placeholder="Supplement Name" type="text" name="supplement" id="supplement" /></li>
