@@ -1,6 +1,6 @@
 <div class="toolbar">
     <h1>Add Dietary Supplement</h1>
-    <a class="back goback" href="#Profile">Profile</a>
+    <a class="back goback pop" href="#Profile">Profile</a>
     <a class="button goback submitSupplement" href="#home">Save</a>
 </div>
 <div class="info">
