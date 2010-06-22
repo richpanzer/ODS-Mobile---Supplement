@@ -6,24 +6,25 @@ $(document).ready(function() {
   setupDatabaseTables();
   updateUserLists();
 
-
-  // Main Settings page execution
+  /* Setup Listeners */
   $("#mainSettings").submit(saveMainSettings);
   $("#mainSettings").bind('pageAnimationStart', loadMainSettings);
 
   /* CRUD Supplement Functionality */
-  $(".submitSupplement").click(function(){
+  $(".submitProfile").click(function(){
     $("#saveSupplement").submit();
   });
-  $("#saveSupplement").submit(createSupplement);
+  $("#saveSupplement").submit(createProfile);
   
   /* CRUD User Functionality */
-  $("#submitUser").click(function(){
+  $(".submitUser").click(function(){
     $("#saveUser").submit();
   });
   $("#saveUser").submit(function(){
-    insertUser();
+    insertUser($("#profile_name").val());
   });
+
+  getSupplementList(1);
 
   // Need to delete all content for testing purposes or load some dummy data?
   $("#resetUserData").click(function(){

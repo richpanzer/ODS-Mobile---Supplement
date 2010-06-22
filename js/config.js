@@ -11,3 +11,4 @@ var GACode = 'UX-AAAAAA';
 // Error messages...
 
 var noUsersError = 'No profiles exist';
+var noSupplementsError = 'No supplements to list';

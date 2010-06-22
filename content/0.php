@@ -1,12 +1,12 @@
 <div class="toolbar">
-  <h1>Supplement Tracker</h1>
+  <h1>Get Started</h1>
 </div>
 <div class="content">
   <p>Hey guys, this is the main menu area.  Pretty cool, huh?  It looks about like an iPhone main menu should.</p>
 </div>
 <ul class="rounded">
 <?php
-  $pageExclusions = array('home','Email','Add Profile','Profile','Supplement');
+  $pageExclusions = array('home','Email','Add Profile','Profile','Supplement','Supplement List');
   foreach ($filelist as $file) {
     $filename = strip_ext(basename($file));
     $cleaned_filename = str_replace($findme, $replaceme, $filename);

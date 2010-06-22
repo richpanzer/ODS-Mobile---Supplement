@@ -1,6 +1,6 @@
 <div class="toolbar">
-    <h1>Profiles</h1>
-    <a class="back pop" href="#Profiles">Profiles</a>
+    <h1>Email</h1>
+    <a class="pop blueButton" href="#Profiles">Profiles</a>
 </div>
 <div class="content">
   <p>I'm sorry Dave, I cannot do that.</p>

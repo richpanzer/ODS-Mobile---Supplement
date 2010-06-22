@@ -1,10 +1,10 @@
 <div class="toolbar">
-    <h1>Add Dietary Supplement</h1>
-    <a class="back goback pop" href="#Profile">Profile</a>
-    <a class="button goback submitSupplement" href="#home">Save</a>
+    <h1>Add Supplement</h1>
+    <a class="back goback pop" href="#Profiles">Profile</a>
+    <a class="button goback submitProfile" href="#home">Save</a>
 </div>
 <div class="info">
-  <p>Add Supplement</p>
+  <p>Add Dietary Supplement</p>
 </div>
 <form id="saveSupplement" class="form" method="post">
   <ul class="rounded">
@@ -17,36 +17,39 @@
   <ul class="rounded">
     <li>
       <select placeholder="Amount" name="amount" id="amount">
-        <option>0.1</option>
-        <option>0.2</option>
-        <option>1/4</option>
-        <option>0.3</option>
-        <option>1/3</option>
-        <option>0.4</option>
-        <option>0.5</option>
-        <option>0.6</option>
-        <option>2/3</option>
-        <option>0.7</option>
-        <option>3/4</option>
-        <option>0.8</option>
-        <option>0.9</option>
-        <option>1.0</option>
-        <option>2.0</option>
-        <option>3.0</option>
-        <option>4.0</option>
-        <option>5.0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+        <option>16</option>
+        <option>17</option>
+        <option>18</option>
+        <option>19</option>
+        <option>20</option>
+        <option>25</option>
+        <option>35</option>
         <option>50</option>
         <option>100</option>
-        <option>150</option>
-        <option>200</option>
         <option>250</option>
-        <option>300</option>
-        <option>350</option>
-        <option>400</option>
-        <option>450</option>
         <option>500</option>
         <option>750</option>
         <option>1000</option>
+        <option>2000</option>
+        <option>2500</option>
+        <option>3000</option>
+        <option>4000</option>
+        <option>5000</option>
       </select>
     </li>
     <li>
@@ -66,11 +69,9 @@
         <option>With Breakfast</option>
         <option>With Every Meal</option>
         <option>Before Bed</option>
-        <option>5x Day</option>
         <option>3x Day</option>
         <option>2x Day</option>
         <option>1x Day</option>
-        <option>Every Other Day</option>
         <option>1x Week</option>
       </select>
     </li>
@@ -78,6 +79,5 @@
   <ul class="rounded">
     <li>Add an image</li>
     <li><textarea placeholder="Notes" name="notes" id="notes"></textarea></li>
-    <!-- li><input type="submit" class="submit" name="action" value="Save" /></li -->
   </ul>
 </form>

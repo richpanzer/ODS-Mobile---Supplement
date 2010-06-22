@@ -5,7 +5,7 @@
 <div class="content">
   <h4>Dietary Supplements Resources</h4>
 </div>
-<ul class="rounded">
+<ul class="edgetoedge">
   <li><a target="_blank" href="http://google.com">About ODS</a></li>
   <li><a target="_blank" href="http://google.com">Dietary Supplements</a></li>
   <li><a target="_blank" href="http://google.com">Botanical Dietary Supplements</a></li>
