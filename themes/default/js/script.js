@@ -11,20 +11,43 @@ $(document).ready(function() {
   $("#mainSettings").bind('pageAnimationStart', loadMainSettings);
 
   /* CRUD Supplement Functionality */
-  $(".submitProfile").click(function(){
-    $("#saveSupplement").submit();
+  $(".submitProfile").bind('click', function(){
+    var callback = jQT.goTo($('#Profiles'), 'flip');
+    createProfile(callback);
+    return false;
   });
-  $("#saveSupplement").submit(createProfile);
   
   /* CRUD User Functionality */
-  $(".submitUser").click(function(){
-    $("#saveUser").submit();
-  });
-  $("#saveUser").submit(function(){
-    insertUser($("#profile_name").val());
+  $(".submitUser").bind('click', function(){
+    var callback = jQT.goTo($('#Profiles'), 'flip');
+    var user = $("#profile_name").val();
+    insertUser(user, callback);
+    return false;
   });
 
-  getSupplementList(1);
+  $(".submitUserAddSupplement").bind('click', function(){
+    var callback = jQT.goTo($('#Supplement'), 'flip');
+    var user = $("#profile_name").val();
+    insertUser(user, callback);
+    return false;
+  });
+
+  $(".clickToAddSupplement").bind('click', function(){
+    var callback = jQT.goTo($('#Supplement'), 'flip');
+    var user = $(".currentUser").html();
+    $(".userSelectToggle").val(user).css("display","none");
+    $(".addSupplementInfo").html('Add Dietary Supplement to "' + user + '"');
+    return false;
+  });
+
+  $(".clickToAddSupplementAndSaveUser").bind('click', function(){
+    var callback = jQT.goTo($('#Supplement'), 'flip');
+    var user = $("#profile_name").val();
+    insertUser(user, callback);
+    $(".userSelectToggle").val(user).css("display","none");
+    $(".addSupplementInfo").html('Add Dietary Supplement to "' + user + '"');
+    return false;
+  });
 
   // Need to delete all content for testing purposes or load some dummy data?
   $("#resetUserData").click(function(){

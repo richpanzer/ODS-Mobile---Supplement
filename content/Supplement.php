@@ -4,14 +4,16 @@
     <a class="button goback submitProfile" href="#home">Save</a>
 </div>
 <div class="info">
-  <p>Add Dietary Supplement</p>
+  <p class="addSupplementInfo">Add Dietary Supplement</p>
 </div>
 <form id="saveSupplement" class="form" method="post">
-  <ul class="rounded">
+  <ul class="rounded userSelectToggle">
     <li>
       <select placeholder="User Name" name="user_select" id="user_select">
       </select>
     </li>
+  </ul>
+  <ul class="rounded">
     <li><input placeholder="Supplement Name" type="text" name="supplement" id="supplement" /></li>
   </ul>
   <ul class="rounded">

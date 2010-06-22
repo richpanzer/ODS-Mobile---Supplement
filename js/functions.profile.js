@@ -1,6 +1,5 @@
 // Save a single Profile to the database
-function createProfile() {
-  var callback  = jQT.goBack();
+function createProfile(callback) {
   var userID = $("#user_select option:selected").attr("name");
   var supplement = $("#supplement").val(); // User entered w/ Ajax DB suggestions
   var amount = $("#amount").val();
@@ -12,12 +11,10 @@ function createProfile() {
   db.transaction(function(transaction) {
     transaction.executeSql(querySupplementID, [], function(transaction, result1) {
       if (result1.rows.length > 0) {
-        alert('A supplement already exists!');
         // Supplement already exists, so take id and add new profile row
         supplementID = result1.rows.item(0)['id'];
         insertProfile(callback, userID, supplementID, amount, unit, frequency, notes, myimg);
       } else {
-        alert('A supplement did not exists by that name!');
         // Insert Supplement
         createSupplement(supplement);
         // Get new supplement ID and insert profile row
@@ -40,5 +37,6 @@ function insertProfile(callback, userID, supplementID, amount, unit, frequency, 
   var insertProfileQuery = "INSERT INTO profile " +
     "(user_id, supplement_id, amount, unit, frequency, notes, myimg) " +
     "VALUES (" + insertProfileValues + ");";
-  allPurposeDBQuery(insertProfileQuery, null, errorHandler);
+  dbQuery(insertProfileQuery);
+  //allPurposeDBQuery(insertProfileQuery, callback, errorHandler);
 }

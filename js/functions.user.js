@@ -1,8 +1,10 @@
 // Insert a single user row WORKS
-function insertUser(name) {
-  if (name.length > 0) {
-    var query = "INSERT INTO user (user) VALUES ('" + name + "');";
+function insertUser(user, callback) {
+  if (user.length > 0) {
+    var query = "INSERT INTO user (user) VALUES ('" + user + "');";
     dbQuery(query);
+    updateUserLists();
+    //allPurposeDBQuery(insertProfileQuery, updateUserLists, errorHandler);
   }
 }
 
@@ -41,15 +43,29 @@ function updateUserDOM(results) {
     for (var i=0; i<results.rows.length; i++) {
       var row = results.rows.item(i);
       $('#profile_list').
-        append($('<ul class="edgetoedge"><li><a class="cube" ' +
-        'href="#Profile">' + row['user'] + '</a></li></ul>'));
+        append($('<ul class="edgetoedge"><li><a class="cube" title="' +
+        row['id'] + '" href="#Profile">' + row['user'] + '</a></li></ul>'));
       $('#user_select').
         append($("<option></option>").
           attr("value",row['id']).
           attr("name",row['id']).
           text(row['user']));
     }
+    registerNewUserDOM();
   } else {
     addUserOptionsError();
   }
+}
+
+function registerNewUserDOM() {
+  $('#profile_list ul li a').bind("click", function(){
+    var uid = $(this).attr('title');
+    removeUserSupplementDOM();
+    getSupplementList(uid);
+    $('.currentUser').html($(this).html());
+  });
+}
+
+function removeUserSupplementDOM() {
+  $('#profile_entries').children().remove().end();
 }

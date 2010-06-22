@@ -1,6 +1,5 @@
 // Create a supplement entry
 function createSupplement(supplement) {
-  alert('Got to function: createSupplement');
   var query = "INSERT INTO supplement (`name`) VALUES ('" + supplement + "');";
   //dbQuery(query);
   allPurposeDBQuery(query, null, errorHandler);
