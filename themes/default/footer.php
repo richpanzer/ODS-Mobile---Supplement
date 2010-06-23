@@ -26,6 +26,7 @@ EOD;
   <script type="text/javascript">
     <?php
       include UNIX_JS . 'jquery-1.3.2.min.js';
+      include UNIX_JS . 'jquery.clearform.js';
       include UNIX_JQ . 'jqtouch/jqtouch.min.js';
       echo addjstext($freeformOutput);
       // format default::: addjstofile($file, $minify=true);

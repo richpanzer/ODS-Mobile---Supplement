@@ -7,8 +7,10 @@ function createSupplement(supplement) {
 
 // Returns supplement list for a given user id
 function getSupplementList(uid) {
-  var query = "SELECT * FROM `profile`, `user` LEFT JOIN `supplement` ON " +
-    "`profile`.`user_id`=`user`.`id` WHERE `user_id`='" + uid + "';";
+  var query = "SELECT * FROM `user` " +
+    "JOIN `profile` ON `user`.`id`=`profile`.`user_id` " +
+    "JOIN `supplement` ON `profile`.`supplement_id`=`supplement`.`id` " +
+    "WHERE `profile`.`user_id`='" + uid + "';";
   db.transaction(function(transaction,results){
     transaction.executeSql(query, null, function(transaction,results){
       addSupplementsToDOM(results);

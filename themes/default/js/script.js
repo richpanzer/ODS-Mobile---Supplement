@@ -35,7 +35,7 @@ $(document).ready(function() {
   $(".clickToAddSupplement").bind('click', function(){
     var callback = jQT.goTo($('#Supplement'), 'flip');
     var user = $(".currentUser").html();
-    $(".userSelectToggle").val(user).css("display","none");
+    $(".userSelectToggle").hide();
     $(".addSupplementInfo").html('Add Dietary Supplement to "' + user + '"');
     return false;
   });

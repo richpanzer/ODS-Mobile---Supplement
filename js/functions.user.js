@@ -61,8 +61,13 @@ function registerNewUserDOM() {
   $('#profile_list ul li a').bind("click", function(){
     var uid = $(this).attr('title');
     removeUserSupplementDOM();
+    $('form input, form textarea').clearForm();
     getSupplementList(uid);
     $('.currentUser').html($(this).html());
+    $("#user_select option:selected").
+      attr('text',$(this).html()).
+      attr('name',uid).
+      attr('value',uid);
   });
 }
 
