@@ -26,7 +26,7 @@ $(document).ready(function() {
   });
 
   $(".addSupplement").bind('click', function(){
-    var callback = jQT.goTo($('#Supplement'), 'flip');
+    var callback = jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
     var user = $(".currentUser").html();
     //$(".userSelectToggle").hide();
     $(".userSelectToggle").val(user).css("opacity","0.25");

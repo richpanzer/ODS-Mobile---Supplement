@@ -7,7 +7,7 @@
   <ul id="profile_entries" class="rounded">
   </ul>
   <div class="content">
-    <p><a href="#Supplement" class="pop whiteButton addSupplement">Add Dietary Supplement</a></p>
+    <p><a href="#Add_Dietary_Supplement" class="pop whiteButton addSupplement">Add Dietary Supplement</a></p>
   </div>
 </div>
 <?php include PATH_TXT . 'includes/toolbar.php'; ?>
