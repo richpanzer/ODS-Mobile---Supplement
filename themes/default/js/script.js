@@ -35,7 +35,7 @@ $(document).ready(function() {
   });
 
   $(".sumbitUserSubmitProfile").bind('click', function(){
-    var callback = jQT.goTo($('#Supplement'), 'flip');
+    var callback = jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
     var user = $("#profile_name").val();
     insertUser(user, callback);
     $(".userSelectToggle").val(user).css("opacity","0.25");
