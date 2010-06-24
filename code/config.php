@@ -1,6 +1,6 @@
 <?php
 
-define('SITENAME', 'Supplement Tracker');
+define('SITENAME', 'My Dietary Supplement');
 define('PATH_UNIX', 'C:\wamp\www\ODS\iphone3\/');
 define('PATH_WEB', 'http://192.168.1.10/ODS/iphone3/');
 define('THEME',  'custom'); // Select the iPhone base theme.

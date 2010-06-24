@@ -8,8 +8,5 @@
   </ul>
 </form>
 <div class="content">
-  <p><a href="#Supplement" class="clickToAddSupplementAndSaveUser grayButton pop">Add Dietary Supplement</a></p>
-</div>
-<div class="info">
-  <p>The bug on this page is adding supplement doesn't save user profile name. There's a conflict somewhere only allowing the next page OR save data.</p>
+  <p><a href="#Add_Dietary_Supplement" class="sumbitUserSubmitProfile grayButton pop">Add Dietary Supplement</a></p>
 </div>

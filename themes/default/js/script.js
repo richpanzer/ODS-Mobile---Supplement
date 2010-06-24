@@ -25,26 +25,20 @@ $(document).ready(function() {
     return false;
   });
 
-  $(".submitUserAddSupplement").bind('click', function(){
-    var callback = jQT.goTo($('#Supplement'), 'flip');
-    var user = $("#profile_name").val();
-    insertUser(user, callback);
-    return false;
-  });
-
-  $(".clickToAddSupplement").bind('click', function(){
+  $(".addSupplement").bind('click', function(){
     var callback = jQT.goTo($('#Supplement'), 'flip');
     var user = $(".currentUser").html();
-    $(".userSelectToggle").hide();
+    //$(".userSelectToggle").hide();
+    $(".userSelectToggle").val(user).css("opacity","0.25");
     $(".addSupplementInfo").html('Add Dietary Supplement to "' + user + '"');
     return false;
   });
 
-  $(".clickToAddSupplementAndSaveUser").bind('click', function(){
+  $(".sumbitUserSubmitProfile").bind('click', function(){
     var callback = jQT.goTo($('#Supplement'), 'flip');
     var user = $("#profile_name").val();
     insertUser(user, callback);
-    $(".userSelectToggle").val(user).css("display","none");
+    $(".userSelectToggle").val(user).css("opacity","0.25");
     $(".addSupplementInfo").html('Add Dietary Supplement to "' + user + '"');
     return false;
   });

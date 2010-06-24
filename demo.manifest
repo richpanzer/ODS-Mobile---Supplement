@@ -10,6 +10,7 @@ CACHE MANIFEST<!-- Date: 2010.06.15 -->
 <?php echo UNIX_JQTHEME; ?>button_clicked.png
 <?php echo UNIX_JQTHEME; ?>chevron.png
 <?php echo UNIX_JQTHEME; ?>chevron_circle.png
+<?php echo UNIX_JQTHEME; ?>blueButton.png
 <?php echo UNIX_JQTHEME; ?>grayButton.png
 <?php echo UNIX_JQTHEME; ?>loading.png
 <?php echo UNIX_JQTHEME; ?>on_off.png

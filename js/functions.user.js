@@ -8,11 +8,6 @@ function insertUser(user, callback) {
   }
 }
 
-// Remove all User related DOM lists.
-function removeUserOptions() {
-  $('#profile_list, #user_select').children().remove().end();
-}
-
 // Add the error message for "There are no users" in this box/select/whatever
 function addUserOptionsError() {
   $('#profile_list').append($('<ul class="rounded"></ul>'));
@@ -60,17 +55,29 @@ function updateUserDOM(results) {
 function registerNewUserDOM() {
   $('#profile_list ul li a').bind("click", function(){
     var uid = $(this).attr('title');
+    var user = $(this).html();
     removeUserSupplementDOM();
-    $('form input, form textarea').clearForm();
+    $('form input').clearForm();
     getSupplementList(uid);
-    $('.currentUser').html($(this).html());
-    $("#user_select option:selected").
-      attr('text',$(this).html()).
-      attr('name',uid).
-      attr('value',uid);
+    $(".currentUser").html(user);
+
+
+    if (0 == 0) {
+      var useroption = $("#user_select option[text="+ user + "]");
+      uid = useroption.val();
+    }
+    
+    alert('the uid is: ' + uid);
+    $("#user_select").val(uid);
   });
 }
 
+// Remove all Supplement Entries for a profile from DOM
 function removeUserSupplementDOM() {
   $('#profile_entries').children().remove().end();
+}
+
+// Remove all User related DOM lists.
+function removeUserOptions() {
+  $('#profile_list, #user_select').children().remove().end();
 }
