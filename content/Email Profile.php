@@ -3,9 +3,33 @@
       <h1>Email</h1>
       <a class="pop blueButton" href="#Profiles">Profiles</a>
   </div>
+  <div class="info">
+    <p>This page does nothing.</p>
+  </div>
+  <span id="emailContent">
+    <ul class="rounded emailUserEntry">
+      <li><strong>James Brooks</strong></li>
+      <li>Supplement - Amount Frequency</li>
+      <li>Calcium - 8mg 3x Day</li>
+    </ul>
+    <ul class="rounded emailUserEntry">
+      <li><strong>Rich Panzer</strong></li>
+      <li>Supplement - Amount Frequency</li>
+      <li>Calcium - 8mg 3x Day</li>
+    </ul>
+    <ul class="rounded emailUserEntry">
+      <li><strong>Paulina Puig</strong></li>
+      <li>Supplement - Amount Frequency</li>
+      <li>Calcium - 8mg 3x Day</li>
+    </ul>
+  </span>
+  <form class="form" method="post">
+    <ul class="rounded">
+      <li><input placeholder="Enter Email Address" type="text" name="emailTo" id="emailTo" /></li>
+    </ul>
+  </form>
   <div class="content">
-    <p>I'm sorry Dave, I cannot do that.</p>
-    <p><a href="#Supplement" class="pop whiteButton">Email the Selected Profiles</a></p>
+    <p><a id="EmailChecked" href="#" class="pop whiteButton">Email the Selected Profiles</a></p>
   </div>
 </div>
 <?php include PATH_TXT . 'includes/toolbar.php'; ?>

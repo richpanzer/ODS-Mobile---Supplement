@@ -1,7 +1,7 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
     <h1>Profiles</h1>
-    <a class="blueButton pop" href="#Email">Email</a>
+    <a class="blueButton pop" href="#Email_Profile">Email</a>
     <a class="button pop" href="#Add_Profile">Add</a>
   </div>
   <span id="profile_list">

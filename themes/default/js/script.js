@@ -53,4 +53,15 @@ $(document).ready(function() {
     clearDatabaseContent(prepopulateDatabase);
     updateUserListings();
   });
+
+  $("#EmailChecked").bind('click', function(e) {
+    e.preventDefault();
+    var mailto = $("#emailTo").val();
+    var subject = 'My generic subject';
+    var body = $("#emailContent").html();
+    emailThis(mailto,subject,body);
+    return false;
+  });
+
+
 });

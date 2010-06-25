@@ -1,7 +1,7 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
     <h1>Tips</h1>
-    <a class="button goback" href="#home">Home</a>
+    <a class="button goback" href="#Start">Home</a>
   </div>
   <div class="content">
     <p>I'm not sure what goes here.</p>

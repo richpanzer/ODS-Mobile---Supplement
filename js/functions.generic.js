@@ -123,3 +123,24 @@ function allPurposeDBQuery(query, nullHandler, errorHandler) {
   });
   return false;
 }
+
+
+function emailThis(mailto,subject,body) {
+
+	if (body.length > 0) {
+
+    //body = body.replace(/\s*\(.+\)\s*/, "@");
+
+
+    window.location.href = "mailto:" + mailto + "&subject=" + subject + "&body=" + body;
+
+/*    alert("You are sending a message to " + mailto);
+    alert("Subject: " + subject);
+    alert("The body is: " + body);
+*/
+
+
+	} else {
+    alert("You didn't select any profiles!");
+  }
+}

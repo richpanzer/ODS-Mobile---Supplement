@@ -2,7 +2,7 @@
   <div class="toolbar">
       <h1>Add Supplement</h1>
       <a class="blueButton pop" href="#Profiles">Profile</a>
-      <a class="button goback submitProfile" href="#home">Save</a>
+      <a class="button goback submitProfile" href="#Start">Save</a>
   </div>
   <div class="info">
     <p class="addSupplementInfo">Add Dietary Supplement</p>

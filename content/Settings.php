@@ -1,7 +1,7 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
       <h1>Settings</h1>
-      <a class="button goback" href="#home">Done</a>
+      <a class="button goback" href="#Start">Done</a>
   </div>
   <div class="info">
     <p><strong>A place to set stuff</strong></p>
@@ -18,8 +18,8 @@
     </ul>
   </form>
   <div class="content">
-    <p><a href="#home" id="resetUserData" class="pop whiteButton">Reset User Data</a></p>
-    <p><a href="#home" id="populateUserData" class="pop whiteButton">Prepopulate Database</a></p>
+    <p><a href="#Start" id="resetUserData" class="pop whiteButton">Reset User Data</a></p>
+    <p><a href="#Start" id="populateUserData" class="pop whiteButton">Prepopulate Database</a></p>
   </div>
 </div>
 <?php include PATH_TXT . 'includes/toolbar.php'; ?>
