@@ -17,7 +17,7 @@ function initDB() {
 }
 
 // Setup all Database Tables
-function setupDatabaseTables(reset) {
+function setupDatabaseTables() {
   var setupQuery = new Array();
   setupQuery[0] = 'CREATE TABLE IF NOT EXISTS `user` (' +
     '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
@@ -69,6 +69,7 @@ function clearDatabaseContent(callback) {
   resetQuery[1] = 'DROP TABLE `supplement`;';
   resetQuery[2] = 'DROP TABLE `user`;';
   queryArrays(resetQuery);
+  setupDatabaseTables();
   callback();
 }
 

@@ -1,11 +1,35 @@
 // Insert a single user row WORKS
-function insertUser(user, callback) {
+/* OLD function insertUser(user, callback) {
   if (user.length > 0) {
     var query = "INSERT INTO user (user) VALUES ('" + user + "');";
     dbQuery(query);
     updateUserLists();
     //allPurposeDBQuery(insertProfileQuery, updateUserLists, errorHandler);
   }
+} */
+function insertUser(user, callback) {
+  if (user.length > 0) {
+    var query = "INSERT INTO user (user) VALUES ('" + user + "');";
+    db.transaction(function(transaction,results){
+      transaction.executeSql(query, null, function(transaction,results){
+        var currentuid = results.insertId;
+        updateUserLists(currentuid,user);
+        //alert('the uid is ' + currentuid + ' and the user is ' + user);
+        //setCurrentUser(currentuid,user);
+      }, errorHandler);
+    });
+  }
+  return false;
+}
+
+
+
+// Set the current active user
+function setCurrentUser(uid,user) {
+  //$(".userSelectToggle").hide();
+  $(".userSelectToggle").css("opacity","0.25");
+  $(".currentUser").html(user);
+  $("#user_select").val(uid);
 }
 
 // Add the error message for "There are no users" in this box/select/whatever
@@ -22,17 +46,17 @@ function addUserOptionsError() {
 }
 
 // Generic function used for SELECT queries with a return argument WORKS
-function updateUserLists() {
+function updateUserLists(currentuid,currentuser) {
   var query = "SELECT * FROM `user`;";
   db.transaction(function(transaction) {
     transaction.executeSql(query, [], function(transaction, results) {
-      updateUserDOM(results);
+      updateUserDOM(results,currentuid,currentuser);
     }, errorHandler);
   });
 }
 
 // Update DOM to show any changes in users added or deleted WORKS
-function updateUserDOM(results) {
+function updateUserDOM(results,currentuid,currentuser) {
   if (results.rows.length > 0) {
     removeUserOptions();
     for (var i=0; i<results.rows.length; i++) {
@@ -46,30 +70,25 @@ function updateUserDOM(results) {
           attr("name",row['id']).
           text(row['user']));
     }
-    registerNewUserDOM();
+    registerNewUserDOM(currentuid,currentuser);
+    alert('the uid is ' + currentuid + ' and the user is ' + currentuser);
   } else {
     addUserOptionsError();
   }
 }
 
 function registerNewUserDOM() {
+  // Add Profile List Listeners for new DOM items
   $('#profile_list ul li a').bind("click", function(){
     var uid = $(this).attr('title');
     var user = $(this).html();
-    removeUserSupplementDOM();
-    $('form input').clearForm();
+    $(".currentUser").html(user);//.attr('title',uid);
+    setCurrentUser(uid,user);
     getSupplementList(uid);
-    $(".currentUser").html(user);
-
-
-    if (0 == 0) {
-      var useroption = $("#user_select option[text="+ user + "]");
-      uid = useroption.val();
-    }
-    
-    alert('the uid is: ' + uid);
-    $("#user_select").val(uid);
   });
+  setCurrentUser(currentuid,currentuser);
+  removeUserSupplementDOM();
+  $('form input, form textarea').clearForm();
 }
 
 // Remove all Supplement Entries for a profile from DOM

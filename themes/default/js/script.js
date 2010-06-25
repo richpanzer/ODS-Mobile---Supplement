@@ -1,23 +1,23 @@
 $(document).ready(function() {
 
-  /* Initialize Database */
+  // Initialize and setup database
   var db;
   initDB();
   setupDatabaseTables();
   updateUserLists();
 
-  /* Setup Listeners */
+  // Setup listeners for the main settings page
   $("#mainSettings").submit(saveMainSettings);
   $("#mainSettings").bind('pageAnimationStart', loadMainSettings);
 
-  /* CRUD Supplement Functionality */
+  // Create a profile record and return to the "Profiles" page
   $(".submitProfile").bind('click', function(){
     var callback = jQT.goTo($('#Profiles'), 'flip');
     createProfile(callback);
     return false;
   });
   
-  /* CRUD User Functionality */
+  // Add a new user record
   $(".submitUser").bind('click', function(){
     var callback = jQT.goTo($('#Profiles'), 'flip');
     var user = $("#profile_name").val();
@@ -25,29 +25,30 @@ $(document).ready(function() {
     return false;
   });
 
+  // Listen to the "Add Dietary Supplement" on an existing "Profile" page
   $(".addSupplement").bind('click', function(){
     var callback = jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
     var user = $(".currentUser").html();
-    //$(".userSelectToggle").hide();
-    $(".userSelectToggle").val(user).css("opacity","0.25");
     $(".addSupplementInfo").html('Add Dietary Supplement to "' + user + '"');
     return false;
   });
 
+  // Listen to the "Add Dietary Supplement" button on the "Add Profile" page
   $(".sumbitUserSubmitProfile").bind('click', function(){
     var callback = jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
     var user = $("#profile_name").val();
     insertUser(user, callback);
-    $(".userSelectToggle").val(user).css("opacity","0.25");
     $(".addSupplementInfo").html('Add Dietary Supplement to "' + user + '"');
     return false;
   });
 
-  // Need to delete all content for testing purposes or load some dummy data?
+  // Need to delete all content for testing purposes or load some dummy data?  THIS IS BUGGY
   $("#resetUserData").click(function(){
     clearDatabaseContent(removeUserOptions);
     addUserOptionsError();
   });
+
+  // Function to load some sample data.  THIS IS BUGGY
   $("#populateUserData").click(function(){
     clearDatabaseContent(prepopulateDatabase);
     updateUserListings();
