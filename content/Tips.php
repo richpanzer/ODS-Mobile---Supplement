@@ -1,7 +1,10 @@
-<div class="toolbar">
+<div class="inner-has-bottomtools">
+  <div class="toolbar">
     <h1>Tips</h1>
-    <a class="blueButton goback pop" href="#home">Done</a>
+    <a class="button goback" href="#home">Home</a>
+  </div>
+  <div class="content">
+    <p>I'm not sure what goes here.</p>
+  </div>
 </div>
-<div class="content">
-  <p>I'm not sure what goes here.</p>
-</div>
+<?php include PATH_TXT . 'includes/toolbar.php'; ?>

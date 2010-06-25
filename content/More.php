@@ -1,7 +1,7 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
-      <h1>Update Profile</h1>
-      <a class="blueButton goback pop" href="#home">Done</a>
+    <h1>More</h1>
+    <a class="button goback" href="#home">Home</a>
   </div>
   <div class="content">
     <p>I'm not sure what goes here.</p>

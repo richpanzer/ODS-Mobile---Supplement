@@ -1,9 +1,9 @@
 <div class="toolbar_bottom">
-  <ul>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
+  <ul class="footerIcons">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#Profiles">Profiles</a></li>
+    <li><a href="#Add_Dietary_Supplement">Add DS</a></li>
+    <li><a href="#Learn_About_ODS">About ODS</a></li>
+    <li><a href="#More">More</a></li>
   </ul>
 </div>
