@@ -6,11 +6,5 @@
   </div>
   <ul id="profile_entries" class="rounded">
   </ul>
-<<<<<<< HEAD
-<!--  <div class="content">
-    <p><a href="#Add_Dietary_Supplement" class="pop whiteButton addSupplement">Add Dietary Supplement</a></p>
-  </div>-->
-=======
->>>>>>> df9eacedfb71d61e7b02896869409b1b33452e17
 </div>
 <?php include PATH_TXT . 'includes/toolbar.php'; ?>

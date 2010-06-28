@@ -1,12 +1,12 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
       <h1>Add DS</h1>
-      <a class="back pop" href="#Profiles">Profiles</a>
+      <a class="back pop blueButton" href="#Profiles">Profiles</a>
       <a class="button goback submitProfile" href="#Start">Save</a>
   </div>
-  <!--<div class="info">
-    <p>Individuals Name</p>
-  </div>-->
+  <div class="info">
+    <p id="addSupUserName"></p>
+  </div>
   <form id="saveSupplement" class="form" method="post">
     <ul class="rounded userSelectToggle">
       <li>
@@ -17,8 +17,11 @@
     <ul class="rounded">
       <li><input placeholder="Dietary Supplement Name" type="text" name="supplement" id="supplement" /></li>
     </ul>
+    <div class="content">
+      <p>Amount:</p>
+    </div>
     <ul class="rounded">
-      <li>Amount: 
+      <li>
         <select placeholder="Amount" name="amount" id="amount">
           <option>1</option>
           <option>2</option>
@@ -55,7 +58,12 @@
           <option>5000</option>
         </select>
       </li>
-      <li>Unit: 
+    </ul>
+    <div class="content">
+      <p>Unit:</p>
+    </div>
+    <ul class="rounded">
+      <li> 
         <select placeholder="Unit" name="unit" id="unit" label="Unit">
           <option>mg</option>
           <option>g</option>
@@ -67,7 +75,12 @@
           <option>Pill</option>
         </select>
       </li>
-      <li>How Often: 
+    </ul>
+    <div class="content">
+      <p>How Often:</p>
+    </div>
+    <ul class="rounded">
+      <li>
         <select placeholder="How Often" name="frequency" id="frequency">
           <option>With Breakfast</option>
           <option>With Every Meal</option>
