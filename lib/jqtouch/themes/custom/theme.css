@@ -1761,7 +1761,6 @@ body.landscape .inner-has-bottomtools {
   font-size:10px;
   display:block;
 }
-.toolbar_bottom {border-top:1px solid #000}
 .toolbar_bottom li {
   background:none;
   float:left;
