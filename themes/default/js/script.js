@@ -17,12 +17,13 @@ $(document).ready(function() {
     return false;
   });
   
+  $("#addSupUserName").html(addSupplementHeadingDefault);
 
   // Listen to the "Add Dietary Supplement" on an existing "Profile" page
   $(".addSupplement").bind('click', function(){
     var callback = jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
     var user = $(".currentUser").html();
-    $(".addSupplementInfo").html('Add Dietary Supplement to "' + user + '"');
+    $("#addSupUserName").html(addSupplementHeadingStart + user + addSupplementHeadingEnd);
     return false;
   });
 
@@ -39,7 +40,7 @@ $(document).ready(function() {
     var callback = jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
     var user = $("#profile_name").val();
     insertUser(user, callback);
-    $(".addSupplementInfo").html('Add Dietary Supplement to "' + user + '"');
+    //$(".addSupUserName").html(addSupplementHeadingStart + user + addSupplementHeadingEnd);
     return false;
   });
 

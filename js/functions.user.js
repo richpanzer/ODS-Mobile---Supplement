@@ -16,8 +16,8 @@ function insertUser(user, callback) {
 
 // Set the current active user
 function setCurrentUser(uid,user) {
+  $(".userSelectToggle").css("opacity","0.25")
   //$(".userSelectToggle").hide();
-  $(".userSelectToggle").css("opacity","0.25");
   $(".currentUser").html(user);
   $("#user_select").val(uid);
 }
@@ -66,17 +66,21 @@ function updateUserDOM(results,currentuid,currentuser) {
   }
 }
 
-function registerNewUserDOM() {
+function registerNewUserDOM(currentuid,currentuser) {
   // Add Profile List Listeners for new DOM items
   $('#profile_list ul li a').bind("click", function(){
     removeUserSupplementDOM();
     var uid = $(this).attr('title');
     var user = $(this).html();
     $(".currentUser").html(user);//.attr('title',uid);
+    $("#addSupUserName").html(addSupplementHeadingUserStart + user + addSupplementHeadingUserEnd);
     setCurrentUser(uid,user);
     getSupplementList(uid);
   });
-  setCurrentUser(currentuid,currentuser);
+  if (currentuser) {
+    $("#addSupUserName").html(addSupplementHeadingUserStart + currentuser + addSupplementHeadingUserEnd);
+    setCurrentUser(currentuid,currentuser);
+  }
   removeUserSupplementDOM();
   //removeUserOptions();
   $('form input, form textarea').clearForm();

@@ -40,3 +40,8 @@ function insertProfile(callback, userID, supplementID, amount, unit, frequency, 
   dbQuery(insertProfileQuery);
   //allPurposeDBQuery(insertProfileQuery, callback, errorHandler);
 }
+
+function resetProfileForm() {
+  $("#saveSupplement select").val(0);
+  $("#saveSupplement textarea, #saveSupplement input").val('');
+}

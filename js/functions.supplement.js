@@ -3,6 +3,7 @@ function createSupplement(supplement) {
   var query = "INSERT INTO supplement (`name`) VALUES ('" + supplement + "');";
   //dbQuery(query);
   allPurposeDBQuery(query, null, errorHandler);
+  resetAddProfileForm();
 }
 
 // Returns supplement list for a given user id
@@ -25,7 +26,7 @@ function addSupplementsToDOM(results) {
   if (results.rows.length > 0) {
     for (var i=0; i<results.rows.length; i++) {
       var row = results.rows.item(i);
-      $('#profile_entries').append($('<li></li>').text(row['name']));
+      $('#profile_entries').append($('<li><a class="flip" href="#Supplement">' + row['name'] + '</a></li>'));
     }
   } else {
     addSupplementOptionsError();
@@ -35,4 +36,9 @@ function addSupplementsToDOM(results) {
 // Add the error message for "There are no supplements" in this box/select/whatever WORKS
 function addSupplementOptionsError() {
   $('#profile_entries').append($('<li></li>').text(noSupplementsError));
+}
+
+// reset form for "Add Supplement" page
+function resetAddProfileForm() {
+  $("#saveSupplement input, #saveSupplement textarea").val('');
 }
