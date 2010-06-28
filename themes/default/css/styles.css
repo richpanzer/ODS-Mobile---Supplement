@@ -43,11 +43,18 @@
 /* Custom styles */
 div.content {
   margin:10px;
+  color:#FFF
 }
 div.content p {
   padding:5px 0;
+  color:#FFF
 }
 
+div.content li {
+  padding:5px 0;
+  color:#FFF;
+  font-weight: normal
+}
 
 /* Below added for custom views */
 

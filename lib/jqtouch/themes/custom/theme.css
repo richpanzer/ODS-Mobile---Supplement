@@ -1,6 +1,6 @@
 body {
-  background: #000;
-  color: #ddd;
+  background: #CCC;
+  color: #000;
 }
 body > * {
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333), to(#5e5e65));
@@ -8,7 +8,7 @@ body > * {
 h1, h2 {
   font: bold 18px Helvetica;
   text-shadow: rgba(255,255,255,.2) 0 1px 1px;
-  color: #000;
+  color: #FF5;
   margin: 10px 20px 5px;
 }
 
@@ -153,7 +153,7 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul {
   margin-top: 0;
 }
 ul {
-  color: #aaa;
+  color: #FFF;
   border: 1px solid #333333;
   font: bold 18px Helvetica;
   padding: 0;
@@ -173,7 +173,7 @@ ul.rounded li:last-child, ul.rounded li:last-child a {
   -webkit-border-bottom-right-radius: 8px;
 }
 ul li {
-  color: #666;
+  color: #FFF;
   border-top: 1px solid #333;
   border-bottom: #555858;
   list-style-type: none;
@@ -282,7 +282,7 @@ ul.form li.error + li.error {
   border-top: 0;
 }
 ul li input[type="text"], ul li input[type="password"], ul li textarea, ul li select {
-  color: #777;
+  color: #FFF;
   background: transparent url(../.png);
   border: 0;
   font: normal 17px Helvetica;
@@ -313,7 +313,7 @@ ul li input[type="checkbox"]:after, ul li input[type="radio"]:after {
   font: 17px Helvetica;
   display: block;
   width: 246px;
-  color: #777;
+  color: #FFF;
   margin: -12px 0 0 17px;
 }
 /* @end */
@@ -460,7 +460,7 @@ ul.edgetoedge li em {
 }
 ul.plastic {
   background: #17181a;
-  color: #aaa;
+  color: #FFF;
   font: bold 18px Helvetica;
   margin: 0;
   padding: 0;
@@ -471,7 +471,7 @@ ul.plastic li {
   border-style: solid;
   border-top-color: #222;
   border-bottom-color: #000;
-  color: #666;
+  color: #FFF;
   list-style-type: none;
   overflow: hidden;
   padding: 10px 10px 10px 10px;

@@ -1,8 +1,8 @@
 <?php
 
 define('SITENAME', 'My Dietary Supplement');
-define('PATH_UNIX', 'C:\wamp\www\ODS\iphone3\/');
-define('PATH_WEB', 'http://192.168.1.10/ODS/iphone3/');
+define('PATH_UNIX', 'C:\wamp\www\web-app\/');
+define('PATH_WEB', 'http://192.168.110.33/web-app/');
 define('THEME',  'custom'); // Select the iPhone base theme.
 define('USERTHEME', 'default'); // User created addon theme.
 define('USEGA', false); // Turn on Google Analytics
