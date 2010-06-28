@@ -9,7 +9,7 @@
     </ul>
   </form>
   <div class="content">
-    <p><a href="#Add_Dietary_Supplement" class="sumbitUserSubmitProfile grayButton pop">Add Dietary Supplement</a></p>
+    <p align="right"><a href="#Add_Dietary_Supplement" class="sumbitUserSubmitProfile grayButton pop">Add DS</a></p>
   </div>
 </div>
 <?php include PATH_TXT . 'includes/toolbar.php'; ?>
