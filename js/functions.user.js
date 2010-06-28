@@ -1,12 +1,4 @@
-// Insert a single user row WORKS
-/* OLD function insertUser(user, callback) {
-  if (user.length > 0) {
-    var query = "INSERT INTO user (user) VALUES ('" + user + "');";
-    dbQuery(query);
-    updateUserLists();
-    //allPurposeDBQuery(insertProfileQuery, updateUserLists, errorHandler);
-  }
-} */
+// Insert a single user row
 function insertUser(user, callback) {
   if (user.length > 0) {
     var query = "INSERT INTO user (user) VALUES ('" + user + "');";
@@ -21,8 +13,6 @@ function insertUser(user, callback) {
   }
   return false;
 }
-
-
 
 // Set the current active user
 function setCurrentUser(uid,user) {
@@ -71,7 +61,6 @@ function updateUserDOM(results,currentuid,currentuser) {
           text(row['user']));
     }
     registerNewUserDOM(currentuid,currentuser);
-    alert('the uid is ' + currentuid + ' and the user is ' + currentuser);
   } else {
     addUserOptionsError();
   }
@@ -89,6 +78,7 @@ function registerNewUserDOM() {
   });
   setCurrentUser(currentuid,currentuser);
   removeUserSupplementDOM();
+  //removeUserOptions();
   $('form input, form textarea').clearForm();
 }
 
