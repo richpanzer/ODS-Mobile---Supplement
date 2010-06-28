@@ -26,7 +26,7 @@ function addSupplementsToDOM(results) {
   if (results.rows.length > 0) {
     for (var i=0; i<results.rows.length; i++) {
       var row = results.rows.item(i);
-      $('#profile_entries').append($('<li></li>').text(row['name']));
+      $('#profile_entries').append($('<li><a class="flip" href="#Supplement">' + row['name'] + '</a></li>'));
     }
   } else {
     addSupplementOptionsError();
