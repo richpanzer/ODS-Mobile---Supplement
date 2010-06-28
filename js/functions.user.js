@@ -98,5 +98,6 @@ function removeUserSupplementDOM() {
 
 // Remove all User related DOM lists.
 function removeUserOptions() {
+  $("#profile_name").val('');
   $('#profile_list, #user_select').children().remove().end();
 }

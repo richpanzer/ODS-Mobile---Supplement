@@ -17,19 +17,20 @@ $(document).ready(function() {
     return false;
   });
   
-  // Add a new user record
-  $(".submitUser").bind('click', function(){
-    var callback = jQT.goTo($('#Profiles'), 'flip');
-    var user = $("#profile_name").val();
-    insertUser(user, callback);
-    return false;
-  });
 
   // Listen to the "Add Dietary Supplement" on an existing "Profile" page
   $(".addSupplement").bind('click', function(){
     var callback = jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
     var user = $(".currentUser").html();
     $(".addSupplementInfo").html('Add Dietary Supplement to "' + user + '"');
+    return false;
+  });
+
+  // Add a new user record
+  $(".submitUser").bind('click', function(){
+    var callback = jQT.goTo($('#Profiles'), 'flip');
+    var user = $("#profile_name").val();
+    insertUser(user, callback);
     return false;
   });
 
