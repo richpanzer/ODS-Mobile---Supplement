@@ -80,6 +80,7 @@ function updateUserDOM(results,currentuid,currentuser) {
 function registerNewUserDOM() {
   // Add Profile List Listeners for new DOM items
   $('#profile_list ul li a').bind("click", function(){
+    removeUserSupplementDOM();
     var uid = $(this).attr('title');
     var user = $(this).html();
     $(".currentUser").html(user);//.attr('title',uid);
