@@ -23,11 +23,11 @@
       <li>Calcium - 8mg 3x Day</li>
     </ul>
   </span>
-  <form class="form" method="post">
+<?php /*  <form class="form" method="post">
     <ul class="rounded">
       <li><input placeholder="Enter Email Address" type="text" name="emailTo" id="emailTo" /></li>
     </ul>
-  </form>
+  </form> */ ?>
   <div class="content">
     <p><a id="EmailChecked" href="#" class="pop whiteButton">Email the Selected Profiles</a></p>
   </div>

@@ -1,12 +1,4 @@
-// Insert a single user row WORKS
-/* OLD function insertUser(user, callback) {
-  if (user.length > 0) {
-    var query = "INSERT INTO user (user) VALUES ('" + user + "');";
-    dbQuery(query);
-    updateUserLists();
-    //allPurposeDBQuery(insertProfileQuery, updateUserLists, errorHandler);
-  }
-} */
+// Insert a single user row
 function insertUser(user, callback) {
   if (user.length > 0) {
     var query = "INSERT INTO user (user) VALUES ('" + user + "');";
@@ -21,8 +13,6 @@ function insertUser(user, callback) {
   }
   return false;
 }
-
-
 
 // Set the current active user
 function setCurrentUser(uid,user) {
@@ -71,7 +61,6 @@ function updateUserDOM(results,currentuid,currentuser) {
           text(row['user']));
     }
     registerNewUserDOM(currentuid,currentuser);
-    alert('the uid is ' + currentuid + ' and the user is ' + currentuser);
   } else {
     addUserOptionsError();
   }
@@ -80,6 +69,7 @@ function updateUserDOM(results,currentuid,currentuser) {
 function registerNewUserDOM() {
   // Add Profile List Listeners for new DOM items
   $('#profile_list ul li a').bind("click", function(){
+    removeUserSupplementDOM();
     var uid = $(this).attr('title');
     var user = $(this).html();
     $(".currentUser").html(user);//.attr('title',uid);
@@ -88,6 +78,7 @@ function registerNewUserDOM() {
   });
   setCurrentUser(currentuid,currentuser);
   removeUserSupplementDOM();
+  //removeUserOptions();
   $('form input, form textarea').clearForm();
 }
 
@@ -98,5 +89,6 @@ function removeUserSupplementDOM() {
 
 // Remove all User related DOM lists.
 function removeUserOptions() {
+  $("#profile_name").val('');
   $('#profile_list, #user_select').children().remove().end();
 }

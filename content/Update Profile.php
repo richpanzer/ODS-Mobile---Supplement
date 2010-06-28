@@ -4,7 +4,7 @@
       <a class="blueButton goback pop" href="#Start">Done</a>
   </div>
   <div class="content">
-    <p>I'm not sure what goes here.</p>
+    <p>Form to edit currently selected profile will appear here.</p>
   </div>
 </div>
 <?php include PATH_TXT . 'includes/toolbar.php'; ?>
