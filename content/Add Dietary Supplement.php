@@ -1,12 +1,12 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
-      <h1>Add Supplement</h1>
-      <a class="blueButton pop" href="#Profiles">Profile</a>
+      <h1>Add DS</h1>
+      <a class="back pop" href="#Profiles">Profiles</a>
       <a class="button goback submitProfile" href="#Start">Save</a>
   </div>
-  <div class="info">
-    <p class="addSupplementInfo">Add Dietary Supplement</p>
-  </div>
+  <!--<div class="info">
+    <p>Individuals Name</p>
+  </div>-->
   <form id="saveSupplement" class="form" method="post">
     <ul class="rounded userSelectToggle">
       <li>
@@ -18,7 +18,7 @@
       <li><input placeholder="Dietary Supplement Name" type="text" name="supplement" id="supplement" /></li>
     </ul>
     <ul class="rounded">
-      <li>
+      <li>Amount: 
         <select placeholder="Amount" name="amount" id="amount">
           <option>1</option>
           <option>2</option>
@@ -55,7 +55,7 @@
           <option>5000</option>
         </select>
       </li>
-      <li>
+      <li>Unit: 
         <select placeholder="Unit" name="unit" id="unit" label="Unit">
           <option>mg</option>
           <option>g</option>
@@ -67,20 +67,22 @@
           <option>Pill</option>
         </select>
       </li>
-      <li>
+      <li>How Often: 
         <select placeholder="How Often" name="frequency" id="frequency">
           <option>With Breakfast</option>
           <option>With Every Meal</option>
           <option>Before Bed</option>
-          <option>3x Day</option>
-          <option>2x Day</option>
-          <option>1x Day</option>
-          <option>1x Week</option>
+          <option>3x Daily</option>
+          <option>2x Daily</option>
+          <option>1x Daily</option>
+          <option>1x Weekly</option>
         </select>
       </li>
     </ul>
     <ul class="rounded">
-      <li>Add an image</li>
+      <li>Add Photo</li>
+     </ul>
+     <ul class="rounded">
       <li><textarea placeholder="Notes" name="notes" id="notes"></textarea></li>
     </ul>
   </form>
