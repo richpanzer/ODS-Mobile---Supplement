@@ -16,8 +16,7 @@ function insertUser(user, callback) {
 
 // Set the current active user
 function setCurrentUser(uid,user) {
-  //$(".userSelectToggle").hide();
-  $(".userSelectToggle").css("opacity","0.25");
+  $(".userSelectToggle").hide();
   $(".currentUser").html(user);
   $("#user_select").val(uid);
 }
@@ -77,7 +76,9 @@ function registerNewUserDOM(currentuid,currentuser) {
     setCurrentUser(uid,user);
     getSupplementList(uid);
   });
-  $("#addSupUserName").html(addSupplementHeadingUserStart + currentuser + addSupplementHeadingUserEnd);
+  if (currentuser) {
+    $("#addSupUserName").html(addSupplementHeadingUserStart + currentuser + addSupplementHeadingUserEnd);
+  }
   setCurrentUser(currentuid,currentuser);
   removeUserSupplementDOM();
   //removeUserOptions();
