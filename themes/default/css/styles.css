@@ -45,14 +45,14 @@ text-align:center;
 text-shadow:rgba(0, 0, 0, 0.4) 0 -1px 0
 }
 
-.toolbar_bottom,.footerLogos,.footerIcons,.toolbar_bottom li,.toolbar_bottom a {
+.toolbar_bottom,.footerLogos,.footerIcons,.toolbar_bottom li,.toolbar_bottom li a,.toolbar_bottom a {
+-webkit-border-radius:0;
 border:none;
 background:none;
 display:block;
 font-size:10px;
 margin:0;
 overflow:hidden;
--webkit-border-radius:0;
 color:#FFF;
 padding:0;
 width:100%
@@ -61,7 +61,6 @@ width:100%
 .toolbar_bottom li {
 background:none;
 float:left;
--webkit-border-radius:0
 }
 
 .footerLogos li {
@@ -84,7 +83,6 @@ width:20%
 }
 
 .footerIcons li a {
--webkit-border-radius:0;
 height:35px;
 line-height:50px;
 padding-top:15px;
@@ -119,9 +117,4 @@ text-shadow:rgba(0, 0, 0, 0.5) 0 -1px 0;
 top:8px;
 white-space:nowrap;
 width:auto
-}
-
-span#profile_list {
-  display:block;
-  margin:10px;
 }
