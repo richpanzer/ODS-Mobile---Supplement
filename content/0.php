@@ -5,7 +5,7 @@
   <ul class="rounded">
   <?php
     $home_page = 'Start';
-    $pageExclusions = array($home_page,'Profile','Supplement List','More');
+    $pageExclusions = array($home_page,'Profile','Supplement List','More','Supplement');
     foreach ($filelist as $file) {
       $filename = strip_ext(basename($file));
       $cleaned_filename = str_replace($findme, $replaceme, $filename);
