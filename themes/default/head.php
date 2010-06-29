@@ -2,7 +2,9 @@
 <!-- html manifest="<?php echo PATH_WEB; ?>demo.manifest" lang="en" -->
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <?php //the above is from apple. below is from jqtouch... you do the math
+    //<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> ?>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="shortcut icon" href="<?php echo PATH_THEME; ?>favicon.ico" type="image/x-icon" />

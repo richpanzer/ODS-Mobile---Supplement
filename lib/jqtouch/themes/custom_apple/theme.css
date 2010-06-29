@@ -127,7 +127,7 @@ margin-top:0
 ul {
 -webkit-border-radius:8px;
 background:#fff;
-border:1px solid #B4B4B4;
+border:1px solid #999;
 color:#000;
 font:bold 17px Helvetica;
 margin:10px;
@@ -328,13 +328,13 @@ border-top:0;
 margin:0
 }
 
-.metal ul {
+ul.metal {
 background:#b4b4b4;
 border-bottom:0;
 border-top:0
 }
 
-.edgetoedge ul li small {
+ul.edgetoedge li small {
 font-size:16px;
 line-height:28px
 }
@@ -385,7 +385,7 @@ ul li.arrow small.counter {
 margin-right:15px
 }
 
-.metal ul li {
+ul.metal li {
 background:url(../images/bgMetal.png) top left repeat-x;
 border-bottom:1px solid #9c9ea5;
 border-top:1px solid #eee;
@@ -393,21 +393,21 @@ font-size:26px;
 text-shadow:#fff 0 1px 0
 }
 
-.metal ul li a {
+ul.metal li a {
 line-height:26px;
 margin:0;
 padding:13px 0
 }
 
-.metal ul li a:hover {
+ul.metal li a:hover {
 color:#000
 }
 
-.metal ul li:hover small {
+ul.metal li:hover small {
 color:inherit
 }
 
-.metal ul li a em {
+ul.metal li a em {
 color:#333;
 display:block;
 font-size:14px;
@@ -416,19 +416,19 @@ line-height:14px;
 width:50%
 }
 
-.metal ul li small {
+ul.metal li small {
 float:right;
 font-weight:700;
 margin-top:10px;
 position:relative
 }
 
-.metal ul li.arrow a small {
+ul.metal li.arrow a small {
 line-height:17px;
 padding-right:0
 }
 
-.metal ul li.arrow {
+ul.metal li.arrow {
 background:url(../images/bgMetal.png) top left repeat-x, url(../images/chevron_dg.png) right center no-repeat
 }
 
@@ -626,6 +626,6 @@ text-align:center;
 text-shadow:rgba(255,255,255,.8) 0 1px 0
 }
 
-.edgetoedge ul li:first-child,.edgetoedge ul li:first-child a,.edgetoedge ul li:last-child,.edgetoedge ul li:last-child a,.metal ul li:first-child a,.metal ul li:last-child a,.edgetoedge li,.metal li {
+ul.edgetoedge li:first-child,ul.edgetoedge li:first-child a,ul.edgetoedge li:last-child,ul.edgetoedge li:last-child a,ul.metal li:first-child a,ul.metal li:last-child a,.edgetoedge li,.metal li {
 -webkit-border-radius:0
 }

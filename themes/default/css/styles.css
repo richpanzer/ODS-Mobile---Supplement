@@ -1,16 +1,29 @@
-/* please remove this and the html declaration for the real app */
-.thisisapage {
+body .thisisapage {
 overflow:hidden;
 width:320px
 }
 
+/* Uncomment for production
+body.landscape .thisisapage {
+overflow:hidden;
+width:480px;
+} */
+
+body .inner-has-bottomtools {
+min-height:375px;
+}
+
+body.landscape .inner-has-bottomtools {
+min-height:220px;
+}
+
 div.content {
-color:#FFF;
+color:#000;
 margin:10px
 }
 
 div.content p {
-color:#FFF;
+color:#000;
 padding:5px 0
 }
 
@@ -18,14 +31,6 @@ div.content li {
 color:#FFF;
 font-weight:400;
 padding:5px 0
-}
-
-body .inner-has-bottomtools {
-min-height:359px
-}
-
-body.landscape .inner-has-bottomtools {
-min-height:199px
 }
 
 .heading {
