@@ -3,19 +3,19 @@ overflow:hidden;
 width:320px
 }
 
-/* Uncomment for production
-body.landscape .thisisapage {
-overflow:hidden;
-width:480px;
-} */
-
 body .inner-has-bottomtools {
 min-height:375px;
 }
 
-body.landscape .inner-has-bottomtools {
-min-height:220px;
+/* Uncomment for production
+body.landscape .thisisapage {
+overflow:hidden;
+width:480px;
 }
+
+body.landscape .inner-has-bottomtools {
+min-height:375px;
+} */
 
 div.content {
 color:#000;
