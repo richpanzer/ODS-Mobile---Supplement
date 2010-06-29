@@ -56,6 +56,7 @@ function addjstext($output, $minify=true) {
 function addcssfile($file, $minify=true, $imgPath='/img/') {
   $output = file_get_contents($file);
   $image = dirname($file) . $imgPath;
+  $image = str_replace('css/', '', $image);
   $output = str_replace('img/', $image , $output);
   $output = str_replace(PATH_UNIX, PATH_WEB, $output);
   if (($minify == true) && (MINIFY == true)) {

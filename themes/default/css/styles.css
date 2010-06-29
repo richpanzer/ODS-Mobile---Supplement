@@ -1,1 +1,125 @@
-/* */
+body .thisisapage {
+overflow:hidden;
+width:320px
+}
+
+body .inner-has-bottomtools {
+min-height:375px;
+}
+
+/* Uncomment for production
+body.landscape .thisisapage {
+overflow:hidden;
+width:480px;
+}
+
+body.landscape .inner-has-bottomtools {
+min-height:375px;
+} */
+
+div.content {
+color:#000;
+margin:10px
+}
+
+div.content p {
+color:#000;
+padding:5px 0
+}
+
+div.content li {
+color:#FFF;
+font-weight:400;
+padding:5px 0
+}
+
+.heading {
+-webkit-box-sizing:border-box;
+background:url('img/heading.png') repeat-x;
+padding:0;
+position:relative
+}
+
+.heading > h1 {
+color:#FFF;
+font-size:20px;
+line-height:37px;
+margin:0;
+padding:0;
+text-align:center;
+text-shadow:rgba(0, 0, 0, 0.4) 0 -1px 0
+}
+
+.toolbar_bottom,.footerLogos,.footerIcons,.toolbar_bottom li,.toolbar_bottom li a,.toolbar_bottom a {
+-webkit-border-radius:0;
+border:none;
+background:none;
+display:block;
+font-size:10px;
+margin:0;
+overflow:hidden;
+color:#FFF;
+padding:0;
+width:100%
+}
+
+.toolbar_bottom li {
+background:none;
+float:left;
+}
+
+.footerLogos li {
+width:50%
+}
+
+.footerLogos a {
+display:block
+}
+
+.footerIcons {
+background:-webkit-gradient(linear,left bottom,left top,color-stop(0.49, rgb(0,0,0)),color-stop(0.51, rgb(58,58,58)));
+height:50px
+}
+
+.footerIcons li {
+background:url('img/star.png') no-repeat center 5px;
+text-align:center;
+width:20%
+}
+
+.footerIcons li a {
+height:35px;
+line-height:50px;
+padding-top:15px;
+width:100%
+}
+
+/* Email Content Page */
+#emailContent li {
+background:#FFF;
+font-size:17px;
+font-weight:500
+}
+
+.blueButton {
+-webkit-border-image:url(img/blueButton.png) 0 5 0 5;
+background:none;
+border-width:0 5px;
+color:#fff;
+font-family:inherit;
+font-size:12px;
+font-weight:700;
+height:30px;
+line-height:30px;
+margin:0;
+overflow:hidden;
+padding:0 3px;
+position:absolute;
+right:auto;
+text-decoration:none;
+text-overflow:ellipsis;
+text-shadow:rgba(0, 0, 0, 0.5) 0 -1px 0;
+top:8px;
+white-space:nowrap;
+width:auto
+}
