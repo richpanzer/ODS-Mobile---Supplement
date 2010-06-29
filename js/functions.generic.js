@@ -127,7 +127,8 @@ function allPurposeDBQuery(query, nullHandler, errorHandler) {
 
 function emailThis(mailto,subject,body) {
 	if (body.length > 0) {
-    body = body.replace(/\s*\(.+\)\s*/, "@");
+    subject = encodeURIComponent(subject);
+    body = encodeURIComponent(body);
     window.location.href = "mailto:" + mailto + "&subject=" + subject + "&body=" + body;
     //alert("You are sending a message to '" + mailto + "' with the subject '" + subject + "'.");
     //alert("The body is: " + body);
