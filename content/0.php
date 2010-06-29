@@ -5,7 +5,7 @@
   <ul class="rounded">
   <?php
     $home_page = 'Start';
-    $pageExclusions = array($home_page,'Profile','Supplement List','More');
+    $pageExclusions = array($home_page,'Settings','Profile','Supplement List','More','Supplement');
     foreach ($filelist as $file) {
       $filename = strip_ext(basename($file));
       $cleaned_filename = str_replace($findme, $replaceme, $filename);
@@ -20,3 +20,4 @@
   </ul>
 </div>
 <?php include PATH_TXT . 'includes/homeicons.php'; ?>
+<p style="background:#000;font-size:10px;color:#999;text-decoration:none"><a class="pop" href="#Settings">Settings</a></p>

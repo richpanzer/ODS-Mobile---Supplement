@@ -2,7 +2,7 @@
 $const = get_defined_constants();
 $freeformOutput = <<<EOD
 var jQT = new $.jQTouch({
-  icon: '{$const['THEME_IMG']}jqtouch.png',
+  icon: '{$const['THEME_IMG']}icon.png',
   addGlossToIcon: false,
   startupScreen: '{$const['THEME_IMG']}startup.png',
   statusBar: 'black',

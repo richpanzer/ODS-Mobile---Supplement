@@ -75,7 +75,7 @@ function clearDatabaseContent(callback) {
 
 /* Begin main settings page functions */
 // Corresponds to the "Settings" page
-function saveMainSettings() {
+/* Not used in our app function saveMainSettings() {
   localStorage.age = $('#age').val();
   localStorage.weight = $('#weight').val();
   localStorage.date = $('#date').val();
@@ -88,7 +88,7 @@ function loadMainSettings() {
     $('#age').val(localStorage.age);
     $('#budget').val(localStorage.budget);
     $('#weight').val(localStorage.weight);
-}
+} */
 /* End main settings page functions */
 
 // This is the error handler for all database transactions
@@ -126,57 +126,12 @@ function allPurposeDBQuery(query, nullHandler, errorHandler) {
 
 
 function emailThis(mailto,subject,body) {
-
 	if (body.length > 0) {
-
     body = body.replace(/\s*\(.+\)\s*/, "@");
-    body = htmlentities(body);
-
-
-// To send HTML mail, the Content-type header must be set
-var headers  = 'MIME-Version: 1.0' + "\r\n";
-headers += 'Content-type: text/html; charset=iso-8859-1' + "\r\n";
-mailto = 'jimmybrooks.com@gmail.com';
-
-
-    window.location.href = "mailto:" + mailto + "&header=" + headers + "&subject=" + subject + "&body=" + body;
-
-/*    alert("You are sending a message to " + mailto);
-    alert("Subject: " + subject);
-    alert("The body is: " + body);
-*/
-
-
+    window.location.href = "mailto:" + mailto + "&subject=" + subject + "&body=" + body;
+    //alert("You are sending a message to '" + mailto + "' with the subject '" + subject + "'.");
+    //alert("The body is: " + body);
 	} else {
     alert("You didn't select any profiles!");
   }
-}
-
-
-
-function htmlentities(string, quote_style) {
-    // Convert all applicable characters to HTML entities
-    //
-    // version: 1006.1915
-    // discuss at: http://phpjs.org/functions/htmlentities    // +   original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
-    // +    revised by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
-    // +   improved by: nobbler
-    // +    tweaked by: Jack
-    // +   bugfixed by: Onno Marsman    // +    revised by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
-    // +    bugfixed by: Brett Zamir (http://brett-zamir.me)
-    // +      input by: Ratheous
-    // -    depends on: get_html_translation_table
-    // *     example 1: htmlentities('Kevin & van Zonneveld');    // *     returns 1: 'Kevin &amp; van Zonneveld'
-    // *     example 2: htmlentities("foo'bar","ENT_QUOTES");
-    // *     returns 2: 'foo&#039;bar'
-    var hash_map = {}, symbol = '', tmp_str = '', entity = '';
-    tmp_str = string.toString();
-    if (false === (hash_map = this.get_html_translation_table('HTML_ENTITIES', quote_style))) {
-        return false;
-    }
-    hash_map["'"] = '&#039;';    for (symbol in hash_map) {
-        entity = hash_map[symbol];
-        tmp_str = tmp_str.split(symbol).join(entity);
-    }
-        return tmp_str;
 }

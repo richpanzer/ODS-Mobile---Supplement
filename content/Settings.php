@@ -9,6 +9,7 @@
   <div class="content">
     <p>You know... like name, address, age, vitamin supplements, social security number, pin number, bank account, email passwords, a copy of your utility bill, etc.</p>
   </div>
+  <?php /*
   <form id="mainSettings" method="post">
     <ul class="rounded">
       <li><input placeholder="Age" type="text" name="age" id="age" /></li>
@@ -17,6 +18,8 @@
       <li><input type="submit" class="submit" name="action" value="Save" /></li>
     </ul>
   </form>
+   *
+   */ ?>
   <div class="content">
     <p><a href="#Start" id="resetUserData" class="pop whiteButton">Reset User Data</a></p>
     <p><a href="#Start" id="populateUserData" class="pop whiteButton">Prepopulate Database</a></p>

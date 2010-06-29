@@ -3,9 +3,6 @@
       <h1>Email</h1>
       <a class="pop blueButton" href="#Profiles">Profiles</a>
   </div>
-  <div class="info">
-    <p>This page does nothing.</p>
-  </div>
   <span id="emailContent">
     <ul class="rounded emailUserEntry">
       <li><strong>James Brooks</strong></li>
@@ -24,7 +21,7 @@
     </ul>
   </span>
   <div class="content">
-    <p><a id="EmailChecked" href="#" class="pop whiteButton">Email the Selected Profiles</a></p>
+    <p><a id="EmailChecked" href="#" class="whiteButton">Email Profiles</a></p>
   </div>
 </div>
 <?php include PATH_TXT . 'includes/toolbar.php'; ?>
