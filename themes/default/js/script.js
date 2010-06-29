@@ -58,9 +58,9 @@ $(document).ready(function() {
 
   $("#EmailChecked").bind('click', function(e) {
     e.preventDefault();
-    var mailto = '';// $("#emailTo").val();
+    var mailto = '';
     var subject = 'My generic subject';
-    var body = $("#emailContent").html();
+    var body = $("#emailContent").text();
     emailThis(mailto,subject,body);
     return false;
   });
