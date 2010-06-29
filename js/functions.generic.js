@@ -75,7 +75,7 @@ function clearDatabaseContent(callback) {
 
 /* Begin main settings page functions */
 // Corresponds to the "Settings" page
-function saveMainSettings() {
+/* Not used in our app function saveMainSettings() {
   localStorage.age = $('#age').val();
   localStorage.weight = $('#weight').val();
   localStorage.date = $('#date').val();
@@ -88,7 +88,7 @@ function loadMainSettings() {
     $('#age').val(localStorage.age);
     $('#budget').val(localStorage.budget);
     $('#weight').val(localStorage.weight);
-}
+} */
 /* End main settings page functions */
 
 // This is the error handler for all database transactions

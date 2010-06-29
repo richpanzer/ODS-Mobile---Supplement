@@ -6,9 +6,9 @@ $(document).ready(function() {
   setupDatabaseTables();
   updateUserLists();
 
-  // Setup listeners for the main settings page
+  /* Not used in our application / Setup listeners for the main settings page
   $("#mainSettings").submit(saveMainSettings);
-  $("#mainSettings").bind('pageAnimationStart', loadMainSettings);
+  $("#mainSettings").bind('pageAnimationStart', loadMainSettings); */
 
   // Create a profile record and return to the "Profiles" page
   $(".submitProfile").bind('click', function(){
@@ -59,7 +59,7 @@ $(document).ready(function() {
   $("#EmailChecked").bind('click', function(e) {
     e.preventDefault();
     var mailto = '';
-    var subject = 'My generic subject';
+    var subject = 'My Dietary Supplement Profiles';
     var body = $("#emailContent").text();
     emailThis(mailto,subject,body);
     return false;
