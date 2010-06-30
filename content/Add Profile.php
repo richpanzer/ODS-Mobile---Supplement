@@ -1,4 +1,4 @@
-<div class="inner-has-bottomtools">
+ <div class="inner-has-bottomtools">
   <div class="toolbar">
       <h1>Add Profile</h1>
       <a class="pop blueButton" href="#Profiles">Profiles</a>
