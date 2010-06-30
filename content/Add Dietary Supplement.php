@@ -87,7 +87,8 @@
       <li>Add Photo:</li>
     </ul>
     <ul class="form">
-      <li><label for="frequency">Notes:</label><textarea placeholder="Notes:" name="notes" id="notes"></textarea></li>
+      <li><label for="frequency">Notes:</label>
+      <textarea name="notes" id="notes"></textarea></li>
     </ul>
   </form>
 </div>
