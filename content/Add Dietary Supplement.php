@@ -8,17 +8,17 @@
     <p id="addSupUserName"></p>
   </div>
   <form id="saveSupplement" class="form" method="post">
-    <ul class="rounded userSelectToggle">
+    <ul class="form userSelectToggle">
       <li>
         <label for="user_select">Profile</label>
         <select class="haslabel" placeholder="User Name" name="user_select" id="user_select">
         </select>
       </li>
     </ul>
-    <ul class="rounded">
+    <ul class="form">
       <li><input placeholder="Dietary Supplement Name" type="text" name="supplement" id="supplement" /></li>
     </ul>
-    <ul class="rounded">
+    <ul class="form">
       <li>
         <label for="amount">Amount</label>
         <select class="haslabel" placeholder="Amount" name="amount" id="amount">
@@ -58,7 +58,7 @@
         </select>
       </li>
     </ul>
-    <ul class="rounded">
+    <ul class="form">
       <li>
         <label for="unit">Unit</label>
         <select class="haslabel" placeholder="Unit" name="unit" id="unit" label="Unit">
@@ -73,7 +73,7 @@
         </select>
       </li>
     </ul>
-    <ul class="rounded">
+    <ul class="form">
       <li>
         <label for="frequency">How Often</label>
         <select class="haslabel" placeholder="How Often" name="frequency" id="frequency">
@@ -87,10 +87,10 @@
         </select>
       </li>
     </ul>
-    <ul class="rounded">
+    <ul class="form">
       <li>Add Photo</li>
      </ul>
-     <ul class="rounded">
+     <ul class="form">
       <li><textarea placeholder="Notes" name="notes" id="notes"></textarea></li>
     </ul>
   </form>
