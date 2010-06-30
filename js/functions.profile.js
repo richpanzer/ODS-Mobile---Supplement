@@ -65,16 +65,21 @@ function getAllProfiles() {
 }
 
 function getProfileByUser(uid) {
-  queryprofile = "SELECT * FROM `user` " +
-    "LEFT JOIN `profile` ON `user`.`id`=`profile`.`user_id` " +
-    "LEFT JOIN `supplement` ON `profile`.`supplement_id`=`supplement`.`id` " +
+  var query = "SELECT * FROM `user` " +
+    "JOIN `profile` ON `user`.`id`=`profile`.`user_id` " +
+    "JOIN `supplement` ON `profile`.`supplement_id`=`supplement`.`id` " +
     "WHERE `profile`.`user_id`='" + uid + "';";
-  db.transaction(function(transaction) {
-    transaction.executeSql(queryprofile, [], function(transaction, result2) {
-      for(var i=0;i<result2.rows.length;i++) {
-        var row2 = result2.rows.item(i);
-        $("#emailProfiles ul." + uid).append($('<li>' + row2['name'] + ' - ' + row2['amount'] + ' - ' + row2['frequency'] + '</li>'));
-      }
-    });
+  db.transaction(function(transaction,results){
+    transaction.executeSql(query, null, function(transaction,results){
+      addProfileToDOM(results,uid);
+    }, errorHandler);
   });
+}
+
+function addProfileToDOM(results,uid) {
+  for(var i=0;i<results.rows.length;i++) {
+    var row = results.rows.item(i);
+    $("#emailProfiles ul." + uid).append($('<li style="font-weight:500">' +
+      row['name'] + ' - ' + row['amount'] + ' ' + row['unit'] + ' - ' + row['frequency'] + '</li>'));
+  }
 }

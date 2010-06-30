@@ -62,7 +62,7 @@ getAllProfiles();
     e.preventDefault();
     var mailto = '';
     var subject = 'My Dietary Supplement Profiles';
-    var body = $("#emailContent").text();
+    var body = $("#emailProfiles").text();
     emailThis(mailto,subject,body);
     return false;
   });
