@@ -1,10 +1,7 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
-    <h1>Resources</h1>
-    <a class="button goback" href="#Start">Home</a>
-  </div>
-  <div class="content">
-    <h4>Dietary Supplements Resources</h4>
+    <h3>About ODS</h3>
+    <a class="button back" href="#Start">Home</a>
   </div>
   <ul class="edgetoedge">
     <li><a target="_blank" href="http://ods.od.nih.gov/">Office of Dietary Supplements </a></li>

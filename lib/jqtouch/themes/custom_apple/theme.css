@@ -13,6 +13,13 @@ margin:10px 20px 6px;
 text-shadow:rgba(255,255,255,.2) 0 1px 1px
 }
 
+/*h3 {
+color:#FFF;
+font:12px Helvetica;
+margin:10px 20px 6px;
+text-shadow:rgba(255,255,255,.2) 0 1px 1px
+}*/
+
 /* @group Toolbar */
 .toolbar {
 -webkit-box-sizing:border-box;
@@ -28,6 +35,24 @@ margin-top:20px
 }
 
 .toolbar > h1 {
+color:#fff;
+font-size:20px;
+font-weight:700;
+height:40px;
+left:50%;
+line-height:1em;
+margin:1px 0 0 -75px;
+overflow:hidden;
+position:absolute;
+text-align:center;
+text-overflow:ellipsis;
+text-shadow:rgba(0, 0, 0, 0.4) 0 -1px 0;
+top:10px;
+white-space:nowrap;
+width:150px
+}
+
+.toolbar > h3 {
 color:#fff;
 font-size:20px;
 font-weight:700;
