@@ -1,7 +1,7 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
       <h1>Add DS</h1>
-      <a class="pop blueButton" href="#Profiles">Profiles</a>
+      <a class="button back" href="#Profile">Profile</a>
       <a class="button goback submitProfile" href="#Profiles">Save</a>
   </div>
   <div class="info">
@@ -20,7 +20,7 @@
     </ul>
     <ul class="form">
       <li>
-        <label for="amount">Amount</label>
+        <label for="amount">Amount:</label>
         <select class="haslabel" placeholder="Amount" name="amount" id="amount">
           <option>1</option>
           <option>2</option>
@@ -60,7 +60,7 @@
     </ul>
     <ul class="form">
       <li>
-        <label for="unit">Unit</label>
+        <label for="unit">Unit:</label>
         <select class="haslabel" placeholder="Unit" name="unit" id="unit" label="Unit">
           <option>mg</option>
           <option>g</option>
@@ -75,7 +75,7 @@
     </ul>
     <ul class="form">
       <li>
-        <label for="frequency">How Often</label>
+        <label for="frequency">How Often:</label>
         <select class="haslabel" placeholder="How Often" name="frequency" id="frequency">
           <option>With Breakfast</option>
           <option>With Every Meal</option>
@@ -88,10 +88,10 @@
       </li>
     </ul>
     <ul class="form">
-      <li>Add Photo</li>
+      <li>Add Photo:</li>
      </ul>
      <ul class="form">
-      <li><textarea placeholder="Notes" name="notes" id="notes"></textarea></li>
+      <li><label for="frequency">Notes:</label><textarea placeholder="Notes:" name="notes" id="notes"></textarea></li>
     </ul>
   </form>
 </div>

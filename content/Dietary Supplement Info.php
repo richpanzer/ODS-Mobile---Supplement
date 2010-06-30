@@ -1,7 +1,7 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
-    <h1>Dietary Supplement Info</h1>
-    <a target="_blank" class="button goback" href="#Start">Home</a>
+    <h3>DS Info</h3>
+    <a class="button back" href="#Start">Home</a>
   </div>
   <ul class="edgetoedge">
     <li><a target="_blank" href="http://ods.od.nih.gov/factsheets/dietarysupplements.asp">Dietary Supplements</a></li>

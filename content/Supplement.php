@@ -1,7 +1,8 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
-    <h1>Supplement</h1>
-    <a class="button goback" href="#">Back</a>
+      <h1>View Supplement</h1>
+      <a class="button back" href="#Profile">Profile</a>
+      <a class="button goback submitProfile" href="#Start">Save</a>
   </div>
   <div class="info">
     <p>This page has yet to be built.</p>
