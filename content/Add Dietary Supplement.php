@@ -17,12 +17,10 @@
     <ul class="rounded">
       <li><input placeholder="Dietary Supplement Name" type="text" name="supplement" id="supplement" /></li>
     </ul>
-    <div class="content">
-      <p>Amount:</p>
-    </div>
     <ul class="rounded">
       <li>
-        <select placeholder="Amount" name="amount" id="amount">
+        <label for="amount">Amount</label>
+        <select class="haslabel" placeholder="Amount" name="amount" id="amount">
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -59,12 +57,10 @@
         </select>
       </li>
     </ul>
-    <div class="content">
-      <p>Unit:</p>
-    </div>
     <ul class="rounded">
-      <li> 
-        <select placeholder="Unit" name="unit" id="unit" label="Unit">
+      <li>
+        <label for="unit">Unit</label>
+        <select class="haslabel" placeholder="Unit" name="unit" id="unit" label="Unit">
           <option>mg</option>
           <option>g</option>
           <option>IU</option>
@@ -76,12 +72,10 @@
         </select>
       </li>
     </ul>
-    <div class="content">
-      <p>How Often:</p>
-    </div>
     <ul class="rounded">
       <li>
-        <select placeholder="How Often" name="frequency" id="frequency">
+        <label for="frequency">How Often</label>
+        <select class="haslabel" placeholder="How Often" name="frequency" id="frequency">
           <option>With Breakfast</option>
           <option>With Every Meal</option>
           <option>Before Bed</option>

@@ -56,6 +56,8 @@ $(document).ready(function() {
     updateUserListings();
   });
 
+getAllProfiles();
+
   $("#EmailChecked").bind('click', function(e) {
     e.preventDefault();
     var mailto = '';
