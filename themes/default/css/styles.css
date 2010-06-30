@@ -154,4 +154,6 @@ label {
 
 .haslabel {
   width:70%;
+  position:absolute;
+  right:10px
 }
