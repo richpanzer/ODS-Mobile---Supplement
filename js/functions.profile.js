@@ -49,7 +49,7 @@ function resetProfileForm() {
 
 // needs testing
 function getAllProfiles() {
-
+  $("#emailProfiles").children().remove().end();
   var query = "SELECT * FROM `user`;";
   db.transaction(function(transaction) {
     transaction.executeSql(query, [], function(transaction, result) {
@@ -61,7 +61,6 @@ function getAllProfiles() {
       }
     });
   });
-
 }
 
 function getProfileByUser(uid) {

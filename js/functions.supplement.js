@@ -41,4 +41,8 @@ function addSupplementOptionsError() {
 // reset form for "Add Supplement" page
 function resetAddProfileForm() {
   $("#saveSupplement input, #saveSupplement textarea").val('');
+  $("#addSupUserName").html(addSupplementHeadingUserDefault);
+  $("#user_select").val('1');
+  $(".userSelectToggle").css("opacity","1")
+  //$(".userSelectToggle").show();
 }

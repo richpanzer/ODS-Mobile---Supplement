@@ -56,7 +56,7 @@ $(document).ready(function() {
     updateUserListings();
   });
 
-getAllProfiles();
+  $('#Email_Profile').bind('pageAnimationStart', getAllProfiles);
 
   $("#EmailChecked").bind('click', function(e) {
     e.preventDefault();
