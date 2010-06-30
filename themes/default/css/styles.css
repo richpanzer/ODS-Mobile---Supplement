@@ -123,3 +123,13 @@ top:8px;
 white-space:nowrap;
 width:auto
 }
+
+label {
+  display:inline-block;
+  width:28%;
+  margin-right:2%
+}
+
+.haslabel {
+  width:70%;
+}
