@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" href="myCustomIcon.png" />
     <link rel="apple-touch-icon-precomposed" href="myCustomIcon.png" />
     */ ?>
-    <title></title>
+    <title><?php echo SITENAMESHORT; ?></title>
     <?php
       echo '<style type="text/css" media="screen">';
       // format default::: addcssfile($file, $minify=true);

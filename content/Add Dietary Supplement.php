@@ -1,19 +1,15 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
-      <h1>Add DS</h1>
-      <a class="button back" href="#Profile">Profile</a>
-      <a class="button goback submitProfile" href="#Profiles">Save</a>
+    <h1>Add DS</h1>
+    <a class="button back" href="#Profile">Profile</a>
+    <a class="button goback submitProfile" href="#Start">Save</a>
   </div>
   <div class="info">
     <p id="addSupUserName"></p>
   </div>
   <form id="saveSupplement" class="form" method="post">
     <ul class="form userSelectToggle">
-      <li>
-        <label for="user_select">Profile</label>
-        <select class="haslabel" placeholder="User Name" name="user_select" id="user_select">
-        </select>
-      </li>
+      <li><select placeholder="User Name" name="user_select" id="user_select"></select></li>
     </ul>
     <ul class="form">
       <li><input placeholder="Dietary Supplement Name" type="text" name="supplement" id="supplement" /></li>
@@ -89,8 +85,8 @@
     </ul>
     <ul class="form">
       <li>Add Photo:</li>
-     </ul>
-     <ul class="form">
+    </ul>
+    <ul class="form">
       <li><label for="frequency">Notes:</label><textarea placeholder="Notes:" name="notes" id="notes"></textarea></li>
     </ul>
   </form>

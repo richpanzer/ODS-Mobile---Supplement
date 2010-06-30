@@ -58,6 +58,9 @@ $(document).ready(function() {
 
   $('#Email_Profile').bind('pageAnimationStart', getAllProfiles);
 
+  $('#Add_Dietary_Supplement a').bind('click', resetAddProfileForm);
+
+
   $("#EmailChecked").bind('click', function(e) {
     e.preventDefault();
     var mailto = '';

@@ -82,3 +82,13 @@ function addProfileToDOM(results,uid) {
       row['name'] + ' - ' + row['amount'] + ' ' + row['unit'] + ' - ' + row['frequency'] + '</li>'));
   }
 }
+
+// reset form for "Add Supplement" page
+function resetAddProfileForm() {
+  //alert('hello world');
+  $("#saveSupplement input, #saveSupplement textarea").val('');
+  $("#addSupUserName").html(addSupplementHeadingDefault);
+  $("#user_select").val('1');
+  $(".userSelectToggle").css("opacity","1")
+  //$(".userSelectToggle").show();
+}
