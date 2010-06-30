@@ -2,7 +2,7 @@
   <div class="toolbar">
       <h1>Add DS</h1>
       <a class="pop blueButton" href="#Profiles">Profiles</a>
-      <a class="button goback submitProfile" href="#Start">Save</a>
+      <a class="button goback submitProfile" href="#Profiles">Save</a>
   </div>
   <div class="info">
     <p id="addSupUserName"></p>
@@ -10,7 +10,8 @@
   <form id="saveSupplement" class="form" method="post">
     <ul class="rounded userSelectToggle">
       <li>
-        <select placeholder="User Name" name="user_select" id="user_select">
+        <label for="user_select">Profile</label>
+        <select class="haslabel" placeholder="User Name" name="user_select" id="user_select">
         </select>
       </li>
     </ul>
