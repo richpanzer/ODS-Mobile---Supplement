@@ -290,7 +290,7 @@ background:#fff
 
 ul li input[type="text"],ul li input[type="password"],ul li textarea,ul li select {
 -webkit-appearance:textarea;
-background:#fff url(../.png);
+background:#fff;
 border:0;
 color:#555;
 display:inline-block;
@@ -308,7 +308,7 @@ text-indent:-2px
 
 ul li select {
 -webkit-appearance:textfield;
-background:transparent url(../images/chevron.png) no-repeat 103% 3px;
+background:transparent url(img/chevron.png) no-repeat 103% 3px;
 margin-left:-6px;
 text-indent:0;
 width:104%
