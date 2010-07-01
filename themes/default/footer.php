@@ -27,9 +27,9 @@
       });
     });
 EOD;
-    include UNIX_JS . 'jquery-1.3.2.min.js';
-    include UNIX_JS . 'jquery.clearform.js';
-    include UNIX_JQ . 'jqtouch/jqtouch.min.js';
+    echo addjsfile(UNIX_JS . 'jquery-1.3.2.min.js');
+    echo addjsfile(UNIX_JS . 'jquery.clearform.js');
+    echo addjsfile(UNIX_JQ . 'jqtouch/jqtouch.min.js');
     echo addjstext($freeformOutput);
     // format default::: addjstofile($file, $minify=true);
     // echo addjsfile(PATH_UNIX . 'lib/jquery.autocomplete/jquery.autocomplete.js'); // Need to add this later for supplement name field

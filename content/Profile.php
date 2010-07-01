@@ -4,7 +4,7 @@
     <a class="button back" href="#Profiles">Profiles</a>
     <a class="button" href="#Add_Dietary_Supplement">Add DS</a>
   </div>
-  <ul id="profile_entries" class="rounded">
+  <ul id="profile_entries" class="edgetoedge">
   </ul>
   <div class="content">
     <p><a href="#Update_Profile" class="pop whiteButton">Edit Profile</a></p>

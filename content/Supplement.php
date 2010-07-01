@@ -2,10 +2,10 @@
   <div class="toolbar">
       <h4>View Supplement</h4>
       <a class="button back" href="#Profile">Profile</a>
-      <?php /*<a class="button goback submitProfile" href="#Start">Save</a> */ ?>
   </div>
-  <ul class="edgetoedge weight500">
-    <li><strong>Name:</strong> <span id="supName"></span></li>
+  <br />
+  <h2 id="supName"></h2>
+  <ul class="rounded weight500">
     <li><strong>Amount:</strong> <span id="supAmount"></span></li>
     <li><strong>Frequency:</strong> <span id="supFrequency"></span></li>
     <li><strong>Notes:</strong> <span id="supNotes"></span></li>

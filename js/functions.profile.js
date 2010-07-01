@@ -78,7 +78,7 @@ function getProfileByUser(uid) {
 function addProfileToDOM(results,uid) {
   for(var i=0;i<results.rows.length;i++) {
     var row = results.rows.item(i);
-    $("#emailProfiles ul." + uid).append($('<li style="font-weight:500">' +
+    $("#emailProfiles ul." + uid).append($('<li class="weight500">' +
       row['name'] + ' - ' + row['amount'] + ' ' + row['unit'] + ' - ' + row['frequency'] + '</li>'));
   }
 }

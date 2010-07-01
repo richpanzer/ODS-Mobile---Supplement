@@ -21,7 +21,7 @@
         $filename = $home_page;
       }
       if (!in_array($filename, $pageExclusions)){
-        echo '<li><a href="#' , $cleaned_filename , '">' , $filename , '</a></li>';
+        echo '<li class="arrow"><a href="#' , $cleaned_filename , '">' , $filename , '</a></li>';
       }
     }
   ?>

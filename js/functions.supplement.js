@@ -13,7 +13,7 @@ function getSupplementList(uid) {
     "WHERE `profile`.`user_id`='" + uid + "';";
   db.transaction(function(transaction,results){
     transaction.executeSql(query, null, function(transaction,results){
-      addSupplementsToDOM(results);
+      addSupplementsToDOM(results,uid);
     }, errorHandler);
   });
   //allPurposeDBQuery(query, addSupplementsToDOM, errorHandler);
@@ -21,15 +21,24 @@ function getSupplementList(uid) {
 }
 
 // Add all found supplements for a given result set to the dom WORKS
-function addSupplementsToDOM(results) {
+function addSupplementsToDOM(results,uid) {
   if (results.rows.length > 0) {
     for (var i=0; i<results.rows.length; i++) {
       var row = results.rows.item(i);
-      $('#profile_entries').append($('<li><a class="flip" href="#Supplement">' + row['name'] + '</a></li>'));
+      $('#profile_entries').append($('<li class="arrow"><a class="id' + uid +
+        '_' + i + '" href="#Supplement">' + row['name'] + '</a></li>'));
+      addCurrentSupListener(i,uid,row['name'],row['amount'] + ' ' +
+        row['unit'],row['frequency'],row['notes']);
     }
   } else {
     addSupplementOptionsError();
   }
+}
+
+function addCurrentSupListener(i,uid,supName,supAmount,supFrequency,supNotes) {
+  $("#profile_entries li a.id" + uid + "_" + i).bind('click', function(){
+    showCurrentSupplement(supName,supAmount,supFrequency,supNotes);
+  });
 }
 
 // Add the error message for "There are no supplements" in this box/select/whatever WORKS
@@ -41,7 +50,9 @@ function showCurrentSupplement(supName,supAmount,supFrequency,supNotes) {
   $("#supName").html(supName);
   $("#supAmount").html(supAmount);
   $("#supFrequency").html(supFrequency);
-  $("#supNotes").html(supNotes);
+  if (supNotes.length > 0) {
+    $("#supNotes").html(supNotes);
+  } else {
+    $("#supNotes").html('<span class="errorMsg">' + supNotesBlank + '</span>');
+  }
 }
-
-showCurrentSupplement('Calcium','5mg','1x Day','Some randoms notes...');

@@ -52,7 +52,7 @@ function updateUserDOM(results,currentuid,currentuser) {
     for (var i=0; i<results.rows.length; i++) {
       var row = results.rows.item(i);
       $('#profile_list').
-        append($('<ul class="edgetoedge"><li><a class="cube" title="' +
+        append($('<ul class="edgetoedge"><li class="arrow"><a title="' +
         row['id'] + '" href="#Profile">' + row['user'] + '</a></li></ul>'));
       $('#user_select').
         append($("<option></option>").

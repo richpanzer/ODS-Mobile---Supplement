@@ -60,6 +60,8 @@ $(document).ready(function() {
 
   $('#Add_Dietary_Supplement a').bind('click', resetAddProfileForm);
 
+
+
   $("#EmailChecked").bind('click', function(e) {
     e.preventDefault();
     var mailto = '';
