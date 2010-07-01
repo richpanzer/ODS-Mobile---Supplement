@@ -36,5 +36,5 @@ FileETag None
 </ifModule>
 
 
-AddType application/x-httpd-php .manifest #Should work, else no dynamism by uncommenting next line and commenting this line
-#AddType text/cache-manifest .manifest
+# For dynamically driven manifest file used for HTML5 offline page caching
+AddType application/x-httpd-php text/cache-manifest .manifest

@@ -136,3 +136,11 @@ function emailThis(mailto,subject,body) {
     alert("You didn't select any profiles!");
   }
 }
+
+// Do nothing when this link is clicked!
+function voidClick(link) {
+  link.bind('click',function(e){
+    e.preventDefault();
+    return false;
+  });
+}
