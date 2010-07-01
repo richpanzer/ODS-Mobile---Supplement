@@ -16,8 +16,8 @@
     </ul>
     <ul class="form">
       <li>
-        <label for="amount">Amount:</label>
-        <select class="haslabel" placeholder="Amount" name="amount" id="amount">
+        <input placeholder="Amount" type="text" class="haslabel" name="amount" id="amount" />
+        <?php /*<select class="haslabel" placeholder="Amount" name="amount" id="amount">
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -51,7 +51,7 @@
           <option>3000</option>
           <option>4000</option>
           <option>5000</option>
-        </select>
+        </select> */ ?>
       </li>
     </ul>
     <ul class="form">
