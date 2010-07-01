@@ -149,3 +149,7 @@ ol.edgetoedge li {
 
 #supName {text-align:center}
 .errorMsg {color:#A00}
+.minHeight250 {
+  display:block;
+  min-height:250px
+}

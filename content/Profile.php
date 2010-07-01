@@ -4,8 +4,12 @@
     <a class="button back" href="#Profiles">Profiles</a>
     <a class="button" href="#Add_Dietary_Supplement">Add DS</a>
   </div>
-  <ul id="profile_entries" class="edgetoedge">
-  </ul>
+  <br />
+  <h2><center>Supplements</center></h2>
+  <span class="minHeight250">
+    <ul id="profile_entries" class="edgetoedge">
+    </ul>
+  </span>
   <div class="content">
     <p><a href="#Update_Profile" class="pop whiteButton">Edit Profile</a></p>
   </div>
