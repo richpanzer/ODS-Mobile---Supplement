@@ -7,6 +7,7 @@
 <ul class="edgetoedge">
     <li><a href="#Instructions">Intstructions</a></li>
     <li><a href="#Tips">Tips</a></li>
+    <li><a href="#Update_Profile">Update Profile Name</a></li>
     <li><a href="#Password">Password Protect App</a></li>
   </ul>
 </div>
