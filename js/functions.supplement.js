@@ -36,3 +36,12 @@ function addSupplementsToDOM(results) {
 function addSupplementOptionsError() {
   $('#profile_entries').append($('<li></li>').text(noSupplementsError));
 }
+
+function showCurrentSupplement(supName,supAmount,supFrequency,supNotes) {
+  $("#supName").html(supName);
+  $("#supAmount").html(supAmount);
+  $("#supFrequency").html(supFrequency);
+  $("#supNotes").html(supNotes);
+}
+
+showCurrentSupplement('Calcium','5mg','1x Day','Some randoms notes...');
