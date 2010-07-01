@@ -1,6 +1,6 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
-      <h1>Dev.Settings</h1>
+      <h4>Developer Settings</h4>
       <a class="button goback" href="#Start">Done</a>
   </div>
   <div class="info">
