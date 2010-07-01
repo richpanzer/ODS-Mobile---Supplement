@@ -57,6 +57,11 @@ $(document).ready(function() {
   });
 
   $('#Email_Profile').bind('pageAnimationStart', getAllProfiles);
+  $('.saveUserName').bind('click', function() {
+    var uid = $("#updateUserUID").attr('name');
+    var user = $("#updateUserName").val();
+    updateUserName(uid,user);
+  });
 
   $('#Add_Dietary_Supplement a').bind('click', resetAddProfileForm);
 

@@ -20,6 +20,18 @@ function setCurrentUser(uid,user) {
   //$(".userSelectToggle").hide();
   $(".currentUser").html(user);
   $("#user_select").val(uid);
+  $("#updateUserUID").attr('name',uid);
+  $("#updateUserName").val(user);
+}
+
+// update a single user
+function updateUserName(uid,user) {
+  var query = "UPDATE `user` SET `user`='" + user +"' WHERE `id`='" + uid + "';";
+  db.transaction(function(transaction) {
+    transaction.executeSql(query, [], function(transaction, results) {
+      updateUserLists(results,uid,user);
+    }, errorHandler);
+  });
 }
 
 // Add the error message for "There are no users" in this box/select/whatever
