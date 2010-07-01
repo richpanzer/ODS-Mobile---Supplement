@@ -1,6 +1,6 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
-      <h1>Settings</h1>
+      <h1>More</h1>
       <a class="button goback" href="#Start">Done</a>
   </div>
   <div class="content">

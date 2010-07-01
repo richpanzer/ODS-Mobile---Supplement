@@ -73,6 +73,6 @@ $(document).ready(function() {
   voidClick($("#Profiles .toolbar_bottom a").eq(1));
   voidClick($("#Add_Dietary_Supplement .toolbar_bottom a").eq(2));
   voidClick($("#Learn_About_ODS .toolbar_bottom a").eq(3));
-  voidClick($("#Settings .toolbar_bottom a").eq(4));
+  voidClick($("#Tips .toolbar_bottom a").eq(4));
 
 });

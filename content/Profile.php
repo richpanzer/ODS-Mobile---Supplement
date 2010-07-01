@@ -6,5 +6,8 @@
   </div>
   <ul id="profile_entries" class="rounded">
   </ul>
+  <div class="content">
+    <p><a href="#Update_Profile" class="pop grayButton">Edit Profile</a></p>
+  </div>
 </div>
 <?php include PATH_TXT . 'includes/toolbar.php'; ?>
