@@ -7,9 +7,9 @@
       addGlossToIcon: false,
       startupScreen: '{$const['THEME_IMG']}startup.png',
       statusBar: 'black',
-      slideSelector: 'body ul li a, a:not(.dontslide)',
+      slideSelector: 'body > * > ul li a',
       cubeSelector: 'ul.edgetoedge li a',
-      flipSelector: 'ul.rounded li a',
+      fadeSelector: 'ul.rounded li a',
       slideupSelector: '.toolbar_bottom ul li a',
       preloadImages: [
           '{$const['JQTHEME']}img/back_button.png',

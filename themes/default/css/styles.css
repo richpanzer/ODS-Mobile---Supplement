@@ -156,3 +156,16 @@ label {
 .haslabel {width:60%}
 
 .weight500 {font-weight:500}
+
+
+ol.edgetoedge {
+  list-style-type:decimal !important;
+  padding:10px 0 10px 30px;
+  margin:0;
+  border-bottom:1px solid #333;
+}
+ol.edgetoedge li {
+  list-style-type:decimal !important;
+  padding:5px 0;
+  text-indent:0;
+}

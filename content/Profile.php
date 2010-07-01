@@ -2,7 +2,7 @@
   <div class="toolbar">
     <h1 class="currentUser">Error</h1>
     <a class="button back" href="#Profiles">Profiles</a>
-    <a class="button pop" href="#Add_Dietary_Supplement">Add DS</a>
+    <a class="button" href="#Add_Dietary_Supplement">Add DS</a>
   </div>
   <ul id="profile_entries" class="rounded">
   </ul>
