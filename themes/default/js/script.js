@@ -85,7 +85,7 @@ $(document).ready(function() {
   voidClick($("#Learn_About_ODS .toolbar_bottom a").eq(3));
   voidClick($("#Tips .toolbar_bottom a").eq(4));
 
-
+  // All Accordion related listeners and setup
   $('#accordion .expandable').hide();
   $('#Instructions a').click(function(){
     $('#accordion .expandable').hide();
@@ -100,6 +100,17 @@ $(document).ready(function() {
   $(".instructEmailRef").click(function(){
     goAccordion($('#accordion #instructEmail'));
   });
+
+  // Add dietary supplement page's profile button
+  $("#profileGOTOaddDS").click(function(){
+    $("#addDSProfileBtn").html('Profile').attr('href','#Profile');
+  });
+
+  $("#Add_Dietary_Supplement a").click(function(){
+    $("#addDSProfileBtn").html('Profiles').attr('href','#Profiles');
+  });
+
+
 
 
 });

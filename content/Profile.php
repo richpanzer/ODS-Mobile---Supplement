@@ -2,7 +2,7 @@
   <div class="toolbar">
     <h1 class="currentUser">Error</h1>
     <a class="button back" href="#Profiles">Profiles</a>
-    <a class="button" href="#Add_Dietary_Supplement">Add DS</a>
+    <a id="profileGOTOaddDS" class="button" href="#Add_Dietary_Supplement">Add DS</a>
   </div>
   <br />
   <h2><center>Supplements</center></h2>

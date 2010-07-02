@@ -1,8 +1,8 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
     <h1>Add DS</h1>
-    <a class="button back" href="#Profile">Profile</a>
-    <a class="button goback submitProfile" href="#Start">Save</a>
+    <a id="addDSProfileBtn" class="blueButton" href="#Profiles">Profiles</a>
+    <a class="button goback submitProfile" href="#Profiles">Save</a>
   </div>
   <div class="info">
     <p id="addSupUserName"></p>
