@@ -56,7 +56,7 @@ function getAllProfiles() {
       var queryprofile = '';
       for(var i=0;i<result.rows.length;i++) {
         var row = result.rows.item(i);
-        $("#emailProfiles").append($('<ul class="rounded ' + row['id'] + '"><li><strong>' + row['user'] + '</strong></li></ul>'));
+        $("#emailProfiles").append($('<ul class="rounded ' + row['id'] + '"><li><strong>' + "\n" + row['user'] + "\n" + '</strong></li></ul>'));
         getProfileByUser(row['id']);
       }
     });
@@ -79,7 +79,7 @@ function addProfileToDOM(results,uid) {
   for(var i=0;i<results.rows.length;i++) {
     var row = results.rows.item(i);
     $("#emailProfiles ul." + uid).append($('<li class="weight500">' +
-      row['name'] + ' - ' + row['amount'] + ' ' + row['unit'] + ' - ' + row['frequency'] + '</li>'));
+      row['name'] + ' - ' + row['amount'] + ' ' + row['unit'] + ' - ' + row['frequency'] + "\n" + '</li>'));
   }
 }
 

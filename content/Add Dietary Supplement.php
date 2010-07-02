@@ -8,7 +8,7 @@
     <p id="addSupUserName"></p>
   </div>
   <form id="saveSupplement" class="rounded" method="post">
-    <ul class="form userSelectToggle">
+    <ul class="rounded userSelectToggle">
       <li><select placeholder="User Name" name="user_select" id="user_select"></select></li>
     </ul>
     <ul class="rounded">
@@ -16,13 +16,14 @@
     </ul>
     <ul class="rounded">
       <li>
-        <input placeholder="Amount" type="text" class="haslabel" name="amount" id="amount" />
+        <label for="amount">Amount:</label>
+        <input type="text" class="haslabel" name="amount" id="amount" />
       </li>
     </ul>
     <ul class="rounded">
       <li>
         <label for="unit">Unit:</label>
-        <select class="haslabel" placeholder="Unit" name="unit" id="unit" label="Unit">
+        <select class="haslabel" name="unit" id="unit" label="Unit">
           <option>mg</option>
           <option>g</option>
           <option>IU</option>

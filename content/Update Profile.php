@@ -1,7 +1,8 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
       <h1>Update Profile Name</h1>
-      <a class="blueButton goback saveUserName" href="#Start">Done</a>
+      <a class="back" href="#Profile">Profile</a>
+      <a class="button saveUserName" href="#Profiles">Save</a>
   </div>
   <div class="info">
     <p>Update your profile name.</p>
