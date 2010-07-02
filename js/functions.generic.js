@@ -144,3 +144,17 @@ function voidClick(link) {
     return false;
   });
 }
+
+// Bind a click event to an accordian animation
+function goAccordion(clicked) {
+  $('#accordion .expandable').animate({
+    height: 'hide',
+    duration: 'fast',
+    easing: 'linear'
+  });
+  clicked.siblings('.expandable').animate({
+    height: 'show',
+    duration: 'fast',
+    easing: 'linear'
+  });
+}

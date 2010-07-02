@@ -78,10 +78,28 @@ $(document).ready(function() {
     return false;
   });
 
+  
   // This is needed for the toolbar to function correctly
   voidClick($("#Profiles .toolbar_bottom a").eq(1));
   voidClick($("#Add_Dietary_Supplement .toolbar_bottom a").eq(2));
   voidClick($("#Learn_About_ODS .toolbar_bottom a").eq(3));
   voidClick($("#Tips .toolbar_bottom a").eq(4));
+
+
+  $('#accordion .expandable').hide();
+  $('#Instructions a').click(function(){
+    $('#accordion .expandable').hide();
+  });
+
+  $('#accordion h2').click(function(){
+    goAccordion($(this));
+  });
+  $(".instructProfileRef").click(function(){
+    goAccordion($('#accordion #instructProfile'));
+  });
+  $(".instructEmailRef").click(function(){
+    goAccordion($('#accordion #instructEmail'));
+  });
+
 
 });
