@@ -7,7 +7,7 @@
   <br />
   <h2><center>Supplements</center></h2>
   <span class="minHeight250">
-    <ul id="profile_entries" class="edgetoedge">
+    <ul id="profile_entries" class="edgetoedge"><?php // Dynamically populated ?>
     </ul>
   </span>
   <div class="content">

@@ -4,7 +4,7 @@ width:320px
 }
 
 body .inner-has-bottomtools {
-min-height:375px;
+min-height:363px;
 }
 
 /* Uncomment for production
@@ -14,8 +14,8 @@ width:480px;
 }
 
 body.landscape .inner-has-bottomtools {
-min-height:375px;
-} */
+min-height:203px;
+}*/
 
 div.content {
 color:#000;

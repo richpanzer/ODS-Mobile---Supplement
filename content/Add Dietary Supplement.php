@@ -7,19 +7,19 @@
   <div class="info">
     <p id="addSupUserName"></p>
   </div>
-  <form id="saveSupplement" class="form" method="post">
+  <form id="saveSupplement" class="rounded" method="post">
     <ul class="form userSelectToggle">
       <li><select placeholder="User Name" name="user_select" id="user_select"></select></li>
     </ul>
-    <ul class="form">
+    <ul class="rounded">
       <li><input placeholder="Dietary Supplement Name" type="text" name="supplement" id="supplement" /></li>
     </ul>
-    <ul class="form">
+    <ul class="rounded">
       <li>
         <input placeholder="Amount" type="text" class="haslabel" name="amount" id="amount" />
       </li>
     </ul>
-    <ul class="form">
+    <ul class="rounded">
       <li>
         <label for="unit">Unit:</label>
         <select class="haslabel" placeholder="Unit" name="unit" id="unit" label="Unit">
@@ -34,7 +34,7 @@
         </select>
       </li>
     </ul>
-    <ul class="form">
+    <ul class="rounded">
       <li>
         <label for="frequency">How Often:</label>
         <select class="haslabel" placeholder="How Often" name="frequency" id="frequency">
@@ -48,10 +48,10 @@
         </select>
       </li>
     </ul>
-    <ul class="form">
+    <ul class="rounded">
       <li>Add Photo:</li>
     </ul>
-    <ul class="form">
+    <ul class="rounded">
       <li><label for="frequency">Notes:</label>
       <textarea name="notes" id="notes"></textarea></li>
     </ul>
