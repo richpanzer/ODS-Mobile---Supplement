@@ -12,7 +12,8 @@
       'Supplement List',
       'More',
       'Supplement',
-      'Update Profile'
+      'Update Profile',
+      'Edit Supplement'
       );
     foreach ($filelist as $file) {
       $filename = strip_ext(basename($file));
