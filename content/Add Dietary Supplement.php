@@ -39,13 +39,24 @@
       <li>
         <label for="frequency">How Often:</label>
         <select class="haslabel" placeholder="How Often" name="frequency" id="frequency">
-          <option>With Breakfast</option>
-          <option>With Every Meal</option>
-          <option>Before Bed</option>
-          <option>3x Daily</option>
-          <option>2x Daily</option>
-          <option>1x Daily</option>
-          <option>1x Weekly</option>
+          <option>1x</option>
+          <option>2x</option>
+          <option>3x</option>
+          <option>4x</option>
+          <option>5x</option>
+          <option>6x</option>
+          <option>7x</option>
+          <option>8x</option>
+          <option>9x</option>
+          <option>10x</option>
+        </select>
+        <select class="haslabel" placeholder="How Often" name="frequency" id="frequency">
+          <option>Hourly</option>
+          <option>Daily</option>
+          <option>Weekly</option>
+          <option>Monthly</option>
+          <option>Annually</option>
+          <option>Occasionally</option>
         </select>
       </li>
     </ul>

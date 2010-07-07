@@ -13,6 +13,7 @@
       'More',
       'Supplement',
       'Update Profile',
+	  'Password',
       'Edit Supplement'
       );
     foreach ($filelist as $file) {
