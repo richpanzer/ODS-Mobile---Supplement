@@ -113,32 +113,4 @@ $(document).ready(function() {
     $("#addDSProfileBtn").html('Profiles').attr('href','#Profiles');
   });
 
-
-/*
-  // Listeners to change "View Supplement" page
-  $("#editSupplement").toggle(function(){
-    $("#editSupplement").html('Done');
-    var properties = $("#supProperties li");
-    $("#supProperties").children().remove().end();
-    $.each(properties, function(i,values){
-      var myvalue = $(values).html();
-      $("#supProperties").append('<li class="arrow"><a href="#Edit_Supplement">'
-        + myvalue + '</a></li>');
-      var thisproperty = $("#supProperties .label").eq(i).html();
-      var thisvalue= $("#supProperties li:eq(" + i + ") span span").html();
-      $("#supProperties li a").eq(i).click(function(){
-        $("#supPropertyTitle").html(thisproperty);
-        $("#editSupField").val(thisvalue);
-      })
-    });
-  }, function(){
-    $("#editSupplement").html('Edit');
-    var properties = $("#supProperties li a");
-    $("#supProperties").children().remove().end();
-    $.each(properties, function(i,values){
-      var myvalue = $(values).html();
-      $("#supProperties").append('<li>' + myvalue + '</li>');
-    });
-  }); */
-
 });

@@ -48,23 +48,7 @@ function addSupplementOptionsError() {
 }
 
 function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,notes) {
-  var output = "UID is " + uid + "\n";
-  output += "User is " + user + "\n";
-  output += "SID is " + sid + "\n";
-  output += "PID is " + pid + "\n";
-  output += "Name is " + supplement + "\n";
-  output += "Amount is " + amount + "\n";
-  output += "Units are " + unit + "\n";
-  output += "Frequency is " + frequency + "\n";
-  output += "Notes are " + notes + "\n";
-  alert(output);
-  $("#user_select_update").append('<option value="' + uid + '">' + user + '</option>');
-  $("#supplement_update").val(supplement);
-  $("#amount_update").val(amount);
-  $("#unit_update").val(unit);
-  $("#frequency_update").val(frequency);
-  $("#notes_update").val(notes);
-
+  // This updates the "view" page
   $("#supName").html(supplement);
   $("#supAmount").html(amount + ' ' + unit);
   $("#supFrequency").html(frequency);
@@ -73,4 +57,11 @@ function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency
   } else {
     $("#supNotes").html('<span class="errorMsg">' + supNotesBlank + '</span>');
   }
+  // This updates the "edit" page
+  $("#user_select_update").append('<option value="' + uid + '">' + user + '</option>');
+  $("#supplement_update").val(supplement);
+  $("#amount_update").val(amount);
+  $("#unit_update").val(unit);
+  $("#frequency_update").val(frequency);
+  $("#notes_update").val(notes);
 }
