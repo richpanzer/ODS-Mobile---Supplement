@@ -1,6 +1,6 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
-      <h1>Additional Functionality</h1>
+      <h3>App Support</h3>
       <a class="button goback" href="#Start">Done</a>
   </div>
   <ul class="edgetoedge">
