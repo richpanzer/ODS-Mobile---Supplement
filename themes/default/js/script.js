@@ -110,6 +110,8 @@ $(document).ready(function() {
     $("#addDSProfileBtn").html('Profiles').attr('href','#Profiles');
   });
 
+
+/*
   // Listeners to change "View Supplement" page
   $("#editSupplement").toggle(function(){
     $("#editSupplement").html('Done');
@@ -121,7 +123,7 @@ $(document).ready(function() {
         + myvalue + '</a></li>');
       var thisproperty = $("#supProperties .label").eq(i).html();
       var thisvalue= $("#supProperties li:eq(" + i + ") span span").html();
-      $("#supProperties li a").eq(i).bind('click', function(){
+      $("#supProperties li a").eq(i).click(function(){
         $("#supPropertyTitle").html(thisproperty);
         $("#editSupField").val(thisvalue);
       })
@@ -134,6 +136,6 @@ $(document).ready(function() {
       var myvalue = $(values).html();
       $("#supProperties").append('<li>' + myvalue + '</li>');
     });
-  });
+  }); */
 
 });

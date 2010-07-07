@@ -7,7 +7,9 @@ function createSupplement(supplement) {
 
 // Returns supplement list for a given user id
 function getSupplementList(uid) {
-  var query = "SELECT * FROM `user` " +
+  var query = "SELECT *, " +
+    "`user`.`id` as uid, `supplement`.`id` as sid, `profile`.`id` as pid " +
+    "FROM `user` " +
     "JOIN `profile` ON `user`.`id`=`profile`.`user_id` " +
     "JOIN `supplement` ON `profile`.`supplement_id`=`supplement`.`id` " +
     "WHERE `profile`.`user_id`='" + uid + "';";
@@ -27,17 +29,16 @@ function addSupplementsToDOM(results,uid) {
       var row = results.rows.item(i);
       $('#profile_entries').append($('<li class="arrow"><a class="id' + uid +
         '_' + i + '" href="#Supplement">' + row['name'] + '</a></li>'));
-      addCurrentSupListener(i,uid,row['name'],row['amount'] + ' ' +
-        row['unit'],row['frequency'],row['notes']);
+      addCurrentSupListener(i,row['user'],row['uid'],row['sid'],row['pid'],row['name'],row['amount'],row['unit'],row['frequency'],row['notes']);
     }
   } else {
     addSupplementOptionsError();
   }
 }
 
-function addCurrentSupListener(i,uid,supName,supAmount,supFrequency,supNotes) {
+function addCurrentSupListener(i,user,uid,sid,pid,supplement,amount,unit,frequency,notes) {
   $("#profile_entries li a.id" + uid + "_" + i).bind('click', function(){
-    showCurrentSupplement(supName,supAmount,supFrequency,supNotes);
+    showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,notes);
   });
 }
 
@@ -46,12 +47,29 @@ function addSupplementOptionsError() {
   $('#profile_entries').append($('<li></li>').text(noSupplementsError));
 }
 
-function showCurrentSupplement(supName,supAmount,supFrequency,supNotes) {
-  $("#supName").html(supName);
-  $("#supAmount").html(supAmount);
-  $("#supFrequency").html(supFrequency);
-  if (supNotes.length > 0) {
-    $("#supNotes").html(supNotes);
+function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,notes) {
+  var output = "UID is " + uid + "\n";
+  output += "User is " + user + "\n";
+  output += "SID is " + sid + "\n";
+  output += "PID is " + pid + "\n";
+  output += "Name is " + supplement + "\n";
+  output += "Amount is " + amount + "\n";
+  output += "Units are " + unit + "\n";
+  output += "Frequency is " + frequency + "\n";
+  output += "Notes are " + notes + "\n";
+  alert(output);
+  $("#user_select_update").append('<option value="' + uid + '">' + user + '</option>');
+  $("#supplement_update").val(supplement);
+  $("#amount_update").val(amount);
+  $("#unit_update").val(unit);
+  $("#frequency_update").val(frequency);
+  $("#notes_update").val(notes);
+
+  $("#supName").html(supplement);
+  $("#supAmount").html(amount + ' ' + unit);
+  $("#supFrequency").html(frequency);
+  if (notes.length > 0) {
+    $("#supNotes").html(notes);
   } else {
     $("#supNotes").html('<span class="errorMsg">' + supNotesBlank + '</span>');
   }

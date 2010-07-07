@@ -1,6 +1,6 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
-    <h1>Add DS</h1>
+    <h3>Add DS</h3>
     <a id="addDSProfileBtn" class="blueButton" href="#Profiles">Profiles</a>
     <a class="button goback submitProfile" href="#Profiles">Save</a>
   </div>
