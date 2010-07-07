@@ -100,6 +100,9 @@ $(document).ready(function() {
   $(".instructEmailRef").click(function(){
     goAccordion($('#accordion #instructEmail'));
   });
+  $(".instructPasswordRef").click(function(){
+    goAccordion($('#accordion #instructPassword'));
+  });
 
   // Add dietary supplement page's profile button
   $("#profileGOTOaddDS").click(function(){

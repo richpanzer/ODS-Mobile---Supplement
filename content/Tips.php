@@ -4,8 +4,9 @@
     <a class="button back" href="#Start">Home</a>
   </div>
   <ul class="edgetoedge">
-    <li><a class="instructProfileRef" href="#Instructions">Password protect this app.</a><br />Go to the home screen on your device and select Settings to begin.</li>
-    <li><a class="instructEmailRef" href="#Instructions">Email your profiles</a><br />Q: Did you know you can email your dietary supplements profile?<br />A: Select &quot;Email Profile&quot; from the MyDS home screen, or select &quot;Email&quot; on the &quot;View Profiles&quot; screen.</li>
+    <li><a class="instructProfileRef" href="#Instructions">You can create multiple accounts.</a><br /></li>
+    <li><a class="instructPasswordRef" href="#Instructions">You can password protect this app.</a><br /></li>
+    <li><a class="instructEmailRef" href="#Instructions">You can Email your profiles.</a></li>
   </ul>
 </div>
 <?php include PATH_TXT . 'includes/toolbar.php'; ?>
