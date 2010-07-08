@@ -150,11 +150,13 @@ function goAccordion(clicked) {
   $('#accordion .expandable').animate({
     height: 'hide',
     duration: 'fast',
+    opacity: 'hide',
     easing: 'linear'
   });
   clicked.siblings('.expandable').animate({
     height: 'show',
     duration: 'fast',
+    opacity: 'show',
     easing: 'linear'
   });
 }

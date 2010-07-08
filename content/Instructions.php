@@ -3,7 +3,7 @@
     <h1>Instructions</h1>
     <a class="button back" href="#Start">Home</a>
   </div>
-  <div id="accordion" style="min-height:420px">
+  <div id="accordion" class="minHeight420">
     <div class="panel">
       <h2 id="instructProfile">Create a Profile</h2>
       <ol class="edgetoedge expandable">

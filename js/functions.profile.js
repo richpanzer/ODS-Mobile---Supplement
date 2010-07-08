@@ -92,3 +92,22 @@ function resetAddProfileForm() {
   $(".userSelectToggle").css("opacity","1")
   //$(".userSelectToggle").show();
 }
+
+// Update a profile row
+function updateProfile(callback,uid,sid,amount,unit,frequency,notes,myimg) {
+  var info = 'UID: ' + uid + '\n';
+  info += 'SID: ' + sid + '\n';
+  info += 'Amount: ' + amount + '\n';
+  info += 'Unit: ' + unit + '\n';
+  info += 'Frequency: ' + frequency + '\n';
+  info += 'Notes: ' + notes + '\n';
+  alert(info);
+  /*
+  var insertProfileValues = "'" + userID + "', '" + supplementID + "', '" + amount + "', '"
+    + unit + "', '" + frequency + "', '" + notes + "', '" + myimg + "'";
+  var insertProfileQuery = "INSERT INTO profile " +
+    "(user_id, supplement_id, amount, unit, frequency, notes, myimg) " +
+    "VALUES (" + insertProfileValues + ");";
+  dbQuery(insertProfileQuery); */
+  //allPurposeDBQuery(insertProfileQuery, callback, errorHandler);
+}

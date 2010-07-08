@@ -130,7 +130,7 @@ label {
   margin-right:3.5%
 }
 
-.haslabel, #amount {
+.haslabel, #amount, #amount_update {
   display:inline-block !important;
   width:60%
 }
@@ -163,6 +163,10 @@ ol.edgetoedge li {
   display:block;
   min-height:250px
 }
+.minHeight420 {
+  display:block;
+  min-height:420px
+}
 
 
 #accordion .expandable {overflow:hidden}
@@ -175,5 +179,5 @@ ol.edgetoedge li {
   padding:8px 10px;
   font-size:16px;
   text-shadow:rgba(0, 0, 0, 0.4) 0 -1.5px 0;
-  /*cursor:pointer;*/
+  cursor:pointer;
 }

@@ -2,7 +2,7 @@
   <div class="toolbar">
     <h1>Edit DS</h1>
     <a class="button back" href="#Supplement">Back</a>
-    <a class="button" href="#Supplement">Save</a>
+    <a class="button updateThisSupplement" href="#Supplement">Save</a>
   </div>
   <div class="info">
     <p id="addSupUserName"></p>

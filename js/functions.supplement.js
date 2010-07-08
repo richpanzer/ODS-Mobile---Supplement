@@ -58,10 +58,13 @@ function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency
     $("#supNotes").html('<span class="errorMsg">' + supNotesBlank + '</span>');
   }
   // This updates the "edit" page
-  $("#user_select_update").append('<option value="' + uid + '">' + user + '</option>');
-  $("#supplement_update").val(supplement);
+  $("#user_select_update")
+    .attr('name',uid)
+    .append('<option value="' + uid + '">' + user + '</option>');
+  $("#supplement_update").val(supplement).attr('name',sid);
   $("#amount_update").val(amount);
   $("#unit_update").val(unit);
   $("#frequency_update").val(frequency);
   $("#notes_update").val(notes);
+  $("#updateSupplement").attr('name',pid);
 }

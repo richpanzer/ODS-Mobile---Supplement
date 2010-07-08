@@ -113,4 +113,20 @@ $(document).ready(function() {
     $("#addDSProfileBtn").html('Profiles').attr('href','#Profiles');
   });
 
+  $(".updateThisSupplement").bind('click',function(){
+    var callback = jQT.goTo($('#Profile'), 'fade');
+    var uid = $("#user_select_update").val();
+    var sid = $("#supplement_update").attr('name');
+    var pid = $("#updateSupplement").attr('name');
+    var user = $("#user_select_update").val();
+    var supplement = $("#supplement_update").val();
+    var amount = $("#amount_update").val();
+    var unit = $("#unit_update").val();
+    var frequency = $("#frequency_update").val();
+    var notes = $("#notes_update").val();
+    var myimg = 'Placeholder';
+    updateProfile(callback,uid,sid,amount,unit,frequency,notes,myimg);
+  });
+
+
 });
