@@ -114,12 +114,11 @@ $(document).ready(function() {
   });
 
   $(".updateThisSupplement").click(function(){
-    var callback = jQT.goTo($('#Profile'), 'fade');
     var uid = $("#user_select_update").val();
     /*var sid = $("#supplement_update").attr('name');*/
     var sid = 1;
     var pid = $("#updateSupplement").attr('name');
-    var user = $("#user_select_update").val();
+    var user = $("#user_select_update").text();
     /*var supplement = $("#supplement_update").val();*/
     var supplement = $("#supplement_update").html();
     var amount = $("#amount_update").val();
@@ -127,7 +126,7 @@ $(document).ready(function() {
     var frequency = $("#frequency_update").val();
     var notes = $("#notes_update").val();
     var myimg = 'Placeholder';
-    updateProfile(callback,uid,sid,pid,supplement,amount,unit,frequency,notes,myimg);
+    updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,notes,myimg);
   });
 
 

@@ -16,8 +16,8 @@ function insertUser(user, callback) {
 
 // Set the current active user
 function setCurrentUser(uid,user) {
-  $(".userSelectToggle").css("opacity","0.25")
-  //$(".userSelectToggle").hide();
+  //$(".userSelectToggle").css("opacity","0.25")
+  $(".userSelectToggle").hide();
   $(".currentUser").html(user);
   $("#user_select").val(uid);
   $("#updateUserUID").attr('name',uid);

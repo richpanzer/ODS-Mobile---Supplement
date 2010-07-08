@@ -1,13 +1,12 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
-    <h1 class="currentUser">Error</h1>
+    <h3 class="currentUser">Error</h3>
     <a class="button back" href="#Profiles">Profiles</a>
     <a id="profileGOTOaddDS" class="button" href="#Add_Dietary_Supplement">Add DS</a>
   </div>
-  <br />
   <h2><center>Supplements</center></h2>
   <span class="minHeight250">
-    <ul id="profile_entries" class="edgetoedge"><?php // Dynamically populated ?>
+    <ul id="profile_entries" class="rounded"><?php // Dynamically populated ?>
     </ul>
   </span>
   <div class="content">

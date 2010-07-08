@@ -4,17 +4,14 @@
     <a class="button back" href="#Supplement">Back</a>
     <a class="button updateThisSupplement" href="#Profiles">Save</a>
   </div>
-  <div class="info">
-    <p id="addSupUserName"></p>
-  </div>
   <form id="updateSupplement" class="rounded" method="post">
     <ul class="rounded userSelectToggle">
       <li><select placeholder="User Name" name="user_select" id="user_select_update"></select></li>
     </ul>
     <h2 id="supplement_update"></h2>
-    <?php /*<ul class="rounded">
+    <ul class="rounded" style="display:none">
       <li><input placeholder="Dietary Supplement Name" type="text" name="supplement" id="supplement_update" /></li>
-    </ul>*/ ?>
+    </ul>
     <ul class="rounded">
       <li>
         <label for="amount">Amount:</label>

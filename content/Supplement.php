@@ -4,7 +4,6 @@
       <a class="button back" href="#Profile">Profile</a>
       <a class="button fade" href="#Edit_Supplement">Edit</a>
   </div>
-  <br />
   <h2 id="supName"></h2>
   <ul id="supProperties" class="rounded weight500">
     <li><span><strong class="label">Amount:</strong> <span id="supAmount"></span></span></li>

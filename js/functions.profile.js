@@ -89,13 +89,14 @@ function resetAddProfileForm() {
   $("#saveSupplement input, #saveSupplement textarea").val('');
   $("#addSupUserName").html(addSupplementHeadingDefault);
   $("#user_select").val('1');
-  $(".userSelectToggle").css("opacity","1")
-  //$(".userSelectToggle").show();
+  //$(".userSelectToggle").css("opacity","1")
+  $(".userSelectToggle").show();
 }
 
 // Update a profile row
-function updateProfile(callback,uid,sid,pid,supplement,amount,unit,frequency,notes,myimg) {
+function updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,notes,myimg) {
   /*var info = 'UID: ' + uid + '\n';
+  info += 'User: ' + user + '\n';
   info += 'SID: ' + sid + '\n';
   info += 'PID: ' + pid + '\n';
   info += 'Supplement: ' + supplement + '\n';
@@ -125,5 +126,7 @@ function updateProfile(callback,uid,sid,pid,supplement,amount,unit,frequency,not
   db.transaction(function(transaction){
     transaction.executeSql(updatePro);
   });
+
+  updateUserLists(uid,user);
 
 }
