@@ -94,20 +94,36 @@ function resetAddProfileForm() {
 }
 
 // Update a profile row
-function updateProfile(callback,uid,sid,amount,unit,frequency,notes,myimg) {
-  var info = 'UID: ' + uid + '\n';
+function updateProfile(callback,uid,sid,pid,supplement,amount,unit,frequency,notes,myimg) {
+  /*var info = 'UID: ' + uid + '\n';
   info += 'SID: ' + sid + '\n';
+  info += 'PID: ' + pid + '\n';
+  info += 'Supplement: ' + supplement + '\n';
   info += 'Amount: ' + amount + '\n';
   info += 'Unit: ' + unit + '\n';
   info += 'Frequency: ' + frequency + '\n';
   info += 'Notes: ' + notes + '\n';
-  alert(info);
-  /*
-  var insertProfileValues = "'" + userID + "', '" + supplementID + "', '" + amount + "', '"
-    + unit + "', '" + frequency + "', '" + notes + "', '" + myimg + "'";
-  var insertProfileQuery = "INSERT INTO profile " +
-    "(user_id, supplement_id, amount, unit, frequency, notes, myimg) " +
-    "VALUES (" + insertProfileValues + ");";
-  dbQuery(insertProfileQuery); */
-  //allPurposeDBQuery(insertProfileQuery, callback, errorHandler);
+  info += 'Image: ' + myimg + '\n';
+  alert(info);*/
+  
+  /*var updateSup = "UPDATE `supplement` " +
+    "SET `name`='" + supplement + "' " +
+    "WHERE `id`=" + sid + ";"; */
+  var updatePro = "UPDATE `profile` " +
+    "SET `amount`='" + amount + "', " +
+    "`unit`='" + unit + "', " +
+    "`frequency`='" + frequency + "', " +
+    "`notes`='" + notes + "' " +
+    "WHERE `id`=" + pid + ";";
+  //alert(updatePro);
+  /* doesn't work because of "return false" dbQuery(updateSup);
+  dbQuery(updatePro);*/
+
+  /* don't need to update the supplement name: db.transaction(function(transaction){
+    transaction.executeSql(updateSup);
+  });*/
+  db.transaction(function(transaction){
+    transaction.executeSql(updatePro);
+  });
+
 }

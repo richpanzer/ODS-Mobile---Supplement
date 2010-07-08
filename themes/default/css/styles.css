@@ -157,7 +157,8 @@ ol.edgetoedge li {
   text-indent:0;
 }
 
-#supName {text-align:center}
+#supName,
+#supplement_update {text-align:center}
 .errorMsg {color:#A00}
 .minHeight250 {
   display:block;
