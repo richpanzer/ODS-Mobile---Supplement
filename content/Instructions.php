@@ -25,7 +25,7 @@
     <div class="panel">
       <h2 id="instructPhoto">Add Photo</h2>
       <ol class="edgetoedge expandable">
-        <li>While adding or editing a dietary supplement select the Photo icon. The system will allow you add up to two photos from your camera roll.</li>
+        <li>While adding or editing a dietary supplement within your profile select the Photo icon. The system will allow you add up to two photos from your camera roll.</li>
       </ol>
     </div>
     <div class="panel">
@@ -34,7 +34,7 @@
         <li>Go to the homescreen and select Settings. Select Password Protect and enter in a 4 digit pin.</li>
       </ol>
     </div>
-    <div class="panel">
+    <!--<div class="panel">
       <h2 id="instructVisitODS">Visit ODS</h2>
       <ol class="edgetoedge expandable">
         <li>You can visit the Office of Dietary Supplements Web site and related resources by selecting the About ODS link from the home screen, or the About ODS graphic on the toolbar below.</li>
@@ -45,7 +45,7 @@
       <ol class="edgetoedge expandable">
         <li>You can learn more about Dietary Supplements by going to the home screen and selecting Dietary Supplement Information, or by selecting the More icon below and selecting Dietary Supplement Information.</li>
       </ol>
-    </div>
+    </div>-->
   </div>
 </div>
 <?php include PATH_TXT . 'includes/toolbar.php'; ?>
