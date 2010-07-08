@@ -17,6 +17,7 @@
     <ul class="rounded">
       <li>
         <label for="amount">Amount:</label>
+        <input type="text" class="haslabel" name="amount" id="amount" />
         <input type="text" placeholder="0" class="haslabel" name="amount" id="amount" />
       </li>
       <li>
@@ -37,24 +38,21 @@
       <li>
         <label for="frequency">How Often:</label>
         <select class="haslabel" placeholder="How Often" name="frequency" id="frequency">
+        <select class="haslabel-width1" placeholder="How Often" name="frequency" id="frequency">
           <option>1x</option>
           <option>2x</option>
           <option>3x</option>
           <option>4x</option>
           <option>5x</option>
-          <option>6x</option>
-          <option>7x</option>
-          <option>8x</option>
-          <option>9x</option>
-          <option>10x</option>
+          <option>Occasionally</option>
         </select>
         <select class="haslabel" name="unit_time" id="unit_time">
+          <option selected="selected"> </option>
           <option>Hourly</option>
           <option>Daily</option>
           <option>Weekly</option>
           <option>Monthly</option>
           <option>Annually</option>
-          <option>Occasionally</option>
         </select>
         <br class="reset" />
       </li>
