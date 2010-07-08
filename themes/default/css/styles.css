@@ -6,6 +6,7 @@ width:320px
 body .inner-has-bottomtools {
 min-height:363px;
 }
+br.reset{clear:both}
 
 /* Uncomment for production
 body.landscape .thisisapage {
@@ -134,6 +135,7 @@ label {
   display:inline-block !important;
   width:60%
 }
+select.haslabel {float:right}
 
 input.haslabel {
   padding:0 !important;
