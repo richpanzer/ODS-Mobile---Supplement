@@ -14,17 +14,14 @@ $(document).ready(function() {
   $(".submitProfile").bind('click', function(){
     var callback = jQT.goTo($('#Profiles'), 'flip');
     createProfile(callback);
-    return false;
   });
   
   $("#addSupUserName").html(addSupplementHeadingDefault);
 
   // Listen to the "Add Dietary Supplement" on an existing "Profile" page
   $(".addSupplement").bind('click', function(){
-    var callback = jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
-    var user = $(".currentUser").html();
-    $("#addSupUserName").html(addSupplementHeadingStart + user + addSupplementHeadingEnd);
-    return false;
+    $("#addSupUserName").html(addSupplementHeadingStart +
+      $(".currentUser").html() + addSupplementHeadingEnd);
   });
 
   // Add a new user record
@@ -56,7 +53,7 @@ $(document).ready(function() {
     updateUserListings();
   });
 
-  $('#Email_Profile').bind('pageAnimationStart', getAllProfiles);
+  
   
   $('.saveUserName').bind('click', function() {
     var uid = $("#updateUserUID").attr('name');
@@ -68,15 +65,21 @@ $(document).ready(function() {
   $('#Add_Dietary_Supplement a').bind('click', resetAddProfileForm);
 
 
+  $('#Email_Profile').bind('pageAnimationStart', function(){
+    getAllProfiles();
+  });
 
-  $("#EmailChecked").bind('click', function(e) {
-    e.preventDefault();
-    var mailto = '';
+  $('#Email_Profile').bind('pageAnimationEnd', function(){
+    var mail = 'mailto:?';
     var subject = 'My Dietary Supplement Profiles';
     var body = $("#emailProfiles").text();
-    emailThis(mailto,subject,body);
-    return false;
+    mail += 'subject=' + encodeURIComponent(subject);
+    mail += '&body=' + encodeURIComponent(body);
+    $("#EmailChecked").attr('href',mail);
+    alert(mail);
   });
+
+
 
   
   // This is needed for the toolbar to function correctly
@@ -128,6 +131,43 @@ $(document).ready(function() {
     var myimg = 'Placeholder';
     updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,notes,myimg);
   });
+
+
+
+
+
+/* Trying out better ways to relate to the db
+// This is the error handler for all database transactions
+function DBerror(errorMsg,transaction,error) {
+  alert('Database Error: ' + error.message + ' (Code '+error.code+')' + "\n\n" +
+  'Message: ' + errorMsg);
+  return true;
+}
+
+function DBquery(query, data, callback, message) {
+  db.transaction(function(transaction,result){
+    transaction.executeSql(query, data, function(result){
+      if (callback != null) {
+        if( eval('typeof ' + callback) == 'function') {
+          callback(result);
+        } else {
+          alert('Your database query callback is not a valid function!');
+        }
+      }
+    }, DBerror(message));
+  });
+  return false;
+}
+
+var thisquery = "SELECT * FROM `user` WHERE `id`=?;";
+var thisdata = new Array("1");
+var thismessage = 'howdy world';
+function thiscallback(result) {
+  alert('hi there');
+  //alert(result.insertId);
+}
+DBquery(thisquery,thisdata,thiscallback,thismessage);
+*/
 
 
 });

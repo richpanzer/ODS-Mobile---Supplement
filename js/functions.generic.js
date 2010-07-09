@@ -97,6 +97,8 @@ function errorHandler(transaction, error) {
   return true;
 }
 
+
+
 // Generic query execution for an array of query statments
 function queryArrays(query) {
   for (var i=0;i<query.length;i++) {
@@ -125,17 +127,17 @@ function allPurposeDBQuery(query, nullHandler, errorHandler) {
 }
 
 
-function emailThis(mailto,subject,body) {
+/*function emailThis(link,subject,body) {
 	if (body.length > 0) {
     subject = encodeURIComponent(subject);
     body = encodeURIComponent(body);
-    window.location.href = "mailto:" + mailto + "&subject=" + subject + "&body=" + body;
+    window.location.href = "mailto:?subject=" + subject + "&body=" + body;
     //alert("You are sending a message to '" + mailto + "' with the subject '" + subject + "'.");
     //alert("The body is: " + body);
 	} else {
     alert("You didn't select any profiles!");
   }
-}
+}*/
 
 // Do nothing when this link is clicked!
 function voidClick(link) {
@@ -149,13 +151,13 @@ function voidClick(link) {
 function goAccordion(clicked) {
   $('#accordion .expandable').animate({
     height: 'hide',
-    duration: 'fast',
+    duration: 10,
     opacity: 'hide',
     easing: 'linear'
   });
   clicked.siblings('.expandable').animate({
     height: 'show',
-    duration: 'fast',
+    duration: 10,
     opacity: 'show',
     easing: 'linear'
   });
