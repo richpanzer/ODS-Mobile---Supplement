@@ -29,16 +29,16 @@ function addSupplementsToDOM(results,uid) {
       var row = results.rows.item(i);
       $('#profile_entries').append($('<li class="arrow"><a class="id' + uid +
         '_' + i + '" href="#Supplement">' + row['name'] + '</a></li>'));
-      addCurrentSupListener(i,row['user'],row['uid'],row['sid'],row['pid'],row['name'],row['amount'],row['unit'],row['frequency'],row['notes']);
+      addCurrentSupListener(i,row['user'],row['uid'],row['sid'],row['pid'],row['name'],row['amount'],row['unit'],row['frequency'],row['frequency_unit'],row['notes']);
     }
   } else {
     addSupplementOptionsError();
   }
 }
 
-function addCurrentSupListener(i,user,uid,sid,pid,supplement,amount,unit,frequency,notes) {
+function addCurrentSupListener(i,user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes) {
   $("#profile_entries li a.id" + uid + "_" + i).bind('click', function(){
-    showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,notes);
+    showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes);
   });
 }
 
@@ -47,11 +47,12 @@ function addSupplementOptionsError() {
   $('#profile_entries').append($('<li></li>').text(noSupplementsError));
 }
 
-function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,notes) {
+function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes) {
   // This updates the "view" page
   $("#supName").html(supplement);
   $("#supAmount").html(amount + ' ' + unit);
   $("#supFrequency").html(frequency);
+  $("#supFrequencyUnit").html(frequency_unit);
   if (notes.length > 0) {
     $("#supNotes").html(notes);
   } else {
@@ -66,6 +67,7 @@ function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency
   $("#amount_update").val(amount);
   $("#unit_update").val(unit);
   $("#frequency_update").val(frequency);
+  $("#frequency_unit_update").val(frequency_unit);
   $("#notes_update").val(notes);
   $("#updateSupplement").attr('name',pid);
 }

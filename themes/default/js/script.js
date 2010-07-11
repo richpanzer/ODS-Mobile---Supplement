@@ -138,9 +138,10 @@ $(document).ready(function() {
     var amount = $("#amount_update").val();
     var unit = $("#unit_update").val();
     var frequency = $("#frequency_update").val();
+    var frequency_unit = $("#frequency_unit_update").val();
     var notes = $("#notes_update").val();
     var myimg = 'Placeholder';
-    updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,notes,myimg);
+    updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes,myimg);
   });
 
 

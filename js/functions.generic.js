@@ -31,9 +31,10 @@ function setupDatabaseTables() {
     '`supplement_id` INTEGER NOT NULL CONSTRAINT fk_supplement_id REFERENCES supplement(id) ON DELETE CASCADE, ' + // FK
     '`amount` VARCHAR(16) NOT NULL, ' +
     '`unit` VARCHAR(16) NOT NULL, ' +
-    '`frequency` VARCHAR(16) NOT NULL, ' +
-    '`notes` VARCHAR(256) NOT NULL, ' +
-    '`myimg` VARCHAR(256) NOT NULL);'
+    '`frequency` VARCHAR(16), ' +
+    '`frequency_unit` VARCHAR(16), ' +
+    '`notes` VARCHAR(256), ' +
+    '`myimg` VARCHAR(256));'
   setupQuery[3] = "CREATE TRIGGER fki_profile_user_id " +
     "BEFORE INSERT ON profile " +
     "FOR EACH ROW BEGIN " +

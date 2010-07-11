@@ -46,7 +46,7 @@
           <option>4x</option>
           <option>5x</option>
         </select>
-        <select class="haslabel-width1" name="unit_time" id="unit_time">
+        <select class="haslabel-width1" name="frequency_unit" id="frequency_unit">
           <option selected="selected"> </option>
           <option>Hourly</option>
           <option>Daily</option>

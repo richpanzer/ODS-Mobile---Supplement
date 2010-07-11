@@ -30,16 +30,26 @@
           <option>Pill</option>
         </select>
       </li>
+    </ul>
+    <ul class="rounded">
       <li>
         <label for="frequency">How Often:</label>
-        <select class="haslabel" placeholder="How Often" name="frequency" id="frequency_update">
-          <option>With Breakfast</option>
-          <option>With Every Meal</option>
-          <option>Before Bed</option>
-          <option>3x Daily</option>
-          <option>2x Daily</option>
-          <option>1x Daily</option>
-          <option>1x Weekly</option>
+        <select class="haslabel-width1" placeholder="How Often" name="frequency" id="frequency_update">
+          <option>0x</option>
+          <option>1x</option>
+          <option>2x</option>
+          <option>3x</option>
+          <option>4x</option>
+          <option>5x</option>
+        </select>
+        <select class="haslabel-width1" name="frequency_unit" id="frequency_unit_update">
+          <option selected="selected"> </option>
+          <option>Hourly</option>
+          <option>Daily</option>
+          <option>Weekly</option>
+          <option>Monthly</option>
+          <option>Annually</option>
+          <option>Occasionally</option>
         </select>
       </li>
     </ul>
