@@ -76,7 +76,7 @@ $(document).ready(function() {
     mail += 'subject=' + encodeURIComponent(subject);
     mail += '&body=' + encodeURIComponent(body);
     $("#EmailChecked").attr('href',mail);
-    alert(mail);
+    //alert(mail);
   });
 
 
@@ -89,23 +89,34 @@ $(document).ready(function() {
   voidClick($("#Tips .toolbar_bottom a").eq(4));
 
   // All Accordion related listeners and setup
-  $('#accordion .expandable').hide();
-  $('#Instructions a').click(function(){
+  $("#Instructions").bind('pageAnimationStart', function(){
     $('#accordion .expandable').hide();
   });
-
+  
   $('#accordion h2').click(function(){
     goAccordion($(this));
   });
+
+
   $(".instructProfileRef").click(function(){
     goAccordion($('#accordion #instructProfile'));
   });
   $(".instructEmailRef").click(function(){
     goAccordion($('#accordion #instructEmail'));
   });
+  $(".instructPhotoRef").click(function(){
+    goAccordion($('#accordion #instructPhoto'));
+  });
   $(".instructPasswordRef").click(function(){
     goAccordion($('#accordion #instructPassword'));
   });
+  $(".instructVisitODSRef").click(function(){
+    goAccordion($('#accordion #instructVisitODS'));
+  });
+  $(".instructDSresourcesRef").click(function(){
+    goAccordion($('#accordion #instructDSresources'));
+  });
+  
 
   // Add dietary supplement page's profile button
   $("#profileGOTOaddDS").click(function(){

@@ -3,23 +3,29 @@ background:#000
 }
 
 body > * {
-background: rgb(197,204,211) url(img/pinstripes.png);
+  background:-webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.6, rgb(233,226,193)),
+    color-stop(0.2, rgb(222,209,158))
+    );
 }
 
 h1,h2 {
-color:#333;
+color:#5d1b4f;
 font:bold 18px Helvetica;
 margin:10px 20px 6px;
 text-shadow:rgba(255,255,255,.2) 0 1px 1px
 }
 h3,h4 {
-color:#333;
+color:#5d1b4f;
 font:bold 14px Helvetica;
 margin:10px 20px 6px;
 text-shadow:rgba(255,255,255,.2) 0 1px 1px
 }
 h5,h6 {
-color:#333;
+color:#5d1b4f;
 font:bold 12px Helvetica;
 margin:10px 20px 6px;
 text-shadow:rgba(255,255,255,.2) 0 1px 1px
@@ -28,8 +34,7 @@ text-shadow:rgba(255,255,255,.2) 0 1px 1px
 /* @group Toolbar */
 .toolbar {
 -webkit-box-sizing:border-box;
-background:url(img/toolbar.png) #6d84a2 repeat-x;
-border-bottom:1px solid #2d3642;
+background:transparent;
 height:45px;
 padding:10px;
 position:relative
@@ -40,8 +45,8 @@ margin-top:20px
 }
 
 .toolbar > h1, .toolbar > h2, .toolbar > h3, .toolbar h4 {
-color:#fff;
-font-size:20px;
+color:#515d14;
+font-size:16px;
 font-weight:700;
 height:40px;
 left:50%;
@@ -52,19 +57,18 @@ overflow:hidden;
 position:absolute;
 text-align:center;
 text-overflow:ellipsis;
-text-shadow:rgba(0, 0, 0, 0.4) 0 -1px 0;
 top:0px;
 white-space:nowrap;
 width:150px
 }
-.toolbar > h3, .toolbar > h4 {font-size:16px}
+.toolbar > h3, .toolbar > h4 {font-size:13px}
 
 body.landscape .toolbar > h1 {
 margin-left:-125px;
 width:250px
 }
 
-.button,.back,.cancel,.add {
+.button,.back,.cancel,.add,.blueButton {
 -webkit-border-image: url(img/toolButton.png) 0 5 0 5;
 background:none;
 border-width:0 5px;
@@ -81,7 +85,7 @@ position:absolute;
 right:6px;
 text-decoration:none;
 text-overflow:ellipsis;
-text-shadow:rgba(0, 0, 0, 0.5) 0 -1px 0;
+text-shadow:rgba(0, 0, 0, 0.5) 2px 0 0;
 top:8px;
 white-space:nowrap;
 width:auto
@@ -100,7 +104,7 @@ padding:0;
 right:auto
 }
 
-.leftbutton,.cancel {
+.blueButton,.leftbutton,.cancel {
 left:6px;
 right:auto
 }
@@ -142,7 +146,7 @@ ul {
 -webkit-border-radius:8px;
 background:#fff;
 border:1px solid #999;
-color:#000;
+color:#5d1b4f;
 font:bold 17px Helvetica;
 margin:10px;
 padding:0
@@ -150,7 +154,7 @@ padding:0
 
 ul li {
 border-top:1px solid #999;
-color:#333;
+color:#5d1b4f;
 list-style-type:none;
 padding:10px
 }
@@ -185,7 +189,7 @@ background-repeat:no-repeat
 /* universal links on list */
 ul li a,li.img a + a {
 -webkit-tap-highlight-color:rgba(0,0,0,0);
-color:#000;
+color:#5d1b4f;
 display:block;
 margin:-10px;
 overflow:hidden;
@@ -237,7 +241,7 @@ margin-left:0 !important
 }
 
 ul li a + a {
-color:#000;
+color:#5d1b4f;
 display:block;
 font:14px Helvetica;
 margin:0;
@@ -304,7 +308,7 @@ width:104%
 }
 
 ul li input[type="checkbox"],ul li input[type="radio"] {
-color:#333;
+color:#5d1b4f;
 margin:0;
 padding:10px
 }
@@ -366,7 +370,7 @@ border-top:1px solid #989ea4
 /* @end
  @group Mini Label */
 ul li small {
-color:#369;
+color:#5d1b4f;
 display:block;
 float:right;
 font:17px Helvetica;
@@ -414,7 +418,7 @@ padding:13px 0
 }
 
 ul.metal li a:hover {
-color:#000
+color:#5d1b4f
 }
 
 ul.metal li:hover small {
@@ -422,7 +426,7 @@ color:inherit
 }
 
 ul.metal li a em {
-color:#333;
+color:#5d1b4f;
 display:block;
 font-size:14px;
 font-style:normal;
@@ -495,7 +499,7 @@ text-shadow:#bfbfbf 0 1px 0
 }
 
 .plastic ul li small {
-color:#333;
+color:#5d1b4f;
 font-size:13px;
 font-weight:700;
 line-height:24px;
@@ -584,14 +588,14 @@ float:right
 
 ul.individual li a {
 -webkit-border-radius:8px;
-color:#333;
+color:#5d1b4f;
 line-height:16px;
 margin:-11px -10px -14px;
 padding:11px 10px 14px
 }
 
 ul.individual li a:hover {
-background:#36c;
+background:#5d1b4f;
 color:#fff
 }
 
@@ -629,15 +633,16 @@ width:149px
 
 /* @end */
 .info {
-background:#dce1eb;
-border-top:1px solid rgba(76, 86, 108, .3);
-color:#333;
-font-size:12px;
+background:url(img/info.png);
+color:#FFF;
+font-size:16px;
 font-weight:700;
-line-height:16px;
-padding:15px;
+height:34px;
+line-height:34px;
+padding:0 15px;
+overflow:hidden;
 text-align:center;
-text-shadow:rgba(255,255,255,.8) 0 1px 0
+text-shadow:rgba(0,0,0,.5) 1px 0
 }
 
 ul.edgetoedge li:first-child,ul.edgetoedge li:first-child a,ul.edgetoedge li:last-child,ul.edgetoedge li:last-child a,ul.metal li:first-child a,ul.metal li:last-child a,.edgetoedge li,.metal li {

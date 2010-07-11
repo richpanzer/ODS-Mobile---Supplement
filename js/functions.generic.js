@@ -149,16 +149,6 @@ function voidClick(link) {
 
 // Bind a click event to an accordian animation
 function goAccordion(clicked) {
-  $('#accordion .expandable').animate({
-    height: 'hide',
-    duration: 10,
-    opacity: 'hide',
-    easing: 'linear'
-  });
-  clicked.siblings('.expandable').animate({
-    height: 'show',
-    duration: 10,
-    opacity: 'show',
-    easing: 'linear'
-  });
+  $('#accordion .expandable, not:' + clicked).slideUp(180,'linear');
+  clicked.siblings('.expandable').slideDown(180,'linear');
 }

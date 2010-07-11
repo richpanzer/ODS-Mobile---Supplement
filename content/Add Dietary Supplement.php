@@ -7,7 +7,7 @@
   <div class="info">
     <p id="addSupUserName"></p>
   </div>
-  <form id="saveSupplement" class="rounded" method="post">
+  <form id="saveSupplement" class="form" method="post">
     <ul class="rounded userSelectToggle">
       <li><select placeholder="User Name" name="user_select" id="user_select"></select></li>
     </ul>
