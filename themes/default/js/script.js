@@ -159,7 +159,9 @@ $(document).ready(function() {
   });
 
 
-
+  $("#updateUser").bind('click', function(){
+    jQT.goTo($('#Update_Profile'), 'flip');
+  });
 
 
 /* Trying out better ways to relate to the db

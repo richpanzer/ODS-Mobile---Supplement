@@ -10,7 +10,7 @@
     </ul>
   </span>
   <div class="content">
-    <p><a href="#Update_Profile" id="updateUser" class="flip whiteButton">Edit Profile</a></p>
+    <p><a href="#" id="updateUser" class="whiteButton">Edit Profile</a></p>
   </div>
 </div>
 <?php include PATH_TXT . 'includes/toolbar.php'; ?>

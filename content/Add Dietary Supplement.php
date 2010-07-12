@@ -1,11 +1,11 @@
 <div class="inner-has-bottomtools">
+  <div class="info">
+    <p id="addSupUserName" class="smallHeading"></p>
+  </div>
   <div class="toolbar">
     <h3>Add DS</h3>
     <a id="addDSProfileBtn" class="blueButton" href="#Profiles">Profiles</a>
     <a class="button submitProfile" href="#">Save</a>
-  </div>
-  <div class="info">
-    <p id="addSupUserName"></p>
   </div>
   <form id="saveSupplement" class="form" method="post">
     <ul class="rounded userSelectToggle">

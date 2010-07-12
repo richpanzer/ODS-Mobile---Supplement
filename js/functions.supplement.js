@@ -28,7 +28,7 @@ function addSupplementsToDOM(results,uid) {
     for (var i=0; i<results.rows.length; i++) {
       var row = results.rows.item(i);
       $('#profile_entries').append($('<li class="arrow"><a class="id' + uid +
-        '_' + i + '" href="#Supplement">' + row['name'] + '</a></li>'));
+        '_' + i + '" href="#">' + row['name'] + '</a></li>'));
       addCurrentSupListener(i,row['user'],row['uid'],row['sid'],row['pid'],row['name'],row['amount'],row['unit'],row['frequency'],row['frequency_unit'],row['notes']);
     }
   } else {
@@ -39,6 +39,7 @@ function addSupplementsToDOM(results,uid) {
 function addCurrentSupListener(i,user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes) {
   $("#profile_entries li a.id" + uid + "_" + i).bind('click', function(){
     showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes);
+    jQT.goTo($('#Supplement'), 'flip');
   });
 }
 

@@ -65,7 +65,7 @@ function updateUserDOM(results,currentuid,currentuser) {
       var row = results.rows.item(i);
       $('#profile_list').
         append($('<ul class="edgetoedge"><li class="arrow"><a title="' +
-        row['id'] + '" href="#Profile">' + row['user'] + '</a></li></ul>'));
+        row['id'] + '" href="#">' + row['user'] + '</a></li></ul>'));
       $('#user_select').
         append($("<option></option>").
           attr("value",row['id']).
@@ -80,7 +80,8 @@ function updateUserDOM(results,currentuid,currentuser) {
 
 function registerNewUserDOM(currentuid,currentuser) {
   // Add Profile List Listeners for new DOM items
-  $('#profile_list ul li a').bind("click", function(){
+  $('#profile_list ul li a').bind("click", function(e){
+    e.preventDefault();
     removeUserSupplementDOM();
     var uid = $(this).attr('title');
     var user = $(this).html();
@@ -88,6 +89,8 @@ function registerNewUserDOM(currentuid,currentuser) {
     $("#addSupUserName").html(addSupplementHeadingUserStart + user + addSupplementHeadingUserEnd);
     setCurrentUser(uid,user);
     getSupplementList(uid);
+    jQT.goTo($('#Profile'), 'flip');
+    return false;
   });
   if (currentuser) {
     $("#addSupUserName").html(addSupplementHeadingUserStart + currentuser + addSupplementHeadingUserEnd);

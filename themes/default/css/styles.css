@@ -42,6 +42,10 @@ padding:0;
 position:relative
 }
 
+.smallHeading {
+  font-size:12px;
+}
+
 .toolbar_bottom,.footerIcons,.toolbar_bottom li,.toolbar_bottom li a,.toolbar_bottom a {
 -webkit-border-radius:0;
 border:none;

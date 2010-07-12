@@ -13,6 +13,6 @@ var GACode = 'UX-AAAAAA';
 var noUsersError = 'No profiles exist';
 var noSupplementsError = 'No supplements to list';
 var addSupplementHeadingDefault = 'Add Dietary Supplement';
-var addSupplementHeadingUserStart = 'Add Supplement to "';
+var addSupplementHeadingUserStart = 'Add DS to "';
 var addSupplementHeadingUserEnd = '"';
 var supNotesBlank = 'No notes were made.';
