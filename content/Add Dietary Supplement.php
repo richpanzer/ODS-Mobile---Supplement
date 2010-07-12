@@ -65,5 +65,13 @@
       <textarea name="notes" id="notes"></textarea></li>
     </ul>
   </form>
+  <div class="content">
+    
+    <img style="width:60px;height:60px" id="test_img" src="" />
+    <!-- for testing, add the buttons below -->
+    <button onclick="getPicture()">From Camera</button>
+    <button onclick="getPicture(PictureSourceType.PHOTO_LIBRARY)">From Photo Library</button>
+
+  </div>
 </div>
 <?php include PATH_TXT . 'includes/toolbar.php'; ?>

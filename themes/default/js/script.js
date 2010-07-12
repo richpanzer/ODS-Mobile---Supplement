@@ -6,6 +6,10 @@ $(document).ready(function() {
   setupDatabaseTables();
   updateUserLists();
 
+  if (typeof(PhoneGap) != 'undefined') {
+    $('body > *').css({minHeight: '460px !important'});
+  }
+
   /*if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
     if(window.applicationCache.update()) {
       alert('updatedS');
