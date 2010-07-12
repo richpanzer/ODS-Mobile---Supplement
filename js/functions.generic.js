@@ -150,13 +150,13 @@ function voidClick(link) {
 
 // Bind a click event to an accordian animation
 function goAccordion(clicked) {
-  $('#accordion .expandable').slideUp(180,'linear');
-  clicked.siblings('.expandable').slideDown(180,'linear');
+  $('#accordion .expandable').slideUp(300,'linear');
+  clicked.siblings('.expandable').slideDown(300,'linear');
 }
 
 // Go to the accordion with something pre-selected
 function goToAccordion(clicked) {
-  $('#accordion .expandable').slideUp(180,'linear');
+  $('#accordion .expandable').slideUp(300,'linear');
   jQT.goTo($('#Instructions'), 'flip');
-  clicked.siblings('.expandable').slideDown(180,'linear');
+  clicked.siblings('.expandable').slideDown(300,'linear');
 }

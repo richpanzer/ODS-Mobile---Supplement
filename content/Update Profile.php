@@ -2,7 +2,7 @@
   <div class="toolbar">
       <h3>Update Profile</h3>
       <a class="back" href="#Profile">Profile</a>
-      <a class="button saveUserName" href="#Profiles">Save</a>
+      <a class="button saveUserName" href="#">Save</a>
   </div>
   <div class="info">
     <p>Update your profile name.</p>

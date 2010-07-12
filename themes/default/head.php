@@ -12,6 +12,7 @@
     <link rel="apple-touch-icon" href="myCustomIcon.png" />
     <link rel="apple-touch-icon-precomposed" href="myCustomIcon.png" />
     */ ?>
+    <script type="text/javascript" src="phonegap.js" charset="utf-8"></script>
     <title><?php echo SITENAMESHORT; ?></title>
     <?php
       echo '<style type="text/css" media="screen">';

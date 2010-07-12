@@ -6,6 +6,15 @@ $(document).ready(function() {
   setupDatabaseTables();
   updateUserLists();
 
+  /*if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+    if(window.applicationCache.update()) {
+      alert('updatedS');
+    }
+    if(window.applicationCache.swapCache()) {
+      alert('next');
+    }
+  }*/
+
   /* Not used in our application / Setup listeners for the main settings page
   $("#mainSettings").submit(saveMainSettings);
   $("#mainSettings").bind('pageAnimationStart', loadMainSettings); */
@@ -67,6 +76,7 @@ $(document).ready(function() {
     var uid = $("#updateUserUID").attr('name');
     var user = $("#updateUserName").val();
     updateUserName(uid,user);
+    resetAddProfileForm();
     jQT.goTo($('#Profiles'), 'flip');
   });
 
