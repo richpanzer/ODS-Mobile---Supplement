@@ -32,12 +32,20 @@ $(document).ready(function() {
     return false;
   });
 
-  // Listen to the "Add Dietary Supplement" button on the "Add Profile" page
+  /*  Listen to the "Add Dietary Supplement" button on the "Add Profile" page
   $(".sumbitUserSubmitProfile").bind('click', function(){
     var callback = jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
     var user = $("#profile_name").val();
     insertUser(user, callback);
     //$(".addSupUserName").html(addSupplementHeadingStart + user + addSupplementHeadingEnd);
+    return false;
+  }); */
+
+  // Listen to the "Add Dietary Supplement" button on the "Add Profile" page
+  $(".sumbitUserSubmitProfile").bind('click', function(){
+    var user = $("#profile_name").val();
+    insertUser(user);
+    jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
     return false;
   });
 
@@ -125,15 +133,15 @@ $(document).ready(function() {
   
 
   // Add dietary supplement page's profile button
-  $("#profileGOTOaddDS").click(function(){
+  $("#profileGOTOaddDS").bind('click',function(){
     $("#addDSProfileBtn").html('Profile').attr('href','#Profile');
   });
 
-  $("#Add_Dietary_Supplement a").click(function(){
+  $("#Add_Dietary_Supplement a").bind('click', function(){
     $("#addDSProfileBtn").html('Profiles').attr('href','#Profiles');
   });
 
-  $(".updateThisSupplement").click(function(){
+  $(".updateThisSupplement").bind('click',function(){
     var uid = $("#user_select_update").val();
     /*var sid = $("#supplement_update").attr('name');*/
     var sid = 1;

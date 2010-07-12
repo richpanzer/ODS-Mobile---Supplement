@@ -2,7 +2,7 @@
   <div class="toolbar">
     <h3>Add DS</h3>
     <a id="addDSProfileBtn" class="blueButton" href="#Profiles">Profiles</a>
-    <a class="button goback submitProfile" href="#Profiles">Save</a>
+    <a class="button submitProfile" href="#">Save</a>
   </div>
   <div class="info">
     <p id="addSupUserName"></p>
