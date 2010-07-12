@@ -153,3 +153,10 @@ function goAccordion(clicked) {
   $('#accordion .expandable').slideUp(180,'linear');
   clicked.siblings('.expandable').slideDown(180,'linear');
 }
+
+// Go to the accordion with something pre-selected
+function goToAccordion(clicked) {
+  $('#accordion .expandable').slideUp(180,'linear');
+  jQT.goTo($('#Instructions'), 'flip');
+  clicked.siblings('.expandable').slideDown(180,'linear');
+}

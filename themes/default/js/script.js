@@ -89,9 +89,9 @@ $(document).ready(function() {
   voidClick($("#Tips .toolbar_bottom a").eq(4));
 
   // All Accordion related listeners and setup
-  //$("#Instructions").bind('pageAnimationStart', function(){
+  $("#Instructions").bind('pageAnimationStart', function(){
     $('#accordion .expandable').hide();
-  //});
+  });
   
   $('#accordion h2').click(function(){
     goAccordion($(this));
@@ -99,21 +99,27 @@ $(document).ready(function() {
 
 
   $(".instructProfileRef").click(function(){
+    jQT.goTo($('#Instructions'), 'flip');
     goAccordion($('#accordion #instructProfile'));
   });
   $(".instructEmailRef").click(function(){
+    jQT.goTo($('#Instructions'), 'flip');
     goAccordion($('#accordion #instructEmail'));
   });
   $(".instructPhotoRef").click(function(){
+    jQT.goTo($('#Instructions'), 'flip');
     goAccordion($('#accordion #instructPhoto'));
   });
   $(".instructPasswordRef").click(function(){
+    jQT.goTo($('#Instructions'), 'flip');
     goAccordion($('#accordion #instructPassword'));
   });
   $(".instructVisitODSRef").click(function(){
+    jQT.goTo($('#Instructions'), 'flip');
     goAccordion($('#accordion #instructVisitODS'));
   });
   $(".instructDSresourcesRef").click(function(){
+    jQT.goTo($('#Instructions'), 'flip');
     goAccordion($('#accordion #instructDSresources'));
   });
   
