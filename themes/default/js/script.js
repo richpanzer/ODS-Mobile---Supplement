@@ -89,9 +89,9 @@ $(document).ready(function() {
   voidClick($("#Tips .toolbar_bottom a").eq(4));
 
   // All Accordion related listeners and setup
-  $("#Instructions").bind('pageAnimationStart', function(){
+  //$("#Instructions").bind('pageAnimationStart', function(){
     $('#accordion .expandable').hide();
-  });
+  //});
   
   $('#accordion h2').click(function(){
     goAccordion($(this));

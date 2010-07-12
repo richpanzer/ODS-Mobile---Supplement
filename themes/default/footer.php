@@ -9,7 +9,8 @@
       statusBar: 'black',
       slideSelector: 'body > * > ul li a, ul.rounded li a',
       cubeSelector: 'ul.edgetoedge li a',
-      popSelector: '.toolbar a, #startLinks a',
+      popSelector: '.toolbar a',
+      flipSelector: '#startLinks a',
       slideupSelector: '.toolbar_bottom ul li a',
       preloadImages: [
           '{$const['JQTHEME']}img/back_button.png',
