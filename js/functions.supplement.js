@@ -64,7 +64,6 @@ function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency
     .attr('name',uid)
     .append('<option value="' + uid + '">' + user + '</option>');
   $("#supplement_update").val(supplement).attr('name',sid);
-  $("#supplement_update").html(supplement);
   $("#amount_update").val(amount);
   $("#unit_update").val(unit);
   $("#frequency_update").val(frequency);

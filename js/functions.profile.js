@@ -81,7 +81,8 @@ function addProfileToDOM(results,uid) {
     var row = results.rows.item(i);
     $("#emailProfiles ul." + uid).append($('<li class="weight500">' +
       row['name'] + ' - ' + row['amount'] + ' ' + row['unit'] + ' - ' + 
-      row['frequency'] + ' ' + row['frequency_unit'] + "\n" + '</li>'));
+      row['frequency'] + ' ' + row['frequency_unit'] +
+      '<span style="display:none"> - ' + row['notes'] + '</span>' + "\n" + '</li>'));
   }
 }
 
@@ -97,21 +98,10 @@ function resetAddProfileForm() {
 
 // Update a profile row
 function updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes,myimg) {
-  /*var info = 'UID: ' + uid + '\n';
-  info += 'User: ' + user + '\n';
-  info += 'SID: ' + sid + '\n';
-  info += 'PID: ' + pid + '\n';
-  info += 'Supplement: ' + supplement + '\n';
-  info += 'Amount: ' + amount + '\n';
-  info += 'Unit: ' + unit + '\n';
-  info += 'Frequency: ' + frequency + '\n';
-  info += 'Notes: ' + notes + '\n';
-  info += 'Image: ' + myimg + '\n';
-  alert(info);*/
-  
-  /*var updateSup = "UPDATE `supplement` " +
+  //alert('Supplement ID: ' + sid);
+  var updateSup = "UPDATE `supplement` " +
     "SET `name`='" + supplement + "' " +
-    "WHERE `id`=" + sid + ";"; */
+    "WHERE `id`=" + sid + ";";
   var updatePro = "UPDATE `profile` " +
     "SET `amount`='" + amount + "', " +
     "`unit`='" + unit + "', " +
@@ -123,13 +113,11 @@ function updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,frequen
   /* doesn't work because of "return false" dbQuery(updateSup);
   dbQuery(updatePro);*/
 
-  /* don't need to update the supplement name: db.transaction(function(transaction){
-    transaction.executeSql(updateSup);
-  });*/
+  /* don't need to update the supplement name:*/
   db.transaction(function(transaction){
+    transaction.executeSql(updateSup);
     transaction.executeSql(updatePro);
   });
-
   updateUserLists(uid,user);
 
 }

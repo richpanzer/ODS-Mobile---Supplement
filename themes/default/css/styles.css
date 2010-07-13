@@ -146,7 +146,7 @@ label {
   margin-right:3.5%
 }
 
-.haslabel, #amount, #amount_update {
+.haslabel, #amount, #amount_update, #supplement_update {
   display:inline-block !important;
   width:60%
 }
@@ -181,8 +181,7 @@ ol.edgetoedge li {
   text-indent:0;
 }
 
-#supName,
-#supplement_update {text-align:center}
+#supName {text-align:center}
 .errorMsg {color:#A00}
 .minHeight250 {
   display:block;

@@ -157,12 +157,10 @@ $(document).ready(function() {
 
   $(".updateThisSupplement").bind('click',function(){
     var uid = $("#user_select_update").val();
-    /*var sid = $("#supplement_update").attr('name');*/
-    var sid = 1;
+    var sid = $("#supplement_update").attr('name');
     var pid = $("#updateSupplement").attr('name');
     var user = $("#user_select_update").text();
-    /*var supplement = $("#supplement_update").val();*/
-    var supplement = $("#supplement_update").html();
+    var supplement = $("#supplement_update").val();
     var amount = $("#amount_update").val();
     var unit = $("#unit_update").val();
     var frequency = $("#frequency_update").val();
