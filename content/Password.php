@@ -1,7 +1,8 @@
 <div class="inner-has-bottomtools">
   <div class="toolbar">
       <h1>Password Protect App</h1>
-      <a class="blueButton goback" href="#Start">Done</a>
+      <a class="back" href="#Profile">Profile</a>
+      <a class="button savePassword" href="#">Save</a>
   </div>
   <div class="info">
     <p>This page is a placeholder.</p>

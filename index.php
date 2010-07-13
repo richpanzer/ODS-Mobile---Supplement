@@ -1,5 +1,4 @@
 <?php
-
 include 'code/config.php';
 
 /*
