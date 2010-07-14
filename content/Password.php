@@ -5,12 +5,19 @@
       <a class="button savePassword" href="#">Save</a>
   </div>
   <div class="info">
-    <p>This page is a placeholder.</p>
+    <p>Update Your Password For this.</p>
   </div>
   <form>
   <ul class="rounded">
-    <li><input type="text" placeholder="Rich Panzer" name="updateUser" value="" /></li>
+    <li>
+        <input type="password" placeholder="Password" id="password1" value="" />
+    </li>
+    <li>
+        <input type="password" placeholder="Password Again" id="password2" value="" />
+    </li>
   </ul>
   </form>
+    <div class="error"></div>
+    <div class="success"></div>
 </div>
 <?php include PATH_TXT . 'includes/toolbar.php'; ?>

@@ -303,3 +303,12 @@ ol.edgetoedge li {
   margin:6px 0 7px;
   background-position:center -271px;
 }
+
+.error{
+    color:red;
+    padding:0 10px;
+}
+.success{
+    color:green;
+    padding:0 10px;
+}

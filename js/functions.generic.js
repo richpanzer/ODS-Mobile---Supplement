@@ -35,20 +35,25 @@ function setupDatabaseTables() {
     '`frequency_unit` VARCHAR(16), ' +
     '`notes` VARCHAR(256), ' +
     '`myimg` VARCHAR(256));'
-  setupQuery[3] = "CREATE TRIGGER fki_profile_user_id " +
+  setupQuery[3] = 'CREATE TABLE IF NOT EXISTS `setting` (' +
+    '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,' +
+    '`name` VARCHAR(32) NOT NULL, ' +
+    '`value` VARCHAR(256));';
+  setupQuery[4] = "CREATE TRIGGER fki_profile_user_id " +
     "BEFORE INSERT ON profile " +
     "FOR EACH ROW BEGIN " +
     "SELECT RAISE(ROLLBACK, 'insert on table `profile` violates foreign key constraint `fk_user_id`') " +
     "WHERE  NEW.user_id IS NOT NULL " +
     "AND (SELECT `id` FROM `user` WHERE `id` = NEW.user_id) IS NULL;" +
     "END;";
-  setupQuery[4] = "CREATE TRIGGER fki_profile_supplement_id " +
+  setupQuery[5] = "CREATE TRIGGER fki_profile_supplement_id " +
     "BEFORE INSERT ON profile " +
     "FOR EACH ROW BEGIN " +
     "SELECT RAISE(ROLLBACK, 'insert on table `profile` violates foreign key constraint `fk_supplement_id`') " +
     "WHERE  NEW.supplement_id IS NOT NULL " +
     "AND (SELECT `id` FROM `supplement` WHERE `id` = NEW.supplement_id) IS NULL;" +
     "END;";
+  
   queryArrays(setupQuery);
 }
 

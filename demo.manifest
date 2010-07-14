@@ -1,0 +1,23 @@
+<?php
+
+include 'code/config.php';
+include 'code/functions.php';
+header('Content-Type: text/cache-manifest'); // This may not be needed.
+echo 'CACHE MANIFEST' , "\n";
+echo PATH_THEME , 'favicon.ico' , "\n";
+
+// Collect all images in the user theme
+$userThemeImgs = getContentList(UNIX_THEME . 'img/', '.png');
+foreach ($userThemeImgs as $file) {
+  echo PATH_THEME , 'img/' , $file , "\n";
+}
+
+// Collect all images in the JQTouch theme
+$themeImgs = getContentList(UNIX_JQTHEME . 'img/', '.png');
+foreach ($themeImgs as $file) {
+  echo JQTHEME , 'img/' , $file , "\n";
+}
+
+echo '<!-- Date: ', date('Y.d') ,' -->';
+
+?>

@@ -101,6 +101,28 @@ $(document).ready(function() {
     //alert(mail);
   });
 
+  $('.savePassword').click(function(){
+      var p1 = $.trim($('#password1').val());
+      var p2 = $.trim($('#password2').val());
+
+      if(p1 == '')
+      {
+        $('.error').text('Please Enter a Password.');
+        return;
+      }
+      if(p1.length < 4)
+      {
+        $('.error').text('Password must be at least 4 characters long.');
+        return;
+      }
+      if(p1 != p2)
+      {
+        $('.error').text('Passwords do not match.');
+        return;
+      }
+      updatePassword(p1);
+    return false;
+  });
 
 
   

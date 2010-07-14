@@ -39,6 +39,7 @@ EOD;
     echo addjsfile(UNIX_JS . 'functions.user.js');
     echo addjsfile(UNIX_JS . 'functions.supplement.js');
     echo addjsfile(UNIX_JS . 'functions.profile.js');
+    echo addjsfile(UNIX_JS . 'md5-min.js');
     echo addjsfile(UNIX_THEME . 'js/script.js');
     if (USEGA == true) {
       echo addjsfile(UNIX_JS . 'gacode.js');
