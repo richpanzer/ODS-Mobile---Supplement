@@ -254,7 +254,7 @@ ol.edgetoedge li {
 #startLinks li a span {
   display:block;
   width:105px;
-  background-image:url(img/startLogos.png);
+  background-image:url('img/startLogos.png');
   background-repeat:no-repeat;
 }
 

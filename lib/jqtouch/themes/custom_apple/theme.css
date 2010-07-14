@@ -69,7 +69,7 @@ width:250px
 }
 
 .button,.back,.cancel,.add,.blueButton {
--webkit-border-image: url(img/toolButton.png) 0 5 0 5;
+-webkit-border-image: url('img/toolButton.png') 0 5 0 5;
 background:none;
 border-width:0 5px;
 color:#fff;
@@ -92,11 +92,11 @@ width:auto
 }
 
 .button.active,.back.active,.cancel.active,.add.active {
--webkit-border-image: url(img/toolButton.png) 0 5 0 5;
+-webkit-border-image: url('img/toolButton.png') 0 5 0 5;
 }
 
 .back {
--webkit-border-image: url(img/backButton.png) 0 8 0 14;
+-webkit-border-image: url('img/backButton.png') 0 8 0 14;
 border-width:0 8px 0 14px;
 left:6px;
 max-width:55px;
@@ -127,12 +127,12 @@ text-decoration:inherit
 }
 
 .whiteButton {
--webkit-border-image: url(img/whiteButton.png) 0 12 0 12;
+-webkit-border-image: url('img/whiteButton.png') 0 12 0 12;
 text-shadow:rgba(255, 255, 255, 0.7) 0 1px 0
 }
 
 .grayButton {
--webkit-border-image: url(img/grayButton.png) 0 12 0 12;
+-webkit-border-image: url('img/grayButton.png') 0 12 0 12;
 color:#FFF
 }
 
@@ -173,7 +173,7 @@ li:last-child,li:last-child a {
 
 /* universal arrows */
 ul li.arrow {
-background-image:url(img/chevron.png);
+background-image:url('img/chevron.png');
 background-position:right center;
 background-repeat:no-repeat
 }
@@ -181,7 +181,7 @@ background-repeat:no-repeat
 /* @end
  @group Plastic */
 #plastic ul li.arrow,#metal ul li.arrow {
-background-image:url(img/listArrow.png);
+background-image:url('img/listArrow.png');
 background-position:right center;
 background-repeat:no-repeat
 }
@@ -200,7 +200,7 @@ white-space:nowrap
 }
 
 ul li a.active {
-background:#194fdb url(img/selection.png) 0 0 repeat-x;
+background:#194fdb url('img/selection.png') 0 0 repeat-x;
 color:#fff
 }
 
@@ -301,7 +301,7 @@ text-indent:-2px
 
 ul li select {
 -webkit-appearance:textfield;
-background:transparent url(img/chevron.png) no-repeat 103% 3px;
+background:transparent url('img/chevron.png') no-repeat 103% 3px;
 margin-left:-6px;
 text-indent:0;
 width:104%
@@ -324,7 +324,7 @@ width:246px
 /* @end
  @group Edge to edge */
 .edgetoedge h4 {
-background:#9a9faa url(img/listGroup.png) top left repeat-x;
+background:#9a9faa url('img/listGroup.png') top left repeat-x;
 border-top:1px solid #a5b1ba;
 color:#fff;
 margin:0;
@@ -404,7 +404,7 @@ margin-right:15px
 }
 
 ul.metal li {
-background:url(../images/bgMetal.png) top left repeat-x;
+background:url('../images/bgMetal.png') top left repeat-x;
 border-bottom:1px solid #9c9ea5;
 border-top:1px solid #eee;
 font-size:26px;
@@ -447,7 +447,7 @@ padding-right:0
 }
 
 ul.metal li.arrow {
-background:url(../images/bgMetal.png) top left repeat-x, url(../images/chevron_dg.png) right center no-repeat
+background:url('../images/bgMetal.png') top left repeat-x, url('../images/chevron_dg.png') right center no-repeat
 }
 
 .plastic {
@@ -619,7 +619,7 @@ left:0
 -webkit-border-radius:5px;
 -webkit-tap-highlight-color:rgba(0,0,0,0);
 -webkit-transition:left .15s;
-background:#fff url(img/on_off.png) 0 0 no-repeat;
+background:#fff url('img/on_off.png') 0 0 no-repeat;
 background-color:transparent;
 border:0;
 height:27px;
@@ -633,7 +633,7 @@ width:149px
 
 /* @end */
 .info {
-background:url(img/info.png);
+background:url('img/info.png');
 color:#FFF;
 font-size:16px;
 font-weight:700;
