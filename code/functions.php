@@ -55,12 +55,11 @@ function addjstext($output, $minify=true) {
 
 // Add CSS file to <head> and minify
 function addcssfile($file, $minify=true, $imgPath='/img/') {
-  $minify = false;
   $output = file_get_contents($file);
   $image = dirname($file) . $imgPath;
   $image = str_replace('css/', '', $image);
   $output = str_replace('img/', $image , $output);
-  $output = str_replace(PATH_UNIX, PATH_WEB, $output);
+  $output = str_replace(PATH_UNIX, '', $output);
   if (($minify == true) && (MINIFY == true)) {
     $output = cssmin::minify($output);
   }
