@@ -1,14 +1,1348 @@
 <!doctype html>
-<!-- html manifest="http://192.168.1.10/ODS/iphone3/demo.manifest" lang="en" -->
+<!-- html manifest="/ODS/iPhone3/demo.manifest" lang="en" -->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link rel="shortcut icon" href="http://192.168.1.10/ODS/iphone3/themes/default/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/ODS/iPhone3/themes/default/favicon.ico" type="image/x-icon" />
         <script type="text/javascript" src="phonegap.js" charset="utf-8"></script>
     <title>My DS</title>
-    <style type="text/css" media="screen">*{margin:0;padding:0}a{-webkit-tap-highlight-color:rgba(0,0,0,0)}body{overflow-x:hidden;-webkit-user-select:none;-webkit-text-size-adjust:none;font-family:Helvetica;-webkit-perspective:800;-webkit-transform-style:preserve-3d}.selectable,input,textarea{-webkit-user-select:auto}body>*{-webkit-backface-visibility:hidden;-webkit-box-sizing:border-box;display:none;position:absolute;left:0;width:100%;-webkit-transform:translate3d(0,0,0) rotate(0) scale(1);min-height:420px !important}body.fullscreen>*{min-height:460px !important}body.fullscreen.black-translucent>*{min-height:480px !important}body.landscape>*{min-height:320px}body>.current{display:block !important}.in,.out{-webkit-animation-timing-function:ease-in-out;-webkit-animation-duration:350ms}.slide.in{-webkit-animation-name:slideinfromright}.slide.out{-webkit-animation-name:slideouttoleft}.slide.in.reverse{-webkit-animation-name:slideinfromleft}.slide.out.reverse{-webkit-animation-name:slideouttoright}@-webkit-keyframes slideinfromright{from{-webkit-transform:translateX(100%)}to{-webkit-transform:translateX(0)}}@-webkit-keyframes slideinfromleft{from{-webkit-transform:translateX(-100%)}to{-webkit-transform:translateX(0)}}@-webkit-keyframes slideouttoleft{from{-webkit-transform:translateX(0)}to{-webkit-transform:translateX(-100%)}}@-webkit-keyframes slideouttoright{from{-webkit-transform:translateX(0)}to{-webkit-transform:translateX(100%)}}@-webkit-keyframes fadein{from{opacity:0}to{opacity:1}}@-webkit-keyframes fadeout{from{opacity:1}to{opacity:0}}.fade.in{z-index:10;-webkit-animation-name:fadein}.fade.out{z-index:0}.dissolve.in{-webkit-animation-name:fadein}.dissolve.out{-webkit-animation-name:fadeout}.flip{-webkit-animation-duration:.65s}.flip.in{-webkit-animation-name:flipinfromleft}.flip.out{-webkit-animation-name:flipouttoleft}.flip.in.reverse{-webkit-animation-name:flipinfromright}.flip.out.reverse{-webkit-animation-name:flipouttoright}@-webkit-keyframes flipinfromright{from{-webkit-transform:rotateY(-180deg) scale(.8)}to{-webkit-transform:rotateY(0) scale(1)}}@-webkit-keyframes flipinfromleft{from{-webkit-transform:rotateY(180deg) scale(.8)}to{-webkit-transform:rotateY(0) scale(1)}}@-webkit-keyframes flipouttoleft{from{-webkit-transform:rotateY(0) scale(1)}to{-webkit-transform:rotateY(-180deg) scale(.8)}}@-webkit-keyframes flipouttoright{from{-webkit-transform:rotateY(0) scale(1)}to{-webkit-transform:rotateY(180deg) scale(.8)}}.slideup.in{-webkit-animation-name:slideup;z-index:10}.slideup.out{-webkit-animation-name:dontmove;z-index:0}.slideup.out.reverse{z-index:10;-webkit-animation-name:slidedown}.slideup.in.reverse{z-index:0;-webkit-animation-name:dontmove}@-webkit-keyframes slideup{from{-webkit-transform:translateY(100%)}to{-webkit-transform:translateY(0)}}@-webkit-keyframes slidedown{from{-webkit-transform:translateY(0)}to{-webkit-transform:translateY(100%)}}@-webkit-keyframes dontmove{from{opacity:1}to{opacity:1}}.swap{-webkit-transform:perspective(800);-webkit-animation-duration:.7s}.swap.out{-webkit-animation-name:swapouttoleft}.swap.in{-webkit-animation-name:swapinfromright}.swap.out.reverse{-webkit-animation-name:swapouttoright}.swap.in.reverse{-webkit-animation-name:swapinfromleft}@-webkit-keyframes swapouttoright{0%{-webkit-transform:translate3d(0px,0px,0px) rotateY(0deg);-webkit-animation-timing-function:ease-in-out}50%{-webkit-transform:translate3d(-180px,0px,-400px) rotateY(20deg);-webkit-animation-timing-function:ease-in}100%{-webkit-transform:translate3d(0px,0px,-800px) rotateY(70deg)}}@-webkit-keyframes swapouttoleft{0%{-webkit-transform:translate3d(0px,0px,0px) rotateY(0deg);-webkit-animation-timing-function:ease-in-out}50%{-webkit-transform:translate3d(180px,0px,-400px) rotateY(-20deg);-webkit-animation-timing-function:ease-in}100%{-webkit-transform:translate3d(0px,0px,-800px) rotateY(-70deg)}}@-webkit-keyframes swapinfromright{0%{-webkit-transform:translate3d(0px,0px,-800px) rotateY(70deg);-webkit-animation-timing-function:ease-out}50%{-webkit-transform:translate3d(-180px,0px,-400px) rotateY(20deg);-webkit-animation-timing-function:ease-in-out}100%{-webkit-transform:translate3d(0px,0px,0px) rotateY(0deg)}}@-webkit-keyframes swapinfromleft{0%{-webkit-transform:translate3d(0px,0px,-800px) rotateY(-70deg);-webkit-animation-timing-function:ease-out}50%{-webkit-transform:translate3d(180px,0px,-400px) rotateY(-20deg);-webkit-animation-timing-function:ease-in-out}100%{-webkit-transform:translate3d(0px,0px,0px) rotateY(0deg)}}.cube{-webkit-animation-duration:.55s}.cube.in{-webkit-animation-name:cubeinfromright;-webkit-transform-origin:0% 50%}.cube.out{-webkit-animation-name:cubeouttoleft;-webkit-transform-origin:100% 50%}.cube.in.reverse{-webkit-animation-name:cubeinfromleft;-webkit-transform-origin:100% 50%}.cube.out.reverse{-webkit-animation-name:cubeouttoright;-webkit-transform-origin:0% 50%}@-webkit-keyframes cubeinfromleft{from{-webkit-transform:rotateY(-90deg) translateZ(320px);opacity:.5}to{-webkit-transform:rotateY(0deg) translateZ(0);opacity:1}}@-webkit-keyframes cubeouttoright{from{-webkit-transform:rotateY(0deg) translateX(0);opacity:1}to{-webkit-transform:rotateY(90deg) translateZ(320px);opacity:.5}}@-webkit-keyframes cubeinfromright{from{-webkit-transform:rotateY(90deg) translateZ(320px);opacity:.5}to{-webkit-transform:rotateY(0deg) translateZ(0);opacity:1}}@-webkit-keyframes cubeouttoleft{from{-webkit-transform:rotateY(0deg) translateZ(0);opacity:1}to{-webkit-transform:rotateY(-90deg) translateZ(320px);opacity:.5}}.pop{-webkit-transform-origin:50% 50%}.pop.in{-webkit-animation-name:popin;z-index:10}.pop.out.reverse{-webkit-animation-name:popout;z-index:10}.pop.in.reverse{z-index:0;-webkit-animation-name:dontmove}@-webkit-keyframes popin{from{-webkit-transform:scale(.2);opacity:0}to{-webkit-transform:scale(1);opacity:1}}@-webkit-keyframes popout{from{-webkit-transform:scale(1);opacity:1}to{-webkit-transform:scale(.2);opacity:0}}body{background:#000}body>*{background:-webkit-gradient( linear,left bottom,left top,color-stop(0.6,rgb(233,226,193)),color-stop(0.2,rgb(222,209,158)) )}h1,h2{color:#5d1b4f;font:bold 18px Helvetica;margin:10px 20px 6px;text-shadow:rgba(255,255,255,.2) 0 1px 1px}h3,h4{color:#5d1b4f;font:bold 14px Helvetica;margin:10px 20px 6px;text-shadow:rgba(255,255,255,.2) 0 1px 1px}h5,h6{color:#5d1b4f;font:bold 12px Helvetica;margin:10px 20px 6px;text-shadow:rgba(255,255,255,.2) 0 1px 1px}.toolbar{-webkit-box-sizing:border-box;background:transparent;height:45px;padding:10px;position:relative}.black-translucent .toolbar{margin-top:20px}.toolbar>h1,.toolbar>h2,.toolbar>h3,.toolbar h4{color:#515d14;font-size:16px;font-weight:700;height:40px;left:50%;line-height:40px;padding:0;margin:1px 0 0 -75px;overflow:hidden;position:absolute;text-align:center;text-overflow:ellipsis;top:0px;white-space:nowrap;width:150px}.toolbar>h3,.toolbar>h4{font-size:13px}body.landscape .toolbar>h1{margin-left:-125px;width:250px}.button,.back,.cancel,.add,.blueButton{-webkit-border-image:url(http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/toolButton.png) 0 5 0 5;background:none;border-width:0 5px;color:#fff;font-family:inherit;font-size:12px;font-weight:700;height:30px;line-height:30px;margin:0;overflow:hidden;padding:0 3px;position:absolute;right:6px;text-decoration:none;text-overflow:ellipsis;text-shadow:rgba(0,0,0,0.5) 2px 0 0;top:8px;white-space:nowrap;width:auto}.button.active,.back.active,.cancel.active,.add.active{-webkit-border-image:url(http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/toolButton.png) 0 5 0 5}.back{-webkit-border-image:url(http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/backButton.png) 0 8 0 14;border-width:0 8px 0 14px;left:6px;max-width:55px;padding:0;right:auto}.blueButton,.leftbutton,.cancel{left:6px;right:auto}.add{font-size:24px;font-weight:700;line-height:24px}.whiteButton,.grayButton{border-width:0 12px;color:inherit;display:block;font-size:20px;font-weight:700;padding:10px;text-align:center;text-decoration:inherit}.whiteButton{-webkit-border-image:url(http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/whiteButton.png) 0 12 0 12;text-shadow:rgba(255,255,255,0.7) 0 1px 0}.grayButton{-webkit-border-image:url(http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/grayButton.png) 0 12 0 12;color:#FFF}h1+ul,h2+ul,h3+ul,h4+ul,h5+ul,h6+ul{margin-top:0}ul{-webkit-border-radius:8px;background:#fff;border:1px solid #999;color:#5d1b4f;font:bold 17px Helvetica;margin:10px;padding:0}ul li{border-top:1px solid #999;color:#5d1b4f;list-style-type:none;padding:10px}li:first-child,li:first-child a{-webkit-border-top-left-radius:8px;-webkit-border-top-right-radius:8px;border-top:0}li:last-child,li:last-child a{-webkit-border-bottom-left-radius:8px;-webkit-border-bottom-right-radius:8px}ul li.arrow{background-image:url(http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/chevron.png);background-position:right center;background-repeat:no-repeat}#plastic ul li.arrow,#metal ul li.arrow{background-image:url(http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/listArrow.png);background-position:right center;background-repeat:no-repeat}ul li a,li.img a+a{-webkit-tap-highlight-color:rgba(0,0,0,0);color:#5d1b4f;display:block;margin:-10px;overflow:hidden;padding:12px 10px;text-decoration:none;text-overflow:ellipsis;white-space:nowrap}ul li a.active{background:#194fdb url(http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/selection.png) 0 0 repeat-x;color:#fff}ul li a.button{background-color:#194fdb;color:#fff}ul li.img a+a{font-size:17px;font-weight:700;margin:-10px 10px -20px -5px}ul li.img a+a+a{font-size:14px;font-weight:400;margin-bottom:-10px;margin-left:-10px;margin-top:0}ul li.img a+small+a{margin-left:-5px}ul li.img a+small+a+a{font-size:14px;font-weight:400;margin-bottom:-10px;margin-left:-10px;margin-top:-20px}ul li.img a+small+a+a+a{margin-bottom:0;margin-left:0 !important}ul li a+a{color:#5d1b4f;display:block;font:14px Helvetica;margin:0;overflow:hidden;padding:0;text-overflow:ellipsis;white-space:nowrap}ul li a+a+a,ul li.img a+a+a+a,ul li.img a+small+a+a+a{color:#555;display:block;font:13px Helvetica;margin:0;overflow:hidden;padding:0;text-overflow:ellipsis;white-space:nowrap}ul.form li{padding:7px 10px}ul.form li.error{border:2px solid red}ul.form li.error+li.error{border-top:0}ul.form li:hover{background:#fff}ul li input[type="text"],ul li input[type="password"],ul li textarea,ul li select{-webkit-appearance:textarea;background:#fff;border:0;color:#555;display:inline-block;font:normal 17px Helvetica;margin-left:0;padding:0;width:100%}ul li textarea{height:120px;padding:0;text-indent:-2px}ul li select{-webkit-appearance:textfield;background:transparent url(http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/chevron.png) no-repeat 103% 3px;margin-left:-6px;text-indent:0;width:104%}ul li input[type="checkbox"],ul li input[type="radio"]{color:#5d1b4f;margin:0;padding:10px}ul li input[type="checkbox"]:after,ul li input[type="radio"]:after{content:attr(title);display:block;font:17px Helvetica;margin:-12px 0 0 17px;width:246px}.edgetoedge h4{background:#9a9faa url(http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/listGroup.png) top left repeat-x;border-top:1px solid #a5b1ba;color:#fff;margin:0;padding:2px 10px;text-shadow:#666 0 1px 0}.edgetoedge,.metal{background-color:#fff;margin:0;padding:0}ul.edgetoedge,ul.metal,ul.plastic ul{-webkit-border-radius:0;border-left:0;border-right:0;border-top:0;margin:0}ul.metal{background:#b4b4b4;border-bottom:0;border-top:0}ul.edgetoedge li small{font-size:16px;line-height:28px}.edgetoedge li em{font-style:normal;font-weight:400}.edgetoedge h4+ul{border-bottom:1px solid #717d85;border-top:1px solid #989ea4}ul li small{color:#5d1b4f;display:block;float:right;font:17px Helvetica;overflow:hidden;padding:3px 0;text-align:right;text-overflow:ellipsis;white-space:nowrap;width:23%}ul li.arrow small{padding:0 15px}ul li small.counter{-webkit-border-radius:11px;background:#9a9faa;color:#fff;display:inline !important;font-size:17px !important;font-weight:700;line-height:13px !important;margin-top:-22px;padding:4px 10px 5px;width:auto}ul li.arrow small.counter{margin-right:15px}ul.metal li{background:url(../images/bgMetal.png) top left repeat-x;border-bottom:1px solid #9c9ea5;border-top:1px solid #eee;font-size:26px;text-shadow:#fff 0 1px 0}ul.metal li a{line-height:26px;margin:0;padding:13px 0}ul.metal li a:hover{color:#5d1b4f}ul.metal li:hover small{color:inherit}ul.metal li a em{color:#5d1b4f;display:block;font-size:14px;font-style:normal;line-height:14px;width:50%}ul.metal li small{float:right;font-weight:700;margin-top:10px;position:relative}ul.metal li.arrow a small{line-height:17px;padding-right:0}ul.metal li.arrow{background:url(../images/bgMetal.png) top left repeat-x,url(../images/chevron_dg.png) right center no-repeat}.plastic{background:#adadad;margin:0;padding:0}.plastic ul{-webkit-border-radius:0;background-color:#999;border-left:0;border-right:0;border-top:0;margin:0}.plastic ul li{-webkit-border-radius:0;border-bottom:1px solid #9d9d9d;border-top:1px solid #bfbfbf}.plastic ul li:nth-child(odd){background-color:#989898;border-bottom:1px solid #8a8a8a;border-top:1px solid #b5b5b5}.plastic ul+p{color:#2f3237;font-size:11px;padding:10px;text-shadow:none}.plastic ul+p strong{font-size:14px;line-height:18px;text-shadow:#fff 0 1px 0}.plastic ul li a{text-shadow:#d3d3d3 0 1px 0}.plastic ul li:nth-child(odd) a{text-shadow:#bfbfbf 0 1px 0}.plastic ul li small{color:#5d1b4f;font-size:13px;font-weight:700;line-height:24px;text-shadow:#d3d3d3 0 1px 0;text-transform:uppercase}#plastic ul.minibanner,#plastic ul.bigbanner{border:0;clear:both;height:81px;margin:10px}#plastic ul.bigbanner{height:140px !important}#plastic ul.minibanner li{-webkit-border-radius:5px;background-color:#989898;border:1px solid #8a8a8a;float:left;height:81px;padding:0;width:145px}#plastic ul.bigbanner li{-webkit-border-radius:5px;background-color:#989898;border:1px solid #8a8a8a;float:left;height:140px;margin-bottom:4px;padding:0;width:296px}#plastic ul.minibanner li:first-child{margin-right:6px}#plastic ul.minibanner li a{color:transparent;display:block;height:81px;text-shadow:none;width:145px}#plastic ul.bigbanner li a{color:transparent;display:block;height:145px;text-shadow:none;width:296px}ul.individual{background:none;border:0;clear:both;overflow:hidden}ul.individual li{-webkit-border-radius:8px;-webkit-box-sizing:border-box;background:#FFF;border:1px solid #b4b4b4;color:#777;display:block;float:left;font-size:14px;padding:11px 10px 14px;text-align:center;width:48%}ul.individual li+li{float:right}ul.individual li a{-webkit-border-radius:8px;color:#5d1b4f;line-height:16px;margin:-11px -10px -14px;padding:11px 10px 14px}ul.individual li a:hover{background:#5d1b4f;color:#fff}.toggle{display:block;float:right;height:27px;overflow:hidden;position:relative;width:94px}.toggle input[type="checkbox"]:checked{left:0}.toggle input[type="checkbox"]{-webkit-appearance:textarea;-webkit-border-radius:5px;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-transition:left .15s;background:#fff url(http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/on_off.png) 0 0 no-repeat;background-color:transparent;border:0;height:27px;left:-55px;margin:0;overflow:hidden;position:absolute;top:0;width:149px}.info{background:url(http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/info.png);color:#FFF;font-size:16px;font-weight:700;height:34px;line-height:34px;padding:0 15px;overflow:hidden;text-align:center;text-shadow:rgba(0,0,0,.5) 1px 0}ul.edgetoedge li:first-child,ul.edgetoedge li:first-child a,ul.edgetoedge li:last-child,ul.edgetoedge li:last-child a,ul.metal li:first-child a,ul.metal li:last-child a,.edgetoedge li,.metal li{-webkit-border-radius:0}body .thisisapage{overflow:hidden;width:320px}body .inner-has-bottomtools{min-height:350px}body .has-big-bottomtools{min-height:325px}br.reset{clear:both}div.content{color:#000;margin:10px}div.content p{color:#000;padding:5px 0}div.content li{color:#FFF;font-weight:400;padding:5px 0}.heading{-webkit-box-sizing:border-box;background:url('http://192.168.1.10/ODS/iphone3/themes/default/img/heading.png') repeat-x;height:45px;padding:0;position:relative}.smallHeading{font-size:12px}.toolbar_bottom,.footerIcons,.toolbar_bottom li,.toolbar_bottom li a,.toolbar_bottom a{-webkit-border-radius:0;border:none;background:none;display:block;font-size:10px;margin:0;overflow:hidden;color:#FFF;padding:0;width:100%}.toolbar_bottom li{background:none;float:left;text-align:center}.footerLogos ul{width:100%;margin:0 auto;border:none;background:none;text-align:center}.footerLogos li{width:105px;padding:0;margin:0;overflow:hidden;background:0;border:none;-webkit-border-radius:0;float:left}.footerLogos li.last{width:66%}.footerIcons{background:-webkit-gradient( linear,left bottom,left top,color-stop(0.85,rgb(103,119,25)),color-stop(0.02,rgb(65,74,16)) );height:66px}.footerIcons li{text-align:center;width:20%}.footerIcons li a{display:block;height:66px;width:100%;padding:0;margin:0}.footerIcons li a span{background-image:url('http://192.168.1.10/ODS/iphone3/themes/default/img/footerIcons.png');background-repeat:no-repeat;display:block;margin:16px auto 0;height:29px}.footer1{width:27px}.footer2{width:28px;background-position:-27px 0}.footer3{width:24px;background-position:-55px 0}.footer4{width:43px;background-position:-79px 0}.footer5{width:26px;background-position:-122px 0}#emailContent li{background:#FFF;font-size:17px;font-weight:500}label{display:inline-block;width:35%;margin-right:3.5%}.haslabel,#amount,#amount_update,#supplement_update{display:inline-block !important;width:60%}select.haslabel{float:right}input.haslabel{padding:0 !important;margin:0 !important;position:relative;left:-2.0%}.haslabel-width1{display:inline-block !important;width:30%;position:relative;left:3.5%}.weight500{font-weight:500}ol.edgetoedge{list-style-type:decimal !important;padding:10px 10px 10px 30px;margin:0;border-bottom:1px solid #999}ol.edgetoedge li{list-style-type:decimal !important;padding:5px 0;text-indent:0}#supName{text-align:center}.errorMsg{color:#A00}.minHeight250{display:block;min-height:250px}.min400{display:block;min-height:400px}#accordion .expandable{overflow:hidden}#accordion h2{background:-webkit-gradient( linear,left bottom,left top,color-stop(0.2,rgb(64,2,52)),color-stop(0.8,rgb(104,36,90)) );color:#FFF;font-weight:700;margin:0;padding:8px 10px;font-size:16px;text-shadow:rgba(0,0,0,0.4) 0 -1.5px 0;cursor:pointer}#startLinks{border:0;width:317px;margin:7px auto}#startLinks,#startLinks li{padding:0}#startLinks li{width:105px;height:95px;float:left;overflow:hidden;font-size:12px;border:0;-webkit-border-radius:0}#startLinks li a{display:block;height:75px;padding-top:20px;text-align:center}#startLinks li.borderSides{border-left:1px solid #dbcd9c;border-right:1px solid #dbcd9c}#startLinks li.borderTopSides{border:1px solid #dbcd9c;border-bottom:none}#startLinks li.borderTop{border-top:1px solid #dbcd9c}#startLinks li a span{display:block;width:105px;background-image:url(http://192.168.1.10/ODS/iphone3/themes/default/img/startLogos.png);background-repeat:no-repeat}.start1{height:37px;margin:6px 0 7px;background-position:center 0}.start2{height:37px;margin:6px 0 7px;background-position:center -37px}.start3{height:30px;margin:10px 0;background-position:center -74px}.start4{height:40px;margin:5px 0;background-position:center -104px}.start5{height:40px;margin:5px 0;background-position:center -143px}.start6{height:27px;margin:11px 0 12px;background-position:center -184px}.start7{height:39px;margin:5px 0 6px;background-position:center -211px}.start8{height:21px;margin:14px 0 15px;background-position:center -250px}.start9{height:37px;margin:6px 0 7px;background-position:center -271px}.error{color:red;padding:0 10px}.success{color:green;padding:0 10px}</style>  </head>
+    <style type="text/css" media="screen">* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-user-select: none;
+    -webkit-text-size-adjust: none;
+    font-family: Helvetica;
+    -webkit-perspective: 800;
+    -webkit-transform-style: preserve-3d;
+}
+.selectable, input, textarea {
+    -webkit-user-select: auto;
+}
+body > * {
+    -webkit-backface-visibility: hidden;
+    -webkit-box-sizing: border-box;
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translate3d(0,0,0) rotate(0) scale(1);
+    min-height: 420px !important;
+}
+body.fullscreen > * {
+    min-height: 460px !important;
+}
+body.fullscreen.black-translucent > * {
+    min-height: 480px !important;
+}
+body.landscape > * {
+    min-height: 320px;
+}
+body > .current {
+    display: block !important;
+}
+
+.in, .out {
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 350ms;
+}
+
+.slide.in {
+	-webkit-animation-name: slideinfromright;
+}
+
+.slide.out {
+	-webkit-animation-name: slideouttoleft;
+}
+
+.slide.in.reverse {
+	-webkit-animation-name: slideinfromleft;
+}
+
+.slide.out.reverse {
+	-webkit-animation-name: slideouttoright;
+}
+
+@-webkit-keyframes slideinfromright {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(0); }
+}
+
+@-webkit-keyframes slideinfromleft {
+    from { -webkit-transform: translateX(-100%); }
+    to { -webkit-transform: translateX(0); }
+}
+
+@-webkit-keyframes slideouttoleft {
+    from { -webkit-transform: translateX(0); }
+    to { -webkit-transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slideouttoright {
+    from { -webkit-transform: translateX(0); }
+    to { -webkit-transform: translateX(100%); }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade.in {
+	z-index: 10;
+	-webkit-animation-name: fadein;
+}
+.fade.out {
+	z-index: 0;
+}
+
+.dissolve.in {
+	-webkit-animation-name: fadein;
+}
+
+.dissolve.out {
+	-webkit-animation-name: fadeout;	
+}
+
+
+
+.flip {
+	-webkit-animation-duration: .65s;
+}
+
+.flip.in {
+	-webkit-animation-name: flipinfromleft;
+}
+
+.flip.out {
+	-webkit-animation-name: flipouttoleft;
+}
+
+/* Shake it all about */
+
+.flip.in.reverse {
+	-webkit-animation-name: flipinfromright;
+}
+
+.flip.out.reverse {
+	-webkit-animation-name: flipouttoright;
+}
+
+@-webkit-keyframes flipinfromright {
+    from { -webkit-transform: rotateY(-180deg) scale(.8); }
+    to { -webkit-transform: rotateY(0) scale(1); }
+}
+
+@-webkit-keyframes flipinfromleft {
+    from { -webkit-transform: rotateY(180deg) scale(.8); }
+    to { -webkit-transform: rotateY(0) scale(1); }
+}
+
+@-webkit-keyframes flipouttoleft {
+    from { -webkit-transform: rotateY(0) scale(1); }
+    to { -webkit-transform: rotateY(-180deg) scale(.8); }
+}
+
+@-webkit-keyframes flipouttoright {
+    from { -webkit-transform: rotateY(0) scale(1); }
+    to { -webkit-transform: rotateY(180deg) scale(.8); }
+}
+
+.slideup.in {
+	-webkit-animation-name: slideup;
+	z-index: 10;
+}
+
+.slideup.out {
+	-webkit-animation-name: dontmove;
+	z-index: 0;
+}
+
+.slideup.out.reverse {
+	z-index: 10;
+	-webkit-animation-name: slidedown;
+}
+
+.slideup.in.reverse {
+	z-index: 0;
+	-webkit-animation-name: dontmove;
+}
+
+
+@-webkit-keyframes slideup {
+    from { -webkit-transform: translateY(100%); }
+    to { -webkit-transform: translateY(0); }
+}
+
+@-webkit-keyframes slidedown {
+    from { -webkit-transform: translateY(0); }
+    to { -webkit-transform: translateY(100%); }
+}
+
+
+
+/* Hackish, but reliable. */
+
+@-webkit-keyframes dontmove {
+    from { opacity: 1; }
+    to { opacity: 1; }
+}
+
+.swap {
+	-webkit-transform: perspective(800);
+	-webkit-animation-duration: .7s;
+}
+.swap.out {
+	-webkit-animation-name: swapouttoleft;
+}
+.swap.in {
+	-webkit-animation-name: swapinfromright;
+}
+.swap.out.reverse {
+	-webkit-animation-name: swapouttoright;
+}
+.swap.in.reverse {
+	-webkit-animation-name: swapinfromleft;
+}
+
+
+@-webkit-keyframes swapouttoright {
+    0% {
+        -webkit-transform: translate3d(0px, 0px, 0px) rotateY(0deg);
+        -webkit-animation-timing-function: ease-in-out;
+    }
+    50% {
+        -webkit-transform: translate3d(-180px, 0px, -400px) rotateY(20deg);
+        -webkit-animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform:  translate3d(0px, 0px, -800px) rotateY(70deg);
+    }
+}
+
+@-webkit-keyframes swapouttoleft {
+    0% {
+        -webkit-transform: translate3d(0px, 0px, 0px) rotateY(0deg);
+        -webkit-animation-timing-function: ease-in-out;
+    }
+    50% {
+        -webkit-transform:  translate3d(180px, 0px, -400px) rotateY(-20deg);
+        -webkit-animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: translate3d(0px, 0px, -800px) rotateY(-70deg);
+    }
+}
+
+@-webkit-keyframes swapinfromright {
+    0% {
+        -webkit-transform: translate3d(0px, 0px, -800px) rotateY(70deg);
+        -webkit-animation-timing-function: ease-out;
+    }
+    50% {
+        -webkit-transform: translate3d(-180px, 0px, -400px) rotateY(20deg);
+        -webkit-animation-timing-function: ease-in-out;
+    }
+    100% {
+        -webkit-transform: translate3d(0px, 0px, 0px) rotateY(0deg);
+    }
+}
+
+@-webkit-keyframes swapinfromleft {
+    0% {
+        -webkit-transform: translate3d(0px, 0px, -800px) rotateY(-70deg);
+        -webkit-animation-timing-function: ease-out;
+    }
+    50% {
+        -webkit-transform: translate3d(180px, 0px, -400px) rotateY(-20deg);
+        -webkit-animation-timing-function: ease-in-out;
+    }
+    100% {
+        -webkit-transform: translate3d(0px, 0px, 0px) rotateY(0deg);
+    }
+}
+
+.cube {
+    -webkit-animation-duration: .55s;
+}
+
+.cube.in {
+	-webkit-animation-name: cubeinfromright;
+    -webkit-transform-origin: 0% 50%;
+}
+.cube.out {
+	-webkit-animation-name: cubeouttoleft;
+    -webkit-transform-origin: 100% 50%;
+}
+.cube.in.reverse {
+	-webkit-animation-name: cubeinfromleft;	
+    -webkit-transform-origin: 100% 50%;
+}
+.cube.out.reverse {
+	-webkit-animation-name: cubeouttoright;
+    -webkit-transform-origin: 0% 50%;
+
+}
+
+@-webkit-keyframes cubeinfromleft {
+	from {
+        -webkit-transform: rotateY(-90deg) translateZ(320px);
+        opacity: .5;
+	}
+    to {
+        -webkit-transform: rotateY(0deg) translateZ(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes cubeouttoright {
+    from {
+        -webkit-transform: rotateY(0deg) translateX(0);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: rotateY(90deg) translateZ(320px);
+        opacity: .5;
+    }
+}
+@-webkit-keyframes cubeinfromright {
+    from {
+        -webkit-transform: rotateY(90deg) translateZ(320px);
+        opacity: .5;
+    }
+    to {
+        -webkit-transform: rotateY(0deg) translateZ(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes cubeouttoleft {
+    from {
+        -webkit-transform: rotateY(0deg) translateZ(0);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: rotateY(-90deg) translateZ(320px);
+        opacity: .5;
+    }
+}
+
+
+
+
+.pop {
+	-webkit-transform-origin: 50% 50%;
+}
+
+.pop.in {
+	-webkit-animation-name: popin;
+	z-index: 10;
+}
+
+.pop.out.reverse {
+	-webkit-animation-name: popout;
+	z-index: 10;
+}
+
+.pop.in.reverse {
+	z-index: 0;
+	-webkit-animation-name: dontmove;
+}
+
+@-webkit-keyframes popin {
+    from {
+        -webkit-transform: scale(.2);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes popout {
+    from {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: scale(.2);
+        opacity: 0;
+    }
+}body {
+background:#000
+}
+
+body > * {
+  background:-webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.6, rgb(233,226,193)),
+    color-stop(0.2, rgb(222,209,158))
+    );
+}
+
+h1,h2 {
+color:#5d1b4f;
+font:bold 18px Helvetica;
+margin:10px 20px 6px;
+text-shadow:rgba(255,255,255,.2) 0 1px 1px
+}
+h3,h4 {
+color:#5d1b4f;
+font:bold 14px Helvetica;
+margin:10px 20px 6px;
+text-shadow:rgba(255,255,255,.2) 0 1px 1px
+}
+h5,h6 {
+color:#5d1b4f;
+font:bold 12px Helvetica;
+margin:10px 20px 6px;
+text-shadow:rgba(255,255,255,.2) 0 1px 1px
+}
+
+/* @group Toolbar */
+.toolbar {
+-webkit-box-sizing:border-box;
+background:transparent;
+height:45px;
+padding:10px;
+position:relative
+}
+
+.black-translucent .toolbar {
+margin-top:20px
+}
+
+.toolbar > h1, .toolbar > h2, .toolbar > h3, .toolbar h4 {
+color:#515d14;
+font-size:16px;
+font-weight:700;
+height:40px;
+left:50%;
+line-height:40px;
+padding:0;
+margin:1px 0 0 -75px;
+overflow:hidden;
+position:absolute;
+text-align:center;
+text-overflow:ellipsis;
+top:0px;
+white-space:nowrap;
+width:150px
+}
+.toolbar > h3, .toolbar > h4 {font-size:13px}
+
+body.landscape .toolbar > h1 {
+margin-left:-125px;
+width:250px
+}
+
+.button,.back,.cancel,.add,.blueButton {
+-webkit-border-image: url(/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/toolButton.png) 0 5 0 5;
+background:none;
+border-width:0 5px;
+color:#fff;
+font-family:inherit;
+font-size:12px;
+font-weight:700;
+height:30px;
+line-height:30px;
+margin:0;
+overflow:hidden;
+padding:0 3px;
+position:absolute;
+right:6px;
+text-decoration:none;
+text-overflow:ellipsis;
+text-shadow:rgba(0, 0, 0, 0.5) 2px 0 0;
+top:8px;
+white-space:nowrap;
+width:auto
+}
+
+.button.active,.back.active,.cancel.active,.add.active {
+-webkit-border-image: url(/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/toolButton.png) 0 5 0 5;
+}
+
+.back {
+-webkit-border-image: url(/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/backButton.png) 0 8 0 14;
+border-width:0 8px 0 14px;
+left:6px;
+max-width:55px;
+padding:0;
+right:auto
+}
+
+.blueButton,.leftbutton,.cancel {
+left:6px;
+right:auto
+}
+
+.add {
+font-size:24px;
+font-weight:700;
+line-height:24px
+}
+
+.whiteButton,.grayButton {
+border-width:0 12px;
+color:inherit;
+display:block;
+font-size:20px;
+font-weight:700;
+padding:10px;
+text-align:center;
+text-decoration:inherit
+}
+
+.whiteButton {
+-webkit-border-image: url(/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/whiteButton.png) 0 12 0 12;
+text-shadow:rgba(255, 255, 255, 0.7) 0 1px 0
+}
+
+.grayButton {
+-webkit-border-image: url(/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/grayButton.png) 0 12 0 12;
+color:#FFF
+}
+
+/* @end
+ @group Lists */
+h1 + ul,h2 + ul,h3 + ul,h4 + ul,h5 + ul,h6 + ul {
+margin-top:0
+}
+
+ul {
+-webkit-border-radius:8px;
+background:#fff;
+border:1px solid #999;
+color:#5d1b4f;
+font:bold 17px Helvetica;
+margin:10px;
+padding:0
+}
+
+ul li {
+border-top:1px solid #999;
+color:#5d1b4f;
+list-style-type:none;
+padding:10px
+}
+
+/* when you have a first LI item on any list */
+li:first-child,li:first-child a {
+-webkit-border-top-left-radius:8px;
+-webkit-border-top-right-radius:8px;
+border-top:0
+}
+
+li:last-child,li:last-child a {
+-webkit-border-bottom-left-radius:8px;
+-webkit-border-bottom-right-radius:8px
+}
+
+/* universal arrows */
+ul li.arrow {
+background-image:url(/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/chevron.png);
+background-position:right center;
+background-repeat:no-repeat
+}
+
+/* @end
+ @group Plastic */
+#plastic ul li.arrow,#metal ul li.arrow {
+background-image:url(/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/listArrow.png);
+background-position:right center;
+background-repeat:no-repeat
+}
+
+/* universal links on list */
+ul li a,li.img a + a {
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+color:#5d1b4f;
+display:block;
+margin:-10px;
+overflow:hidden;
+padding:12px 10px;
+text-decoration:none;
+text-overflow:ellipsis;
+white-space:nowrap
+}
+
+ul li a.active {
+background:#194fdb url(/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/selection.png) 0 0 repeat-x;
+color:#fff
+}
+
+ul li a.button {
+background-color:#194fdb;
+color:#fff
+}
+
+ul li.img a + a {
+font-size:17px;
+font-weight:700;
+margin:-10px 10px -20px -5px
+}
+
+ul li.img a + a + a {
+font-size:14px;
+font-weight:400;
+margin-bottom:-10px;
+margin-left:-10px;
+margin-top:0
+}
+
+ul li.img a + small + a {
+margin-left:-5px
+}
+
+ul li.img a + small + a + a {
+font-size:14px;
+font-weight:400;
+margin-bottom:-10px;
+margin-left:-10px;
+margin-top:-20px
+}
+
+ul li.img a + small + a + a + a {
+margin-bottom:0;
+margin-left:0 !important
+}
+
+ul li a + a {
+color:#5d1b4f;
+display:block;
+font:14px Helvetica;
+margin:0;
+overflow:hidden;
+padding:0;
+text-overflow:ellipsis;
+white-space:nowrap
+}
+
+ul li a + a + a,ul li.img a + a + a + a,ul li.img a + small + a + a + a {
+color:#555;
+display:block;
+font:13px Helvetica;
+margin:0;
+overflow:hidden;
+padding:0;
+text-overflow:ellipsis;
+white-space:nowrap
+}
+
+/*
+@end
+ @group Forms */
+ul.form li {
+padding:7px 10px
+}
+
+ul.form li.error {
+border:2px solid red
+}
+
+ul.form li.error + li.error {
+border-top:0
+}
+
+ul.form li:hover {
+background:#fff
+}
+
+ul li input[type="text"],ul li input[type="password"],ul li textarea,ul li select {
+-webkit-appearance:textarea;
+background:#fff;
+border:0;
+color:#555;
+display:inline-block;
+font:normal 17px Helvetica;
+margin-left:0;
+padding:0;
+width:100%
+}
+
+ul li textarea {
+height:120px;
+padding:0;
+text-indent:-2px
+}
+
+ul li select {
+-webkit-appearance:textfield;
+background:transparent url(/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/chevron.png) no-repeat 103% 3px;
+margin-left:-6px;
+text-indent:0;
+width:104%
+}
+
+ul li input[type="checkbox"],ul li input[type="radio"] {
+color:#5d1b4f;
+margin:0;
+padding:10px
+}
+
+ul li input[type="checkbox"]:after,ul li input[type="radio"]:after {
+content:attr(title);
+display:block;
+font:17px Helvetica;
+margin:-12px 0 0 17px;
+width:246px
+}
+
+/* @end
+ @group Edge to edge */
+.edgetoedge h4 {
+background:#9a9faa url(/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/listGroup.png) top left repeat-x;
+border-top:1px solid #a5b1ba;
+color:#fff;
+margin:0;
+padding:2px 10px;
+text-shadow:#666 0 1px 0
+}
+
+.edgetoedge,.metal {
+background-color:#fff;
+margin:0;
+padding:0
+}
+
+ul.edgetoedge,ul.metal,ul.plastic ul {
+-webkit-border-radius:0;
+border-left:0;
+border-right:0;
+border-top:0;
+margin:0
+}
+
+ul.metal {
+background:#b4b4b4;
+border-bottom:0;
+border-top:0
+}
+
+ul.edgetoedge li small {
+font-size:16px;
+line-height:28px
+}
+
+.edgetoedge li em {
+font-style:normal;
+font-weight:400
+}
+
+.edgetoedge h4 + ul {
+border-bottom:1px solid #717d85;
+border-top:1px solid #989ea4
+}
+
+/* @end
+ @group Mini Label */
+ul li small {
+color:#5d1b4f;
+display:block;
+float:right;
+font:17px Helvetica;
+overflow:hidden;
+padding:3px 0;
+text-align:right;
+text-overflow:ellipsis;
+white-space:nowrap;
+width:23%
+}
+
+ul li.arrow small {
+padding:0 15px
+}
+
+ul li small.counter {
+-webkit-border-radius:11px;
+background:#9a9faa;
+color:#fff;
+display:inline !important;
+font-size:17px !important;
+font-weight:700;
+line-height:13px !important;
+margin-top:-22px;
+padding:4px 10px 5px;
+width:auto
+}
+
+ul li.arrow small.counter {
+margin-right:15px
+}
+
+ul.metal li {
+background:url(../images/bgMetal.png) top left repeat-x;
+border-bottom:1px solid #9c9ea5;
+border-top:1px solid #eee;
+font-size:26px;
+text-shadow:#fff 0 1px 0
+}
+
+ul.metal li a {
+line-height:26px;
+margin:0;
+padding:13px 0
+}
+
+ul.metal li a:hover {
+color:#5d1b4f
+}
+
+ul.metal li:hover small {
+color:inherit
+}
+
+ul.metal li a em {
+color:#5d1b4f;
+display:block;
+font-size:14px;
+font-style:normal;
+line-height:14px;
+width:50%
+}
+
+ul.metal li small {
+float:right;
+font-weight:700;
+margin-top:10px;
+position:relative
+}
+
+ul.metal li.arrow a small {
+line-height:17px;
+padding-right:0
+}
+
+ul.metal li.arrow {
+background:url(../images/bgMetal.png) top left repeat-x, url(../images/chevron_dg.png) right center no-repeat
+}
+
+.plastic {
+background:#adadad;
+margin:0;
+padding:0
+}
+
+.plastic ul {
+-webkit-border-radius:0;
+background-color:#999;
+border-left:0;
+border-right:0;
+border-top:0;
+margin:0
+}
+
+.plastic ul li {
+-webkit-border-radius:0;
+border-bottom:1px solid #9d9d9d;
+border-top:1px solid #bfbfbf
+}
+
+.plastic ul li:nth-child(odd) {
+background-color:#989898;
+border-bottom:1px solid #8a8a8a;
+border-top:1px solid #b5b5b5
+}
+
+.plastic ul + p {
+color:#2f3237;
+font-size:11px;
+padding:10px;
+text-shadow:none
+}
+
+.plastic ul + p strong {
+font-size:14px;
+line-height:18px;
+text-shadow:#fff 0 1px 0
+}
+
+.plastic ul li a {
+text-shadow:#d3d3d3 0 1px 0
+}
+
+.plastic ul li:nth-child(odd) a {
+text-shadow:#bfbfbf 0 1px 0
+}
+
+.plastic ul li small {
+color:#5d1b4f;
+font-size:13px;
+font-weight:700;
+line-height:24px;
+text-shadow:#d3d3d3 0 1px 0;
+text-transform:uppercase
+}
+
+#plastic ul.minibanner,#plastic ul.bigbanner {
+border:0;
+clear:both;
+height:81px;
+margin:10px
+}
+
+#plastic ul.bigbanner {
+height:140px !important
+}
+
+#plastic ul.minibanner li {
+-webkit-border-radius:5px;
+background-color:#989898;
+border:1px solid #8a8a8a;
+float:left;
+height:81px;
+padding:0;
+width:145px
+}
+
+#plastic ul.bigbanner li {
+-webkit-border-radius:5px;
+background-color:#989898;
+border:1px solid #8a8a8a;
+float:left;
+height:140px;
+margin-bottom:4px;
+padding:0;
+width:296px
+}
+
+#plastic ul.minibanner li:first-child {
+margin-right:6px
+}
+
+#plastic ul.minibanner li a {
+color:transparent;
+display:block;
+height:81px;
+text-shadow:none;
+width:145px
+}
+
+#plastic ul.bigbanner li a {
+color:transparent;
+display:block;
+height:145px;
+text-shadow:none;
+width:296px
+}
+
+/* @end
+ @group Individual */
+ul.individual {
+background:none;
+border:0;
+clear:both;
+overflow:hidden
+}
+
+ul.individual li {
+-webkit-border-radius:8px;
+-webkit-box-sizing:border-box;
+background:#FFF;
+border:1px solid #b4b4b4;
+color:#777;
+display:block;
+float:left;
+font-size:14px;
+padding:11px 10px 14px;
+text-align:center;
+width:48%
+}
+
+ul.individual li + li {
+float:right
+}
+
+ul.individual li a {
+-webkit-border-radius:8px;
+color:#5d1b4f;
+line-height:16px;
+margin:-11px -10px -14px;
+padding:11px 10px 14px
+}
+
+ul.individual li a:hover {
+background:#5d1b4f;
+color:#fff
+}
+
+/* @end
+ @group Toggle */
+.toggle {
+display:block;
+float:right;
+height:27px;
+overflow:hidden;
+position:relative;
+width:94px
+}
+
+.toggle input[type="checkbox"]:checked {
+left:0
+}
+
+.toggle input[type="checkbox"] {
+-webkit-appearance:textarea;
+-webkit-border-radius:5px;
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+-webkit-transition:left .15s;
+background:#fff url(/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/on_off.png) 0 0 no-repeat;
+background-color:transparent;
+border:0;
+height:27px;
+left:-55px;
+margin:0;
+overflow:hidden;
+position:absolute;
+top:0;
+width:149px
+}
+
+/* @end */
+.info {
+background:url(/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/info.png);
+color:#FFF;
+font-size:16px;
+font-weight:700;
+height:34px;
+line-height:34px;
+padding:0 15px;
+overflow:hidden;
+text-align:center;
+text-shadow:rgba(0,0,0,.5) 1px 0
+}
+
+ul.edgetoedge li:first-child,ul.edgetoedge li:first-child a,ul.edgetoedge li:last-child,ul.edgetoedge li:last-child a,ul.metal li:first-child a,ul.metal li:last-child a,.edgetoedge li,.metal li {
+-webkit-border-radius:0
+}body .thisisapage {
+overflow:hidden;
+width:320px
+}
+
+body .inner-has-bottomtools {min-height:350px}
+body .has-big-bottomtools {min-height:325px}
+
+/* Uncomment for production
+body.landscape .thisisapage {
+overflow:hidden;
+width:480px;
+}
+
+body.landscape .inner-has-bottomtools {
+min-height:203px;
+}*/
+
+br.reset{clear:both}
+
+div.content {
+color:#000;
+margin:10px
+}
+
+div.content p {
+color:#000;
+padding:5px 0
+}
+
+div.content li {
+color:#FFF;
+font-weight:400;
+padding:5px 0
+}
+
+.heading {
+-webkit-box-sizing:border-box;
+background:url('/ODS/iPhone3/themes/default/img/heading.png') repeat-x;
+height:45px;
+padding:0;
+position:relative
+}
+
+.smallHeading {
+  font-size:12px;
+}
+
+.toolbar_bottom,.footerIcons,.toolbar_bottom li,.toolbar_bottom li a,.toolbar_bottom a {
+-webkit-border-radius:0;
+border:none;
+background:none;
+display:block;
+font-size:10px;
+margin:0;
+overflow:hidden;
+color:#FFF;
+padding:0;
+width:100%
+}
+
+.toolbar_bottom li {
+background:none;
+float:left;
+text-align:center;
+}
+
+.footerLogos ul {
+  width:100%;
+  margin:0 auto;
+  border:none;
+  background:none;
+  text-align:center;
+}
+.footerLogos li {
+  width:105px;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+  background:0;
+  border:none;
+  -webkit-border-radius:0;
+  float:left;
+}
+.footerLogos li.last {width:66%}
+
+.footerIcons {
+background:-webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0.85, rgb(103,119,25)),
+  color-stop(0.02, rgb(65,74,16))
+  );
+height:66px
+}
+
+.footerIcons li {
+text-align:center;
+width:20%
+}
+
+.footerIcons li a {
+display:block;
+height:66px;
+width:100%;
+padding:0;
+margin:0;
+}
+.footerIcons li a span {
+  background-image:url('/ODS/iPhone3/themes/default/img/footerIcons.png');
+  background-repeat:no-repeat;
+  display:block;
+  margin:16px auto 0;
+  height:29px;
+}
+.footer1 {width:27px}
+.footer2 {
+  width:28px;
+  background-position:-27px 0
+}
+.footer3 {
+  width:24px;
+  background-position:-55px 0
+}
+.footer4 {
+  width:43px;
+  background-position:-79px 0
+}
+.footer5 {
+  width:26px;
+  background-position:-122px 0
+}
+
+
+/* Email Content Page */
+#emailContent li {
+background:#FFF;
+font-size:17px;
+font-weight:500
+}
+
+label {
+  display:inline-block;
+  width:35%;
+  margin-right:3.5%
+}
+
+.haslabel, #amount, #amount_update, #supplement_update {
+  display:inline-block !important;
+  width:60%
+}
+select.haslabel {float:right}
+
+input.haslabel {
+  padding:0 !important;
+  margin:0 !important;
+  position:relative;
+  left:-2.0%;
+}
+
+.haslabel-width1 {
+  display:inline-block !important;
+  width:30%;
+  position:relative;
+  left:3.5%;
+}
+
+.weight500 {font-weight:500}
+
+
+ol.edgetoedge {
+  list-style-type:decimal !important;
+  padding:10px 10px 10px 30px;
+  margin:0;
+  border-bottom:1px solid #999;
+}
+ol.edgetoedge li {
+  list-style-type:decimal !important;
+  padding:5px 0;
+  text-indent:0;
+}
+
+#supName {text-align:center}
+.errorMsg {color:#A00}
+.minHeight250 {
+  display:block;
+  min-height:250px
+}
+.min400 {
+  display:block;
+  min-height:400px
+}
+
+
+#accordion .expandable {overflow:hidden}
+#accordion h2 {
+  background:-webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.2, rgb(64,2,52)),
+    color-stop(0.8, rgb(104,36,90))
+    );
+  color:#FFF;
+  font-weight:700;
+  margin:0;
+  padding:8px 10px;
+  font-size:16px;
+  text-shadow:rgba(0, 0, 0, 0.4) 0 -1.5px 0;
+  cursor:pointer;
+}
+
+#startLinks {
+  border:0;
+  width:317px;
+  margin:7px auto;
+}
+
+#startLinks,
+#startLinks li {
+  padding:0;
+}
+#startLinks li {
+  width:105px;
+  height:95px;
+  float:left;
+  overflow:hidden;
+  font-size:12px;
+  border:0;
+  -webkit-border-radius:0;
+}
+#startLinks li a {
+  display:block;
+  height:75px;
+  padding-top:20px;
+  text-align:center;
+}
+
+#startLinks li.borderSides {
+  border-left:1px solid #dbcd9c;
+  border-right:1px solid #dbcd9c;
+}
+
+#startLinks li.borderTopSides {
+  border:1px solid #dbcd9c;
+  border-bottom:none;
+}
+
+#startLinks li.borderTop {
+  border-top:1px solid #dbcd9c;
+}
+
+#startLinks li a span {
+  display:block;
+  width:105px;
+  background-image:url(/ODS/iPhone3/themes/default/img/startLogos.png);
+  background-repeat:no-repeat;
+}
+
+.start1 {
+  height:37px;
+  margin:6px 0 7px;
+  background-position:center 0;
+}
+.start2 {
+  height:37px;
+  margin:6px 0 7px;
+  background-position:center -37px;
+}
+.start3 {
+  height:30px;
+  margin:10px 0;
+  background-position:center -74px;
+}
+.start4 {
+  height:40px;
+  margin:5px 0;
+  background-position:center -104px;
+}
+.start5 {
+  height:40px;
+  margin:5px 0;
+  background-position:center -143px;
+}
+.start6 {
+  height:27px;
+  margin:11px 0 12px;
+  background-position:center -184px;
+}
+.start7 {
+  height:39px;
+  margin:5px 0 6px;
+  background-position:center -211px;
+}
+.start8 {
+  height:21px;
+  margin:14px 0 15px;
+  background-position:center -250px;
+}
+.start9 {
+  height:37px;
+  margin:6px 0 7px;
+  background-position:center -271px;
+}
+
+.error{
+    color:red;
+    padding:0 10px;
+}
+.success{
+    color:green;
+    padding:0 10px;
+}</style>  </head>
   <body>
   <div id="Start" class="thisisapage"><div class="heading"></div><div class="has-big-bottomtools">
   <div class="info">
@@ -528,7 +1862,7 @@ this.value='';else if(type=='checkbox'||type=='radio')
 this.checked=false;else if(tag=='select')
 this.selectedIndex=-1;});};
 (function($){$.jQTouch=function(_2){$.support.WebKitCSSMatrix=(typeof WebKitCSSMatrix=="object");$.support.touch=(typeof Touch=="object");$.support.WebKitAnimationEvent=(typeof WebKitTransitionEvent=="object");var _3,$head=$("head"),hist=[],newPageCount=0,jQTSettings={},hashCheck,currentPage,orientation,isMobileWebKit=RegExp(" Mobile/").test(navigator.userAgent),tapReady=true,lastAnimationTime=0,touchSelectors=[],publicObj={},extensions=$.jQTouch.prototype.extensions,defaultAnimations=["slide","flip","slideup","swap","cube","pop","dissolve","fade","back"],animations=[],hairextensions="";init(_2);function init(_4){var _5={addGlossToIcon:true,backSelector:".back, .cancel, .goback",cacheGetRequests:true,cubeSelector:".cube",dissolveSelector:".dissolve",fadeSelector:".fade",fixedViewport:true,flipSelector:".flip",formSelector:"form",fullScreen:true,fullScreenClass:"fullscreen",icon:null,touchSelector:"a, .touch",popSelector:".pop",preloadImages:false,slideSelector:"body > * > ul li a",slideupSelector:".slideup",startupScreen:null,statusBar:"default",submitSelector:".submit",swapSelector:".swap",useAnimations:true,useFastTouch:true};jQTSettings=$.extend({},_5,_4);if(jQTSettings.preloadImages){for(var i=jQTSettings.preloadImages.length-1;i>=0;i--){(new Image()).src=jQTSettings.preloadImages[i];}}if(jQTSettings.icon){var _7=(jQTSettings.addGlossToIcon)?"":"-precomposed";hairextensions+="<link rel=\"apple-touch-icon"+_7+"\" href=\""+jQTSettings.icon+"\" />";}if(jQTSettings.startupScreen){hairextensions+="<link rel=\"apple-touch-startup-image\" href=\""+jQTSettings.startupScreen+"\" />";}if(jQTSettings.fixedViewport){hairextensions+="<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;\"/>";}if(jQTSettings.fullScreen){hairextensions+="<meta name=\"apple-mobile-web-app-capable\" content=\"yes\" />";if(jQTSettings.statusBar){hairextensions+="<meta name=\"apple-mobile-web-app-status-bar-style\" content=\""+jQTSettings.statusBar+"\" />";}}if(hairextensions){$head.append(hairextensions);}$(document).ready(function(){for(var i in extensions){var fn=extensions[i];if($.isFunction(fn)){$.extend(publicObj,fn(publicObj));}}for(var i in defaultAnimations){var _a=defaultAnimations[i];var _b=jQTSettings[_a+"Selector"];if(typeof(_b)=="string"){addAnimation({name:_a,selector:_b});}}touchSelectors.push("input");touchSelectors.push(jQTSettings.touchSelector);touchSelectors.push(jQTSettings.backSelector);touchSelectors.push(jQTSettings.submitSelector);$(touchSelectors.join(", ")).css("-webkit-touch-callout","none");$(jQTSettings.backSelector).tap(liveTap);$(jQTSettings.submitSelector).tap(submitParentForm);_3=$("body");if(jQTSettings.fullScreenClass&&window.navigator.standalone==true){_3.addClass(jQTSettings.fullScreenClass+" "+jQTSettings.statusBar);}_3.bind("touchstart",handleTouch).bind("orientationchange",updateOrientation).trigger("orientationchange").submit(submitForm);if(jQTSettings.useFastTouch&&$.support.touch){_3.click(function(e){var _d=$(e.target);if(_d.attr("target")=="_blank"||_d.attr("rel")=="external"||_d.is("input[type=\"checkbox\"]")){return true;}else{return false;}});_3.mousedown(function(e){var _f=(new Date()).getTime()-lastAnimationTime;if(_f<200){return false;}});}if($("body > .current").length==0){currentPage=$("body > *:first");}else{currentPage=$("body > .current:first");$("body > .current").removeClass("current");}$(currentPage).addClass("current");location.hash=$(currentPage).attr("id");addPageToHistory(currentPage);scrollTo(0,0);dumbLoopStart();});}function goBack(to){if(hist.length>1){var _11=Math.min(parseInt(to||1,10),hist.length-1);if(isNaN(_11)&&typeof(to)==="string"&&to!="#"){for(var i=1,length=hist.length;i<length;i++){if("#"+hist[i].id===to){_11=i;break;}}}if(isNaN(_11)||_11<1){_11=1;}var _13=hist[0].animation;var _14=hist[0].page;hist.splice(0,_11);var _15=hist[0].page;animatePages(_14,_15,_13,true);return publicObj;}else{console.error("No pages in history.");return false;}}function goTo(_16,_17){var _18=hist[0].page;if(typeof(_16)==="string"){_16=$(_16);}if(typeof(_17)==="string"){for(var i=animations.length-1;i>=0;i--){if(animations[i].name===_17){_17=animations[i];break;}}}if(animatePages(_18,_16,_17)){addPageToHistory(_16,_17);return publicObj;}else{console.error("Could not animate pages.");return false;}}function getOrientation(){return orientation;}function liveTap(e){var $el=$(e.target);if($el.attr("nodeName")!=="A"){$el=$el.parent("a");}var _1c=$el.attr("target"),hash=$el.attr("hash"),animation=null;if(tapReady==false||!$el.length){console.warn("Not able to tap element.");return false;}if($el.attr("target")=="_blank"||$el.attr("rel")=="external"){return true;}for(var i=animations.length-1;i>=0;i--){if($el.is(animations[i].selector)){animation=animations[i];break;}}if(_1c=="_webapp"){window.location=$el.attr("href");}else{if($el.is(jQTSettings.backSelector)){goBack(hash);}else{if(hash&&hash!="#"){$el.addClass("active");goTo($(hash).data("referrer",$el),animation);}else{$el.addClass("loading active");showPageByHref($el.attr("href"),{animation:animation,callback:function(){$el.removeClass("loading");setTimeout($.fn.unselect,250,$el);},$referrer:$el});}}}return false;}function addPageToHistory(_1e,_1f){var _20=_1e.attr("id");hist.unshift({page:_1e,animation:_1f,id:_20});}function animatePages(_21,_22,_23,_24){if(_22.length===0){$.fn.unselect();console.error("Target element is missing.");return false;}$(":focus").blur();scrollTo(0,0);var _25=function(_26){if(_23){_22.removeClass("in reverse "+_23.name);_21.removeClass("current out reverse "+_23.name);}else{_21.removeClass("current");}_22.trigger("pageAnimationEnd",{direction:"in"});_21.trigger("pageAnimationEnd",{direction:"out"});clearInterval(dumbLoop);currentPage=_22;location.hash=currentPage.attr("id");dumbLoopStart();var _27=_22.data("referrer");if(_27){_27.unselect();}lastAnimationTime=(new Date()).getTime();tapReady=true;};_21.trigger("pageAnimationStart",{direction:"out"});_22.trigger("pageAnimationStart",{direction:"in"});if($.support.WebKitAnimationEvent&&_23&&jQTSettings.useAnimations){_22.one("webkitAnimationEnd",_25);tapReady=false;_22.addClass(_23.name+" in current "+(_24?" reverse":""));_21.addClass(_23.name+" out"+(_24?" reverse":""));}else{_22.addClass("current");_25();}return true;}function dumbLoopStart(){dumbLoop=setInterval(function(){var _28=currentPage.attr("id");if(location.hash==""){location.hash="#"+_28;}else{if(location.hash!="#"+_28){try{goBack(location.hash);}catch(e){console.error("Unknown hash change.");}}}},100);}function insertPages(_29,_2a){var _2b=null;$(_29).each(function(_2c,_2d){var _2e=$(this);if(!_2e.attr("id")){_2e.attr("id","page-"+(++newPageCount));}_2e.appendTo(_3);if(_2e.hasClass("current")||!_2b){_2b=_2e;}});if(_2b!==null){goTo(_2b,_2a);return _2b;}else{return false;}}function showPageByHref(_2f,_30){var _31={data:null,method:"GET",animation:null,callback:null,$referrer:null};var _32=$.extend({},_31,_30);if(_2f!="#"){$.ajax({url:_2f,data:_32.data,type:_32.method,success:function(_33,_34){var _35=insertPages(_33,_32.animation);if(_35){if(_32.method=="GET"&&jQTSettings.cacheGetRequests&&_32.$referrer){_32.$referrer.attr("href","#"+_35.attr("id"));}if(_32.callback){_32.callback(true);}}},error:function(_36){if(_32.$referrer){_32.$referrer.unselect();}if(_32.callback){_32.callback(false);}}});}else{if($referrer){$referrer.unselect();}}}function submitForm(e,_38){var _39=(typeof(e)==="string")?$(e):$(e.target);if(_39.length&&_39.is(jQTSettings.formSelector)&&_39.attr("action")){showPageByHref(_39.attr("action"),{data:_39.serialize(),method:_39.attr("method")||"POST",animation:animations[0]||null,callback:_38});return false;}return true;}function submitParentForm(e){var _3b=$(this).closest("form");if(_3b.length){evt=jQuery.Event("submit");evt.preventDefault();_3b.trigger(evt);return false;}return true;}function addAnimation(_3c){if(typeof(_3c.selector)=="string"&&typeof(_3c.name)=="string"){animations.push(_3c);$(_3c.selector).tap(liveTap);touchSelectors.push(_3c.selector);}}function updateOrientation(){orientation=window.innerWidth<window.innerHeight?"profile":"landscape";_3.removeClass("profile landscape").addClass(orientation).trigger("turn",{orientation:orientation});}function handleTouch(e){var $el=$(e.target);if(!$(e.target).is(touchSelectors.join(", "))){var _3f=$(e.target).closest("a");if(_3f.length){$el=_3f;}else{return;}}if(event){var _40=null,startX=event.changedTouches[0].clientX,startY=event.changedTouches[0].clientY,startTime=(new Date).getTime(),deltaX=0,deltaY=0,deltaT=0;$el.bind("touchmove",touchmove).bind("touchend",touchend);_40=setTimeout(function(){$el.makeActive();},100);}function touchmove(e){updateChanges();var _42=Math.abs(deltaX);var _43=Math.abs(deltaY);if(_42>_43&&(_42>35)&&deltaT<1000){$el.trigger("swipe",{direction:(deltaX<0)?"left":"right"}).unbind("touchmove touchend");}else{if(_43>1){$el.removeClass("active");}}clearTimeout(_40);}function touchend(){updateChanges();if(deltaY===0&&deltaX===0){$el.makeActive();$el.trigger("tap");}else{$el.removeClass("active");}$el.unbind("touchmove touchend");clearTimeout(_40);}function updateChanges(){var _44=event.changedTouches[0]||null;deltaX=_44.pageX-startX;deltaY=_44.pageY-startY;deltaT=(new Date).getTime()-startTime;}}$.fn.unselect=function(obj){if(obj){obj.removeClass("active");}else{$(".active").removeClass("active");}};$.fn.makeActive=function(){return $(this).addClass("active");};$.fn.swipe=function(fn){if($.isFunction(fn)){return this.each(function(i,el){$(el).bind("swipe",fn);});}};$.fn.tap=function(fn){if($.isFunction(fn)){var _4a=(jQTSettings.useFastTouch&&$.support.touch)?"tap":"click";return $(this).live(_4a,fn);}else{$(this).trigger("tap");}};publicObj={getOrientation:getOrientation,goBack:goBack,goTo:goTo,addAnimation:addAnimation,submitForm:submitForm};return publicObj;};$.jQTouch.prototype.extensions=[];$.jQTouch.addExtension=function(_4b){$.jQTouch.prototype.extensions.push(_4b);};})(jQuery);
-var jQT=new $.jQTouch({icon:'http://192.168.1.10/ODS/iphone3/themes/default/img/icon.png',addGlossToIcon:true,startupScreen:'http://192.168.1.10/ODS/iphone3/themes/default/img/startup.png',statusBar:'black',slideSelector:'body > * > ul li a, ul.rounded li a',cubeSelector:'ul.edgetoedge li a',popSelector:'.toolbar a',flipSelector:'#startLinks a',slideupSelector:'.toolbar_bottom ul li a',preloadImages:['http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/back_button.png','http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/back_button_clicked.png','http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/button_clicked.png','http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/grayButton.png','http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/whiteButton.png','http://192.168.1.10/ODS/iphone3/lib/jqtouch/themes/custom_apple/img/loading.gif']});$(function(){jQT.addAnimation({name:'reveal',selector:'.revealme'});});
+var jQT=new $.jQTouch({icon:'/ODS/iPhone3/themes/default/img/icon.png',addGlossToIcon:true,startupScreen:'/ODS/iPhone3/themes/default/img/startup.png',statusBar:'black',slideSelector:'body > * > ul li a, ul.rounded li a',cubeSelector:'ul.edgetoedge li a',popSelector:'.toolbar a',flipSelector:'#startLinks a',slideupSelector:'.toolbar_bottom ul li a',preloadImages:['/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/back_button.png','/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/back_button_clicked.png','/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/button_clicked.png','/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/grayButton.png','/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/whiteButton.png','/ODS/iPhone3/lib/jqtouch/themes/custom_apple/img/loading.gif']});$(function(){jQT.addAnimation({name:'reveal',selector:'.revealme'});});
 var dbInfo=new Array();dbInfo['name']='My DS';dbInfo['ver']='1.0';dbInfo['display']='My Dietary Supplement v2';dbInfo['size']=65536;var GACode='UX-AAAAAA';var noUsersError='No profiles exist';var noSupplementsError='No supplements to list';var addSupplementHeadingDefault='Add Dietary Supplement';var addSupplementHeadingUserStart='Add DS to "';var addSupplementHeadingUserEnd='"';var supNotesBlank='No notes were made.';
 function initDB(){try{if(!window.openDatabase){alert('This browser does not support databases!');}else{db=openDatabase(dbInfo['name'],dbInfo['ver'],dbInfo['display'],dbInfo['size']);}}catch(e){if(e==2){console.log("Invalid database version.");}else{console.log("Unknown error "+e+".");}}}
 function setupDatabaseTables(){var setupQuery=new Array();setupQuery[0]='CREATE TABLE IF NOT EXISTS `user` ('+'`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, '+'`user` VARCHAR(32) NOT NULL)';setupQuery[1]='CREATE TABLE IF NOT EXISTS `supplement` ('+'`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, '+'`name` VARCHAR(32) NOT NULL)';setupQuery[2]='CREATE TABLE IF NOT EXISTS `profile` ('+'`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, '+'`user_id` INTEGER NOT NULL CONSTRAINT fk_user_id REFERENCES user(id) ON DELETE CASCADE, '+'`supplement_id` INTEGER NOT NULL CONSTRAINT fk_supplement_id REFERENCES supplement(id) ON DELETE CASCADE, '+'`amount` VARCHAR(16) NOT NULL, '+'`unit` VARCHAR(16) NOT NULL, '+'`frequency` VARCHAR(16), '+'`frequency_unit` VARCHAR(16), '+'`notes` VARCHAR(256), '+'`myimg` VARCHAR(256));'
