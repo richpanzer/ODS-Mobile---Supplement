@@ -2,7 +2,7 @@
 
 include 'code/config.php';
 include 'code/functions.php';
-header('Content-Type: text/cache-manifest'); // This may not be needed.
+header('Content-Type: text/cache-manifest'); // This may not be needed. See .htaccess
 echo 'CACHE MANIFEST' , "\n";
 echo PATH_THEME , 'favicon.ico' , "\n";
 
