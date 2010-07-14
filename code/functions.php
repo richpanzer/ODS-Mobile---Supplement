@@ -3,6 +3,7 @@
 include PATH_UNIX . 'includes/cssminphp.php';
 include PATH_UNIX . 'includes/jsminphp.php';
 
+
 // Get a full list of files by type for a given directory (non-recursive)
 function getContentList($dir, $type) {
    // open specified directory
@@ -63,6 +64,18 @@ function addcssfile($file, $minify=true, $imgPath='/img/') {
     $output = cssmin::minify($output);
   }
   return $output;
+}
+
+// Capture file output
+function get_include_contents($filename) {
+  if (is_file($filename)) {
+    ob_start();
+    include $filename;
+    $contents = ob_get_contents();
+    ob_end_clean();
+    return $contents;
+  }
+  return false;
 }
 
 
