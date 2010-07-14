@@ -17,10 +17,10 @@
     <?php
       echo '<style type="text/css" media="screen">';
       // format default::: addcssfile($file, $minify=true);
-      echo addcssfile(JQTOUCH . 'jqtouch/jqtouch.css');
+      echo addcssfile(PATH_UNIX . '/lib/jqtouch/jqtouch/jqtouch.css');
       echo addcssfile(UNIX_JQTHEME . 'theme.css');
       //echo addcssfile(PATH_UNIX . 'lib/jquery.autocomplete/styles.css', true, '/'); // Not required or wanted
-      echo addcssfile(THEME_CSS . 'styles.css');
+      echo addcssfile(UNIX_THEME . 'css/styles.css');
       echo '</style>';
     ?>
   </head>
