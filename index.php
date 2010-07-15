@@ -25,7 +25,7 @@ if (file_exists(UNIX_THEME . 'template.php')) {
 echo $buildHtml;
 
 
-$myFile = 'index';
+$myFile = 'index.html';
 $fh = fopen($myFile, 'w') or die("I cannot open the 'index.html' file!");
 fwrite($fh, $buildHtml);
 fclose($fh);
