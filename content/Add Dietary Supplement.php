@@ -60,7 +60,7 @@
     <ul class="rounded">
       <li>Add Photo:<br />
 
-        <img style="width:60px;height:60px" id="addPhoto_01" src="" />
+        <img class="dsImg" id="addPhoto_01" src="" />
         <!-- for testing, add the buttons below -->
         <button onclick="getPicture()">From Camera</button>
         <button onclick="getPicture(PictureSourceType.PHOTO_LIBRARY)">From Photo Library</button>

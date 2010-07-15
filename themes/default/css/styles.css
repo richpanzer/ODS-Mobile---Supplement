@@ -312,3 +312,10 @@ ol.edgetoedge li {
     color:green;
     padding:0 10px;
 }
+
+.dsImg {
+  width:60px;
+  height:60px;
+  background:#777;
+  border:1px solid #FFF
+}

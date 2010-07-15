@@ -99,7 +99,7 @@
           <option>5x</option>
         </select>
         <select class="haslabel-width1" name="frequency_unit" id="frequency_unit">
-          <option selected="selected"> </option>
+          <option selected="selected">&nbsp;</option>
           <option>Hourly</option>
           <option>Daily</option>
           <option>Weekly</option>
@@ -110,21 +110,22 @@
       </li>
     </ul>
     <ul class="rounded">
-      <li>Add Photo:</li>
+      <li>Add Photo:<br />
+
+        <img style="width:60px;height:60px" id="addPhoto_01" src="" />
+        <!-- for testing, add the buttons below -->
+        <button onclick="getPicture()">From Camera</button>
+        <button onclick="getPicture(PictureSourceType.PHOTO_LIBRARY)">From Photo Library</button>
+
+
+
+      </li>
     </ul>
     <ul class="rounded">
       <li><label for="frequency">Notes:</label>
       <textarea name="notes" id="notes"></textarea></li>
     </ul>
   </form>
-  <div class="content">
-    
-    <img style="width:60px;height:60px" id="test_img" src="" />
-    <!-- for testing, add the buttons below -->
-    <button onclick="getPicture()">From Camera</button>
-    <button onclick="getPicture(PictureSourceType.PHOTO_LIBRARY)">From Photo Library</button>
-
-  </div>
 </div>
 <div class="toolbar_bottom">
   <ul class="footerIcons">
@@ -543,7 +544,9 @@ function voidClick(link){link.bind('click',function(e){e.preventDefault();return
 function goAccordion(clicked){$('#accordion .expandable').slideUp(300,'linear');clicked.siblings('.expandable').slideDown(300,'linear');}
 function goToAccordion(clicked){$('#accordion .expandable').slideUp(300,'linear');jQT.goTo($('#Instructions'),'flip');clicked.siblings('.expandable').slideDown(300,'linear');}
 function PictureSourceType(){};PictureSourceType.PHOTO_LIBRARY=0;PictureSourceType.CAMERA=1;function getPicture(sourceType){var options={quality:10};if(sourceType!=undefined){options["sourceType"]=sourceType;}
-navigator.camera.getPicture(getPicture_Success,null,options);};function getPicture_Success(imageData){alert("getpic success");document.getElementById("test_img").src="data:image/jpeg;base64,"+imageData;}
+navigator.camera.getPicture(getPicture_Success,null,options);};function getPicture_Success(imageData){$("#addPhoto_01").src="data:image/jpeg;base64,"+imageData;var info=dump(imageData);alert(info);}
+function dump(arr,level){var dumped_text="";if(!level)level=0;var level_padding="";for(var j=0;j<level+1;j++)level_padding+="    ";if(typeof(arr)=='object'){for(var item in arr){var value=arr[item];if(typeof(value)=='object'){dumped_text+=level_padding+"'"+item+"' ...\n";dumped_text+=dump(value,level+1);}else{dumped_text+=level_padding+"'"+item+"' => \""+value+"\"\n";}}}else{dumped_text="===>"+arr+"<===("+typeof(arr)+")";}
+return dumped_text;}
 function insertUser(user,callback){if(user.length>0){var query="INSERT INTO user (user) VALUES ('"+user+"');";db.transaction(function(transaction,results){transaction.executeSql(query,null,function(transaction,results){var currentuid=results.insertId;updateUserLists(currentuid,user);},errorHandler);});}
 return false;}
 function setCurrentUser(uid,user){$(".userSelectToggle").hide();$(".currentUser").html(user);$("#user_select").val(uid);$("#updateUserUID").attr('name',uid);$("#updateUserName").val(user);}
