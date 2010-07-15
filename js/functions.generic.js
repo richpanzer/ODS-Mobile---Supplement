@@ -172,18 +172,17 @@ function PictureSourceType() {};
 PictureSourceType.LIBRARY = 0;
 PictureSourceType.CAMERA = 1;
 
-function getPicture(origin,sourceType) {
+function getPicture(sourceType) {
+  $("#addPhotoOne").attr('src') = "data:image/jpeg;base64," + imageData;
   var options = { quality: 10 };
   if (sourceType != undefined) {
     options["sourceType"] = sourceType;
   }
   // if no sourceType specified, the default is CAMERA
-  navigator.camera.getPicture(function(options){
-    getPicture_Success(options, origin);
-  }, null, options);
+  navigator.camera.getPicture(getPicture_Success, null, options);
 }
 
-function getPicture_Success(imageData, origin) {
+function getPicture_Success(imageData) {
   //$("#addPhotoOne").attr('src') = "data:image/jpeg;base64," + imageData;
   document.getElementById("addDSimgOne").src = "data:image/jpeg;base64," + imageData;
   //$('#myname').html('The origin id is: ' + origin + '<br /><br />' + dump(imageData));
@@ -191,7 +190,7 @@ function getPicture_Success(imageData, origin) {
 
 
 $('.getPicture').click(function(){
-  getPicture($(this).attr('id'));
+  getPicture();
 });
 $('.getCameraLibPic').click(function(){
   getPicture(PictureSourceType.LIBRARY);
