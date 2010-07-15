@@ -185,10 +185,8 @@ function getPicture(origin,sourceType) {
 
 function getPicture_Success(imageData, origin) {
   //$("#addPhotoOne").src = "data:image/jpeg;base64," + imageData;
-  document.getElementById("addDSimgOne").src = "data:image/jpeg;base64," + imageData;
-  alert('The origin id is: ' + origin);
-  //var info = dump(imageData);
-  //alert(info);
+  $("#addDSimgOne").src = "data:image/jpeg;base64," + imageData;
+  $('#myname').html('The origin id is: ' + origin + '<br /><br />' + dump(imageData));
 }
 
 

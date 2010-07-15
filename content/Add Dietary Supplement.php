@@ -60,6 +60,7 @@
     <ul class="rounded">
       <li><p><img class="dsImg getPicture" style="width:90px;height:90px" id="addDSimgOne" src="" />
           Add Photo<br />
+          <span id="myname"></span>
           <!--<button class="getPicture">From Camera</button>--></p>
         <br class="reset" />
         <!-- for testing, add the buttons below -->
