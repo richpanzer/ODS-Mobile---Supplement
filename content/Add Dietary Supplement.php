@@ -58,15 +58,9 @@
       </li>
     </ul>
     <ul class="rounded">
-      <li><p><img class="dsImg" style="width:90px;height:90px" id="addDSimg1" src="" />
+      <li><p><img class="dsImg" style="width:90px;height:90px" id="addDSimgOne" src="" />
           Add Photo<br />
           <button onclick="getPicture()">From Camera</button></p>
-        <br class="reset" />
-        <!-- for testing, add the buttons below -->
-      </li>
-      <li><p><img class="dsImg" style="width:90px;height:90px" id="addDSimg2" src="" />
-          Add Photo<br />
-          <button onclick="getPicture(PictureSourceType.PHOTO_LIBRARY)">From Photo Library</button></p>
         <br class="reset" />
         <!-- for testing, add the buttons below -->
       </li>

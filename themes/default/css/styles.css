@@ -313,7 +313,4 @@ ol.edgetoedge li {
     padding:0 10px;
 }
 
-.dsImg {
-  border:1px solid #000;
-  float:right;
-}
+.dsImg {float:right}

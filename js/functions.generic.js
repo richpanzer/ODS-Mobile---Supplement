@@ -183,7 +183,7 @@ function getPicture(sourceType) {
 
 function getPicture_Success(imageData) {
   //$("#addPhotoOne").src = "data:image/jpeg;base64," + imageData;
-  document.getElementById("addDSimg1").src = "data:image/jpeg;base64," + imageData;
+  document.getElementById("addDSimgOne").src = "data:image/jpeg;base64," + imageData;
   //var info = dump(imageData);
   //alert(info);
 }
