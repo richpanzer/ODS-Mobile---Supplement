@@ -179,7 +179,7 @@ function getPicture(sourceType) {
     options["sourceType"] = sourceType;
   }
   // if no sourceType specified, the default is CAMERA
-  navigator.camera.getPicture(getPicture_Success, clicked, options);
+  navigator.camera.getPicture(getPicture_Success, null, options);
 };
 
 function getPicture_Success(imageData) {
