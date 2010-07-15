@@ -189,7 +189,7 @@ function getPicture_Success(imageData) {
 }
 
 
-$('.getCameraPic').click(function(){
+$('#getPicture').click(function(){
   getPicture();
   //alert('camera');
 });
