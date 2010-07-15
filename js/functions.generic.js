@@ -155,15 +155,15 @@ function voidClick(link) {
 
 // Bind a click event to an accordian animation
 function goAccordion(clicked) {
-  $('#accordion .expandable').slideUp(300,'linear');
-  clicked.siblings('.expandable').slideDown(300,'linear');
+  $('#accordion .expandable').slideUp(240,'linear');
+  clicked.siblings('.expandable').slideDown(240,'linear');
 }
 
 // Go to the accordion with something pre-selected
 function goToAccordion(clicked) {
-  $('#accordion .expandable').slideUp(300,'linear');
+  $('#accordion .expandable').slideUp(240,'linear');
   jQT.goTo($('#Instructions'), 'flip');
-  clicked.siblings('.expandable').slideDown(300,'linear');
+  clicked.siblings('.expandable').slideDown(240,'linear');
 }
 
 
@@ -178,23 +178,18 @@ function getPicture(sourceType) {
   if (sourceType != undefined) {
     options["sourceType"] = sourceType;
   }
-  // if no sourceType specified, the default is CAMERA
   navigator.camera.getPicture(getPicture_Success, null, options);
 }
 
 function getPicture_Success(imageData) {
-  //$("#addPhotoOne").attr('src') = "data:image/jpeg;base64," + imageData;
   document.getElementById("addDSimgOne").src = "data:image/jpeg;base64," + imageData;
-  //$('#myname').html('The origin id is: ' + origin + '<br /><br />' + dump(imageData));
 }
-
 
 $('.getPicture').click(function(){
   getPicture();
 });
 $('.getCameraLibPic').click(function(){
   getPicture(PictureSourceType.LIBRARY);
-  //alert('library');
 });
 
 /**
@@ -207,7 +202,7 @@ $('.getCameraLibPic').click(function(){
  * text that will be a more readable version of the
  * array/hash/object that is given.
  * Docs: http://www.openjs.com/scripts/others/dump_function_php_print_r.php
- */
+ *
 function dump(arr,level) {
 	var dumped_text = "";
 	if(!level) level = 0;
@@ -231,4 +226,4 @@ function dump(arr,level) {
 		dumped_text = "===>"+arr+"<===("+typeof(arr)+")";
 	}
 	return dumped_text;
-}
+} */

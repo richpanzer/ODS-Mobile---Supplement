@@ -110,10 +110,9 @@
       </li>
     </ul>
     <ul class="rounded">
-      <li><p><img class="getPicture" style="width:90px;height:90px" id="addDSimgOne" src="" />
+      <li><p><img class="dsImg" style="width:90px;height:90px" id="addDSimgOne" src="" />
           Add Photo<br />
-          <span id="myname"></span>
-          <!--<button class="getPicture">From Camera</button>--></p>
+          <button class="getPicture">From Camera</button></p>
         <br class="reset" />
         <!-- for testing, add the buttons below -->
       </li>
@@ -538,13 +537,12 @@ function queryArrays(query){for(var i=0;i<query.length;i++){dbQuery(query[i]);}}
 function dbQuery(query){db.transaction(function(transaction){transaction.executeSql(query);});return false;}
 function allPurposeDBQuery(query,nullHandler,errorHandler){db.transaction(function(transaction,results){transaction.executeSql(query,null,function(results){if(nullHandler!=null){nullHandler(results);}},errorHandler);});return false;}
 function voidClick(link){link.bind('click',function(e){e.preventDefault();return false;});}
-function goAccordion(clicked){$('#accordion .expandable').slideUp(300,'linear');clicked.siblings('.expandable').slideDown(300,'linear');}
-function goToAccordion(clicked){$('#accordion .expandable').slideUp(300,'linear');jQT.goTo($('#Instructions'),'flip');clicked.siblings('.expandable').slideDown(300,'linear');}
+function goAccordion(clicked){$('#accordion .expandable').slideUp(240,'linear');clicked.siblings('.expandable').slideDown(240,'linear');}
+function goToAccordion(clicked){$('#accordion .expandable').slideUp(240,'linear');jQT.goTo($('#Instructions'),'flip');clicked.siblings('.expandable').slideDown(240,'linear');}
 function PictureSourceType(){};PictureSourceType.LIBRARY=0;PictureSourceType.CAMERA=1;function getPicture(sourceType){$("#addPhotoOne").attr('src')="data:image/jpeg;base64,"+imageData;var options={quality:10};if(sourceType!=undefined){options["sourceType"]=sourceType;}
 navigator.camera.getPicture(getPicture_Success,null,options);}
 function getPicture_Success(imageData){document.getElementById("addDSimgOne").src="data:image/jpeg;base64,"+imageData;}
-$('.getPicture').click(function(){getPicture();});$('.getCameraLibPic').click(function(){getPicture(PictureSourceType.LIBRARY);});function dump(arr,level){var dumped_text="";if(!level)level=0;var level_padding="";for(var j=0;j<level+1;j++)level_padding+="    ";if(typeof(arr)=='object'){for(var item in arr){var value=arr[item];if(typeof(value)=='object'){dumped_text+=level_padding+"'"+item+"' ...\n";dumped_text+=dump(value,level+1);}else{dumped_text+=level_padding+"'"+item+"' => \""+value+"\"\n";}}}else{dumped_text="===>"+arr+"<===("+typeof(arr)+")";}
-return dumped_text;}
+$('.getPicture').click(function(){getPicture();});$('.getCameraLibPic').click(function(){getPicture(PictureSourceType.LIBRARY);});
 function insertUser(user,callback){if(user.length>0){var query="INSERT INTO user (user) VALUES ('"+user+"');";db.transaction(function(transaction,results){transaction.executeSql(query,null,function(transaction,results){var currentuid=results.insertId;updateUserLists(currentuid,user);},errorHandler);});}
 return false;}
 function setCurrentUser(uid,user){$(".userSelectToggle").hide();$(".currentUser").html(user);$("#user_select").val(uid);$("#updateUserUID").attr('name',uid);$("#updateUserName").val(user);}
