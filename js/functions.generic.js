@@ -180,7 +180,7 @@ function getPicture(sourceType) {
   }
   // if no sourceType specified, the default is CAMERA
   navigator.camera.getPicture(getPicture_Success, null, options);
-};
+}
 
 function getPicture_Success(imageData) {
   $("#addPhoto_01").src = "data:image/jpeg;base64," + imageData;
