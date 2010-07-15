@@ -182,7 +182,8 @@ function getPicture(sourceType) {
 };
 
 function getPicture_Success(imageData) {
-  $("#addPhoto_01").src = "data:image/jpeg;base64," + imageData;
+  //$("#addPhoto_01").src = "data:image/jpeg;base64," + imageData;
+  document.getElementById("addPhoto_01").src = "data:image/jpeg;base64," + imageData;
   //var info = dump(imageData);
   //alert(info);
 }
