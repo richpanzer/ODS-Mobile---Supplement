@@ -58,14 +58,14 @@
       </li>
     </ul>
     <ul class="rounded">
-      <li><p><img class="dsImg getCameraPic" id="addPhoto_01" src="" />
+      <li><p><img class="dsImg getCameraPic" id="addPhotoOne" src="" />
           Add Photo<br />from Camera:</p>
         <br class="reset" />
         <?php /*<!-- for testing, add the buttons below -->
         <button onclick="getPicture()">From Camera</button>
         <button onclick="getPicture(PictureSourceType.PHOTO_LIBRARY)">From Photo Library</button>*/ ?>
       </li>
-      <li><p><img class="dsImg getCameraLibPic" id="addPhoto_02" src="" />
+      <li><p><img class="dsImg getCameraLibPic" id="addPhotoTwo" src="" />
           Add Photo<br />from Library:</p>
         <br class="reset" />
       </li>
