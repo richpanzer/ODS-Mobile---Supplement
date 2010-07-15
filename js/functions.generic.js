@@ -170,7 +170,7 @@ function goToAccordion(clicked) {
 // Camera Roll Stuff
 function PictureSourceType() {};
 
-function getPicture(clicked,sourceType) {
+function getPicture(sourceType) {
   var options = { quality: 10 };
   if (sourceType != undefined) {
     options["sourceType"] = sourceType;
@@ -179,10 +179,9 @@ function getPicture(clicked,sourceType) {
   navigator.camera.getPicture(getPicture_Success, clicked, options);
 };
 
-function getPicture_Success(clicked, imageData) {
+function getPicture_Success(imageData) {
   $("#addPhoto_01").src = "data:image/jpeg;base64," + imageData;
   var info = dump(imageData);
-  alert(clicked);
   alert(info);
 }
 
