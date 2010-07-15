@@ -316,7 +316,6 @@ ol.edgetoedge li {
 .dsImg {
   width:80px;
   height:80px;
-  background:#DDD;
-  border:1px solid #777;
+  border:1px solid #000;
   float:right;
 }
