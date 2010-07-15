@@ -232,4 +232,12 @@ DBquery(thisquery,thisdata,thiscallback,thismessage);
 */
 
 
+$('.getCameraPic').click(function(){
+  getPicture();
+});
+$('.getCameraLibPic').click(function(){
+  getPicture(PictureSourceType.PHOTO_LIBRARY);
+});
+
+
 });

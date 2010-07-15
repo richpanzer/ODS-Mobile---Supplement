@@ -5,11 +5,14 @@ dbInfo['ver']     = '1.0'; // Database version
 dbInfo['display'] = 'My Dietary Supplement v2'; // Display Name
 dbInfo['size']    = 65536; // Maximum size
 
+// Regarding images ...
+PictureSourceType.PHOTO_LIBRARY = 0;
+PictureSourceType.CAMERA = 1;
+
 // Google Analytics
 var GACode = 'UX-AAAAAA';
 
 // Error messages...
-
 var noUsersError = 'No profiles exist';
 var noSupplementsError = 'No supplements to list';
 var addSupplementHeadingDefault = 'Add Dietary Supplement';

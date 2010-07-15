@@ -169,19 +169,20 @@ function goToAccordion(clicked) {
 
 // Camera Roll Stuff
 function PictureSourceType() {};
-PictureSourceType.PHOTO_LIBRARY = 0;
-PictureSourceType.CAMERA = 1;
-function getPicture(sourceType) {
-     var options = { quality: 10 };
-     if (sourceType != undefined) {
-          options["sourceType"] = sourceType;
-     }
-     // if no sourceType specified, the default is CAMERA
-     navigator.camera.getPicture(getPicture_Success, null, options);
+
+function getPicture(clicked,sourceType) {
+  var options = { quality: 10 };
+  if (sourceType != undefined) {
+    options["sourceType"] = sourceType;
+  }
+  // if no sourceType specified, the default is CAMERA
+  navigator.camera.getPicture(getPicture_Success, clicked, options);
 };
-function getPicture_Success(imageData) {
+
+function getPicture_Success(clicked, imageData) {
   $("#addPhoto_01").src = "data:image/jpeg;base64," + imageData;
   var info = dump(imageData);
+  alert(clicked);
   alert(info);
 }
 
