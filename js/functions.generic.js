@@ -169,7 +169,6 @@ function goToAccordion(clicked) {
 
 // Camera Roll Stuff
 function PictureSourceType() {};
-// Regarding images ...
 PictureSourceType.LIBRARY = 0;
 PictureSourceType.CAMERA = 1;
 
@@ -180,13 +179,23 @@ function getPicture(sourceType) {
   }
   // if no sourceType specified, the default is CAMERA
   navigator.camera.getPicture(getPicture_Success, null, options);
-}
+};
 
 function getPicture_Success(imageData) {
   $("#addPhoto_01").src = "data:image/jpeg;base64," + imageData;
   //var info = dump(imageData);
   //alert(info);
 }
+
+
+$('.getCameraPic').click(function(){
+  getPicture();
+  //alert('camera');
+});
+$('.getCameraLibPic').click(function(){
+  getPicture(PictureSourceType.LIBRARY);
+  //alert('library');
+});
 
 /**
  * Function : dump()

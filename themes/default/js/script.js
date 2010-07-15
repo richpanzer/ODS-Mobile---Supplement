@@ -232,14 +232,6 @@ DBquery(thisquery,thisdata,thiscallback,thismessage);
 */
 
 
-$('.getCameraPic').click(function(){
-  getPicture();
-  //alert('camera');
-});
-$('.getCameraLibPic').click(function(){
-  getPicture(PictureSourceType.LIBRARY);
-  //alert('library');
-});
 
 
 });
