@@ -58,7 +58,7 @@
       </li>
     </ul>
     <ul class="rounded">
-      <li><p><img class="dsImg getCameraPic" id="addPhotoOne" src="" />
+      <li><p><img style="width:60px;height:60px" id="test_img" src="" />
           Add Photo<br />from Camera:</p>
         <br class="reset" />
         <?php /*<!-- for testing, add the buttons below -->
