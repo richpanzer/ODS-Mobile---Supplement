@@ -172,7 +172,8 @@ function PictureSourceType() {};
 PictureSourceType.LIBRARY = 0;
 PictureSourceType.CAMERA = 1;
 
-function getPicture(sourceType) {
+function getPicture(origin,sourceType) {
+  alert('ID is: ' + origin);
   var options = { quality: 10 };
   if (sourceType != undefined) {
     options["sourceType"] = sourceType;
@@ -189,8 +190,8 @@ function getPicture_Success(imageData) {
 }
 
 
-$('#getPicture').click(function(){
-  getPicture();
+$('.getPicture').click(function(){
+  getPicture($(this).attr('id'));
   //alert('camera');
 });
 $('.getCameraLibPic').click(function(){
