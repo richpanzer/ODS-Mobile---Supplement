@@ -234,9 +234,11 @@ DBquery(thisquery,thisdata,thiscallback,thismessage);
 
 $('.getCameraPic').click(function(){
   getPicture();
+  //alert('camera');
 });
 $('.getCameraLibPic').click(function(){
-  getPicture(PictureSourceType.PHOTO_LIBRARY);
+  getPicture(PictureSourceType.LIBRARY);
+  //alert('library');
 });
 
 

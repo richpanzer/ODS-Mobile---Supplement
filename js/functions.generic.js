@@ -169,6 +169,9 @@ function goToAccordion(clicked) {
 
 // Camera Roll Stuff
 function PictureSourceType() {};
+// Regarding images ...
+PictureSourceType.LIBRARY = 0;
+PictureSourceType.CAMERA = 1;
 
 function getPicture(sourceType) {
   var options = { quality: 10 };
@@ -181,8 +184,8 @@ function getPicture(sourceType) {
 
 function getPicture_Success(imageData) {
   $("#addPhoto_01").src = "data:image/jpeg;base64," + imageData;
-  var info = dump(imageData);
-  alert(info);
+  //var info = dump(imageData);
+  //alert(info);
 }
 
 /**
