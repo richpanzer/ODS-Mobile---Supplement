@@ -124,14 +124,6 @@ $(document).ready(function() {
     return false;
   });
 
-
-  
-  // This is needed for the toolbar to function correctly
-  voidClick($("#Profiles .toolbar_bottom a").eq(1));
-  voidClick($("#Add_Dietary_Supplement .toolbar_bottom a").eq(2));
-  voidClick($("#Learn_About_ODS .toolbar_bottom a").eq(3));
-  voidClick($("#Tips .toolbar_bottom a").eq(4));
-
   // All Accordion related listeners and setup
   $("#Instructions").bind('pageAnimationStart', function(){
     $('#accordion .expandable').hide();

@@ -100,14 +100,16 @@ text-align:center;
 width:20%
 }
 
-.footerIcons li a {
+.footerIcons li a,
+.footerIcons li div {
 display:block;
 height:66px;
 width:100%;
 padding:0;
 margin:0;
 }
-.footerIcons li a span {
+.footerIcons li a span,
+.footerIcons li div span {
   background-image:url('img/footerIcons.png');
   background-repeat:no-repeat;
   display:block;

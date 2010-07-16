@@ -7,4 +7,7 @@
   <span id="profile_list">
   </span>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = 'profiles';
+include PATH_TXT . 'includes/toolbar.php';
+?>

@@ -12,4 +12,7 @@
     <li><span><strong class="label">Notes:</strong> <span id="supNotes"></span></span></li>
   </ul>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = '';
+include PATH_TXT . 'includes/toolbar.php';
+?>

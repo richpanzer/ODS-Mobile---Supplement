@@ -12,4 +12,7 @@
     <li><a href="#Learn_About_ODS">About ODS</a></li>
   </ul>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = 'settings';
+include PATH_TXT . 'includes/toolbar.php';
+?>

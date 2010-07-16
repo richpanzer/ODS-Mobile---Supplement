@@ -8,4 +8,7 @@
     <li><a target="_blank" href="http://ods.od.nih.gov/about/about_ods.aspx">About ODS</a></li>
   </ul>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = 'aboutods';
+include PATH_TXT . 'includes/toolbar.php';
+?>

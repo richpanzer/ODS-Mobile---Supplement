@@ -13,4 +13,7 @@
     <p><a href="#" id="updateUser" class="whiteButton">Edit Profile</a></p>
   </div>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = '';
+include PATH_TXT . 'includes/toolbar.php';
+?>

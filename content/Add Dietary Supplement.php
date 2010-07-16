@@ -71,4 +71,7 @@
     </ul>
   </form>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = 'addds';
+include PATH_TXT . 'includes/toolbar.php';
+?>

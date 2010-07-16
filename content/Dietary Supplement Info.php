@@ -11,4 +11,7 @@
     <li><a target="_blank" href="http://ods.od.nih.gov/factsheets/Zinc-QuickFacts.asp">Zinc Quick Facts</a></li>
   </ul>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = '';
+include PATH_TXT . 'includes/toolbar.php';
+?>

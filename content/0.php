@@ -76,4 +76,4 @@
     <li class="last"><a href="#home"><img src="content/img/logo2.png" alt="Some Text" /></a></li>
   </ul>
 </div>
-<p style="display:none;background:#000;font-size:10px;color:#999;text-decoration:none"><a class="flip" href="#Developer_Settings">Developer Settings</a></p>
+<?php /*<p style="background:#000;font-size:10px;color:#999;text-decoration:none"><a class="flip" href="#Developer_Settings">Developer Settings</a></p>*/ ?>

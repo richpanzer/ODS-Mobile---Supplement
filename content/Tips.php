@@ -9,4 +9,7 @@
     <li><a class="instructEmailRef" href="#">You can Email your profiles.</a></li>
   </ul>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = '';
+include PATH_TXT . 'includes/toolbar.php';
+?>

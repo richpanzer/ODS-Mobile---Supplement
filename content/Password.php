@@ -20,4 +20,7 @@
     <div class="error"></div>
     <div class="success"></div>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = '';
+include PATH_TXT . 'includes/toolbar.php';
+?>

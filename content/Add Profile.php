@@ -13,4 +13,7 @@
     <p><a href="#Add_Dietary_Supplement" class="sumbitUserSubmitProfile whiteButton">Add Dietary Supplement</a></p>
   </div>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = '';
+include PATH_TXT . 'includes/toolbar.php';
+?>
