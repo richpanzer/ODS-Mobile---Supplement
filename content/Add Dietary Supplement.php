@@ -64,7 +64,6 @@
         </div>
         <div class="imgBtnWrapper">
           <p><button id="getCamera_01">From Camera</button></p>
-          <br />
           <p><button id="getPicture_01">From Photo Library</button></p>
         </div>
         <br class="reset" />
