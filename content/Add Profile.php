@@ -1,4 +1,4 @@
- <div class="inner-has-bottomtools">
+ <div class="minHeight350">
   <div class="toolbar">
       <h1>Add Profile</h1>
       <a class="blueButton" href="#Profiles">Profiles</a>

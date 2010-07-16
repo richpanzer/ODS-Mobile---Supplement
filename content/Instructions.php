@@ -1,9 +1,9 @@
-<div class="inner-has-bottomtools">
+<div class="minHeight400">
   <div class="toolbar">
     <h1>Instructions</h1>
     <a class="button back" href="#Start">Home</a>
   </div>
-  <div id="accordion" class="min400">
+  <div id="accordion">
     <div class="panel">
       <h2 id="instructProfile">Create a Profile</h2>
       <ol class="edgetoedge expandable">

@@ -1,4 +1,4 @@
-<div class="inner-has-bottomtools">
+<div class="minHeight340">
   <div class="toolbar">
       <h3>Update Profile</h3>
       <a class="back" href="#Profile">Profile</a>

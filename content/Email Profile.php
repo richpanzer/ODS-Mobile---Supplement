@@ -1,4 +1,4 @@
-<div class="inner-has-bottomtools">
+<div class="minHeight340">
   <div class="toolbar">
       <h1>Email</h1>
       <a class="button back" href="#Profiles">Profiles</a>

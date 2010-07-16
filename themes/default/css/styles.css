@@ -1,20 +1,26 @@
 body .thisisapage {
 overflow:hidden;
+height:460px;
 width:320px
 }
 
-body .inner-has-bottomtools {min-height:350px}
-body .has-big-bottomtools {min-height:325px}
+body .minHeight250 {min-height:250px}
+body .minHeight325 {min-height:325px}
+body .minHeight340 {min-height:340px}
+body .minHeight350 {min-height:350px}
+body .minHeight400 {min-height:400px}
 
-/* Uncomment for production
+/* comment the follow landscape items during webkit test */
 body.landscape .thisisapage {
 overflow:hidden;
 width:480px;
+height:300px;
 }
-
-body.landscape .inner-has-bottomtools {
-min-height:203px;
-}*/
+body.landscape .minHeight250 {min-height:210px}
+body.landscape .minHeight325 {min-height:285px}
+body.landscape .minHeight340 {min-height:300px}
+body.landscape .minHeight350 {min-height:310px}
+body.landscape .minHeight400 {min-height:360px}
 
 br.reset{clear:both}
 
@@ -36,18 +42,16 @@ padding:5px 0
 
 .heading {
 -webkit-box-sizing:border-box;
-background:url('img/heading.png') repeat-x;
+background:url('img/heading.png') repeat-x center 0;
 height:45px;
 padding:0;
 position:relative
 }
 
-.smallHeading {
-  font-size:12px;
-}
+.smallHeading {font-size:12px}
 
 .toolbar_bottom,.footerIcons,.toolbar_bottom li,.toolbar_bottom li a,.toolbar_bottom a {
--webkit-border-radius:0;
+-webkit-border-radius:0 !important;
 border:none;
 background:none;
 display:block;
@@ -65,24 +69,28 @@ float:left;
 text-align:center;
 }
 
-.footerLogos ul {
-  width:100%;
+#footerLogos {
+  -webkit-border-radius:0;
+  display:block;
+  width:320px;
+  height:75px;
   margin:0 auto;
   border:none;
   background:none;
   text-align:center;
 }
-.footerLogos li {
-  width:105px;
-  padding:0;
-  margin:0;
-  overflow:hidden;
-  background:0;
-  border:none;
+#footerLogos li {
+  width:106px;
+  display:block;
+  height:75px;
   -webkit-border-radius:0;
   float:left;
+  text-align:center;
 }
-.footerLogos li.last {width:66%}
+#footerLogos li.last {
+  float:left;
+  width:214px
+}
 
 .footerIcons {
 background:-webkit-gradient(
@@ -185,15 +193,6 @@ ol.edgetoedge li {
 
 #supName {text-align:center}
 .errorMsg {color:#A00}
-.minHeight250 {
-  display:block;
-  min-height:250px
-}
-.min400 {
-  display:block;
-  min-height:400px
-}
-
 
 #accordion .expandable {overflow:hidden}
 #accordion h2 {

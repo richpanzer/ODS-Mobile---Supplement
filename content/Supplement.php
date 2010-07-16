@@ -1,4 +1,4 @@
-<div class="inner-has-bottomtools">
+<div class="minHeight340">
   <div class="toolbar">
       <h4>View Supplement</h4>
       <a class="button back" href="#Profile">Profile</a>

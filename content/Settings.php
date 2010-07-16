@@ -1,4 +1,4 @@
-<div class="inner-has-bottomtools">
+<div class="minHeight350">
   <div class="toolbar">
       <h3>App Support</h3>
       <a class="button goback" href="#Start">Done</a>

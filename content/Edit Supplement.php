@@ -1,4 +1,4 @@
-<div class="inner-has-bottomtools">
+<div class="minHeight350">
   <div class="toolbar">
     <h1>Edit DS</h1>
     <a class="button back" href="#Supplement">Back</a>
