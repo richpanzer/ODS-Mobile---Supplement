@@ -182,7 +182,7 @@ function getPicture(sourceType) {
 
 function getPicture_Success(imageData) {
   //document.getElementById("imageOne").src = "data:image/jpeg;base64," + imageData;
-  $("#imageOne").src = "data:image/jpeg;base64," + imageData;
+  $("#imageOne").attr('src', "data:image/jpeg;base64," + imageData);
 }
 
 // Camera Roll Stuff

@@ -13,7 +13,7 @@
       flipSelector: '#startLinks a',
       slideupSelector: '.toolbar_bottom ul li a',
       preloadImages: [
-          '{$const['JQTHEME']}img/back_button.png',
+          '{$const['JQTHEME']}img/backButton.png',
           '{$const['JQTHEME']}img/back_button_clicked.png',
           '{$const['JQTHEME']}img/button_clicked.png',
           '{$const['JQTHEME']}img/grayButton.png',
