@@ -185,10 +185,10 @@ function getPicture_Success(imageData) {
   document.getElementById("addDSimgOne").src = "data:image/jpeg;base64," + imageData;
 }
 
-$('.getPicture').click(function(){
+$('.getCamera').click(function(){
   getPicture();
 });
-$('.getCameraLibPic').click(function(){
+$('.getPicture').click(function(){
   getPicture(PictureSourceType.LIBRARY);
 });
 

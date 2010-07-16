@@ -50,7 +50,7 @@
     <li class="last"><a href="#home"><img src="content/img/logo2.png" alt="Some Text" /></a></li>
   </ul>
 </div>
-<p style="display:none;background:#000;font-size:10px;color:#999;text-decoration:none"><a class="flip" href="#Developer_Settings">Developer Settings</a></p></div><div id="Add_Dietary_Supplement" class="thisisapage"><div class="heading"></div><div class="inner-has-bottomtools">
+</div><div id="Add_Dietary_Supplement" class="thisisapage"><div class="heading"></div><div class="inner-has-bottomtools">
   <div class="info">
     <p id="addSupUserName" class="smallHeading"></p>
   </div>
@@ -145,28 +145,6 @@
   </form>
   <div class="content">
     <p><a href="#Add_Dietary_Supplement" class="sumbitUserSubmitProfile whiteButton">Add Dietary Supplement</a></p>
-  </div>
-</div>
-<div class="toolbar_bottom">
-  <ul class="footerIcons">
-    <li><a href="#Start"><span class="footer1"></span>Home</a></li>
-    <li><a href="#Profiles"><span class="footer2"></span>Profiles</a></li>
-    <li><a href="#Add_Dietary_Supplement"><span class="footer3"></span>Add DS</a></li>
-    <li><a href="#Learn_About_ODS"><span class="footer4"></span>About ODS</a></li>
-    <li><a href="#Settings"><span class="footer5"></span>More</a></li>
-  </ul>
-</div>
-</div><div id="Developer_Settings" class="thisisapage"><div class="heading"></div><div class="inner-has-bottomtools">
-  <div class="toolbar">
-      <h4>Developer Settings</h4>
-      <a class="button goback" href="#Start">Done</a>
-  </div>
-  <div class="info">
-    <p>Need to start fresh?</p>
-  </div>
-  <div class="content">
-    <p><a href="#Start" id="resetUserData" class="pop whiteButton">Reset User Data</a></p>
-    <p><a href="#Start" id="populateUserData" class="pop whiteButton">Prepopulate Database</a></p>
   </div>
 </div>
 <div class="toolbar_bottom">
@@ -557,7 +535,7 @@ function goToAccordion(clicked){$('#accordion .expandable').slideUp(240,'linear'
 function PictureSourceType(){};PictureSourceType.LIBRARY=0;PictureSourceType.CAMERA=1;function getPicture(sourceType){$("#addPhotoOne").attr('src')="data:image/jpeg;base64,"+imageData;var options={quality:10};if(sourceType!=undefined){options["sourceType"]=sourceType;}
 navigator.camera.getPicture(getPicture_Success,null,options);}
 function getPicture_Success(imageData){document.getElementById("addDSimgOne").src="data:image/jpeg;base64,"+imageData;}
-$('.getPicture').click(function(){getPicture();});$('.getCameraLibPic').click(function(){getPicture(PictureSourceType.LIBRARY);});
+$('.getCamera').click(function(){getPicture();});$('.getPicture').click(function(){getPicture(PictureSourceType.LIBRARY);});
 function insertUser(user,callback){if(user.length>0){var query="INSERT INTO user (user) VALUES ('"+user+"');";db.transaction(function(transaction,results){transaction.executeSql(query,null,function(transaction,results){var currentuid=results.insertId;updateUserLists(currentuid,user);},errorHandler);});}
 return false;}
 function setCurrentUser(uid,user){$(".userSelectToggle").hide();$(".currentUser").html(user);$("#user_select").val(uid);$("#updateUserUID").attr('name',uid);$("#updateUserName").val(user);}
