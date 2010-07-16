@@ -1,4 +1,4 @@
- <div class="minHeight350">
+<div class="minHeight340">
   <div class="toolbar">
       <h1>Add Profile</h1>
       <a class="blueButton" href="#Profiles">Profiles</a>
@@ -10,7 +10,7 @@
     </ul>
   </form>
   <div class="content">
-    <p><a href="#Add_Dietary_Supplement" class="sumbitUserSubmitProfile whiteButton">Add Dietary Supplement</a></p>
+    <p><a class="whiteButton submitUser" href="#">Save</a></p>
   </div>
 </div>
 <?php

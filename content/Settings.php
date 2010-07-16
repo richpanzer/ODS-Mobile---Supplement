@@ -1,6 +1,6 @@
 <div class="minHeight350">
   <div class="toolbar">
-      <h3>App Support</h3>
+      <h3>Settings and Resources</h3>
       <a class="button goback" href="#Start">Done</a>
   </div>
   <ul class="edgetoedge">

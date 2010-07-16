@@ -3,7 +3,7 @@
     <p id="addSupUserName" class="smallHeading"></p>
   </div>
   <div class="toolbar">
-    <h3>Add DS</h3>
+    <h3>Add</h3>
     <a id="addDSProfileBtn" class="blueButton" href="#Profiles">Profiles</a>
     <a class="button submitProfile" href="#">Save</a>
   </div>
@@ -70,6 +70,9 @@
       <li><label for="frequency">Notes:</label>
       <textarea name="notes" id="notes"></textarea></li>
     </ul>
+    <div class="content">
+      <p><a class="whiteButton submitProfile" href="#">Save</a></p>
+    </div>
   </form>
 </div>
 <?php

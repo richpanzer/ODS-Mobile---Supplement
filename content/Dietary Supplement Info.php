@@ -1,6 +1,6 @@
 <div class="minHeight350">
   <div class="toolbar">
-    <h3>DS Info</h3>
+    <h3>Resources</h3>
     <a class="button back" href="#Start">Home</a>
   </div>
   <ul class="edgetoedge">

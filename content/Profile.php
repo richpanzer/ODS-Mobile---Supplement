@@ -2,9 +2,9 @@
   <div class="toolbar">
     <h3 class="currentUser">Error</h3>
     <a class="button back" href="#Profiles">Profiles</a>
-    <a id="profileGOTOaddDS" class="button" href="#Add_Dietary_Supplement">Add DS</a>
+    <a id="profileGOTOaddDS" class="button" href="#Add_Dietary_Supplement">Add</a>
   </div>
-  <h2><center>Supplements</center></h2>
+  <h2 style="text-align:center">Dietary Supplements</h2>
   <span class="minHeight250">
     <ul id="profile_entries" class="rounded"><?php // Dynamically populated ?>
     </ul>
