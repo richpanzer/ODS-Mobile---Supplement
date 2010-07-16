@@ -30,8 +30,6 @@
           <option>Pill</option>
         </select>
       </li>
-    </ul>
-    <ul class="rounded">
       <li>
         <label for="frequency">How Often:</label>
         <select class="haslabel-width1" placeholder="How Often" name="frequency" id="frequency_update">
@@ -55,10 +53,14 @@
     </ul>
     <ul class="rounded">
       <li>
-        <img style="width:80px;height:80px;float:left;" id="imageOne_update" />
-        <!-- for testing, add the buttons below -->
-        <button id="getCamera_01">From Camera</button>
-        <button id="getPicture_01">From Photo Library</button>
+        <div class="imgWrapper">
+          <img class="inputImg" id="imageOne_update" />
+        </div>
+        <div class="imgBtnWrapper">
+          <p><button id="getCamera_01">From Camera</button></p>
+          <br />
+          <p><button id="getPicture_01">From Photo Library</button></p>
+        </div>
         <br class="reset" />
       </li>
     </ul>

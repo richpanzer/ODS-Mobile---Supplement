@@ -59,11 +59,12 @@
     </ul>
     <ul class="rounded">
       <li>
-        <div style="float:left;">
-          <img style="width:80px;height:80px;" id="imageOne" />
+        <div class="imgWrapper">
+          <img class="inputImg" id="imageOne" />
         </div>
-        <div style="float:right;margin:15px 0 0;width:180px">
-          <p><button id="getCamera_01">From Camera</button><br /></p>
+        <div class="imgBtnWrapper">
+          <p><button id="getCamera_01">From Camera</button></p>
+          <br />
           <p><button id="getPicture_01">From Photo Library</button></p>
         </div>
         <br class="reset" />

@@ -313,3 +313,16 @@ ol.edgetoedge li {
 }
 
 .dsImg {float:right}
+
+.imgWrapper {
+  float:left;
+}
+.inputImg {
+  width:80px;
+  height:80px
+}
+.imgBtnWrapper {
+  float:right;
+  margin:15px 0 0;
+  width:180px
+}
