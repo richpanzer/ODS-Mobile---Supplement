@@ -172,16 +172,15 @@ function PictureSourceType() {}
 PictureSourceType.LIBRARY = 0;
 PictureSourceType.CAMERA = 1;
 
-function getPicture(sourceType) {
+function getPicture(callback,sourceType) {
   var options = { quality: 10 };
   if (sourceType != undefined) {
     options["sourceType"] = sourceType;
   }
-  navigator.camera.getPicture(getPicture_Success, null, options);
+  navigator.camera.getPicture(callback, null, options);
 }
 
 function getPicture_Success(imageData) {
-  //document.getElementById("imageOne").src = "data:image/jpeg;base64," + imageData;
   $("#imageOne").attr('src', "data:image/jpeg;base64," + imageData);
 }
 

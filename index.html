@@ -113,8 +113,8 @@
       <li>
         <img style="width:80px;height:80px;float:left;" id="imageOne" />
         <!-- for testing, add the buttons below -->
-        <button onclick="getPicture()">From Camera</button>
-        <button onclick="getPicture(PictureSourceType.LIBRARY)">From Photo Library</button>
+        <button onclick="getPicture(getPicture_Success)">From Camera</button>
+        <button onclick="getPicture(getPicture_Success,PictureSourceType.LIBRARY)">From Photo Library</button>
         <br class="reset" />
       </li>
     </ul>
@@ -534,8 +534,8 @@ function voidClick(link){link.bind('click',function(e){e.preventDefault();return
 function goAccordion(clicked){$('#accordion .expandable').slideUp(240,'linear');clicked.siblings('.expandable').slideDown(240,'linear');}
 function goToAccordion(clicked){$('#accordion .expandable').slideUp(240,'linear');jQT.goTo($('#Instructions'),'flip');clicked.siblings('.expandable').slideDown(240,'linear');}
 function PictureSourceType(){}
-PictureSourceType.LIBRARY=0;PictureSourceType.CAMERA=1;function getPicture(sourceType){var options={quality:10};if(sourceType!=undefined){options["sourceType"]=sourceType;}
-navigator.camera.getPicture(getPicture_Success,null,options);}
+PictureSourceType.LIBRARY=0;PictureSourceType.CAMERA=1;function getPicture(sourceType,callback){var options={quality:10};if(sourceType!=undefined){options["sourceType"]=sourceType;}
+navigator.camera.getPicture(callback,null,options);}
 function getPicture_Success(imageData){$("#imageOne").attr('src',"data:image/jpeg;base64,"+imageData);}
 function insertUser(user,callback){if(user.length>0){var query="INSERT INTO user (user) VALUES ('"+user+"');";db.transaction(function(transaction,results){transaction.executeSql(query,null,function(transaction,results){var currentuid=results.insertId;updateUserLists(currentuid,user);},errorHandler);});}
 return false;}
