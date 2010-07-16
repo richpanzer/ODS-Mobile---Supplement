@@ -29,7 +29,7 @@ function addSupplementsToDOM(results,uid) {
       var row = results.rows.item(i);
       $('#profile_entries').append($('<li class="arrow"><a class="id' + uid +
         '_' + i + '" href="#">' + row['name'] + '</a></li>'));
-      addCurrentSupListener(i,row['user'],row['uid'],row['sid'],row['pid'],row['name'],row['amount'],row['unit'],row['frequency'],row['frequency_unit'],row['notes']);
+      addCurrentSupListener(i,row['user'],row['uid'],row['sid'],row['pid'],row['name'],row['amount'],row['unit'],row['frequency'],row['frequency_unit'],row['myimg'],row['notes']);
     }
   } else {
     addSupplementOptionsError();
