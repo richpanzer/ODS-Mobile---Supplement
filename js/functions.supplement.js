@@ -36,9 +36,9 @@ function addSupplementsToDOM(results,uid) {
   }
 }
 
-function addCurrentSupListener(i,user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes) {
+function addCurrentSupListener(i,user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,image,notes) {
   $("#profile_entries li a.id" + uid + "_" + i).bind('click', function(){
-    showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes);
+    showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,image,notes);
     jQT.goTo($('#Supplement'), 'flip');
   });
 }
@@ -48,12 +48,13 @@ function addSupplementOptionsError() {
   $('#profile_entries').append($('<li></li>').text(noSupplementsError));
 }
 
-function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes) {
+function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,image,notes) {
   // This updates the "view" page
   $("#supName").html(supplement);
   $("#supAmount").html(amount + ' ' + unit);
   $("#supFrequency").html(frequency);
   $("#supFrequencyUnit").html(frequency_unit);
+  $("#supPhoto").attr('src', "data:image/jpeg;base64," + image);
   if (notes.length > 0) {
     $("#supNotes").html(notes);
   } else {
