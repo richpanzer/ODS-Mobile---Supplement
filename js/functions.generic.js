@@ -34,7 +34,7 @@ function setupDatabaseTables() {
     '`frequency` VARCHAR(16), ' +
     '`frequency_unit` VARCHAR(16), ' +
     '`notes` VARCHAR(256), ' +
-    '`myimg` VARCHAR(256));'
+    '`myimg` BLOB);'
   setupQuery[3] = 'CREATE TABLE IF NOT EXISTS `setting` (' +
     '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,' +
     '`name` VARCHAR(32) NOT NULL, ' +

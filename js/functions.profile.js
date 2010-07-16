@@ -7,7 +7,8 @@ function createProfile(callback) {
   var frequency = $("#frequency").val();
   var frequency_unit = $("#frequency_unit").val();
   var notes = $("#notes").val();
-  var myimg = 'Image 1 Placeholder';
+  //var myimg = 'Image 1 Placeholder';
+  var myimg = $("#imageOne").attr('src');
   var querySupplementID = "SELECT `id` FROM `supplement` WHERE `name`='" + supplement + "' LIMIT 1;";
   db.transaction(function(transaction) {
     transaction.executeSql(querySupplementID, [], function(transaction, result1) {
