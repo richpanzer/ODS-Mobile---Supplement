@@ -54,7 +54,7 @@ function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency
   $("#supAmount").html(amount + ' ' + unit);
   $("#supFrequency").html(frequency);
   $("#supFrequencyUnit").html(frequency_unit);
-  $("#supPhoto").attr('src', "data:image/jpeg;base64," + image);
+  $("#supPhoto").attr('src', image);
   if (notes.length > 0) {
     $("#supNotes").html(notes);
   } else {
