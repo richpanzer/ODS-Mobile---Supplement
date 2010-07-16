@@ -61,8 +61,8 @@
       <li>
         <img style="width:80px;height:80px;float:left;" id="imageOne" />
         <!-- for testing, add the buttons below -->
-        <button onclick="getPicture(getPicture_Success)">From Camera</button>
-        <button onclick="getPicture(getPicture_Success,PictureSourceType.LIBRARY)">From Photo Library</button>
+        <button class="getCamera_01">From Camera</button>
+        <button class="getPicture_01">From Photo Library</button>
         <br class="reset" />
       </li>
     </ul>

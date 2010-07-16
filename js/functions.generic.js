@@ -184,6 +184,14 @@ function getPicture_Success(imageData) {
   $("#imageOne").attr('src', "data:image/jpeg;base64," + imageData);
 }
 
+$('getCamera_01').bind('click', function(){
+  getPicture(getPicture_Success);
+});
+$('getPicture_01').bind('click', function(){
+  getPicture(getPicture_Success,PictureSourceType.LIBRARY);
+});
+
+
 // Camera Roll Stuff
 /*
 function PictureSourceType() {};
