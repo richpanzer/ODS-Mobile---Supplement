@@ -54,7 +54,13 @@
       </li>
     </ul>
     <ul class="rounded">
-      <li>Add Photo:</li>
+      <li>
+        <img style="width:80px;height:80px;float:left;" id="imageOne_update" />
+        <!-- for testing, add the buttons below -->
+        <button id="getCamera_01">From Camera</button>
+        <button id="getPicture_01">From Photo Library</button>
+        <br class="reset" />
+      </li>
     </ul>
     <ul class="rounded">
       <li><label for="frequency">Notes:</label>

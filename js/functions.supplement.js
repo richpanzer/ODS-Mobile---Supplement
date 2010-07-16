@@ -70,5 +70,6 @@ function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency
   $("#frequency_update").val(frequency);
   $("#frequency_unit_update").val(frequency_unit);
   $("#notes_update").val(notes);
+  $("#imageOne_update").attr('src', image);
   $("#updateSupplement").attr('name',pid);
 }

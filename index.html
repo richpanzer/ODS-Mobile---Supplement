@@ -221,7 +221,13 @@
       </li>
     </ul>
     <ul class="rounded">
-      <li>Add Photo:</li>
+      <li>
+        <img style="width:80px;height:80px;float:left;" id="imageOne_update" />
+        <!-- for testing, add the buttons below -->
+        <button id="getCamera_01">From Camera</button>
+        <button id="getPicture_01">From Photo Library</button>
+        <br class="reset" />
+      </li>
     </ul>
     <ul class="rounded">
       <li><label for="frequency">Notes:</label>
@@ -546,7 +552,7 @@ function addSupplementsToDOM(results,uid){if(results.rows.length>0){for(var i=0;
 function addCurrentSupListener(i,user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,image,notes){$("#profile_entries li a.id"+uid+"_"+i).bind('click',function(){showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,image,notes);jQT.goTo($('#Supplement'),'flip');});}
 function addSupplementOptionsError(){$('#profile_entries').append($('<li></li>').text(noSupplementsError));}
 function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,image,notes){$("#supName").html(supplement);$("#supAmount").html(amount+' '+unit);$("#supFrequency").html(frequency);$("#supFrequencyUnit").html(frequency_unit);$("#supPhoto").attr('src',image);if(notes.length>0){$("#supNotes").html(notes);}else{$("#supNotes").html('<span class="errorMsg">'+supNotesBlank+'</span>');}
-$("#user_select_update").attr('name',uid).append('<option value="'+uid+'">'+user+'</option>');$("#supplement_update").val(supplement).attr('name',sid);$("#amount_update").val(amount);$("#unit_update").val(unit);$("#frequency_update").val(frequency);$("#frequency_unit_update").val(frequency_unit);$("#notes_update").val(notes);$("#updateSupplement").attr('name',pid);}
+$("#user_select_update").attr('name',uid).append('<option value="'+uid+'">'+user+'</option>');$("#supplement_update").val(supplement).attr('name',sid);$("#amount_update").val(amount);$("#unit_update").val(unit);$("#frequency_update").val(frequency);$("#frequency_unit_update").val(frequency_unit);$("#notes_update").val(notes);$("#imageOne_update").attr('src',image);$("#updateSupplement").attr('name',pid);}
 function createProfile(callback){var userID=$("#user_select option:selected").attr("name");var supplement=$("#supplement").val();var amount=$("#amount").val();var unit=$("#unit").val();var frequency=$("#frequency").val();var frequency_unit=$("#frequency_unit").val();var notes=$("#notes").val();var myimg=$("#imageOne").attr('src');var querySupplementID="SELECT `id` FROM `supplement` WHERE `name`='"+supplement+"' LIMIT 1;";db.transaction(function(transaction){transaction.executeSql(querySupplementID,[],function(transaction,result1){if(result1.rows.length>0){supplementID=result1.rows.item(0)['id'];insertProfile(callback,userID,supplementID,amount,unit,frequency,frequency_unit,notes,myimg);}else{createSupplement(supplement);db.transaction(function(transaction){transaction.executeSql(querySupplementID,[],function(transaction,result2){supplementID=result2.rows.item(0)['id'];insertProfile(callback,userID,supplementID,amount,unit,frequency,frequency_unit,notes,myimg);});});}},errorHandler);});return false;}
 function insertProfile(callback,userID,supplementID,amount,unit,frequency,frequency_unit,notes,myimg){var insertProfileValues="'"+userID+"', '"+supplementID+"', '"+amount+"', '"
 +unit+"', '"+frequency+"', '"+frequency_unit+"', '"+notes+"', '"+myimg+"'";var insertProfileQuery="INSERT INTO profile "+"(user_id, supplement_id, amount, unit, frequency, frequency_unit, notes, myimg) "+"VALUES ("+insertProfileValues+");";dbQuery(insertProfileQuery);}
