@@ -537,7 +537,7 @@ function PictureSourceType(){}
 PictureSourceType.LIBRARY=0;PictureSourceType.CAMERA=1;function getPicture(callback,sourceType){var options={quality:10};if(sourceType!=undefined){options["sourceType"]=sourceType;}
 navigator.camera.getPicture(callback,null,options);}
 function getPicture_Success(imageData){$("#imageOne").attr('src',"data:image/jpeg;base64,"+imageData);}
-$('getCamera_01').bind('click',function(){getPicture(getPicture_Success);});$('getPicture_01').bind('click',function(){getPicture(getPicture_Success,PictureSourceType.LIBRARY);});
+$('.getCamera_01').click(function(){getPicture(getPicture_Success);});$('.getPicture_01').click(function(){getPicture(getPicture_Success,PictureSourceType.LIBRARY);});
 function insertUser(user,callback){if(user.length>0){var query="INSERT INTO user (user) VALUES ('"+user+"');";db.transaction(function(transaction,results){transaction.executeSql(query,null,function(transaction,results){var currentuid=results.insertId;updateUserLists(currentuid,user);},errorHandler);});}
 return false;}
 function setCurrentUser(uid,user){$(".userSelectToggle").hide();$(".currentUser").html(user);$("#user_select").val(uid);$("#updateUserUID").attr('name',uid);$("#updateUserName").val(user);}

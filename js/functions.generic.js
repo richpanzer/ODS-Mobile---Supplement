@@ -184,10 +184,10 @@ function getPicture_Success(imageData) {
   $("#imageOne").attr('src', "data:image/jpeg;base64," + imageData);
 }
 
-$('.getCamera_01').click(function(){
+$('#getCamera_01').click(function(){
   getPicture(getPicture_Success);
 });
-$('.getPicture_01').click(function(){
+$('#getPicture_01').click(function(){
   getPicture(getPicture_Success,PictureSourceType.LIBRARY);
 });
 

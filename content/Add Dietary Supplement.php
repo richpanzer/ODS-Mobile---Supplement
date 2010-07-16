@@ -61,8 +61,8 @@
       <li>
         <img style="width:80px;height:80px;float:left;" id="imageOne" />
         <!-- for testing, add the buttons below -->
-        <button class="getCamera_01">From Camera</button>
-        <button class="getPicture_01">From Photo Library</button>
+        <button id="getCamera_01">From Camera</button>
+        <button id="getPicture_01">From Photo Library</button>
         <br class="reset" />
       </li>
     </ul>
