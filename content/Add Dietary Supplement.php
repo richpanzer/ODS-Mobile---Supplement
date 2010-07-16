@@ -59,10 +59,11 @@
     </ul>
     <ul class="rounded">
       <li>
-        <img style="width:60px;height:60px" id="test_img" src="" />
+        <img style="width:80px;height:80px;float:left;" id="imageOne" src="" />
         <!-- for testing, add the buttons below -->
         <button onclick="getPicture()">From Camera</button>
         <button onclick="getPicture(PictureSourceType.LIBRARY)">From Photo Library</button>
+        <br class="reset" />
       </li>
     </ul>
     <ul class="rounded">
