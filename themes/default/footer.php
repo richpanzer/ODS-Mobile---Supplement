@@ -4,7 +4,7 @@
     $freeformOutput = <<<EOD
     var jQT = new $.jQTouch({
       icon: '{$const['THEME_IMG']}icon.png',
-      addGlossToIcon: true,
+      addGlossToIcon: false,
       startupScreen: '{$const['THEME_IMG']}startup.png',
       statusBar: 'black',
       slideSelector: 'body > * > ul li a, ul.rounded li a',

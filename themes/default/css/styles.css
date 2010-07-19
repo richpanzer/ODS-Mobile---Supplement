@@ -152,25 +152,25 @@ label {
   display:inline-block;
   width:95px;
   float:left;
-  background-color:blue;
 }
 
 .haslabel, input.haslabel, input[type=text].haslabel {
   display:inline-block !important;
-  width:183px;
+  width:175px;
   float:left;
   margin-left:5px;
 }
-textarea {padding:10px 5px}
+textarea {padding:0}
 
 .haslabel-50 {
   display:inline-block !important;
-  width:50px;
+  width:40px;
   margin-left:5px;
 }
 .haslabel-125 {
   display:inline-block !important;
-  width:128px;
+  width:125px;
+  margin-left:5px;
 }
 
 
