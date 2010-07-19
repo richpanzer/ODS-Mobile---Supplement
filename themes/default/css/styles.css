@@ -156,9 +156,8 @@ label {
 
 .haslabel, input.haslabel, input[type=text].haslabel {
   display:inline-block !important;
-  width:175px;
+  width:180px;
   float:left;
-  margin-left:5px;
 }
 textarea {padding:0}
 
