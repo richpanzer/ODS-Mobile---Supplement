@@ -8,7 +8,12 @@
   <ul id="supProperties" class="rounded weight500">
     <li><span><strong class="label">Amount:</strong> <span id="supAmount"></span></span></li>
     <li><span><strong class="label">Frequency:</strong> <span id="supFrequency"></span> <span id="supFrequencyUnit"></span></span></li>
-    <li><span><strong class="label">Photo:</strong> <img id="supPhoto" style="width:80px;height:80px;" /></span></li>
+    <li>
+      <span id="photocontainer"><strong class="label">Photos:</strong><br />
+        <p><img id="supPhoto" class="inputImg" /><img id="supPhoto2" class="inputImg" /></p>
+        <br class="reset" />
+      </span>
+    </li>
     <li><span><strong class="label">Notes:</strong> <span id="supNotes"></span></span></li>
   </ul>
 </div>

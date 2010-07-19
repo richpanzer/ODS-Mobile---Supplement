@@ -174,7 +174,7 @@ li:last-child,li:last-child a {
 /* universal arrows */
 ul li.arrow {
 background-image:url('img/chevron.png');
-background-position:right center;
+background-position:95% center;
 background-repeat:no-repeat
 }
 

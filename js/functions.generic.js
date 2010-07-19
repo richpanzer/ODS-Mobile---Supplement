@@ -183,12 +183,22 @@ function getPicture(callback,sourceType) {
 function getPicture_Success(imageData) {
   $("#imageOne").attr('src', "data:image/jpeg;base64," + imageData);
 }
+function getPicture_Success2(imageData) {
+  $("#imageTwo").attr('src', "data:image/jpeg;base64," + imageData);
+}
 
 $('#getCamera_01').click(function(){
   getPicture(getPicture_Success);
 });
 $('#getPicture_01').click(function(){
   getPicture(getPicture_Success,PictureSourceType.LIBRARY);
+});
+
+$('#getCamera_02').click(function(){
+  getPicture(getPicture_Success2);
+});
+$('#getPicture_02').click(function(){
+  getPicture(getPicture_Success2,PictureSourceType.LIBRARY);
 });
 
 

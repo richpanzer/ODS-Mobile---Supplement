@@ -225,14 +225,22 @@ DBquery(thisquery,thisdata,thiscallback,thismessage);
 
 $('.inputImg').toggle(function(){
   $(this).animate({
-    width: '200px',
-    height: '200px'
-  }, fast);
+    width: 213,
+    height: 240
+  }, 'slow');
+  $(this).siblings().animate({
+    width: 40,
+    height: 40
+  },'slow');
 }, function(){
   $(this).animate({
-    width: '80px',
-    height: '80px'
-  }, fast);
+    width: 80,
+    height: 80
+  }, 'fast');
+  $(this).siblings().animate({
+    width: 80,
+    height: 80
+  },'slow');
 });
 
 
