@@ -252,6 +252,8 @@ $('.inputImg').toggle(function(){
 function pageHeight() {
   return window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
 }
+var mypageheight = pageHeight();
+$('.thisisapage').css('height',mypageheight);
 
 
 
