@@ -153,9 +153,10 @@ label {
   width:95px;
   float:left;
 }
-input,select,textarea {
-  border:none !important;
+input,textarea {
+  border:1px solid red !important;
   padding:0 !important;
+  -webkit-border-radius:0;
 }
 
 .haslabel, input.haslabel, input[type=text].haslabel {
