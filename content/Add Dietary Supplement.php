@@ -17,7 +17,7 @@
     <ul class="rounded">
       <li>
         <label for="amount">Amount:</label>
-        <input placeholder="500" type="text" class="haslabel" name="amount" id="amount" />
+        <input placeholder="Enter Amount" type="text" class="haslabel" name="amount" id="amount" />
         <br class="reset" />
       </li>
     </ul>
@@ -49,9 +49,8 @@
           <option>5x</option>
         </select>
         <select class="haslabel-125" name="frequency_unit" id="frequency_unit">
-          <option selected="selected">&nbsp;</option>
           <option>Hourly</option>
-          <option>Daily</option>
+          <option selected="selected">Daily</option>
           <option>Weekly</option>
           <option>Monthly</option>
           <option>Annually</option>

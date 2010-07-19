@@ -10,13 +10,13 @@
     </ul>
     <ul class="rounded">
       <li>
-        <label for="supplement_update">DS Name:</label>
+        <label for="supplement_update">Name:</label>
         <input type="text" class="haslabel" name="supplement" id="supplement_update" />
         <br class="reset" />
       </li>
       <li>
         <label for="amount">Amount:</label>
-        <input type="text" class="haslabel" name="amount" id="amount_update" />
+        <input placeholder="Enter Amount" type="text" class="haslabel" name="amount" id="amount_update" />
         <br class="reset" />
       </li>
       <li>
@@ -44,9 +44,8 @@
           <option>5x</option>
         </select>
         <select class="haslabel-125" name="frequency_unit" id="frequency_unit_update">
-          <option selected="selected"> </option>
           <option>Hourly</option>
-          <option>Daily</option>
+          <option selected="selected">Daily</option>
           <option>Weekly</option>
           <option>Monthly</option>
           <option>Annually</option>
