@@ -245,4 +245,14 @@ $('.inputImg').toggle(function(){
 
 
 
+// Browser Window Size and Position
+// copyright Stephen Chapman, 3rd Jan 2005, 8th Dec 2005
+// you may copy these functions but please keep the copyright notice as well
+
+function pageHeight() {
+  return window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
+}
+
+
+
 });

@@ -10,7 +10,7 @@
     </ul>
   </form>
   <div class="content">
-    <p><a class="whiteButton submitUser" href="#">Save</a></p>
+    <p><a class="whiteButton sumbitUserSubmitProfile" href="#">Add Dietary Supplement</a></p>
   </div>
 </div>
 <?php

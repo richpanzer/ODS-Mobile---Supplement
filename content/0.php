@@ -1,4 +1,4 @@
-<div class="minHeight325">
+<div>
   <div class="info">
     <p>Get Started</p>
   </div>
@@ -15,13 +15,11 @@
   </ul>
   <br class="reset" />
 </div>
-<div class="toolbar_bottom">
-  <ul id="footerLogos">
+<div id="footerLogos">
+  <ul>
     <li><a href="#home"><img src="content/img/logo1.png" alt="Some Text" /></a></li>
     <li class="last"><a href="#home"><img src="content/img/logo2.png" alt="Some Text" /></a></li>
   </ul>
   <br class="reset" />
-</div>
-<div id="anewhope">
 </div>
 <?php /*<p style="background:#000;font-size:10px;color:#999;text-decoration:none"><a class="flip" href="#Developer_Settings">Developer Settings</a></p>*/ ?>
