@@ -282,7 +282,7 @@ background:#fff
 }
 
 ul li input[type="text"],ul li input[type="password"],ul li textarea,ul li select {
--webkit-appearance:textarea;
+-webkit-appearance:none;
 background:#fff;
 border:0;
 color:#555;
