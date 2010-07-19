@@ -154,9 +154,9 @@ label {
   float:left;
 }
 input,textarea {
-  border:1px solid red !important;
-  padding:0 !important;
+  padding:0;
   -webkit-border-radius:0;
+  -webkit-appearance:none;
 }
 
 .haslabel, input.haslabel, input[type=text].haslabel {
