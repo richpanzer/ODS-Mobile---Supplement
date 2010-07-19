@@ -223,6 +223,17 @@ function thiscallback(result) {
 DBquery(thisquery,thisdata,thiscallback,thismessage);
 */
 
+$('.inputImg').toggle(function(){
+  $(this).animate({
+    width: '200px',
+    height: '200px'
+  }, fast);
+}, function(){
+  $(this).animate({
+    width: '80px',
+    height: '80px'
+  }, fast);
+});
 
 
 

@@ -69,6 +69,16 @@
         </div>
         <br class="reset" />
       </li>
+      <li>
+        <div class="imgWrapper">
+          <img class="inputImg" id="imageTwo" />
+        </div>
+        <div class="imgBtnWrapper">
+          <p><button id="getCamera_02">From Camera</button></p>
+          <p><button id="getPicture_02">From Photo Library</button></p>
+        </div>
+        <br class="reset" />
+      </li>
     </ul>
     <ul class="rounded">
       <li>
