@@ -1,6 +1,6 @@
 body .thisisapage {
 overflow:hidden;
-width:320px
+/*width:320px*/
 }
 
 body .minHeight250 {min-height:250px}
@@ -12,7 +12,7 @@ body .minHeight400 {min-height:400px}
 /* comment the follow landscape items during webkit test */
 body.landscape .thisisapage {
 overflow:hidden;
-width:480px;
+/*width:480px;*/
 }
 body.landscape .minHeight250 {min-height:210px}
 body.landscape .minHeight325 {min-height:285px}
