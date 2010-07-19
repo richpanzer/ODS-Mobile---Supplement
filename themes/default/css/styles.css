@@ -153,6 +153,10 @@ label {
   width:95px;
   float:left;
 }
+input,select,textarea {
+  border:none !important;
+  padding:0 !important;
+}
 
 .haslabel, input.haslabel, input[type=text].haslabel {
   display:inline-block !important;
