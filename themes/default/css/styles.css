@@ -150,29 +150,28 @@ font-weight:500
 
 label {
   display:inline-block;
-  width:35%;
-  margin-right:3.5%
+  width:90px;
+  float:left;
 }
 
-.haslabel, #amount, #amount_update, #supplement_update {
+.haslabel, input.haslabel, input[type=text].haslabel {
   display:inline-block !important;
-  width:60%
+  width:183px;
+  float:left;
+  margin-left:5px;
 }
-select.haslabel {float:right}
+textarea {padding:10px 5px}
 
-input.haslabel {
-  padding:0 !important;
-  margin:0 !important;
-  position:relative;
-  left:-2.0%;
-}
-
-.haslabel-width1 {
+.haslabel-50 {
   display:inline-block !important;
-  width:30%;
-  position:relative;
-  left:3.5%;
+  width:50px;
+  margin-left:5px;
 }
+.haslabel-125 {
+  display:inline-block !important;
+  width:128px;
+}
+
 
 .weight500 {font-weight:500}
 

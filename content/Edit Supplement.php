@@ -12,10 +12,12 @@
       <li>
         <label for="supplement_update">DS Name:</label>
         <input type="text" class="haslabel" name="supplement" id="supplement_update" />
+        <br class="reset" />
       </li>
       <li>
         <label for="amount">Amount:</label>
         <input type="text" class="haslabel" name="amount" id="amount_update" />
+        <br class="reset" />
       </li>
       <li>
         <label for="unit">Unit:</label>
@@ -29,10 +31,11 @@
           <option>Scoop</option>
           <option>Pill</option>
         </select>
+        <br class="reset" />
       </li>
       <li>
         <label for="frequency">How Often:</label>
-        <select class="haslabel-width1" placeholder="How Often" name="frequency" id="frequency_update">
+        <select class="haslabel-50" placeholder="How Often" name="frequency" id="frequency_update">
           <option>0x</option>
           <option>1x</option>
           <option>2x</option>
@@ -40,7 +43,7 @@
           <option>4x</option>
           <option>5x</option>
         </select>
-        <select class="haslabel-width1" name="frequency_unit" id="frequency_unit_update">
+        <select class="haslabel-125" name="frequency_unit" id="frequency_unit_update">
           <option selected="selected"> </option>
           <option>Hourly</option>
           <option>Daily</option>

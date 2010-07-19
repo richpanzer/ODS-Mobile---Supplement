@@ -301,10 +301,9 @@ text-indent:-2px
 
 ul li select {
 -webkit-appearance:textfield;
-background:transparent url('img/chevron.png') no-repeat 103% 3px;
-margin-left:-6px;
+background:transparent url('img/chevron.png') no-repeat right center;
 text-indent:0;
-width:104%
+padding:0;
 }
 
 ul li input[type="checkbox"],ul li input[type="radio"] {
