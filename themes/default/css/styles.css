@@ -1,6 +1,6 @@
-body .thisisapage {
+/*body .thisisapage {
 overflow:hidden;
-/*width:320px*/
+/*width:320px
 }
 
 body .minHeight250 {min-height:250px}
@@ -9,17 +9,17 @@ body .minHeight340 {min-height:340px}
 body .minHeight350 {min-height:350px}
 body .minHeight400 {min-height:400px}
 
-/* comment the follow landscape items during webkit test */
+/* comment the follow landscape items during webkit test
 body.landscape .thisisapage {
 overflow:hidden;
-/*width:480px;*/
+/*width:480px;
 }
 body.landscape .minHeight250 {min-height:210px}
 body.landscape .minHeight325 {min-height:285px}
 body.landscape .minHeight340 {min-height:300px}
 body.landscape .minHeight350 {min-height:310px}
 body.landscape .minHeight400 {min-height:360px}
-
+*/
 br.reset{clear:both}
 
 div.content {
@@ -58,7 +58,9 @@ margin:0;
 overflow:hidden;
 color:#FFF;
 padding:0;
-width:100%
+width:100%;
+position:absolute;
+bottom:0;
 }
 
 .toolbar_bottom li {
@@ -330,4 +332,12 @@ ol.edgetoedge li {
   float:right;
   margin:15px 0 0;
   width:180px
+}
+
+#anewhope {
+  background:url('img/test.svg');
+  -o-background-size:100% 100%;
+  -webkit-background-size:100% 100%;
+  height:200px;
+  width:200px;
 }

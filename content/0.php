@@ -13,6 +13,7 @@
     <li class="borderTopSides"><a href="#Learn_About_ODS"><span class="start8"></span>About</a></li>
     <li class="borderTop"><a href="#Settings"><span class="start9"></span>Settings</a></li>
   </ul>
+  <br class="reset" />
 </div>
 <div class="toolbar_bottom">
   <ul id="footerLogos">
@@ -20,5 +21,7 @@
     <li class="last"><a href="#home"><img src="content/img/logo2.png" alt="Some Text" /></a></li>
   </ul>
   <br class="reset" />
+</div>
+<div id="anewhope">
 </div>
 <?php /*<p style="background:#000;font-size:10px;color:#999;text-decoration:none"><a class="flip" href="#Developer_Settings">Developer Settings</a></p>*/ ?>
