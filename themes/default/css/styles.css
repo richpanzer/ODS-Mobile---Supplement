@@ -150,8 +150,9 @@ font-weight:500
 
 label {
   display:inline-block;
-  width:90px;
+  width:95px;
   float:left;
+  background-color:blue;
 }
 
 .haslabel, input.haslabel, input[type=text].haslabel {
