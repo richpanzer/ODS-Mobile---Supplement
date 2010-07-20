@@ -329,8 +329,7 @@ ol.edgetoedge li {
 }
 
 #svgtest {
-  content:url('img/test.svg');
-  /*background-image:url('img/test.svg');*/
+  background-image:url('img/test2.svg');
   -o-background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
   width:100%;

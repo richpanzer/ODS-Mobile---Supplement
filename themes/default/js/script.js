@@ -241,11 +241,11 @@ $('.inputImg').toggle(function(){
 });
 
 
-//setPageHeight();
-$('div.thisisapage').bind('pageAnimationStart', function(){
+setPageHeight();
+/*$('div.thisisapage').bind('pageAnimationStart', function(){
   var height = $(this).height();
   setPageHeight(height);
-});
+});*/
 
 
 
