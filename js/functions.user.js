@@ -7,7 +7,8 @@ function insertUser(user, callback) {
         var currentuid = results.insertId;
         updateUserLists(currentuid,user);
         //alert('the uid is ' + currentuid + ' and the user is ' + user);
-        //setCurrentUser(currentuid,user);
+        setCurrentUser(currentuid,user);
+        callback();
       }, errorHandler);
     });
   }

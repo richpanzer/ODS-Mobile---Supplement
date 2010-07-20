@@ -58,8 +58,8 @@ $(document).ready(function() {
   // Listen to the "Add Dietary Supplement" button on the "Add Profile" page
   $(".sumbitUserSubmitProfile").bind('click', function(){
     var user = $("#profile_name").val();
-    insertUser(user);
-    jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
+    callback = jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
+    insertUser(user, callback);
     return false;
   });
 
