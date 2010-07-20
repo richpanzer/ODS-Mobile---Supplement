@@ -155,8 +155,8 @@ function voidClick(link) {
 
 // Bind a click event to an accordian animation
 function goAccordion(clicked) {
-  $('#accordion .expandable').slideUp(240,'swing');
-  clicked.siblings('.expandable').slideDown(240,'swing');
+  $('#accordion .expandable').slideUp(180,'swing');
+  clicked.siblings('.expandable').slideDown(180,'swing');
 }
 
 // Go to the accordion with something pre-selected
@@ -169,7 +169,7 @@ function goToAccordion(clicked) {
 function setPageHeight(clicked) {
   var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
   pageheight = pageheight - 86;
-  pageheight = $(window).height() - 111;
+  pageheight = $(window).height() - 140;
   //var contentheight = pageheight ; 460 - 66
   $('.hastoolbar').css('min-height',pageheight + 'px');
   //.hastoolbar {min-height:394px}
