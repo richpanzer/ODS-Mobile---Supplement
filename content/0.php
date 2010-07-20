@@ -1,4 +1,4 @@
-<div>
+<div class="pageinfo_home">
   <div class="info">
     <p>Get Started</p>
   </div>

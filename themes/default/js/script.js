@@ -86,10 +86,7 @@ $(document).ready(function() {
 
   $('#Add_Dietary_Supplement a').bind('click', resetAddProfileForm);
 
-
-  $('#Email_Profile').bind('pageAnimationStart', function(){
-    getAllProfiles();
-  });
+  $('#Email_Profile').bind('pageAnimationStart',getAllProfiles);
 
   $('#Email_Profile').bind('pageAnimationEnd', function(){
     var mail = 'mailto:?';
@@ -244,16 +241,9 @@ $('.inputImg').toggle(function(){
 });
 
 
+setPageHeight();
+$('div.thisisapage').bind('pageAnimationStart',setPageHeight);
 
-// Browser Window Size and Position
-// copyright Stephen Chapman, 3rd Jan 2005, 8th Dec 2005
-// you may copy these functions but please keep the copyright notice as well
-
-function pageHeight() {
-  return window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
-}
-var mypageheight = pageHeight();
-$('.thisisapage').css('height',mypageheight);
 
 
 

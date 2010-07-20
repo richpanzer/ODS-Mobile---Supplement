@@ -147,7 +147,7 @@ function allPurposeDBQuery(query, nullHandler, errorHandler) {
 
 // Do nothing when this link is clicked!
 function voidClick(link) {
-  link.bind('click',function(e){
+  link.click(function(e){
     e.preventDefault();
     return false;
   });
@@ -155,8 +155,22 @@ function voidClick(link) {
 
 // Bind a click event to an accordian animation
 function goAccordion(clicked) {
-  $('#accordion .expandable').slideUp(240,'linear');
-  clicked.siblings('.expandable').slideDown(240,'linear');
+  $('#accordion .expandable').animate({
+    height: 'hide',
+    easing: 'swing',
+    duration: 240
+  });
+  clicked.siblings('.expandable').animate({
+    height: 'show',
+    easing: 'swing',
+    duration: 240
+  },function(){
+    newheight = $('.minHeightCalc').height();
+    $('#Instructions .toolbar_bottom').animate({
+      top: newheight
+    },240,'swing');
+
+  });
 }
 
 // Go to the accordion with something pre-selected
@@ -166,6 +180,11 @@ function goToAccordion(clicked) {
   clicked.siblings('.expandable').slideDown(240,'linear');
 }
 
+function setPageHeight() {
+  //var thispageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
+  var thispageheight = $(document).height();
+  $('.thisisapage').css('height',thispageheight);
+}
 
 
 function PictureSourceType() {}

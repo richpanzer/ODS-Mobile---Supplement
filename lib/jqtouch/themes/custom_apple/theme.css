@@ -1,7 +1,4 @@
-body {
-background:red;
-/*background:rgb(222,209,158);*/
-}
+body {background:rgb(222,209,158)}
 
 body > * {
   min-width:320px;

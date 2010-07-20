@@ -1,16 +1,3 @@
-body .minHeight250 {min-height:250px}
-body .minHeight325 {min-height:325px}
-body .minHeight340 {min-height:340px}
-body .minHeight350 {min-height:350px}
-body .minHeight400 {min-height:400px}
-
-/* comment the follow landscape items during webkit test
-body.landscape .minHeight250 {min-height:210px}
-body.landscape .minHeight325 {min-height:285px}
-body.landscape .minHeight340 {min-height:300px}
-body.landscape .minHeight350 {min-height:310px}
-body.landscape .minHeight400 {min-height:360px}*/
-
 br.reset{clear:both}
 
 div.content {
@@ -53,14 +40,10 @@ width:100%;
 
 .toolbar_bottom {
 position:fixed;
-bottom:10px;
-margin-bottom:-10px;
+bottom:0px;
 }
 #Instructions .toolbar_bottom {
   position:relative;
-  bottom:0;
-  margin-top:10px;
-  margin-bottom:0;
 }
 
 .toolbar_bottom li {
@@ -104,7 +87,8 @@ background:-webkit-gradient(
   color-stop(0.85, rgb(103,119,25)),
   color-stop(0.02, rgb(65,74,16))
   );
-height:66px
+height:66px;
+overflow:hidden;
 }
 
 .footerIcons li {

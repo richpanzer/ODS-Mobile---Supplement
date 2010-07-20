@@ -123,30 +123,25 @@ function updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,frequen
 
 }
 
-function updatePassword(password)
-{
-    if(password.length)
-    {
-        password = hex_md5(password);
-        var sql = "SELECT * FROM `setting` WHERE `name` = 'password';"
-
-        db.transaction(function(transaction,results){
-            transaction.executeSql(sql,null,function(transaction,results){
-                if(!results.rows.length)
-                {
-                    sql = 'INSERT INTO `setting` (`name`,`value`) VALUES(?,?)';
-                    transaction.executeSql(sql,['password',password],function(){
-                        $('.success').text('Your password has been saved.');
-                    });
-                }
-                else
-                {
-                    sql = 'UPDATE `setting` SET `value` = ? WHERE `name` = ?;';
-                    transaction.executeSql(sql,[password,'password'],function(){
-                        $('.success').text('Your password has been saved.');
-                    });
-                }
-            },errorHandler);
-        });
-    }
+// update user password
+function updatePassword(password) {
+  if(password.length) {
+    password = hex_md5(password);
+    var sql = "SELECT * FROM `setting` WHERE `name` = 'password';"
+    db.transaction(function(transaction,results){
+      transaction.executeSql(sql,null,function(transaction,results){
+        if(!results.rows.length) {
+          sql = 'INSERT INTO `setting` (`name`,`value`) VALUES(?,?)';
+          transaction.executeSql(sql,['password',password],function(){
+            $('.success').text('Your password has been saved.');
+          });
+        } else {
+          sql = 'UPDATE `setting` SET `value` = ? WHERE `name` = ?;';
+          transaction.executeSql(sql,[password,'password'],function(){
+            $('.success').text('Your password has been saved.');
+          });
+        }
+      },errorHandler);
+    });
+  }
 }
