@@ -1,4 +1,4 @@
-<div class="minHeightCalc">
+<div class="hastoolbar">
   <div class="toolbar">
     <h1>Instructions</h1>
     <a class="button back" href="#Start">Home</a>

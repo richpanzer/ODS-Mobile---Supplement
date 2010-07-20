@@ -1,4 +1,6 @@
 br.reset{clear:both}
+.thisisapage {min-height:460px}
+.hastoolbar {min-height:394px}
 
 div.content {
 color:#000;

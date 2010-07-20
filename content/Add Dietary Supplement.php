@@ -1,4 +1,4 @@
-<div class="inner-has-bottomtools">
+<div class="hastoolbar">
   <div class="info">
     <p id="addSupUserName" class="smallHeading"></p>
   </div>

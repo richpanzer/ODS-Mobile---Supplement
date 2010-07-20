@@ -1,4 +1,4 @@
-<div class="minHeight350">
+<div class="hastoolbar">
   <div class="toolbar">
       <h1>Password Protect App</h1>
       <a class="back" href="#Profile">Profile</a>

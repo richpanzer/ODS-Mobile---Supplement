@@ -1,4 +1,4 @@
-<div class="minHeight350">
+<div class="hastoolbar">
   <div class="toolbar">
       <h3>Settings and Resources</h3>
       <a class="button goback" href="#Start">Done</a>
