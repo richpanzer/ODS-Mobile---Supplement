@@ -168,7 +168,7 @@ function goToAccordion(clicked) {
 
 function setPageHeight(clicked) {
   var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
-  pageheight = pageheight - 66;
+  pageheight = pageheight - 86;
   pageheight = $(window).height() - 111;
   //var contentheight = pageheight ; 460 - 66
   $('.hastoolbar').css('min-height',pageheight + 'px');
