@@ -330,6 +330,7 @@ ol.edgetoedge li {
 
 
 #svgtest {
+  background-color:green;
 background-image:url('image.png');
 background-image:none,url('img/test2.svg'), url('image.png');
 background-size:100% 100%;

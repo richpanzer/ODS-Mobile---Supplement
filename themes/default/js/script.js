@@ -5,13 +5,11 @@ $(document).ready(function() {
   initDB();
   setupDatabaseTables();
 
-  $("#Profiles").bind('pageAnimationStart',function(){
-    updateUserLists(null,null);
-  });
+  $("#Profiles").bind('pageAnimationStart',updateUserLists);
 
-  if (typeof(PhoneGap) != 'undefined') {
-    $('body > *').css({minHeight: '460px !important'});
-  }
+
+
+  
 
   /*if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
     if(window.applicationCache.update()) {

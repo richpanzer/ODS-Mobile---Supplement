@@ -72,11 +72,11 @@ function updateUserDOM(results,currentuid,currentuser) {
           attr("name",row['id']).
           text(row['user']));
     }
-    if (currentuid != undefined && currentuser != undefinded) {
-      registerNewUserDOM(currentuid,currentuser);
-    } else {
-      registerNewUserDOM();
+    if (currentuid == undefined && currentuser == undefinded) {
+      currentuid = null;
+      currentuser = null;
     }
+    registerNewUserDOM(currentuid,currentuser);
   } else {
     addUserOptionsError();
   }
@@ -87,21 +87,19 @@ function registerNewUserDOM(currentuid,currentuser) {
   $('#profile_list ul li a').bind("click", function(e){
     e.preventDefault();
     removeUserSupplementDOM();
+    removeUserOptions();
     var uid = $(this).attr('title');
     var user = $(this).html();
-    $(".currentUser").html(user);//.attr('title',uid);
+    $(".currentUser").html(user).attr('title',uid);
     $("#addSupUserName").html(addSupplementHeadingUserStart + user + addSupplementHeadingUserEnd);
     setCurrentUser(uid,user);
     getSupplementList(uid);
     jQT.goTo($('#Profile'), 'flip');
-    return false;
   });
   if (currentuid != undefined && currentuser != undefined) {
     $("#addSupUserName").html(addSupplementHeadingUserStart + currentuser + addSupplementHeadingUserEnd);
     setCurrentUser(currentuid,currentuser);
   }
-  removeUserSupplementDOM();
-  //removeUserOptions();
   $('form input, form textarea').clearForm();
 }
 

@@ -2,6 +2,9 @@
     <?php
     $const = get_defined_constants();
     $freeformOutput = <<<EOD
+    if (typeof(PhoneGap) != 'undefined') {
+      $('body > *').css({minHeight: '460px !important'});
+    }
     var jQT = new $.jQTouch({
       icon: '{$const['THEME_IMG']}icon.png',
       addGlossToIcon: false,
