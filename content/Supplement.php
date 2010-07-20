@@ -1,6 +1,6 @@
 <div class="hastoolbar">
   <div class="toolbar">
-      <h4>View Supplement</h4>
+      <h4>Dietary Supplement</h4>
       <a class="button back" href="#Profile">Profile</a>
       <a class="button fade" href="#Edit_Supplement">Edit</a>
   </div>

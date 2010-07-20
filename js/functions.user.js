@@ -14,16 +14,6 @@ function insertUser(user, callback) {
   return false;
 }
 
-// Set the current active user
-function setCurrentUser(uid,user) {
-  //$(".userSelectToggle").css("opacity","0.25")
-  $(".userSelectToggle").hide();
-  $(".currentUser").html(user);
-  $("#user_select").val(uid);
-  $("#updateUserUID").attr('name',uid);
-  $("#updateUserName").val(user);
-}
-
 // update a single user
 function updateUserName(uid,user) {
   var query = "UPDATE `user` SET `user`='" + user +"' WHERE `id`='" + uid + "';";
@@ -72,10 +62,6 @@ function updateUserDOM(results,currentuid,currentuser) {
           attr("name",row['id']).
           text(row['user']));
     }
-    if (currentuid == undefined && currentuser == undefinded) {
-      currentuid = null;
-      currentuser = null;
-    }
     registerNewUserDOM(currentuid,currentuser);
   } else {
     addUserOptionsError();
@@ -86,22 +72,31 @@ function registerNewUserDOM(currentuid,currentuser) {
   // Add Profile List Listeners for new DOM items
   $('#profile_list ul li a').bind("click", function(e){
     e.preventDefault();
+    $('form input, form textarea').clearForm();
     removeUserSupplementDOM();
-    removeUserOptions();
     var uid = $(this).attr('title');
     var user = $(this).html();
-    $(".currentUser").html(user).attr('title',uid);
-    $("#addSupUserName").html(addSupplementHeadingUserStart + user + addSupplementHeadingUserEnd);
     setCurrentUser(uid,user);
-    getSupplementList(uid);
     jQT.goTo($('#Profile'), 'flip');
   });
-  if (currentuid != undefined && currentuser != undefined) {
-    $("#addSupUserName").html(addSupplementHeadingUserStart + currentuser + addSupplementHeadingUserEnd);
-    setCurrentUser(currentuid,currentuser);
-  }
-  $('form input, form textarea').clearForm();
 }
+
+// Set the current active user
+function setCurrentUser(uid,user) {
+  // Used for updating user name for a profile
+  $("#updateUserName").val(user);
+  $("#updateUserUID").attr('name',uid);
+  // Get all supplement names for a given user
+  getSupplementList(uid);
+  // Hide user select field if user is already selected
+  $(".userSelectToggle").hide();
+  // Set html content for user
+  $(".currentUser").html(user);
+  $(".currentUser").attr('title',uid);
+  $("#user_select").val(uid);
+  $("#addSupUserName").html(addSupplementHeadingUserStart + user + addSupplementHeadingUserEnd);
+}
+
 
 // Remove all Supplement Entries for a profile from DOM
 function removeUserSupplementDOM() {

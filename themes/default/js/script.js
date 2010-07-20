@@ -100,26 +100,23 @@ $(document).ready(function() {
   });
 
   $('.savePassword').click(function(){
-      var p1 = $.trim($('#password1').val());
-      var p2 = $.trim($('#password2').val());
+    var p1 = $.trim($('#password1').val());
+    var p2 = $.trim($('#password2').val());
 
-      if(p1 == '')
-      {
-        $('.error').text('Please Enter a Password.');
-        return;
-      }
-      if(p1.length < 4)
-      {
-        $('.error').text('Password must be at least 4 characters long.');
-        return;
-      }
-      if(p1 != p2)
-      {
-        $('.error').text('Passwords do not match.');
-        return;
-      }
-      updatePassword(p1);
-    return false;
+    if(p1 == '') {
+      $('.error').text('Please Enter a Password.');
+      return;
+    }
+    if(p1.length < 4) {
+      $('.error').text('Password must be at least 4 characters long.');
+      return;
+    }
+    if(p1 != p2) {
+      $('.error').text('Passwords do not match.');
+      return;
+    }
+    updatePassword(p1);
+    //return false;
   });
 
   // All Accordion related listeners and setup
@@ -183,71 +180,70 @@ $(document).ready(function() {
   });
 
 
-  $("#updateUser").bind('click', function(){
+  $("#updateUser").click(function(){
     jQT.goTo($('#Update_Profile'), 'flip');
   });
 
 
-/* Trying out better ways to relate to the db
-// This is the error handler for all database transactions
-function DBerror(errorMsg,transaction,error) {
-  alert('Database Error: ' + error.message + ' (Code '+error.code+')' + "\n\n" +
-  'Message: ' + errorMsg);
-  return true;
-}
+  /* Trying out better ways to relate to the db
+  // This is the error handler for all database transactions
+  function DBerror(errorMsg,transaction,error) {
+    alert('Database Error: ' + error.message + ' (Code '+error.code+')' + "\n\n" +
+    'Message: ' + errorMsg);
+    return true;
+  }
 
-function DBquery(query, data, callback, message) {
-  db.transaction(function(transaction,result){
-    transaction.executeSql(query, data, function(result){
-      if (callback != null) {
-        if( eval('typeof ' + callback) == 'function') {
-          callback(result);
-        } else {
-          alert('Your database query callback is not a valid function!');
+  function DBquery(query, data, callback, message) {
+    db.transaction(function(transaction,result){
+      transaction.executeSql(query, data, function(result){
+        if (callback != null) {
+          if( eval('typeof ' + callback) == 'function') {
+            callback(result);
+          } else {
+            alert('Your database query callback is not a valid function!');
+          }
         }
-      }
-    }, DBerror(message));
+      }, DBerror(message));
+    });
+    return false;
+  }
+
+  var thisquery = "SELECT * FROM `user` WHERE `id`=?;";
+  var thisdata = new Array("1");
+  var thismessage = 'howdy world';
+  function thiscallback(result) {
+    alert('hi there');
+    //alert(result.insertId);
+  }
+  DBquery(thisquery,thisdata,thiscallback,thismessage);
+  */
+
+  $('.inputImg').toggle(function(){
+    $(this).animate({
+      width: 213,
+      height: 240
+    }, 'slow');
+    $(this).siblings().animate({
+      width: 40,
+      height: 40
+    },'slow');
+  }, function(){
+    $(this).animate({
+      width: 80,
+      height: 80
+    }, 'fast');
+    $(this).siblings().animate({
+      width: 80,
+      height: 80
+    },'slow');
   });
-  return false;
-}
-
-var thisquery = "SELECT * FROM `user` WHERE `id`=?;";
-var thisdata = new Array("1");
-var thismessage = 'howdy world';
-function thiscallback(result) {
-  alert('hi there');
-  //alert(result.insertId);
-}
-DBquery(thisquery,thisdata,thiscallback,thismessage);
-*/
-
-$('.inputImg').toggle(function(){
-  $(this).animate({
-    width: 213,
-    height: 240
-  }, 'slow');
-  $(this).siblings().animate({
-    width: 40,
-    height: 40
-  },'slow');
-}, function(){
-  $(this).animate({
-    width: 80,
-    height: 80
-  }, 'fast');
-  $(this).siblings().animate({
-    width: 80,
-    height: 80
-  },'slow');
-});
 
 
-setPageHeight();
-/*$('div.thisisapage').bind('pageAnimationStart', function(){
-  var height = $(this).height();
-  setPageHeight(height);
-});*/
-
+  setPageHeight();
+  $('div.thisisapage').bind('pageAnimationStart', function(){
+    var height = $(this).height();
+    setPageHeight(height);
+  });
 
 
 
