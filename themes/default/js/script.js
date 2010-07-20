@@ -243,7 +243,7 @@ $('.inputImg').toggle(function(){
 
 //setPageHeight();
 $('div.thisisapage').click(function(){
-  setPageHeight($(this).height());
+  setPageHeight();
 });
 
 

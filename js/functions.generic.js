@@ -180,11 +180,10 @@ function goToAccordion(clicked) {
 }
 
 function setPageHeight(clicked) {
-  var thispageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
-  var contentheight = $('.hastoolbar').height();
-  var trythisheight = $('.thisisapage').height();
-  var topmargin = trythisheight - contentheight;
-  $('.toolbar_bottom').css('top', topmargin);
+  //var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
+  var pageheight = $(document).height();
+  var contentheight = pageheight - 112;
+  $('.hastoolbar').height(contentheight);
 }
 
 

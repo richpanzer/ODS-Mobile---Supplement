@@ -1,7 +1,8 @@
 body {background:rgb(222,209,158)}
 
 body > * {
-
+  min-width:320px;
+  overflow:hidden;
   background:-webkit-gradient(
     linear,
     left bottom,
