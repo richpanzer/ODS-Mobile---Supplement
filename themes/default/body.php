@@ -11,7 +11,7 @@ foreach ($filelist as $file) {
       $filename = $home_page;
   }
   echo '<div id="' . $filename . '" class="thisisapage">' .
-    '<div class="heading"></div>' .
+    '<div class="heading"><h1></h1></div>' .
     get_include_contents(PATH_TXT . $file) . '</div>';
 }
 

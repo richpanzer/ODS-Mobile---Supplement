@@ -241,8 +241,10 @@ $('.inputImg').toggle(function(){
 });
 
 
-setPageHeight();
-$('div.thisisapage').bind('pageAnimationStart',setPageHeight);
+//setPageHeight();
+$('div.thisisapage').click(function(){
+  setPageHeight($(this).height());
+});
 
 
 

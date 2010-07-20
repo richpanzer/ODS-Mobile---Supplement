@@ -1,4 +1,4 @@
-<div class="minHeight340">
+<div class="hastoolbar">
   <div class="toolbar">
     <h3 class="currentUser">Error</h3>
     <a class="button back" href="#Profiles">Profiles</a>

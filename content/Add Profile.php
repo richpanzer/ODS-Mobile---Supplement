@@ -1,4 +1,4 @@
-<div class="minHeight340">
+<div class="hastoolbar">
   <div class="toolbar">
       <h1>Add Profile</h1>
       <a class="blueButton" href="#Profiles">Profiles</a>

@@ -165,11 +165,10 @@ function goAccordion(clicked) {
     easing: 'swing',
     duration: 240
   },function(){
-    newheight = $('.minHeightCalc').height();
+    newheight = $('.minHeightCalc').height() + 45;
     $('#Instructions .toolbar_bottom').animate({
       top: newheight
-    },240,'swing');
-
+    },120,'swing');
   });
 }
 
@@ -180,10 +179,12 @@ function goToAccordion(clicked) {
   clicked.siblings('.expandable').slideDown(240,'linear');
 }
 
-function setPageHeight() {
-  //var thispageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
-  var thispageheight = $(document).height();
-  $('.thisisapage').css('height',thispageheight);
+function setPageHeight(clicked) {
+  var thispageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
+  var contentheight = $('.hastoolbar').height();
+  var trythisheight = $('.thisisapage').height();
+  var topmargin = trythisheight - contentheight;
+  $('.toolbar_bottom').css('top', topmargin);
 }
 
 
