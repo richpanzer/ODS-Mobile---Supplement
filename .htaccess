@@ -35,6 +35,5 @@ FileETag None
   Header unset Last-Modified
 </ifModule>
 
-
 # For dynamically driven manifest file used for HTML5 offline page caching
 AddType application/x-httpd-php text/cache-manifest .manifest

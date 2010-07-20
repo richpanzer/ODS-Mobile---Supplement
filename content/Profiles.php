@@ -1,4 +1,4 @@
-<div class="inner-has-bottomtools">
+<div class="hastoolbar">
   <div class="toolbar">
     <h1>Profiles</h1>
     <a class="blueButton" href="#Email_Profile">Email</a>
@@ -7,4 +7,7 @@
   <span id="profile_list">
   </span>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = 'profiles';
+include PATH_TXT . 'includes/toolbar.php';
+?>

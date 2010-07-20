@@ -5,15 +5,17 @@ function createProfile(callback) {
   var amount = $("#amount").val();
   var unit = $("#unit").val();
   var frequency = $("#frequency").val();
+  var frequency_unit = $("#frequency_unit").val();
   var notes = $("#notes").val();
-  var myimg = 'Image 1 Placeholder';
+  //var myimg = 'Image 1 Placeholder';
+  var myimg = $("#imageOne").attr('src');
   var querySupplementID = "SELECT `id` FROM `supplement` WHERE `name`='" + supplement + "' LIMIT 1;";
   db.transaction(function(transaction) {
     transaction.executeSql(querySupplementID, [], function(transaction, result1) {
       if (result1.rows.length > 0) {
         // Supplement already exists, so take id and add new profile row
         supplementID = result1.rows.item(0)['id'];
-        insertProfile(callback, userID, supplementID, amount, unit, frequency, notes, myimg);
+        insertProfile(callback,userID,supplementID,amount,unit,frequency,frequency_unit,notes,myimg);
       } else {
         // Insert Supplement
         createSupplement(supplement);
@@ -21,7 +23,7 @@ function createProfile(callback) {
         db.transaction(function(transaction) {
           transaction.executeSql(querySupplementID, [], function(transaction, result2) {
             supplementID = result2.rows.item(0)['id'];
-            insertProfile(callback, userID, supplementID, amount, unit, frequency, notes, myimg);
+            insertProfile(callback,userID,supplementID,amount,unit,frequency,frequency_unit,notes,myimg);
           });
         });
       }
@@ -31,11 +33,11 @@ function createProfile(callback) {
 }
 
 // Insert a profile row
-function insertProfile(callback, userID, supplementID, amount, unit, frequency, notes, myimg) {
+function insertProfile(callback,userID,supplementID,amount,unit,frequency,frequency_unit,notes,myimg) {
   var insertProfileValues = "'" + userID + "', '" + supplementID + "', '" + amount + "', '"
-    + unit + "', '" + frequency + "', '" + notes + "', '" + myimg + "'";
+    + unit + "', '" + frequency + "', '" + frequency_unit + "', '" + notes + "', '" + myimg + "'";
   var insertProfileQuery = "INSERT INTO profile " +
-    "(user_id, supplement_id, amount, unit, frequency, notes, myimg) " +
+    "(user_id, supplement_id, amount, unit, frequency, frequency_unit, notes, myimg) " +
     "VALUES (" + insertProfileValues + ");";
   dbQuery(insertProfileQuery);
   //allPurposeDBQuery(insertProfileQuery, callback, errorHandler);
@@ -79,7 +81,9 @@ function addProfileToDOM(results,uid) {
   for(var i=0;i<results.rows.length;i++) {
     var row = results.rows.item(i);
     $("#emailProfiles ul." + uid).append($('<li class="weight500">' +
-      row['name'] + ' - ' + row['amount'] + ' ' + row['unit'] + ' - ' + row['frequency'] + "\n" + '</li>'));
+      row['name'] + ' - ' + row['amount'] + ' ' + row['unit'] + ' - ' + 
+      row['frequency'] + ' ' + row['frequency_unit'] +
+      '<span style="display:none"> - ' + row['notes'] + '</span>' + "\n" + '</li>'));
   }
 }
 
@@ -94,39 +98,50 @@ function resetAddProfileForm() {
 }
 
 // Update a profile row
-function updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,notes,myimg) {
-  /*var info = 'UID: ' + uid + '\n';
-  info += 'User: ' + user + '\n';
-  info += 'SID: ' + sid + '\n';
-  info += 'PID: ' + pid + '\n';
-  info += 'Supplement: ' + supplement + '\n';
-  info += 'Amount: ' + amount + '\n';
-  info += 'Unit: ' + unit + '\n';
-  info += 'Frequency: ' + frequency + '\n';
-  info += 'Notes: ' + notes + '\n';
-  info += 'Image: ' + myimg + '\n';
-  alert(info);*/
-  
-  /*var updateSup = "UPDATE `supplement` " +
+function updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes,myimg) {
+  //alert('Supplement ID: ' + sid);
+  var updateSup = "UPDATE `supplement` " +
     "SET `name`='" + supplement + "' " +
-    "WHERE `id`=" + sid + ";"; */
+    "WHERE `id`=" + sid + ";";
   var updatePro = "UPDATE `profile` " +
     "SET `amount`='" + amount + "', " +
     "`unit`='" + unit + "', " +
     "`frequency`='" + frequency + "', " +
+    "`frequency_unit`='" + frequency_unit + "', " +
     "`notes`='" + notes + "' " +
     "WHERE `id`=" + pid + ";";
   //alert(updatePro);
   /* doesn't work because of "return false" dbQuery(updateSup);
   dbQuery(updatePro);*/
 
-  /* don't need to update the supplement name: db.transaction(function(transaction){
-    transaction.executeSql(updateSup);
-  });*/
+  /* don't need to update the supplement name:*/
   db.transaction(function(transaction){
+    transaction.executeSql(updateSup);
     transaction.executeSql(updatePro);
   });
-
   updateUserLists(uid,user);
 
+}
+
+// update user password
+function updatePassword(password) {
+  if(password.length) {
+    password = hex_md5(password);
+    var sql = "SELECT * FROM `setting` WHERE `name` = 'password';"
+    db.transaction(function(transaction,results){
+      transaction.executeSql(sql,null,function(transaction,results){
+        if(!results.rows.length) {
+          sql = 'INSERT INTO `setting` (`name`,`value`) VALUES(?,?)';
+          transaction.executeSql(sql,['password',password],function(){
+            $('.success').text('Your password has been saved.');
+          });
+        } else {
+          sql = 'UPDATE `setting` SET `value` = ? WHERE `name` = ?;';
+          transaction.executeSql(sql,[password,'password'],function(){
+            $('.success').text('Your password has been saved.');
+          });
+        }
+      },errorHandler);
+    });
+  }
 }

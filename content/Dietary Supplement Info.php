@@ -1,6 +1,6 @@
-<div class="inner-has-bottomtools">
+<div class="hastoolbar">
   <div class="toolbar">
-    <h3>DS Info</h3>
+    <h3>Resources</h3>
     <a class="button back" href="#Start">Home</a>
   </div>
   <ul class="edgetoedge">
@@ -11,4 +11,7 @@
     <li><a target="_blank" href="http://ods.od.nih.gov/factsheets/Zinc-QuickFacts.asp">Zinc Quick Facts</a></li>
   </ul>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = '';
+include PATH_TXT . 'includes/toolbar.php';
+?>

@@ -7,21 +7,12 @@ function insertUser(user, callback) {
         var currentuid = results.insertId;
         updateUserLists(currentuid,user);
         //alert('the uid is ' + currentuid + ' and the user is ' + user);
-        //setCurrentUser(currentuid,user);
+        setCurrentUser(currentuid,user);
+        callback();
       }, errorHandler);
     });
   }
   return false;
-}
-
-// Set the current active user
-function setCurrentUser(uid,user) {
-  //$(".userSelectToggle").css("opacity","0.25")
-  $(".userSelectToggle").hide();
-  $(".currentUser").html(user);
-  $("#user_select").val(uid);
-  $("#updateUserUID").attr('name',uid);
-  $("#updateUserName").val(user);
 }
 
 // update a single user
@@ -65,7 +56,7 @@ function updateUserDOM(results,currentuid,currentuser) {
       var row = results.rows.item(i);
       $('#profile_list').
         append($('<ul class="edgetoedge"><li class="arrow"><a title="' +
-        row['id'] + '" href="#Profile">' + row['user'] + '</a></li></ul>'));
+        row['id'] + '" href="#">' + row['user'] + '</a></li></ul>'));
       $('#user_select').
         append($("<option></option>").
           attr("value",row['id']).
@@ -80,23 +71,33 @@ function updateUserDOM(results,currentuid,currentuser) {
 
 function registerNewUserDOM(currentuid,currentuser) {
   // Add Profile List Listeners for new DOM items
-  $('#profile_list ul li a').bind("click", function(){
+  $('#profile_list ul li a').bind("click", function(e){
+    e.preventDefault();
+    $('form input, form textarea').clearForm();
     removeUserSupplementDOM();
     var uid = $(this).attr('title');
     var user = $(this).html();
-    $(".currentUser").html(user);//.attr('title',uid);
-    $("#addSupUserName").html(addSupplementHeadingUserStart + user + addSupplementHeadingUserEnd);
     setCurrentUser(uid,user);
-    getSupplementList(uid);
+    jQT.goTo($('#Profile'), 'flip');
   });
-  if (currentuser) {
-    $("#addSupUserName").html(addSupplementHeadingUserStart + currentuser + addSupplementHeadingUserEnd);
-    setCurrentUser(currentuid,currentuser);
-  }
-  removeUserSupplementDOM();
-  //removeUserOptions();
-  $('form input, form textarea').clearForm();
 }
+
+// Set the current active user
+function setCurrentUser(uid,user) {
+  // Used for updating user name for a profile
+  $("#updateUserName").val(user);
+  $("#updateUserUID").attr('name',uid);
+  // Get all supplement names for a given user
+  getSupplementList(uid);
+  // Hide user select field if user is already selected
+  $(".userSelectToggle").hide();
+  // Set html content for user
+  $(".currentUser").html(user);
+  $(".currentUser").attr('title',uid);
+  $("#user_select").val(uid);
+  $("#addSupUserName").html(addSupplementHeadingUserStart + user + addSupplementHeadingUserEnd);
+}
+
 
 // Remove all Supplement Entries for a profile from DOM
 function removeUserSupplementDOM() {

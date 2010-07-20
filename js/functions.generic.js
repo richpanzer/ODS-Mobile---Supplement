@@ -31,23 +31,29 @@ function setupDatabaseTables() {
     '`supplement_id` INTEGER NOT NULL CONSTRAINT fk_supplement_id REFERENCES supplement(id) ON DELETE CASCADE, ' + // FK
     '`amount` VARCHAR(16) NOT NULL, ' +
     '`unit` VARCHAR(16) NOT NULL, ' +
-    '`frequency` VARCHAR(16) NOT NULL, ' +
-    '`notes` VARCHAR(256) NOT NULL, ' +
-    '`myimg` VARCHAR(256) NOT NULL);'
-  setupQuery[3] = "CREATE TRIGGER fki_profile_user_id " +
+    '`frequency` VARCHAR(16), ' +
+    '`frequency_unit` VARCHAR(16), ' +
+    '`notes` VARCHAR(256), ' +
+    '`myimg` BLOB);'
+  setupQuery[3] = 'CREATE TABLE IF NOT EXISTS `setting` (' +
+    '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,' +
+    '`name` VARCHAR(32) NOT NULL, ' +
+    '`value` VARCHAR(256));';
+  setupQuery[4] = "CREATE TRIGGER fki_profile_user_id " +
     "BEFORE INSERT ON profile " +
     "FOR EACH ROW BEGIN " +
     "SELECT RAISE(ROLLBACK, 'insert on table `profile` violates foreign key constraint `fk_user_id`') " +
     "WHERE  NEW.user_id IS NOT NULL " +
     "AND (SELECT `id` FROM `user` WHERE `id` = NEW.user_id) IS NULL;" +
     "END;";
-  setupQuery[4] = "CREATE TRIGGER fki_profile_supplement_id " +
+  setupQuery[5] = "CREATE TRIGGER fki_profile_supplement_id " +
     "BEFORE INSERT ON profile " +
     "FOR EACH ROW BEGIN " +
     "SELECT RAISE(ROLLBACK, 'insert on table `profile` violates foreign key constraint `fk_supplement_id`') " +
     "WHERE  NEW.supplement_id IS NOT NULL " +
     "AND (SELECT `id` FROM `supplement` WHERE `id` = NEW.supplement_id) IS NULL;" +
     "END;";
+  
   queryArrays(setupQuery);
 }
 
@@ -97,6 +103,8 @@ function errorHandler(transaction, error) {
   return true;
 }
 
+
+
 // Generic query execution for an array of query statments
 function queryArrays(query) {
   for (var i=0;i<query.length;i++) {
@@ -125,21 +133,21 @@ function allPurposeDBQuery(query, nullHandler, errorHandler) {
 }
 
 
-function emailThis(mailto,subject,body) {
+/*function emailThis(link,subject,body) {
 	if (body.length > 0) {
     subject = encodeURIComponent(subject);
     body = encodeURIComponent(body);
-    window.location.href = "mailto:" + mailto + "&subject=" + subject + "&body=" + body;
+    window.location.href = "mailto:?subject=" + subject + "&body=" + body;
     //alert("You are sending a message to '" + mailto + "' with the subject '" + subject + "'.");
     //alert("The body is: " + body);
 	} else {
     alert("You didn't select any profiles!");
   }
-}
+}*/
 
 // Do nothing when this link is clicked!
 function voidClick(link) {
-  link.bind('click',function(e){
+  link.click(function(e){
     e.preventDefault();
     return false;
   });
@@ -147,16 +155,119 @@ function voidClick(link) {
 
 // Bind a click event to an accordian animation
 function goAccordion(clicked) {
-  $('#accordion .expandable').animate({
-    height: 'hide',
-    duration: 'fast',
-    opacity: 'hide',
-    easing: 'linear'
-  });
-  clicked.siblings('.expandable').animate({
-    height: 'show',
-    duration: 'fast',
-    opacity: 'show',
-    easing: 'linear'
-  });
+  $('#accordion .expandable').slideUp(180,'swing');
+  clicked.siblings('.expandable').slideDown(180,'swing');
 }
+
+// Go to the accordion with something pre-selected
+function goToAccordion(clicked) {
+  $('#accordion .expandable').slideUp(240,'linear');
+  jQT.goTo($('#Instructions'), 'flip');
+  clicked.siblings('.expandable').slideDown(240,'linear');
+}
+
+function setPageHeight(clicked) {
+  //var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
+  var pageheight = $(document).height();
+  pageheight = pageheight - 140;
+  var homeheight = pageheight - 20;
+  $('.hastoolbar_home').css('min-height',homeheight + 'px');
+  $('.hastoolbar').css('min-height',pageheight + 'px');
+}
+
+
+function PictureSourceType() {}
+PictureSourceType.LIBRARY = 0;
+PictureSourceType.CAMERA = 1;
+
+function getPicture(callback,sourceType) {
+  var options = { quality: 10 };
+  if (sourceType != undefined) {
+    options["sourceType"] = sourceType;
+  }
+  navigator.camera.getPicture(callback, null, options);
+}
+
+function getPicture_Success(imageData) {
+  $("#imageOne").attr('src', "data:image/jpeg;base64," + imageData);
+}
+function getPicture_Success2(imageData) {
+  $("#imageTwo").attr('src', "data:image/jpeg;base64," + imageData);
+}
+
+$('#getCamera_01').click(function(){
+  getPicture(getPicture_Success);
+});
+$('#getPicture_01').click(function(){
+  getPicture(getPicture_Success,PictureSourceType.LIBRARY);
+});
+
+$('#getCamera_02').click(function(){
+  getPicture(getPicture_Success2);
+});
+$('#getPicture_02').click(function(){
+  getPicture(getPicture_Success2,PictureSourceType.LIBRARY);
+});
+
+
+// Camera Roll Stuff
+/*
+function PictureSourceType() {};
+PictureSourceType.LIBRARY = 0;
+PictureSourceType.CAMERA = 1;
+
+function getPicture(sourceType) {
+  $("#addPhotoOne").attr('src') = "data:image/jpeg;base64," + imageData;
+  var options = { quality: 10 };
+  if (sourceType != undefined) {
+    options["sourceType"] = sourceType;
+  }
+  navigator.camera.getPicture(getPicture_Success, null, options);
+}
+
+function getPicture_Success(imageData) {
+  document.getElementById("addDSimgOne").src = "data:image/jpeg;base64," + imageData;
+}
+
+$('.getCamera').click(function(){
+  getPicture();
+});
+$('.getPicture').click(function(){
+  getPicture(PictureSourceType.LIBRARY);
+});
+
+/**
+ * Function : dump()
+ * Arguments: The data - array,hash(associative array),object
+ *    The level - OPTIONAL
+ * Returns  : The textual representation of the array.
+ * This function was inspired by the print_r function of PHP.
+ * This will accept some data as the argument and return a
+ * text that will be a more readable version of the
+ * array/hash/object that is given.
+ * Docs: http://www.openjs.com/scripts/others/dump_function_php_print_r.php
+ *
+function dump(arr,level) {
+	var dumped_text = "";
+	if(!level) level = 0;
+
+	//The padding given at the beginning of the line.
+	var level_padding = "";
+	for(var j=0;j<level+1;j++) level_padding += "    ";
+
+	if(typeof(arr) == 'object') { //Array/Hashes/Objects
+		for(var item in arr) {
+			var value = arr[item];
+
+			if(typeof(value) == 'object') { //If it is an array,
+				dumped_text += level_padding + "'" + item + "' ...\n";
+				dumped_text += dump(value,level+1);
+			} else {
+				dumped_text += level_padding + "'" + item + "' => \"" + value + "\"\n";
+			}
+		}
+	} else { //Stings/Chars/Numbers etc.
+		dumped_text = "===>"+arr+"<===("+typeof(arr)+")";
+	}
+	return dumped_text;
+} */

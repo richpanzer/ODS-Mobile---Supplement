@@ -10,10 +10,9 @@ foreach ($filelist as $file) {
   if ($filename == '0') {
       $filename = $home_page;
   }
-  echo '<div id="' , $filename , '" class="thisisapage">';
-  echo '<div class="heading"><h1>' . SITENAME . '</h1></div>';
-  include PATH_TXT . $file;
-  echo '</div>';
+  echo '<div id="' . $filename . '" class="thisisapage">' .
+    '<div class="heading"><h1></h1></div>' .
+    get_include_contents(PATH_TXT . $file) . '</div>';
 }
 
 ?>

@@ -28,17 +28,18 @@ function addSupplementsToDOM(results,uid) {
     for (var i=0; i<results.rows.length; i++) {
       var row = results.rows.item(i);
       $('#profile_entries').append($('<li class="arrow"><a class="id' + uid +
-        '_' + i + '" href="#Supplement">' + row['name'] + '</a></li>'));
-      addCurrentSupListener(i,row['user'],row['uid'],row['sid'],row['pid'],row['name'],row['amount'],row['unit'],row['frequency'],row['notes']);
+        '_' + i + '" href="#">' + row['name'] + '</a></li>'));
+      addCurrentSupListener(i,row['user'],row['uid'],row['sid'],row['pid'],row['name'],row['amount'],row['unit'],row['frequency'],row['frequency_unit'],row['myimg'],row['notes']);
     }
   } else {
     addSupplementOptionsError();
   }
 }
 
-function addCurrentSupListener(i,user,uid,sid,pid,supplement,amount,unit,frequency,notes) {
+function addCurrentSupListener(i,user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,image,notes) {
   $("#profile_entries li a.id" + uid + "_" + i).bind('click', function(){
-    showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,notes);
+    showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,image,notes);
+    jQT.goTo($('#Supplement'), 'flip');
   });
 }
 
@@ -47,11 +48,13 @@ function addSupplementOptionsError() {
   $('#profile_entries').append($('<li></li>').text(noSupplementsError));
 }
 
-function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,notes) {
+function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,image,notes) {
   // This updates the "view" page
   $("#supName").html(supplement);
   $("#supAmount").html(amount + ' ' + unit);
   $("#supFrequency").html(frequency);
+  $("#supFrequencyUnit").html(frequency_unit);
+  $("#supPhoto").attr('src', image);
   if (notes.length > 0) {
     $("#supNotes").html(notes);
   } else {
@@ -61,11 +64,12 @@ function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency
   $("#user_select_update")
     .attr('name',uid)
     .append('<option value="' + uid + '">' + user + '</option>');
-  $("#supplement_update").val(supplement).attr('name',sid);
-  $("#supplement_update").html(supplement);
+  $("#supplement_update").val(supplement);
   $("#amount_update").val(amount);
   $("#unit_update").val(unit);
   $("#frequency_update").val(frequency);
+  $("#frequency_unit_update").val(frequency_unit);
   $("#notes_update").val(notes);
+  $("#imageOne_update").attr('src', image);
   $("#updateSupplement").attr('name',pid);
 }

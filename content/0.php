@@ -1,33 +1,25 @@
-<div class="inner-has-bottomtools">
-  <div class="toolbar">
-    <h1>Get Started</h1>
+<div class="hastoolbar_home">
+  <div class="info">
+    <p>Get Started</p>
   </div>
-  <ul class="rounded">
-  <?php
-    $home_page = 'Start';
-    $pageExclusions = array(
-      $home_page,
-      'Developer Settings',
-      'Profile',
-      'Supplement List',
-      'More',
-      'Supplement',
-      'Update Profile',
-	  'Password',
-      'Edit Supplement'
-      );
-    foreach ($filelist as $file) {
-      $filename = strip_ext(basename($file));
-      $cleaned_filename = str_replace($findme, $replaceme, $filename);
-      if ($filename == '0') {
-        $filename = $home_page;
-      }
-      if (!in_array($filename, $pageExclusions)){
-        echo '<li class="arrow"><a href="#' , $cleaned_filename , '">' , $filename , '</a></li>';
-      }
-    }
-  ?>
+  <ul id="startLinks">
+    <li><a href="#Profiles"><span class="start1"></span>Profiles</a></li>
+    <li class="borderSides"><a href="#Add_Profile"><span class="start2"></span>Add Profiles</a></li>
+    <li><a href="#Add_Dietary_Supplement"><span class="start3"></span>Add Dietary<br />Supplement</a></li>
+    <li class="borderTop"><a href="#Tips"><span class="start4"></span>Tips</a></li>
+    <li class="borderTopSides"><a href="#Dietary_Supplement_Info"><span class="start5"></span>Resources</a></li>
+    <li class="borderTop"><a href="#Email_Profile"><span class="start6"></span>Email Profile</a></li>
+    <li class="borderTop"><a href="#Instructions"><span class="start7"></span>Instructions</a></li>
+    <li class="borderTopSides"><a href="#Learn_About_ODS"><span class="start8"></span>About</a></li>
+    <li class="borderTop"><a href="#Settings"><span class="start9"></span>Settings</a></li>
   </ul>
+  <br class="reset" />
 </div>
-<?php include PATH_TXT . 'includes/homeicons.php'; ?>
-<p style="background:#000;font-size:10px;color:#999;text-decoration:none"><a class="flip" href="#Developer_Settings">Developer Settings</a></p>
+<div id="footerLogos">
+  <ul>
+    <li><a href="#home"><img src="content/img/logo1.png" alt="Some Text" /></a></li>
+    <li class="last"><a href="#home"><img src="content/img/logo2.png" alt="Some Text" /></a></li>
+  </ul>
+  <br class="reset" />
+</div>
+<?php /*<p style="background:#000;font-size:10px;color:#999;text-decoration:none"><a class="flip" href="#Developer_Settings">Developer Settings</a></p>*/ ?>

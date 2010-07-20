@@ -1,9 +1,9 @@
-<div class="inner-has-bottomtools">
+<div class="hastoolbar">
   <div class="toolbar">
     <h1>Instructions</h1>
     <a class="button back" href="#Start">Home</a>
   </div>
-  <div id="accordion" class="minHeight420">
+  <div id="accordion">
     <div class="panel">
       <h2 id="instructProfile">Create a Profile</h2>
       <ol class="edgetoedge expandable">
@@ -48,4 +48,7 @@
     </div>-->
   </div>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = '';
+include PATH_TXT . 'includes/toolbar.php';
+?>

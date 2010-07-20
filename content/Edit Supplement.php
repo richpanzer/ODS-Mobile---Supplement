@@ -1,21 +1,23 @@
-<div class="inner-has-bottomtools">
+<div class="hastoolbar">
   <div class="toolbar">
     <h1>Edit DS</h1>
     <a class="button back" href="#Supplement">Back</a>
     <a class="button updateThisSupplement" href="#Profiles">Save</a>
   </div>
   <form id="updateSupplement" class="rounded" method="post">
-    <ul class="rounded userSelectToggle">
-      <li><select placeholder="User Name" name="user_select" id="user_select_update"></select></li>
-    </ul>
-    <h2 id="supplement_update"></h2>
     <ul class="rounded" style="display:none">
-      <li><input placeholder="Dietary Supplement Name" type="text" name="supplement" id="supplement_update" /></li>
+      <li><select placeholder="User Name" name="user_select" id="user_select_update"></select></li>
     </ul>
     <ul class="rounded">
       <li>
+        <label for="supplement_update">Name:</label>
+        <input type="text" class="haslabel" name="supplement" id="supplement_update" />
+        <br class="reset" />
+      </li>
+      <li>
         <label for="amount">Amount:</label>
-        <input type="text" class="haslabel" name="amount" id="amount_update" />
+        <input placeholder="Enter Amount" type="text" class="haslabel" name="amount" id="amount_update" />
+        <br class="reset" />
       </li>
       <li>
         <label for="unit">Unit:</label>
@@ -29,22 +31,49 @@
           <option>Scoop</option>
           <option>Pill</option>
         </select>
+        <br class="reset" />
       </li>
       <li>
         <label for="frequency">How Often:</label>
-        <select class="haslabel" placeholder="How Often" name="frequency" id="frequency_update">
-          <option>With Breakfast</option>
-          <option>With Every Meal</option>
-          <option>Before Bed</option>
-          <option>3x Daily</option>
-          <option>2x Daily</option>
-          <option>1x Daily</option>
-          <option>1x Weekly</option>
+        <select class="haslabel-50" placeholder="How Often" name="frequency" id="frequency_update">
+          <option>0x</option>
+          <option>1x</option>
+          <option>2x</option>
+          <option>3x</option>
+          <option>4x</option>
+          <option>5x</option>
+        </select>
+        <select class="haslabel-125" name="frequency_unit" id="frequency_unit_update">
+          <option>Hourly</option>
+          <option selected="selected">Daily</option>
+          <option>Weekly</option>
+          <option>Monthly</option>
+          <option>Annually</option>
+          <option>Occasionally</option>
         </select>
       </li>
     </ul>
     <ul class="rounded">
-      <li>Add Photo:</li>
+      <li>
+        <div class="imgWrapper">
+          <img class="inputImg" id="imageOne_update" />
+        </div>
+        <div class="imgBtnWrapper">
+          <p><button id="getCamera_01">From Camera</button></p>
+          <p><button id="getPicture_01">From Photo Library</button></p>
+        </div>
+        <br class="reset" />
+      </li>
+      <li>
+        <div class="imgWrapper">
+          <img class="inputImg" id="imageTwo_update" />
+        </div>
+        <div class="imgBtnWrapper">
+          <p><button id="getCamera_02">From Camera</button></p>
+          <p><button id="getPicture_02">From Photo Library</button></p>
+        </div>
+        <br class="reset" />
+      </li>
     </ul>
     <ul class="rounded">
       <li><label for="frequency">Notes:</label>
@@ -52,4 +81,7 @@
     </ul>
   </form>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = '';
+include PATH_TXT . 'includes/toolbar.php';
+?>

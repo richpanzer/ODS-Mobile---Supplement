@@ -1,8 +1,8 @@
- <div class="inner-has-bottomtools">
+<div class="hastoolbar">
   <div class="toolbar">
       <h1>Add Profile</h1>
       <a class="blueButton" href="#Profiles">Profiles</a>
-      <a class="button submitUser" href="#Profile">Save</a>
+      <a class="button submitUser" href="#">Save</a>
   </div>
   <form id="saveUser" method="post">
     <ul class="rounded">
@@ -10,7 +10,10 @@
     </ul>
   </form>
   <div class="content">
-    <p><a href="#Add_Dietary_Supplement" class="sumbitUserSubmitProfile whiteButton">Add Dietary Supplement</a></p>
+    <p><a class="whiteButton sumbitUserSubmitProfile" href="#">Add Dietary Supplement</a></p>
   </div>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = '';
+include PATH_TXT . 'includes/toolbar.php';
+?>

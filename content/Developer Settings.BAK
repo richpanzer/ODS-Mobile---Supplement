@@ -1,4 +1,4 @@
-<div class="inner-has-bottomtools">
+<div class="hastoolbar">
   <div class="toolbar">
       <h4>Developer Settings</h4>
       <a class="button goback" href="#Start">Done</a>
@@ -11,4 +11,7 @@
     <p><a href="#Start" id="populateUserData" class="pop whiteButton">Prepopulate Database</a></p>
   </div>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = '';
+include PATH_TXT . 'includes/toolbar.php';
+?>

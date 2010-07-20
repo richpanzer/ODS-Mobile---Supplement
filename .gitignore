@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
 /code/config.php
-=======
 config.php
->>>>>>> 72051f5ef6879f4c20fb271e595839cf35a6fb03
+*.db

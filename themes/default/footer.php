@@ -2,6 +2,9 @@
     <?php
     $const = get_defined_constants();
     $freeformOutput = <<<EOD
+    if (typeof(PhoneGap) != 'undefined') {
+      $('body > *').css({minHeight: '460px !important'});
+    }
     var jQT = new $.jQTouch({
       icon: '{$const['THEME_IMG']}icon.png',
       addGlossToIcon: false,
@@ -10,9 +13,10 @@
       slideSelector: 'body > * > ul li a, ul.rounded li a',
       cubeSelector: 'ul.edgetoedge li a',
       popSelector: '.toolbar a',
+      flipSelector: '#startLinks a',
       slideupSelector: '.toolbar_bottom ul li a',
       preloadImages: [
-          '{$const['JQTHEME']}img/back_button.png',
+          '{$const['JQTHEME']}img/backButton.png',
           '{$const['JQTHEME']}img/back_button_clicked.png',
           '{$const['JQTHEME']}img/button_clicked.png',
           '{$const['JQTHEME']}img/grayButton.png',
@@ -38,6 +42,7 @@ EOD;
     echo addjsfile(UNIX_JS . 'functions.user.js');
     echo addjsfile(UNIX_JS . 'functions.supplement.js');
     echo addjsfile(UNIX_JS . 'functions.profile.js');
+    echo addjsfile(UNIX_JS . 'md5-min.js');
     echo addjsfile(UNIX_THEME . 'js/script.js');
     if (USEGA == true) {
       echo addjsfile(UNIX_JS . 'gacode.js');

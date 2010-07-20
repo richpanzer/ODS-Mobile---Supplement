@@ -1,16 +1,19 @@
-<div class="inner-has-bottomtools">
+<div class="hastoolbar">
   <div class="toolbar">
     <h3 class="currentUser">Error</h3>
     <a class="button back" href="#Profiles">Profiles</a>
-    <a id="profileGOTOaddDS" class="button" href="#Add_Dietary_Supplement">Add DS</a>
+    <a id="profileGOTOaddDS" class="button" href="#Add_Dietary_Supplement">Add</a>
   </div>
-  <h2><center>Supplements</center></h2>
+  <h2 style="text-align:center">Dietary Supplements</h2>
   <span class="minHeight250">
     <ul id="profile_entries" class="rounded"><?php // Dynamically populated ?>
     </ul>
   </span>
   <div class="content">
-    <p><a href="#Update_Profile" id="updateUser" class="flip whiteButton">Edit Profile</a></p>
+    <p><a href="#" id="updateUser" class="whiteButton">Edit Profile</a></p>
   </div>
 </div>
-<?php include PATH_TXT . 'includes/toolbar.php'; ?>
+<?php
+$currentPage = '';
+include PATH_TXT . 'includes/toolbar.php';
+?>
