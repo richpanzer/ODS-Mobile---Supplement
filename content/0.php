@@ -1,4 +1,4 @@
-<div class="pageinfo_home">
+<div class="hastoolbar_home">
   <div class="info">
     <p>Get Started</p>
   </div>
