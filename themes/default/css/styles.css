@@ -1,5 +1,12 @@
 br.reset{clear:both}
-.thisisapage {min-height:460px}
+.thisisapage {
+  min-height:460px;
+  width:100%;
+  border:1px solid #555;
+  overflow:hidden;
+  -webkit-box-shadow:0 0 50px 0 #000;
+}
+
 .hastoolbar {min-height:394px}
 
 div.content {
@@ -205,7 +212,7 @@ ol.edgetoedge li {
 #startLinks {
   border:0;
   width:100%;
-  margin:7px 2%;
+  margin:1.5% 2%;
 }
 
 #startLinks,
