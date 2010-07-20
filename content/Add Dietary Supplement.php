@@ -17,7 +17,7 @@
     <ul class="rounded">
       <li>
         <label for="amount">Amount:</label>
-        <input placeholder="Enter Amount" type="text" class="haslabel" name="amount" id="amount" />
+        <input placeholder="Enter Amount" type="text" class="haslabel" name="phone" id="amount" />
         <br class="reset" />
       </li>
     </ul>
