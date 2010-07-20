@@ -242,8 +242,9 @@ $('.inputImg').toggle(function(){
 
 
 //setPageHeight();
-$('div.thisisapage').click(function(){
-  setPageHeight();
+$('div.thisisapage').bind('pageAnimationStart', function(){
+  var height = $(this).height();
+  setPageHeight(height);
 });
 
 

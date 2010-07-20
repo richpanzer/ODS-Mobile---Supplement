@@ -10,7 +10,9 @@
   <div id="svgtest">
     &nbsp;
   </div>
+  <br class="reset" />
 </div>
+<br class="reset" />
 <?php
 $currentPage = 'aboutods';
 include PATH_TXT . 'includes/toolbar.php';

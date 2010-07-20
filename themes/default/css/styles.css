@@ -244,7 +244,6 @@ ol.edgetoedge li {
 #startLinks li a span {
   display:block;
   width:100%;
-
   background-image:url('img/startLogos.png');
   background-repeat:no-repeat;
 }
@@ -328,7 +327,8 @@ ol.edgetoedge li {
 }
 
 #svgtest {
-  background-image: url('img/test.svg');
+  content:url('img/test.svg');
+  /*background-image:url('img/test.svg');*/
   -o-background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
   width:100%;
