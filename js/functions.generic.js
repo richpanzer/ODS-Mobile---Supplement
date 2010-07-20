@@ -167,8 +167,9 @@ function goToAccordion(clicked) {
 }
 
 function setPageHeight(clicked) {
-  //var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
-  pageheight = $(window).height() - 140;
+  var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
+  //pageheight = $(window).height() - 140;
+  pageheight = pageheight - 140;
   var homeheight = pageheight + 20;
   $('.hastoolbar_home').css('min-height',height + 'px');
   $('.hastoolbar').css('min-height',pageheight + 'px');
