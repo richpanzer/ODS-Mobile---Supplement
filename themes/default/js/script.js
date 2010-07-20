@@ -4,7 +4,10 @@ $(document).ready(function() {
   var db;
   initDB();
   setupDatabaseTables();
-  updateUserLists();
+
+  $("#Profiles").bind('pageAnimationStart',function(){
+    updateUserLists(null,null);
+  });
 
   if (typeof(PhoneGap) != 'undefined') {
     $('body > *').css({minHeight: '460px !important'});

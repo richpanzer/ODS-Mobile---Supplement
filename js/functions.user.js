@@ -72,7 +72,11 @@ function updateUserDOM(results,currentuid,currentuser) {
           attr("name",row['id']).
           text(row['user']));
     }
-    registerNewUserDOM(currentuid,currentuser);
+    if (currentuid != undefined && currentuser != undefinded) {
+      registerNewUserDOM(currentuid,currentuser);
+    } else {
+      registerNewUserDOM();
+    }
   } else {
     addUserOptionsError();
   }
@@ -92,7 +96,7 @@ function registerNewUserDOM(currentuid,currentuser) {
     jQT.goTo($('#Profile'), 'flip');
     return false;
   });
-  if (currentuser) {
+  if (currentuid != undefined && currentuser != undefined) {
     $("#addSupUserName").html(addSupplementHeadingUserStart + currentuser + addSupplementHeadingUserEnd);
     setCurrentUser(currentuid,currentuser);
   }
