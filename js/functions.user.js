@@ -86,7 +86,7 @@ function registerNewUserDOM(cuid,cuser) {
   if ((!isNaN(cuid)) && (cuser != undefined)) {
     setCurrentUser(cuid,cuser);
     getSupplementList(cuid);
-    alert('the uid is ' + cuid + ' and the user is ' + cuser);
+    //alert('the uid is ' + cuid + ' and the user is ' + cuser);
   }
 }
 
