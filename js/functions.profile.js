@@ -96,19 +96,20 @@ function resetAddProfileForm() {
 
 // Update a profile row
 function updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes,img_01,img_02) {
-  var updateSup = "UPDATE `supplement` " +
-    "SET `name`='" + supplement + "' " +
-    "WHERE `id`=" + sid + ";";
+  alert('Supplement name: ' + supplement + ' SID: ' + sid);
+  var updateSup = "UPDATE `supplement` SET `name`='" + supplement + "' WHERE `id`=" + sid + ";";
   var updatePro = "UPDATE `profile` " +
     "SET `amount`='" + amount + "', " +
     "`unit`='" + unit + "', " +
     "`frequency`='" + frequency + "', " +
     "`frequency_unit`='" + frequency_unit + "', " +
+    "`img_01`='" + img_01 + "', " +
+    "`img_02`='" + img_02 + "', " +
     "`notes`='" + notes + "' " +
     "WHERE `id`=" + pid + ";";
-  db.transaction(function(transaction){
-    transaction.executeSql(updateSup);
-    transaction.executeSql(updatePro);
+  db.transaction(function(transaction) {
+    transaction.executeSql(updateSup, [], null, errorHandler);
+    transaction.executeSql(updatePro, [], null, errorHandler);
   });
   updateUserLists(uid,user);
 }

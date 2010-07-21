@@ -99,7 +99,7 @@ function loadMainSettings() {
 /* End main settings page functions */
 
 // This is the error handler for all database transactions
-function errorHandler(transaction, error) {
+function errorHandler(error) {
   alert('The transaction could not be made. Error: '+error.message+' (Code '+error.code+')');
   return true;
 }

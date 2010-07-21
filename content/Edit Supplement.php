@@ -11,7 +11,7 @@
     <ul class="rounded">
       <li>
         <label for="supplement_update">Name:</label>
-        <input type="text" class="haslabel" name="supplement" id="supplement_update" />
+        <input type="text" class="haslabel" name="" id="supplement_update" />
         <br class="reset" />
       </li>
       <li>
