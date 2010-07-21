@@ -58,7 +58,7 @@
         </select>
       </li>
     </ul>
-    <ul class="rounded">
+    <ul class="rounded hideOniPad">
       <li>
         <div class="imgWrapper">
           <img class="inputImg" id="imageOne" />

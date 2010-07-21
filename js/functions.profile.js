@@ -88,17 +88,14 @@ function addProfileToDOM(results,uid) {
 
 // reset form for "Add Supplement" page
 function resetAddProfileForm() {
-  //alert('hello world');
   $("#saveSupplement input, #saveSupplement textarea").val('');
   $("#addSupUserName").html(addSupplementHeadingDefault);
   $("#user_select").val('1');
-  //$(".userSelectToggle").css("opacity","1")
   $(".userSelectToggle").show();
 }
 
 // Update a profile row
 function updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes,img_01,img_02) {
-  //alert('Supplement ID: ' + sid);
   var updateSup = "UPDATE `supplement` " +
     "SET `name`='" + supplement + "' " +
     "WHERE `id`=" + sid + ";";

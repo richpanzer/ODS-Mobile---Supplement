@@ -9,7 +9,7 @@
     <li><span><strong class="label">Amount:</strong> <span id="supAmount"></span></span></li>
     <li><span><strong class="label">How Often:</strong> <span id="supFrequency"></span></span></li>
     <li><span><strong class="label">Frequency:</strong> <span id="supFrequency"></span> <span id="supFrequencyUnit"></span></span></li>
-    <li>
+    <li class="hideOniPad">
       <span id="photocontainer"><strong class="label">Photos:</strong><br />
         <p><img id="supPhoto_01" class="inputImg" /><img id="supPhoto_02" class="inputImg" /></p>
         <br class="reset" />
