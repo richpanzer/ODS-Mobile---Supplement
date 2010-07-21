@@ -1,10 +1,13 @@
   <script type="text/javascript">
     <?php
     $const = get_defined_constants();
-    $freeformOutput = <<<EOD
+
+    /*$freeformOutput = <<<EOD
     if (typeof(PhoneGap) != 'undefined') {
       $('body > *').css({minHeight: '460px !important'});
     }
+EOD;*/
+    $freeformOutput = <<<EOD
     var IsiPhone = navigator.userAgent.indexOf("iPhone") != -1;
     var IsiPod = navigator.userAgent.indexOf("iPod") != -1;
     var IsiPad = navigator.userAgent.indexOf("iPad") != -1;
