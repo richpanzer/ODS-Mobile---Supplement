@@ -5,7 +5,7 @@
     $freeformOutput =
       "if (typeof(PhoneGap) != 'undefined') {" .
         //$('body > *').css({minHeight: '460px !important'});
-        "isPhoneGap = true;" .
+        "var isPhoneGap = true;" .
       "}";
 
     $freeformOutput .= <<<EOD
