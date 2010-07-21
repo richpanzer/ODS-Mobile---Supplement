@@ -12,8 +12,8 @@
     <li class="borderTop"><a href="#Instructions"><span class="start7"></span>Instructions</a></li>
     <li class="borderTopSides"><a href="#Learn_About_ODS"><span class="start8"></span>About</a></li>
     <li class="borderTop"><a href="#Settings"><span class="start9"></span>Settings</a></li>
+    <br class="reset" />
   </ul>
-  <br class="reset" />
 </div>
 <div id="footerLogos">
   <ul>

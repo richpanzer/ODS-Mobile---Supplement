@@ -214,14 +214,16 @@ ol.edgetoedge li {
 }
 
 #startLinks {
-  border:0;
   width:100%;
   margin:1.5% 2%;
+  padding:0;
 }
 
 #startLinks,
 #startLinks li {
-  padding:0;
+  border:0;
+  -webkit-border-radius:0;
+  background:none;
 }
 #startLinks li {
   width:32%;
@@ -229,9 +231,9 @@ ol.edgetoedge li {
   float:left;
   overflow:hidden;
   display:block;
-  font-size:12px;
-  border:0;
-  -webkit-border-radius:0;
+  font-size:12px; 
+  padding:0.5% 0;
+
 }
 #startLinks li a {
   display:block;
