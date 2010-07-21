@@ -9,9 +9,6 @@ $(document).ready(function() {
     $('.hideOniPad').hide();
   }
 
-  //$("#Profiles").bind('pageAnimationStart',updateUserLists);
-  updateUserLists();
-
   setPageHeight();
   $('div.thisisapage').bind('pageAnimationStart', function(){
     var height = $(this).height();
@@ -243,6 +240,7 @@ $(document).ready(function() {
     },'slow');
   });
 
-
+//$("#Profiles").bind('pageAnimationStart',updateUserLists);
+  updateUserLists();
 
 });
