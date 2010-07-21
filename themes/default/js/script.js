@@ -10,10 +10,7 @@ $(document).ready(function() {
   }
 
   setPageHeight();
-  $('div.thisisapage').bind('pageAnimationStart', function(){
-    var height = $(this).height();
-    setPageHeight(height);
-  });
+  $('div.thisisapage').bind('pageAnimationEnd',setPageHeight);
 
   //$("#Profiles").bind('pageAnimationStart',updateUserLists);
   updateUserLists();

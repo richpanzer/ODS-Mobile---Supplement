@@ -165,11 +165,11 @@ function goToAccordion(clicked) {
   clicked.siblings('.expandable').slideDown(240,'linear');
 }
 
-function setPageHeight(clicked) {
-  //var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
-  var pageheight = $(document).height();
-  pageheight = pageheight - 160;
-  var homeheight = pageheight - 20;
+function setPageHeight() {
+  var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
+  //var pageheight = $(document).height();
+  pageheight -= 113;
+  var homeheight = pageheight - 28;
   $('.hastoolbar_home').css('min-height',homeheight + 'px');
   $('.hastoolbar').css('min-height',pageheight + 'px');
 }
