@@ -15,6 +15,9 @@ $(document).ready(function() {
     setPageHeight(height);
   });
 
+  //$("#Profiles").bind('pageAnimationStart',updateUserLists);
+  updateUserLists();
+
   /*if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
     if(window.applicationCache.update()) {
       alert('updatedS');
@@ -231,8 +234,5 @@ $(document).ready(function() {
       height: 80
     },'slow');
   });
-
-//$("#Profiles").bind('pageAnimationStart',updateUserLists);
-  updateUserLists();
 
 });
