@@ -8,7 +8,11 @@ $(document).ready(function() {
   $("#Profiles").bind('pageAnimationStart',updateUserLists);
 
 
-
+  setPageHeight();
+  $('div.thisisapage').bind('pageAnimationStart', function(){
+    var height = $(this).height();
+    setPageHeight(height);
+  });
   
 
   /*if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
@@ -75,8 +79,6 @@ $(document).ready(function() {
     updateUserListings();
   });
 
-  
-  
   $('.saveUserName').bind('click', function() {
     var uid = $("#updateUserUID").attr('name');
     var user = $("#updateUserName").val();
@@ -159,7 +161,6 @@ $(document).ready(function() {
   $("#profileGOTOaddDS").bind('click',function(){
     $("#addDSProfileBtn").html('Profile').attr('href','#Profile');
   });
-
   $("#Add_Dietary_Supplement a").bind('click', function(){
     $("#addDSProfileBtn").html('Profiles').attr('href','#Profiles');
   });
@@ -175,8 +176,9 @@ $(document).ready(function() {
     var frequency = $("#frequency_update").val();
     var frequency_unit = $("#frequency_unit_update").val();
     var notes = $("#notes_update").val();
-    var myimg = 'Placeholder';
-    updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes,myimg);
+    var img_01 = $("#imageOne_update").attr('src');
+    var img_02 = $("#imageTwo_update").attr('src');
+    updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes,img_01,img_02);
   });
 
 
@@ -236,13 +238,6 @@ $(document).ready(function() {
       width: 80,
       height: 80
     },'slow');
-  });
-
-
-  setPageHeight();
-  $('div.thisisapage').bind('pageAnimationStart', function(){
-    var height = $(this).height();
-    setPageHeight(height);
   });
 
 

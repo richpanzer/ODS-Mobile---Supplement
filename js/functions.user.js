@@ -20,7 +20,8 @@ function updateUserName(uid,user) {
   var query = "UPDATE `user` SET `user`='" + user +"' WHERE `id`='" + uid + "';";
   db.transaction(function(transaction) {
     transaction.executeSql(query, [], function(transaction, results) {
-      updateUserLists(results,uid,user);
+      updateUserLists(uid,user);
+      
     }, errorHandler);
   });
 }
@@ -73,12 +74,15 @@ function registerNewUserDOM(currentuid,currentuser) {
   // Add Profile List Listeners for new DOM items
   $('#profile_list ul li a').bind("click", function(e){
     e.preventDefault();
-    $('form input, form textarea').clearForm();
+    //$('form input, form textarea').clearForm();
     removeUserSupplementDOM();
     var uid = $(this).attr('title');
     var user = $(this).html();
+    $("#user_select").val(uid);
     setCurrentUser(uid,user);
+    getSupplementList(uid);
     jQT.goTo($('#Profile'), 'flip');
+    return false;
   });
 }
 
@@ -87,14 +91,10 @@ function setCurrentUser(uid,user) {
   // Used for updating user name for a profile
   $("#updateUserName").val(user);
   $("#updateUserUID").attr('name',uid);
-  // Get all supplement names for a given user
-  getSupplementList(uid);
-  // Hide user select field if user is already selected
-  $(".userSelectToggle").hide();
-  // Set html content for user
+  $(".userSelectToggle").css("opacity","0.25")
+  //$(".userSelectToggle").hide();
   $(".currentUser").html(user);
-  $(".currentUser").attr('title',uid);
-  $("#user_select").val(uid);
+  
   $("#addSupUserName").html(addSupplementHeadingUserStart + user + addSupplementHeadingUserEnd);
 }
 

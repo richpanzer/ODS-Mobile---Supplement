@@ -4,7 +4,7 @@
   </div>
   <div class="toolbar">
     <h3>Add</h3>
-    <a id="addDSProfileBtn" class="blueButton" href="#Profiles">Profiles</a>
+    <a id="addDSProfileBtn" class="blueButton" href="#">Profiles</a>
     <a class="button submitProfile" href="#">Save</a>
   </div>
   <form id="saveSupplement" class="form" method="post">

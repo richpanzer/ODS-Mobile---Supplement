@@ -10,7 +10,7 @@
     <li><span><strong class="label">Frequency:</strong> <span id="supFrequency"></span> <span id="supFrequencyUnit"></span></span></li>
     <li>
       <span id="photocontainer"><strong class="label">Photos:</strong><br />
-        <p><img id="supPhoto" class="inputImg" /><img id="supPhoto2" class="inputImg" /></p>
+        <p><img id="supPhoto_01" class="inputImg" /><img id="supPhoto_02" class="inputImg" /></p>
         <br class="reset" />
       </span>
     </li>

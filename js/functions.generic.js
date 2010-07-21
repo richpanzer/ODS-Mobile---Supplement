@@ -34,7 +34,8 @@ function setupDatabaseTables() {
     '`frequency` VARCHAR(16), ' +
     '`frequency_unit` VARCHAR(16), ' +
     '`notes` VARCHAR(256), ' +
-    '`myimg` BLOB);'
+    '`img_01` BLOB, ' +
+    '`img_02` BLOB);';
   setupQuery[3] = 'CREATE TABLE IF NOT EXISTS `setting` (' +
     '`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,' +
     '`name` VARCHAR(32) NOT NULL, ' +
@@ -58,7 +59,7 @@ function setupDatabaseTables() {
 }
 
 // Prepopulate Database
-function prepopulateDatabase() {
+/*function prepopulateDatabase() {
   var setupQuery = new Array();
   setupQuery[0] = "INSERT OR IGNORE INTO `user` (id, user) VALUES (1, 'Rich');";
   setupQuery[1] = "INSERT OR IGNORE INTO `user` (id, user) VALUES (2, 'James');";
@@ -77,7 +78,7 @@ function clearDatabaseContent(callback) {
   queryArrays(resetQuery);
   setupDatabaseTables();
   callback();
-}
+} */
 
 /* Begin main settings page functions */
 // Corresponds to the "Settings" page
@@ -102,8 +103,6 @@ function errorHandler(transaction, error) {
   alert('The transaction could not be made. Error: '+error.message+' (Code '+error.code+')');
   return true;
 }
-
-
 
 // Generic query execution for an array of query statments
 function queryArrays(query) {

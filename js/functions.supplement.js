@@ -29,16 +29,16 @@ function addSupplementsToDOM(results,uid) {
       var row = results.rows.item(i);
       $('#profile_entries').append($('<li class="arrow"><a class="id' + uid +
         '_' + i + '" href="#">' + row['name'] + '</a></li>'));
-      addCurrentSupListener(i,row['user'],row['uid'],row['sid'],row['pid'],row['name'],row['amount'],row['unit'],row['frequency'],row['frequency_unit'],row['myimg'],row['notes']);
+      addCurrentSupListener(i,row['user'],row['uid'],row['sid'],row['pid'],row['name'],row['amount'],row['unit'],row['frequency'],row['frequency_unit'],row['img_01'],row['img_02'],row['notes']);
     }
   } else {
     addSupplementOptionsError();
   }
 }
 
-function addCurrentSupListener(i,user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,image,notes) {
+function addCurrentSupListener(i,user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,img_01,img_02,notes) {
   $("#profile_entries li a.id" + uid + "_" + i).bind('click', function(){
-    showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,image,notes);
+    showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,img_01,img_02,notes);
     jQT.goTo($('#Supplement'), 'flip');
   });
 }
@@ -48,13 +48,14 @@ function addSupplementOptionsError() {
   $('#profile_entries').append($('<li></li>').text(noSupplementsError));
 }
 
-function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,image,notes) {
+function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,img_01,img_02,notes) {
   // This updates the "view" page
   $("#supName").html(supplement);
   $("#supAmount").html(amount + ' ' + unit);
   $("#supFrequency").html(frequency);
   $("#supFrequencyUnit").html(frequency_unit);
-  $("#supPhoto").attr('src', image);
+  $("#supPhoto_01").attr('src', img_01);
+  $("#supPhoto_02").attr('src', img_02);
   if (notes.length > 0) {
     $("#supNotes").html(notes);
   } else {
@@ -70,6 +71,7 @@ function showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency
   $("#frequency_update").val(frequency);
   $("#frequency_unit_update").val(frequency_unit);
   $("#notes_update").val(notes);
-  $("#imageOne_update").attr('src', image);
+  $("#imageOne_update").attr('src', img_01);
+  $("#imageTwo_update").attr('src', img_02);
   $("#updateSupplement").attr('name',pid);
 }
