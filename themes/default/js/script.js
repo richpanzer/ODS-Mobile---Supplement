@@ -12,8 +12,8 @@ $(document).ready(function() {
   setPageHeight();
   $('div.thisisapage').bind('pageAnimationEnd',setPageHeight);
 
-  //$("#Profiles").bind('pageAnimationStart',updateUserLists);
-  updateUserLists();
+  $("#Profiles").bind('pageAnimationStart',updateUserLists);
+  //updateUserLists();
 
   /*if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
     if(window.applicationCache.update()) {
