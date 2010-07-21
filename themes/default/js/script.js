@@ -13,7 +13,17 @@ $(document).ready(function() {
     var height = $(this).height();
     setPageHeight(height);
   });
-  
+
+
+  var IsiPhone = navigator.userAgent.indexOf("iPhone") != -1;
+  var IsiPod = navigator.userAgent.indexOf("iPod") != -1;
+  var IsiPad = navigator.userAgent.indexOf("iPad") != -1;
+  var IsiPhoneOS = IsiPhone || IsiPad || IsiPod;
+
+  if (IsiPad == true) {
+    $('.hideOniPad').hide();
+  }
+
 
   /*if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
     if(window.applicationCache.update()) {

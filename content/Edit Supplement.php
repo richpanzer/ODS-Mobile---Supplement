@@ -54,7 +54,7 @@
       </li>
     </ul>
     <ul class="rounded">
-      <li>
+      <li class="hideOniPad">
         <div class="imgWrapper">
           <img class="inputImg" id="imageOne_update" />
         </div>
@@ -64,7 +64,7 @@
         </div>
         <br class="reset" />
       </li>
-      <li>
+      <li class="hideOniPad">
         <div class="imgWrapper">
           <img class="inputImg" id="imageTwo_update" />
         </div>
