@@ -59,8 +59,8 @@
           <img class="inputImg" id="imageOne_update" />
         </div>
         <div class="imgBtnWrapper">
-          <p><button id="getCamera_01">From Camera</button></p>
-          <p><button id="getPicture_01">From Photo Library</button></p>
+          <p><button id="getCamera_01_update">From Camera</button></p>
+          <p><button id="getPicture_01_update">From Photo Library</button></p>
         </div>
         <br class="reset" />
       </li>
@@ -69,8 +69,8 @@
           <img class="inputImg" id="imageTwo_update" />
         </div>
         <div class="imgBtnWrapper">
-          <p><button id="getCamera_02">From Camera</button></p>
-          <p><button id="getPicture_02">From Photo Library</button></p>
+          <p><button id="getCamera_02_update">From Camera</button></p>
+          <p><button id="getPicture_02_update">From Photo Library</button></p>
         </div>
         <br class="reset" />
       </li>

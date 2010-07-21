@@ -232,7 +232,7 @@ $(document).ready(function() {
 
   $('.inputImg').toggle(function(){
     $(this).animate({
-      width: 213,
+      width: 210,
       height: 240
     }, 'slow');
     $(this).siblings().animate({

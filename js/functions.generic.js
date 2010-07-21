@@ -194,6 +194,13 @@ function getPicture_Success2(imageData) {
   $("#imageTwo").attr('src', "data:image/jpeg;base64," + imageData);
 }
 
+function getPicture_Success_update(imageData) {
+  $("#imageOne_update").attr('src', "data:image/jpeg;base64," + imageData);
+}
+function getPicture_Success2_update(imageData) {
+  $("#imageTwo_update").attr('src', "data:image/jpeg;base64," + imageData);
+}
+
 $('#getCamera_01').click(function(){
   getPicture(getPicture_Success);
 });
@@ -208,6 +215,19 @@ $('#getPicture_02').click(function(){
   getPicture(getPicture_Success2,PictureSourceType.LIBRARY);
 });
 
+$('#getCamera_01_update').click(function(){
+  getPicture(getPicture_Success_update);
+});
+$('#getPicture_01_update').click(function(){
+  getPicture(getPicture_Success_update,PictureSourceType.LIBRARY);
+});
+
+$('#getCamera_02_update').click(function(){
+  getPicture(getPicture_Success2_update);
+});
+$('#getPicture_02_update').click(function(){
+  getPicture(getPicture_Success2_update,PictureSourceType.LIBRARY);
+});
 
 // Camera Roll Stuff
 /*
