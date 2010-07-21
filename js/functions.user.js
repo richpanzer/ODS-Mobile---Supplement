@@ -1,14 +1,13 @@
 // Insert a single user row
-function insertUser(user, callback) {
+function insertUser(user) {
   if (user.length > 0) {
     var query = "INSERT INTO user (user) VALUES ('" + user + "');";
     db.transaction(function(transaction,results){
-      transaction.executeSql(query, null, function(transaction,results){
-        var currentuid = results.insertId;
-        updateUserLists(currentuid,user);
-        //alert('the uid is ' + currentuid + ' and the user is ' + user);
-        setCurrentUser(currentuid,user);
-        callback();
+      transaction.executeSql(query, null, function(results){
+        var cuid = results.insertId;
+        //alert('the uid is ' + cuid + ' and the user is ' + user);
+        updateUserLists(cuid,user);
+        setCurrentUser(cuid,user);
       }, errorHandler);
     });
   }
@@ -16,12 +15,11 @@ function insertUser(user, callback) {
 }
 
 // update a single user
-function updateUserName(uid,user) {
-  var query = "UPDATE `user` SET `user`='" + user +"' WHERE `id`='" + uid + "';";
+function updateUserName(cuid,cuser) {
+  var query = "UPDATE `user` SET `user`='" + cuser +"' WHERE `id`='" + cuid + "';";
   db.transaction(function(transaction) {
-    transaction.executeSql(query, [], function(transaction, results) {
-      updateUserLists(uid,user);
-      
+    transaction.executeSql(query, [], function() {
+      updateUserLists(cuid,cuser);
     }, errorHandler);
   });
 }
@@ -40,19 +38,20 @@ function addUserOptionsError() {
 }
 
 // Generic function used for SELECT queries with a return argument WORKS
-function updateUserLists(currentuid,currentuser) {
+function updateUserLists(cuid,cuser) {
   var query = "SELECT * FROM `user`;";
   db.transaction(function(transaction) {
     transaction.executeSql(query, [], function(transaction, results) {
-      updateUserDOM(results,currentuid,currentuser);
+      updateUserDOM(results,cuid,cuser);
     }, errorHandler);
   });
 }
 
 // Update DOM to show any changes in users added or deleted WORKS
-function updateUserDOM(results,currentuid,currentuser) {
+function updateUserDOM(results,cuid,cuser) {
+  removeUserSupplementDOM();
+  removeUserOptions();
   if (results.rows.length > 0) {
-    removeUserOptions();
     for (var i=0; i<results.rows.length; i++) {
       var row = results.rows.item(i);
       $('#profile_list').
@@ -64,13 +63,13 @@ function updateUserDOM(results,currentuid,currentuser) {
           attr("name",row['id']).
           text(row['user']));
     }
-    registerNewUserDOM(currentuid,currentuser);
+    registerNewUserDOM(cuid,cuser);
   } else {
     addUserOptionsError();
   }
 }
 
-function registerNewUserDOM(currentuid,currentuser) {
+function registerNewUserDOM(cuid,cuser) {
   // Add Profile List Listeners for new DOM items
   $('#profile_list ul li a').bind("click", function(e){
     e.preventDefault();
@@ -84,6 +83,11 @@ function registerNewUserDOM(currentuid,currentuser) {
     jQT.goTo($('#Profile'), 'flip');
     return false;
   });
+  if ((cuid != undefined) && (cuser != undefined)) {
+    setCurrentUser(cuid,cuser);
+    getSupplementList(cuid);
+    alert('the uid is ' + cuid + ' and the user is ' + cuser);
+  }
 }
 
 // Set the current active user

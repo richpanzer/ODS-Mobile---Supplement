@@ -5,8 +5,8 @@ $(document).ready(function() {
   initDB();
   setupDatabaseTables();
 
-  $("#Profiles").bind('pageAnimationStart',updateUserLists);
-
+  //$("#Profiles, #Add_Dietary_Supplement").bind('pageAnimationStart',updateUserLists);
+  updateUserLists();
 
   setPageHeight();
   $('div.thisisapage').bind('pageAnimationStart', function(){
@@ -54,9 +54,17 @@ $(document).ready(function() {
 
   // Add a new user record
   $(".submitUser").bind('click', function(){
-    var callback = jQT.goTo($('#Profiles'), 'flip');
     var user = $("#profile_name").val();
-    insertUser(user, callback);
+    insertUser(user);
+    jQT.goTo($('#Profiles'), 'flip');
+    return false;
+  });
+
+  // Listen to the "Add Dietary Supplement" button on the "Add Profile" page
+  $(".sumbitUserSubmitProfile").bind('click', function(){
+    var user = $("#profile_name").val();
+    insertUser(user);
+    jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
     return false;
   });
 
@@ -68,14 +76,6 @@ $(document).ready(function() {
     //$(".addSupUserName").html(addSupplementHeadingStart + user + addSupplementHeadingEnd);
     return false;
   }); */
-
-  // Listen to the "Add Dietary Supplement" button on the "Add Profile" page
-  $(".sumbitUserSubmitProfile").bind('click', function(){
-    var user = $("#profile_name").val();
-    callback = jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
-    insertUser(user, callback);
-    return false;
-  });
 
   // Need to delete all content for testing purposes or load some dummy data?  THIS IS BUGGY
   $("#resetUserData").click(function(){
