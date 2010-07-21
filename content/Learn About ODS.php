@@ -6,13 +6,12 @@
   <ul class="edgetoedge">
     <li><a target="_blank" href="http://ods.od.nih.gov/">Office of Dietary Supplements</a></li>
     <li><a target="_blank" href="http://ods.od.nih.gov/about/about_ods.aspx">About ODS</a></li>
-  </ul>
+  </ul><?php /*
   <div id="svgtest">
     &nbsp;
   </div>
-  <br class="reset" />
+  <br class="reset" />*/ ?>
 </div>
-<br class="reset" />
 <?php
 $currentPage = 'aboutods';
 include PATH_TXT . 'includes/toolbar.php';
