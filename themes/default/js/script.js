@@ -139,21 +139,13 @@ $(document).ready(function() {
     jQT.goTo($('#Instructions'), 'flip');
     goAccordion($('#accordion #instructEmail'));
   });
-  $(".instructPhotoRef").click(function(){
+  $(".instructAddRef").click(function(){
     jQT.goTo($('#Instructions'), 'flip');
-    goAccordion($('#accordion #instructPhoto'));
+    goAccordion($('#accordion #instructAdd'));
   });
   $(".instructPasswordRef").click(function(){
     jQT.goTo($('#Instructions'), 'flip');
     goAccordion($('#accordion #instructPassword'));
-  });
-  $(".instructVisitODSRef").click(function(){
-    jQT.goTo($('#Instructions'), 'flip');
-    goAccordion($('#accordion #instructVisitODS'));
-  });
-  $(".instructDSresourcesRef").click(function(){
-    jQT.goTo($('#Instructions'), 'flip');
-    goAccordion($('#accordion #instructDSresources'));
   });
   
 
