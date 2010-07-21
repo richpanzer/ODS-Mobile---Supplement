@@ -558,7 +558,7 @@ function allPurposeDBQuery(query,nullHandler,errorHandler){db.transaction(functi
 function voidClick(link){link.click(function(e){e.preventDefault();return false;});}
 function goAccordion(clicked){$('#accordion .expandable').slideUp(180,'swing');clicked.siblings('.expandable').slideDown(180,'swing');}
 function goToAccordion(clicked){$('#accordion .expandable').slideUp(240,'linear');jQT.goTo($('#Instructions'),'flip');clicked.siblings('.expandable').slideDown(240,'linear');}
-function setPageHeight(){var pageheight=$(window).height();if(isPhoneGap==true){pageheight-=40;}
+function setPageHeight(){var pageheight=$(window).height();if(isPhoneGap==true){pageheight-=20;}
 pageheight-=113;var homeheight=pageheight-28;$('body > *, .hastoolbar_home').animate({minHeight:homeheight+'px !important',duration:5,easing:'linear'});$('.hastoolbar').animate({minHeight:pageheight+'px !important',duration:5,easing:'linear'});}
 function PictureSourceType(){}
 PictureSourceType.LIBRARY=0;PictureSourceType.CAMERA=1;function getPicture(callback,sourceType){var options={quality:10};if(sourceType!=undefined){options["sourceType"]=sourceType;}
@@ -578,7 +578,7 @@ row['id']+'" href="#">'+row['user']+'</a></li></ul>'));$('#user_select').append(
 registerNewUserDOM(cuid,cuser);}else{addUserOptionsError();}}
 function registerNewUserDOM(cuid,cuser){$('#profile_list ul li a').bind("click",function(e){e.preventDefault();removeUserSupplementDOM();var uid=$(this).attr('title');var user=$(this).html();$("#user_select").val(uid);setCurrentUser(uid,user);getSupplementList(uid);jQT.goTo($('#Profile'),'flip');return false;});if((!isNaN(cuid))&&(cuser!=undefined)){setCurrentUser(cuid,cuser);getSupplementList(cuid);}}
 function setCurrentUser(uid,user){$("#updateUserName").val(user);$("#updateUserUID").attr('name',uid);$(".userSelectToggle").css("opacity","0.25")
-$(".currentUser").html(user);$("#addSupUserName").html(addSupplementHeadingUserStart+user+addSupplementHeadingUserEnd);}
+$(".currentUser").html(user);$("#user_select").val(uid);$("#addSupUserName").html(addSupplementHeadingUserStart+user+addSupplementHeadingUserEnd);}
 function removeUserSupplementDOM(){$('#profile_entries').children().remove().end();}
 function removeUserOptions(){$("#profile_name").val('');$('#profile_list, #user_select').children().remove().end();}
 function createSupplement(supplement){var query="INSERT INTO supplement (`name`) VALUES ('"+supplement+"');";allPurposeDBQuery(query,null,errorHandler);}

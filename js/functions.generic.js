@@ -169,7 +169,7 @@ function setPageHeight() {
   //var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
   var pageheight = $(window).height();
   if (isPhoneGap == true) {
-    pageheight -= 40;
+    pageheight -= 20;
   }
   pageheight -= 113;
   var homeheight = pageheight - 28;

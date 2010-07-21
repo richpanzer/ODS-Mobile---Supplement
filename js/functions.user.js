@@ -99,7 +99,7 @@ function setCurrentUser(uid,user) {
   $(".userSelectToggle").css("opacity","0.25")
   //$(".userSelectToggle").hide();
   $(".currentUser").html(user);
-  
+  $("#user_select").val(uid);
   $("#addSupUserName").html(addSupplementHeadingUserStart + user + addSupplementHeadingUserEnd);
 }
 
