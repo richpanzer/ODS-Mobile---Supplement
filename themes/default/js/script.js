@@ -10,10 +10,11 @@ $(document).ready(function() {
   }
 
   setPageHeight();
+  $(window).resize(setPageHeight);
   $('div.thisisapage').bind('pageAnimationEnd',setPageHeight);
 
-  $("#Profiles").bind('pageAnimationStart',updateUserLists);
-  //updateUserLists();
+  //$("#Profiles").bind('pageAnimationStart',updateUserLists);
+  updateUserLists();
 
   /*if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
     if(window.applicationCache.update()) {
@@ -104,7 +105,6 @@ $(document).ready(function() {
   $('.savePassword').click(function(){
     var p1 = $.trim($('#password1').val());
     var p2 = $.trim($('#password2').val());
-
     if(p1 == '') {
       $('.error').text('Please Enter a Password.');
       return;
@@ -125,12 +125,9 @@ $(document).ready(function() {
   $("#Instructions").bind('pageAnimationStart', function(){
     $('#accordion .expandable').hide();
   });
-  
   $('#accordion h2').click(function(){
     goAccordion($(this));
   });
-
-
   $(".instructProfileRef").click(function(){
     jQT.goTo($('#Instructions'), 'flip');
     goAccordion($('#accordion #instructProfile'));
