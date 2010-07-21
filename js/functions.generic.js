@@ -172,15 +172,15 @@ function setPageHeight() {
     pageheight -= 20;
   }
   pageheight -= 113;
-  var homeheight = pageheight - 28;
+  var homeheight = pageheight - 34;
   $('body > *, .hastoolbar_home').animate({
     minHeight: homeheight + 'px !important',
-    duration: 5,
+    duration: 100,
     easing: 'linear'
   });
   $('.hastoolbar').animate({
     minHeight: pageheight + 'px !important',
-    duration: 5,
+    duration: 100,
     easing: 'linear'
   });
 }

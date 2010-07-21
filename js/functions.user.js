@@ -39,7 +39,7 @@ function addUserOptionsError() {
 
 // Generic function used for SELECT queries with a return argument WORKS
 function updateUserLists(cuid,cuser) {
-  alert("Updating List of Users");
+  //alert("Updating List of Users");
   var query = "SELECT * FROM `user`;";
   db.transaction(function(transaction) {
     transaction.executeSql(query, [], function(transaction, results) {
@@ -96,8 +96,8 @@ function setCurrentUser(uid,user) {
   // Used for updating user name for a profile
   $("#updateUserName").val(user);
   $("#updateUserUID").attr('name',uid);
-  $(".userSelectToggle").css("opacity","0.25")
-  //$(".userSelectToggle").hide();
+  //$(".userSelectToggle").css("opacity","0.25")
+  $(".userSelectToggle").hide();
   $(".currentUser").html(user);
   $("#user_select").val(uid);
   $("#addSupUserName").html(addSupplementHeadingUserStart + user + addSupplementHeadingUserEnd);
