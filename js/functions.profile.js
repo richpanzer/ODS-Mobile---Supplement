@@ -96,7 +96,6 @@ function resetAddProfileForm() {
 
 // Update a profile row
 function updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,notes,img_01,img_02) {
-  alert('Supplement name: ' + supplement + ' SID: ' + sid);
   var updateSup = "UPDATE `supplement` SET `name`='" + supplement + "' WHERE `id`=" + sid + ";";
   var updatePro = "UPDATE `profile` " +
     "SET `amount`='" + amount + "', " +

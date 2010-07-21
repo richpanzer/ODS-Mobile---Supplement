@@ -222,7 +222,7 @@ $(document).ready(function() {
     $(this).animate({
       width: 80,
       height: 80
-    }, 'fast');
+    }, 'slow');
     $(this).siblings().animate({
       width: 80,
       height: 80

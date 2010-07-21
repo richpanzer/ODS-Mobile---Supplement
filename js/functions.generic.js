@@ -169,18 +169,18 @@ function setPageHeight() {
   //var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
   var pageheight = $(window).height();
   if (isPhoneGap == true) {
-    pageheight -= 20;
+    pageheight -= 40;
   }
   pageheight -= 113;
   var homeheight = pageheight - 28;
   $('body > *, .hastoolbar_home').animate({
     minHeight: homeheight + 'px !important',
-    duration: 50,
+    duration: 5,
     easing: 'linear'
   });
   $('.hastoolbar').animate({
     minHeight: pageheight + 'px !important',
-    duration: 50,
+    duration: 5,
     easing: 'linear'
   });
 }

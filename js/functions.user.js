@@ -39,6 +39,7 @@ function addUserOptionsError() {
 
 // Generic function used for SELECT queries with a return argument WORKS
 function updateUserLists(cuid,cuser) {
+  alert("Updating List of Users");
   var query = "SELECT * FROM `user`;";
   db.transaction(function(transaction) {
     transaction.executeSql(query, [], function(transaction, results) {
