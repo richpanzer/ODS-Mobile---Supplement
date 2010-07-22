@@ -7,10 +7,10 @@ $(document).ready(function() {
 
   if (IsiPad == true) {
     $('.hideOniPad').hide();
-    $('body, body > *').css({
+    /*$('body, body > *').css({
       minHeight: '1004px',
       minWidth: '768px'
-    });
+    });*/
   }
 
   // This is for keeping the page from bouncing
