@@ -108,6 +108,8 @@ function updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,frequen
     "WHERE `id`=" + pid + ";";
   db.transaction(function(transaction) {
     transaction.executeSql(updateSup, [], null, errorHandler);
+  });
+  db.transaction(function(transaction) {
     transaction.executeSql(updatePro, [], null, errorHandler);
   });
   updateUserLists(uid,user);
