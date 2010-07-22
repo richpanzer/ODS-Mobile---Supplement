@@ -10,8 +10,6 @@ $(document).ready(function() {
   }
 
   setPageHeight();
-  //$(window).resize(setPageHeight);
-
   var resizeTimer;
   $(window).resize(function() {
     clearTimeout(resizeTimer);
@@ -20,8 +18,7 @@ $(document).ready(function() {
   //$('div.thisisapage').bind('pageAnimationEnd',setPageHeight);
 
   updateUserLists();
-  registerNewUserDOM();
-  //$("#Profiles").bind('pageAnimationStart',updateUserLists);
+  //$("#Profiles").bind('pageAnimationEnd',updateUserLists);
   
 
   /*if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {

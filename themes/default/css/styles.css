@@ -2,14 +2,11 @@ br.reset{clear:both}
 .thisisapage {
   min-height:460px;
   width:100%;
-  border:1px solid #555;
   overflow:hidden;
-  -webkit-box-shadow:0 0 50px 0 #000;
+  /*-webkit-box-shadow:0 0 50px 0 #000;*/
   margin:0!important;
   padding:0!important;
-
 }
-
 
 .hastoolbar,
 .hastoolbar_home {

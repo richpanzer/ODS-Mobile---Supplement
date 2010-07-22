@@ -2,7 +2,7 @@ html, body, body > * {
   margin:0;
   padding:0;
   /*background:rgb(222,209,158)*/
-  background:#CCC;
+  background:#000;
 }
 body > * {
   min-width:320px;
