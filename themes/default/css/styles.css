@@ -6,8 +6,8 @@ br.reset{clear:both}
 }
 .thisisapage,
 .hastoolbar {
-  margin:0 !important;
-  padding:0 !important;
+  padding:0;
+  margin:0;
 }
 
 div.content {
@@ -60,7 +60,6 @@ margin:0;
 width:100%;
 }
 .toolbar_bottom {
-  height:66px;
   min-width:320px;
   overflow:hidden;
 }

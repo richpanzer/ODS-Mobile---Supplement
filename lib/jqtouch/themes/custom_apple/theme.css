@@ -12,8 +12,7 @@ body > * {
     left top,
     color-stop(0.6, rgb(233,226,193)),
     color-stop(0.2, rgb(222,209,158))
-    );
-  padding-bottom:50px;
+    )
 }
 
 h1,h2 {

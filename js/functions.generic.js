@@ -166,19 +166,26 @@ function goToAccordion(clicked) {
 }
 
 function setPageHeight() {
-  //var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
-  var pageheight = $(window).height();
+  var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
+  //var pageheight = $(window).height();
   if (isPhoneGap == true) {
     //pageheight -= 40;
   }
-  pageheight -= 131;
+  
+  var toolbarheight = pageheight - 111;
+  
   var homeheight = pageheight - 40;
-  $('.hastoolbar_home').animate({
-    minHeight: homeheight + 'px !important',
+  $('.hastoolbar').animate({
+    minHeight: toolbarheight + 'px !important',
     duration: 240,
     easing: 'swing'
   });
-  $('body > *, .hastoolbar').animate({
+  $('toolbar_bottom').animate({
+    bottom: 0,
+    duration: 240,
+    easing: 'swing'
+  });
+  $('body, body > *, .thisisapage').animate({
     minHeight: pageheight + 'px !important',
     duration: 240,
     easing: 'swing'
