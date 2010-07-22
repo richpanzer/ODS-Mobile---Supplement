@@ -17,14 +17,16 @@ $(document).ready(function() {
     e.preventDefault();
   };
 
-  $('div.thisisapage').bind('pageAnimationEnd',function(){
-    myScroll = new iScroll($('.scroller'), {
+  //$('div.thisisapage').bind('pageAnimationEnd',function(){
+    var myscroller = $('#Add_Dietary_Supplement');
+    myScroll = new iScroll(myscroller, {
       checkDOMChanges: false,
       bounce: false,
       momentum: false,
       desktopCompatibility: true
     });
-  });
+  //});
+  setTimeout(function () { myScroll.refresh(); }, 0);
 
 
 
