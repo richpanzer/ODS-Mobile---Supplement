@@ -559,7 +559,7 @@ function voidClick(link){link.click(function(e){e.preventDefault();return false;
 function goAccordion(clicked){$('#accordion .expandable').slideUp(180,'swing');clicked.siblings('.expandable').slideDown(180,'swing');}
 function goToAccordion(clicked){$('#accordion .expandable').slideUp(240,'linear');jQT.goTo($('#Instructions'),'flip');clicked.siblings('.expandable').slideDown(240,'linear');}
 function setPageHeight(){var pageheight=$(window).height();if(isPhoneGap==true){pageheight-=20;}
-pageheight-=121;var homeheight=pageheight-28;$('body > *, .hastoolbar_home').animate({minHeight:homeheight+'px !important',duration:240,easing:'linear'});$('.hastoolbar').animate({minHeight:pageheight+'px !important',duration:240,easing:'linear'});}
+pageheight-=121;var homeheight=pageheight-100;$('body > *, .hastoolbar_home').animate({minHeight:homeheight+'px !important',duration:240,easing:'linear'});$('.hastoolbar').animate({minHeight:pageheight+'px !important',duration:240,easing:'linear'});}
 function PictureSourceType(){}
 PictureSourceType.LIBRARY=0;PictureSourceType.CAMERA=1;function getPicture(callback,sourceType){var options={quality:10};if(sourceType!=undefined){options["sourceType"]=sourceType;}
 navigator.camera.getPicture(callback,null,options);}
