@@ -9,6 +9,10 @@ $(document).ready(function() {
     $('.hideOniPad').hide();
   }
 
+  // This is for keeping the page from bouncing
+  document.ontouchmove = function(e){ e.preventDefault(); }
+
+
   setPageHeight();
   var resizeTimer;
   $(window).resize(function() {

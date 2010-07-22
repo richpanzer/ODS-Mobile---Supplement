@@ -1,8 +1,7 @@
 html, body, body > * {
   margin:0;
   padding:0;
-  /*background:rgb(222,209,158)*/
-  background:#000;
+  background:rgb(222,209,158)
 }
 body > * {
   min-width:320px;
