@@ -5,9 +5,15 @@ br.reset{clear:both}
   border:1px solid #555;
   overflow:hidden;
   -webkit-box-shadow:0 0 50px 0 #000;
+  margin:0!important;
+  padding:0!important;
 }
 
-.hastoolbar {min-height:394px}
+
+.hastoolbar,
+.hastoolbar_home {
+  padding-bottom:10px;
+}
 
 div.content {
 color:#000;
@@ -52,15 +58,17 @@ text-align:center;
 border:none;
 background:none;
 font-size:10px;
-margin:0 !important;
 overflow:hidden;
 color:#FFF;
 padding:0;
+margin:0;
 width:100%;
 }
 .toolbar_bottom {
   height:66px;
   overflow:hidden;
+  margin:0;
+  padding:0;
 }
 
 .toolbar_bottom li {

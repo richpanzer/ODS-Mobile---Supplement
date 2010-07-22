@@ -1,3 +1,7 @@
+<div style="position:absolute;top:0;left:0;padding:20px;opacity:0.65;background:#000;color:#fff;">
+  <p>Height: <span class="windowheight"></span></p>
+  <p>Width: <span class="windowwidth"></span></p>
+</div>
 <div class="hastoolbar_home">
   <div class="info">
     <p>Get Started</p>

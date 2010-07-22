@@ -171,16 +171,20 @@ function setPageHeight() {
   if (isPhoneGap == true) {
     pageheight -= 20;
   }
-  pageheight -= 113;
+  var pagewidth = $(window).width();
+  $('.windowheight').html(pageheight);
+  $('.windowwidth').html(pagewidth);
+  
+  pageheight -= 124;
   var homeheight = pageheight - 34;
   $('body > *, .hastoolbar_home').animate({
     minHeight: homeheight + 'px !important',
-    duration: 100,
+    duration: 240,
     easing: 'linear'
   });
   $('.hastoolbar').animate({
     minHeight: pageheight + 'px !important',
-    duration: 100,
+    duration: 240,
     easing: 'linear'
   });
 }

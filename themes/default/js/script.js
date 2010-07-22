@@ -10,7 +10,15 @@ $(document).ready(function() {
   }
 
   setPageHeight();
-  $(window).resize(setPageHeight);
+  //$(window).resize(setPageHeight);
+
+  var resizeTimer;
+  $(window).resize(function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(setPageHeight, 240);
+  });
+
+
   $('div.thisisapage').bind('pageAnimationEnd',setPageHeight);
 
   //$("#Profiles").bind('pageAnimationStart',updateUserLists);
