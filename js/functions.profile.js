@@ -113,6 +113,7 @@ function updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,frequen
   db.transaction(function(transaction) {
     transaction.executeSql(updatePro, [], null, errorHandler);
   });
+  removeUserSupplementDOM();
   updateUserLists(uid,user);
 }
 
