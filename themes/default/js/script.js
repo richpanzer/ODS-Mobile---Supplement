@@ -10,20 +10,27 @@ $(document).ready(function() {
   }
 
   // This is for keeping the page from bouncing
-  document.ontouchmove = function(event) {
+  /*document.ontouchmove = function(event) {
     if (document.body.scrollHeight == document.body.clientHeight) event.preventDefault();
+  }*/
+  function loaded() {
+    document.addEventListener('touchmove', function(e){ e.preventDefault(); });
+    myScroll = new iScroll($('.scroller'), { checkDOMChanges: false, bounce: false, momentum: false });
   }
+  document.addEventListener('DOMContentLoaded', function(){
+    loaded();
+    updateUserLists();
+  });
 
-
-  setPageHeight();
+  /*setPageHeight();
   var resizeTimer;
   $(window).resize(function() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(setPageHeight, 240);
-  });
+  });*/
   //$('div.thisisapage').bind('pageAnimationEnd',setPageHeight);
 
-  updateUserLists();
+  
   //$("#Profiles").bind('pageAnimationEnd',updateUserLists);
   
 

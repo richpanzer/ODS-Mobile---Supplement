@@ -3,6 +3,9 @@ html, body, body > * {
   padding:0;
   background:rgb(222,209,158);
   background:black;
+  height:460px;
+  width:320px;
+  overflow:hidden;
 }
 body > * {
   min-width:320px;

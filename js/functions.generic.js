@@ -165,7 +165,7 @@ function goToAccordion(clicked) {
   clicked.siblings('.expandable').slideDown(240,'linear');
 }
 
-function setPageHeight() {
+/*function setPageHeight() {
   var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
   //var pageheight = $(window).height();
   if (isPhoneGap == true) {
@@ -190,7 +190,7 @@ function setPageHeight() {
     duration: 240,
     easing: 'swing'
   });
-}
+}*/
 
 
 function PictureSourceType() {}

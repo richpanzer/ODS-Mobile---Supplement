@@ -1,4 +1,4 @@
-<div class="hastoolbar">
+<div class="hastoolbar" class="wrapper"><div class="scroller">
   <div class="info">
     <p id="addSupUserName" class="smallHeading"></p>
   </div>
@@ -91,7 +91,7 @@
       <p><a class="whiteButton submitProfile" href="#">Save</a></p>
     </div>
   </form>
-</div>
+</div></div>
 <?php
 $currentPage = 'addds';
 include PATH_TXT . 'includes/toolbar.php';
