@@ -106,6 +106,7 @@ function updateProfile(user,uid,sid,pid,supplement,amount,unit,frequency,frequen
     "`img_02`='" + img_02 + "', " +
     "`notes`='" + notes + "' " +
     "WHERE `id`=" + pid + ";";
+  alert("Profile ID: " + pid);
   db.transaction(function(transaction) {
     transaction.executeSql(updateSup, [], null, errorHandler);
   });
