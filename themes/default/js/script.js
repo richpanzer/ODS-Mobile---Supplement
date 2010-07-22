@@ -14,7 +14,7 @@ $(document).ready(function() {
   }
 
   // This is for keeping the page from bouncing
-  document.ontouchmove = function(e){ e.preventDefault(); }
+  //document.ontouchmove = function(e){ e.preventDefault(); }
 
 
   setPageHeight();

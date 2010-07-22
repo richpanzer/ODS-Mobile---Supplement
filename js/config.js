@@ -1,8 +1,8 @@
 // Client side database variables
 var dbInfo = new Array();
-dbInfo['name']    = 'My DS'; // Short Name
-dbInfo['ver']     = '1.1'; // Database version
-dbInfo['display'] = 'My Dietary Supplement'; // Display Name
+dbInfo['name']    = 'My Dietary Supplement'; // Short Name
+dbInfo['ver']     = '1.5'; // Database version
+dbInfo['display'] = 'My Dietary Supplements'; // Display Name
 dbInfo['size']    = 65536; // Maximum size
 
 // Google Analytics
