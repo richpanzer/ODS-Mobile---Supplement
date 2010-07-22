@@ -176,7 +176,7 @@ function setPageHeight() {
   $('.windowwidth').html(pagewidth);
   
   pageheight -= 123;
-  var homeheight = pageheight - 30;
+  var homeheight = pageheight - 28;
   $('body > *, .hastoolbar_home').animate({
     minHeight: homeheight + 'px !important',
     duration: 240,
