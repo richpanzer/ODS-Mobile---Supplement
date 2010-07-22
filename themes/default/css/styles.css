@@ -7,12 +7,14 @@ br.reset{clear:both}
   -webkit-box-shadow:0 0 50px 0 #000;
   margin:0!important;
   padding:0!important;
+
 }
 
 
 .hastoolbar,
 .hastoolbar_home {
   padding-bottom:10px;
+  min-height: 394px;
 }
 
 div.content {
