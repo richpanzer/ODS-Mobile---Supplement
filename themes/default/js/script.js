@@ -99,9 +99,10 @@ $(document).ready(function() {
 
   $('#Add_Dietary_Supplement a').bind('click', resetAddProfileForm);
 
-  $('#Email_Profile').bind('pageAnimationStart',getAllProfiles);
+  //$('#Email_Profile').bind('pageAnimationStart',getAllProfiles);
 
-  $('#Email_Profile').bind('pageAnimationEnd', function(){
+  $('#Email_Profile').bind('pageAnimationStart', function(){
+    getAllProfiles();
     var mail = 'mailto:?';
     var subject = 'My Dietary Supplement Profiles';
     var body = $("#emailProfiles").text();
