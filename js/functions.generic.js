@@ -171,11 +171,11 @@ function setPageHeight() {
   if (isPhoneGap == true) {
     pageheight -= 20;
   }
-  var pagewidth = $(window).width();
-  $('.windowheight').html(pageheight);
-  $('.windowwidth').html(pagewidth);
+  //var pagewidth = $(window).width();
+  //$('.windowheight').html(pageheight);
+  //$('.windowwidth').html(pagewidth);
   
-  pageheight -= 123;
+  pageheight -= 121;
   var homeheight = pageheight - 28;
   $('body > *, .hastoolbar_home').animate({
     minHeight: homeheight + 'px !important',
