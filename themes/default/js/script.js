@@ -13,14 +13,20 @@ $(document).ready(function() {
   /*document.ontouchmove = function(event) {
     if (document.body.scrollHeight == document.body.clientHeight) event.preventDefault();
   }*/
-  function loaded() {
-    document.addEventListener('touchmove', function(e){ e.preventDefault(); });
-    myScroll = new iScroll($('.scroller'), { checkDOMChanges: false, bounce: false, momentum: false });
-  }
-  document.addEventListener('DOMContentLoaded', function(){
-    loaded();
-    updateUserLists();
+  document.ontouchmove = function(e) {
+    e.preventDefault();
+  };
+
+  $('div.thisisapage').bind('pageAnimationEnd',function(){
+    myScroll = new iScroll($('.scroller'), {
+      checkDOMChanges: false,
+      bounce: false,
+      momentum: false,
+      desktopCompatibility: true
+    });
   });
+
+
 
   /*setPageHeight();
   var resizeTimer;
@@ -32,7 +38,7 @@ $(document).ready(function() {
 
   
   //$("#Profiles").bind('pageAnimationEnd',updateUserLists);
-  
+  updateUserLists();
 
   /*if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
     if(window.applicationCache.update()) {
