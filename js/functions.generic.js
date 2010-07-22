@@ -169,23 +169,19 @@ function setPageHeight() {
   //var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
   var pageheight = $(window).height();
   if (isPhoneGap == true) {
-    pageheight -= 20;
+    //pageheight -= 40;
   }
-  //var pagewidth = $(window).width();
-  //$('.windowheight').html(pageheight);
-  //$('.windowwidth').html(pagewidth);
-  
   pageheight -= 121;
-  var homeheight = pageheight - 140;
-  $('body > *, .hastoolbar_home').animate({
+  var homeheight = pageheight - 40;
+  $('.hastoolbar_home').animate({
     minHeight: homeheight + 'px !important',
     duration: 240,
-    easing: 'linear'
+    easing: 'swing'
   });
-  $('.hastoolbar').animate({
+  $('body > *, .hastoolbar').animate({
     minHeight: pageheight + 'px !important',
     duration: 240,
-    easing: 'linear'
+    easing: 'swing'
   });
 }
 

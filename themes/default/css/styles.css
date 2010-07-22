@@ -3,14 +3,11 @@ br.reset{clear:both}
   min-height:460px;
   width:100%;
   overflow:hidden;
-  /*-webkit-box-shadow:0 0 50px 0 #000;*/
-  margin:0!important;
-  padding:0!important;
 }
-
-.hastoolbar,
-.hastoolbar_home {
-  padding-bottom:10px;
+.thisisapage,
+.hastoolbar {
+  margin:0 !important;
+  padding:0 !important;
 }
 
 div.content {
