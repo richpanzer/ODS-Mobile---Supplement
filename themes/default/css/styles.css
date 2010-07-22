@@ -67,6 +67,7 @@ width:100%;
 }
 .toolbar_bottom {
   height:66px;
+  min-width:320px;
   overflow:hidden;
   margin:0;
   padding:0;

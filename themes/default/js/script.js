@@ -17,12 +17,12 @@ $(document).ready(function() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(setPageHeight, 240);
   });
+  //$('div.thisisapage').bind('pageAnimationEnd',setPageHeight);
 
-
-  $('div.thisisapage').bind('pageAnimationEnd',setPageHeight);
-
-  $("#Profiles").bind('pageAnimationStart',updateUserLists);
-  //updateUserLists();
+  updateUserLists();
+  registerNewUserDOM();
+  //$("#Profiles").bind('pageAnimationStart',updateUserLists);
+  
 
   /*if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
     if(window.applicationCache.update()) {
