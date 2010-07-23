@@ -17,17 +17,13 @@ $(document).ready(function() {
     e.preventDefault();
   };
 
-  //$('div.thisisapage').bind('pageAnimationEnd',function(){
-    var myscroller = $('#Add_Dietary_Supplement');
-    myScroll = new iScroll(myscroller, {
-      checkDOMChanges: false,
-      bounce: false,
-      momentum: false,
-      desktopCompatibility: true
-    });
-  //});
-  setTimeout(function () { myScroll.refresh(); }, 0);
-
+function loaded() {
+	document.addEventListener('touchmove', function(e){
+    e.preventDefault();
+  });
+	myScroll = new iScroll('scroller');
+}
+document.addEventListener('DOMContentLoaded', loaded);
 
 
   /*setPageHeight();

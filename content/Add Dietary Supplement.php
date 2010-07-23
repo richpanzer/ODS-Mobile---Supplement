@@ -1,4 +1,4 @@
-<div class="hastoolbar"><div class="scroller">
+<div class="hastoolbar"><div id="scroller" class="scroller">
   <div class="info">
     <p id="addSupUserName" class="smallHeading"></p>
   </div>
