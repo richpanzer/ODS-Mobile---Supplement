@@ -13,17 +13,21 @@ $(document).ready(function() {
   /*document.ontouchmove = function(event) {
     if (document.body.scrollHeight == document.body.clientHeight) event.preventDefault();
   }*/
-  document.ontouchmove = function(e) {
+  /*document.ontouchmove = function(e) {
     e.preventDefault();
-  };
+  };*/
 
-function loaded() {
+function toolbarloaded() {
 	document.addEventListener('touchmove', function(e){
     e.preventDefault();
   });
 	myScroll = new iScroll('scroller');
 }
-document.addEventListener('DOMContentLoaded', loaded);
+document.addEventListener('touchmove', function(e){
+  e.preventDefault();
+}, false);
+document.addEventListener('DOMContentLoaded', toolbarloaded, false);
+
 
 
   /*setPageHeight();
