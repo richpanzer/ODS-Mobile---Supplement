@@ -16,19 +16,30 @@ $(document).ready(function() {
   /*document.ontouchmove = function(e) {
     e.preventDefault();
   };*/
+  var myScroll;
 
-function toolbarloaded() {
-	document.addEventListener('touchmove', function(e){
-    e.preventDefault();
-  });
-	myScroll = new iScroll('scroller');
-}
-document.addEventListener('touchmove', function(e){
-  e.preventDefault();
-}, false);
-document.addEventListener('DOMContentLoaded', toolbarloaded, false);
+  function setHeight() {
+    var headerH = document.getElementById('header').offsetHeight;
+    var footerH = document.getElementById('footer').offsetHeight;
+    var wrapperH = window.innerHeight - headerH - footerH;
+    document.getElementById('wrapper').style.height = wrapperH + 'px';
+  }
 
+  function loaded() {
+    setHeight();
 
+    myScroll = new iScroll('scroller', {
+      checkDOMChanges: false,
+      bounce: false,
+      momentum: false
+    });
+    //myScroll = new iScroll('scroller');
+    /* myScroll = myScroll.destroy(true);	// Completely destroy the iScroll */
+  }
+
+  window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', setHeight, false);
+  document.addEventListener('touchmove', function(e){ e.preventDefault(); }, false);
+  document.addEventListener('DOMContentLoaded', loaded, false);
 
   /*setPageHeight();
   var resizeTimer;
