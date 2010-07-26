@@ -16,7 +16,6 @@ $(document).ready(function() {
   /*document.ontouchmove = function(e) {
     e.preventDefault();
   };*/
-  var myScroll;
 
   function setHeight() {
     var headerH = document.getElementById('header').offsetHeight;

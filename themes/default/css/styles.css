@@ -10,12 +10,11 @@ br.reset{clear:both}
   margin:0;
 }
 .hastoolbar {
-  height:349px;
-  overflow:scroll;
-      position:relative;
-    z-index:1;
-    width:100%;/* your desired width, auto and 100% are fine */;
-
+  /*height:349px;*/
+  overflow:auto;
+  position:relative;
+  z-index:1;
+  width:100%;
 }
 
 div.content {
