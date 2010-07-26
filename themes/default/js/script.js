@@ -40,12 +40,12 @@ $(document).ready(function() {
   document.addEventListener('touchmove', function(e){ e.preventDefault(); }, false);
   document.addEventListener('DOMContentLoaded', loaded, false);
 
-  /*setPageHeight();
+  setPageHeight();
   var resizeTimer;
   $(window).resize(function() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(setPageHeight, 240);
-  });*/
+  });
   //$('div.thisisapage').bind('pageAnimationEnd',setPageHeight);
 
   

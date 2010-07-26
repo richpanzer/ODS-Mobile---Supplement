@@ -11,7 +11,7 @@ br.reset{clear:both}
 }
 .hastoolbar {
   /*height:349px;*/
-  overflow:auto;
+  /*overflow:auto;*/
   position:relative;
   z-index:1;
   width:100%;
