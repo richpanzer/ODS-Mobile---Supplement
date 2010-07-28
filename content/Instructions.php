@@ -39,15 +39,22 @@
       </ol>
     </div>
     <div class="panel">
-      <h2 id="instructPassword">Update Profile Name</h2>
+      <h2 id="instructProfileName">Update Profile Name</h2>
       <ol class="edgetoedge expandable">
         <li>Go to the homescreen and select Settings.</li>
         <li>Select Update Profile Name.</li>
         <li>Select the profile name from the dropdown list that you wish to update.</li>
-        <li>Select the Edit Profile button</li>
-        
+        <li>Select the Edit Profile button.</li>
+        <li>Modify the profile name and select the Save button.</li>
       </ol>
-      
+    </div>
+    <div class="panel">
+      <h2 id="instructAddPhoto">Add Photo of a Dietary Supplement</h2>
+      <ol class="edgetoedge expandable">
+        <li>When Adding or editing a Dietary Supplement on the iPhone a photo can be added.</li>
+        <li>Select either "Take Photo" or "From Camera" to add a photo.</li>
+        <li>After adding the photo, complete the Dietary Supplement information and Save.</li>
+      </ol>
     </div>
   </div>
 </div></div></div>
