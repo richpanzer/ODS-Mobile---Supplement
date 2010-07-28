@@ -10,11 +10,8 @@ br.reset{clear:both}
   margin:0;
 }
 .hastoolbar {
-  /*height:349px;*/
-  /*overflow:auto;*/
-  position:relative;
-  z-index:1;
   width:100%;
+  overflow:auto;
 }
 
 div.content {
@@ -66,10 +63,7 @@ padding:0;
 margin:0;
 width:100%;
 }
-.toolbar_bottom {
-  min-width:320px;
-  overflow:hidden;
-}
+.toolbar_bottom {width:100%}
 
 .toolbar_bottom li {
 background:none;

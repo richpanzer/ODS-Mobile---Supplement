@@ -1,13 +1,10 @@
-html, body, body > * {
+body {
   margin:0;
   padding:0;
   background:rgb(222,209,158);
   background:black;
-  min-height:100%;
+  height:100%;
   width:100%;
-  /*height:460px;*/
-  /*width:320px;*/
-  /*overflow:hidden;*/
 }
 body > * {
   min-width:320px;
@@ -17,7 +14,9 @@ body > * {
     left top,
     color-stop(0.6, rgb(233,226,193)),
     color-stop(0.2, rgb(222,209,158))
-    )
+    );
+  height:460px;
+  overflow:hidden;
 }
 
 h1,h2 {

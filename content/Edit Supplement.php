@@ -1,9 +1,9 @@
+<div class="toolbar">
+  <h1>Edit DS</h1>
+  <a class="button back" href="#Supplement">Back</a>
+  <a class="button updateThisSupplement" href="#Profiles">Save</a>
+</div>
 <div class="hastoolbar">
-  <div class="toolbar">
-    <h1>Edit DS</h1>
-    <a class="button back" href="#Supplement">Back</a>
-    <a class="button updateThisSupplement" href="#Profiles">Save</a>
-  </div>
   <form id="updateSupplement" class="rounded" method="post">
     <ul class="rounded" style="display:none">
       <li><select placeholder="User Name" name="user_select" id="user_select_update"></select></li>

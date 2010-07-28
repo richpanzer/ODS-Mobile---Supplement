@@ -1,8 +1,8 @@
+<div class="toolbar">
+  <h1>Tips</h1>
+  <a class="button back" href="#Start">Home</a>
+</div>
 <div class="hastoolbar">
-  <div class="toolbar">
-    <h1>Tips</h1>
-    <a class="button back" href="#Start">Home</a>
-  </div>
   <ul class="edgetoedge">
     <li><a class="instructPasswordRef" href="#">Password protect the application</a></li>
     <li><a class="instructAddRef" href="#">Add photos of each dietary supplement</a></li>

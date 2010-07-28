@@ -166,30 +166,27 @@ function goToAccordion(clicked) {
 }
 
 function setPageHeight() {
-  var pageheight = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ?  document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
-  //var pageheight = $(window).height();
-  if (isPhoneGap == true) {
-    //pageheight -= 40;
-  }
+  /*var ph = 0;
+  if (IsiPhone || IsiPod) {
+    ph = 460;
+  } else if (IsiPad) {
+    ph = 1004;
+  } else {*/
+    ph = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
+  //}
+
+  $('body, body > *, .thisisapage').height(ph);
+
+  var heading = $('.heading').height();
+  var infobar = $('.info').height();
+  var headbar = $('.toolbar').height();
+  var footbar = $('.toolbar_bottom').height();
   
-  var toolbarheight = pageheight - 111;
-  
-  var homeheight = pageheight - 40;
-  $('.hastoolbar').animate({
-    minHeight: toolbarheight + 'px !important',
-    duration: 240,
-    easing: 'swing'
-  });
-  $('toolbar_bottom').animate({
-    bottom: 0,
-    duration: 240,
-    easing: 'swing'
-  });
-  $('body, body > *, .thisisapage').animate({
-    minHeight: pageheight + 'px !important',
-    duration: 240,
-    easing: 'swing'
-  });
+  //alert(heading + ' ' + infobar + ' ' + headbar + ' ' + footbar);
+
+  //var tbh = ph - 156;//heading - infobar - headbar - footbar;
+  var tbh = ph - heading - infobar - headbar - footbar - 77;
+  $('.hastoolbar').height(tbh);
 }
 
 

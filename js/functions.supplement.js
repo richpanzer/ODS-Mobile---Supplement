@@ -39,7 +39,7 @@ function addSupplementsToDOM(results,uid) {
 function addCurrentSupListener(i,user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,img_01,img_02,notes) {
   $("#profile_entries li a.id" + uid + "_" + i).bind('click', function(){
     showCurrentSupplement(user,uid,sid,pid,supplement,amount,unit,frequency,frequency_unit,img_01,img_02,notes);
-    jQT.goTo($('#Supplement'), 'flip');
+    jQT.goTo($('#Supplement'), 'slide')
   });
 }
 

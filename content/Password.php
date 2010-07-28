@@ -1,12 +1,12 @@
+<div class="toolbar">
+    <h1>Password Protect App</h1>
+    <a class="back" href="#Profile">Profile</a>
+    <a class="button savePassword" href="#">Save</a>
+</div>
+<div class="info">
+  <p>Update Your Password For this.</p>
+</div>
 <div class="hastoolbar">
-  <div class="toolbar">
-      <h1>Password Protect App</h1>
-      <a class="back" href="#Profile">Profile</a>
-      <a class="button savePassword" href="#">Save</a>
-  </div>
-  <div class="info">
-    <p>Update Your Password For this.</p>
-  </div>
   <form>
   <ul class="rounded">
     <li>

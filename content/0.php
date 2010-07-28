@@ -1,11 +1,7 @@
-<?php /*<div style="position:absolute;top:0;left:0;padding:20px;opacity:0.65;background:#000;color:#fff;">
-  <p>Height: <span class="windowheight"></span></p>
-  <p>Width: <span class="windowwidth"></span></p>
-</div>*/ ?>
-<div class="hastoolbar_home">
-  <div class="info">
-    <p>Get Started</p>
-  </div>
+<div class="info">
+  <p>Get Started</p>
+</div>
+<div class="hastoolbar">
   <ul id="startLinks">
     <li><a href="#Profiles"><span class="start1"></span>Profiles</a></li>
     <li class="borderSides"><a href="#Add_Profile"><span class="start2"></span>Add Profiles</a></li>
@@ -21,8 +17,8 @@
 </div>
 <div id="footerLogos">
   <ul>
-    <li><a href="#home"><img src="content/img/logo1.png" alt="Some Text" /></a></li>
-    <li class="last"><a href="#home"><img src="content/img/logo2.png" alt="Some Text" /></a></li>
+    <li><img src="content/img/logo1.png" alt="" /></li>
+    <li class="last"><img src="content/img/logo2.png" alt="" /></li>
   </ul>
   <br class="reset" />
 </div>

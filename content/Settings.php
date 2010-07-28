@@ -1,8 +1,8 @@
+<div class="toolbar">
+  <h3>Settings and Resources</h3>
+  <a class="button goback" href="#Start">Done</a>
+</div>
 <div class="hastoolbar">
-  <div class="toolbar">
-      <h3>Settings and Resources</h3>
-      <a class="button goback" href="#Start">Done</a>
-  </div>
   <ul class="edgetoedge">
     <li class="arrow"><a href="#Instructions">Instructions</a></li>
     <li class="arrow"><a href="#Tips">Tips</a></li>

@@ -18,10 +18,8 @@
       addGlossToIcon: false,
       startupScreen: '{$const['THEME_IMG']}startup.png',
       statusBar: 'black',
-      slideSelector: 'body > * > ul li a, ul.rounded li a',
-      cubeSelector: 'ul.edgetoedge li a',
-      popSelector: '.toolbar a',
-      flipSelector: '#startLinks a',
+      slideSelector: 'body > * > ul li a, .rounded li a, .edgetoedge li a',
+      popSelector: '.toolbar a, #startLinks a',
       slideupSelector: '.toolbar_bottom ul li a',
       preloadImages: [
           '{$const['JQTHEME']}img/backButton.png',
@@ -42,11 +40,11 @@ EOD;
     echo addjsfile(UNIX_JS . 'jquery-1.3.2.min.js');
     echo addjsfile(UNIX_JS . 'jquery.clearform.js');
     echo addjsfile(UNIX_JQ . 'jqtouch/jqtouch.min.js');
+    echo addjsfile(UNIX_JQ . 'extensions/jqt.scroll.js');
     echo addjstext($freeformOutput);
     // this is the format default::: addjstofile($file, $minify=true);
     // echo addjsfile(PATH_UNIX . 'lib/jquery.autocomplete/jquery.autocomplete.js'); // Need to add this later for supplement name field
     echo addjsfile(UNIX_JS . 'config.js');
-    echo addjsfile(UNIX_JS . 'iscroll.js');
     echo addjsfile(UNIX_JS . 'functions.generic.js');
     echo addjsfile(UNIX_JS . 'functions.user.js');
     echo addjsfile(UNIX_JS . 'functions.supplement.js');

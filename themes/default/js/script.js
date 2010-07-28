@@ -10,35 +10,10 @@ $(document).ready(function() {
   }
 
   // This is for keeping the page from bouncing
-  /*document.ontouchmove = function(event) {
+  document.ontouchmove = function(event) {
     if (document.body.scrollHeight == document.body.clientHeight) event.preventDefault();
-  }*/
-  /*document.ontouchmove = function(e) {
-    e.preventDefault();
-  };*/
-
-  function setHeight() {
-    var headerH = document.getElementById('header').offsetHeight;
-    var footerH = document.getElementById('footer').offsetHeight;
-    var wrapperH = window.innerHeight - headerH - footerH;
-    document.getElementById('wrapper').style.height = wrapperH + 'px';
   }
 
-  function loaded() {
-    setHeight();
-
-    myScroll = new iScroll('scroller', {
-      checkDOMChanges: false,
-      bounce: false,
-      momentum: false
-    });
-    //myScroll = new iScroll('scroller');
-    /* myScroll = myScroll.destroy(true);	// Completely destroy the iScroll */
-  }
-
-  window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', setHeight, false);
-  document.addEventListener('touchmove', function(e){ e.preventDefault(); }, false);
-  document.addEventListener('DOMContentLoaded', loaded, false);
 
   setPageHeight();
   var resizeTimer;
@@ -47,14 +22,13 @@ $(document).ready(function() {
     resizeTimer = setTimeout(setPageHeight, 240);
   });
   //$('div.thisisapage').bind('pageAnimationEnd',setPageHeight);
-
   
   //$("#Profiles").bind('pageAnimationEnd',updateUserLists);
   updateUserLists();
 
   /*if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
     if(window.applicationCache.update()) {
-      alert('updatedS');
+      alert('updated');
     }
     if(window.applicationCache.swapCache()) {
       alert('next');
@@ -67,7 +41,7 @@ $(document).ready(function() {
 
   // Create a profile record and return to the "Profiles" page
   $(".submitProfile").bind('click', function(){
-    var callback = jQT.goTo($('#Profiles'), 'flip');
+    var callback = jQT.goTo($('#Profiles'), 'slide');
     createProfile(callback);
   });
   
@@ -83,7 +57,7 @@ $(document).ready(function() {
   $(".submitUser").bind('click', function(){
     var user = $("#profile_name").val();
     insertUser(user);
-    jQT.goTo($('#Profiles'), 'flip');
+    jQT.goTo($('#Profiles'), 'slide');
     return false;
   });
 
@@ -91,13 +65,13 @@ $(document).ready(function() {
   $(".sumbitUserSubmitProfile").bind('click', function(){
     var user = $("#profile_name").val();
     insertUser(user);
-    jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
+    jQT.goTo($('#Add_Dietary_Supplement'), 'slide');
     return false;
   });
 
   /*  Listen to the "Add Dietary Supplement" button on the "Add Profile" page
   $(".sumbitUserSubmitProfile").bind('click', function(){
-    var callback = jQT.goTo($('#Add_Dietary_Supplement'), 'flip');
+    var callback = jQT.goTo($('#Add_Dietary_Supplement'), 'slide');
     var user = $("#profile_name").val();
     insertUser(user, callback);
     //$(".addSupUserName").html(addSupplementHeadingStart + user + addSupplementHeadingEnd);
@@ -121,7 +95,7 @@ $(document).ready(function() {
     var user = $("#updateUserName").val();
     updateUserName(uid,user);
     resetAddProfileForm();
-    jQT.goTo($('#Profiles'), 'flip');
+    jQT.goTo($('#Profiles'), 'slide');
   });
 
   $('#Add_Dietary_Supplement a').bind('click', resetAddProfileForm);
@@ -166,19 +140,19 @@ $(document).ready(function() {
     goAccordion($(this));
   });
   $(".instructProfileRef").click(function(){
-    jQT.goTo($('#Instructions'), 'flip');
+    jQT.goTo($('#Instructions'), 'slide');
     goAccordion($('#accordion #instructProfile'));
   });
   $(".instructEmailRef").click(function(){
-    jQT.goTo($('#Instructions'), 'flip');
+    jQT.goTo($('#Instructions'), 'slide');
     goAccordion($('#accordion #instructEmail'));
   });
   $(".instructAddRef").click(function(){
-    jQT.goTo($('#Instructions'), 'flip');
+    jQT.goTo($('#Instructions'), 'slide');
     goAccordion($('#accordion #instructAdd'));
   });
   $(".instructPasswordRef").click(function(){
-    jQT.goTo($('#Instructions'), 'flip');
+    jQT.goTo($('#Instructions'), 'slide');
     goAccordion($('#accordion #instructPassword'));
   });
   
@@ -209,7 +183,7 @@ $(document).ready(function() {
 
 
   $("#updateUser").click(function(){
-    jQT.goTo($('#Update_Profile'), 'flip');
+    jQT.goTo($('#Update_Profile'), 'slide');
   });
 
 

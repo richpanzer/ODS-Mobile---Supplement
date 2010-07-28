@@ -81,7 +81,7 @@ function registerNewUserDOM(cuid,cuser) {
     $("#user_select").val(uid);
     setCurrentUser(uid,user);
     getSupplementList(uid);
-    jQT.goTo($('#Profile'), 'flip');
+    jQT.goTo($('#Profile'), 'slide')
     return false;
   });
   if ((!isNaN(cuid)) && (cuser != undefined)) {

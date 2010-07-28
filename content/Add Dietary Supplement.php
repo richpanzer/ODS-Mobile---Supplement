@@ -1,12 +1,10 @@
-<div class="hastoolbar"><div id="scroller">
-  <div class="info">
-    <p id="addSupUserName" class="smallHeading"></p>
-  </div>
-  <div class="toolbar">
-    <h3>Add</h3>
-    <a id="addDSProfileBtn" class="blueButton" href="#">Profiles</a>
-    <a class="button submitProfile" href="#">Save</a>
-  </div>
+<div class="toolbar">
+  <h3>Add</h3>
+  <a id="addDSProfileBtn" class="blueButton" href="#">Profiles</a>
+  <a class="button submitProfile" href="#">Save</a>
+</div>
+<div class="hastoolbar"><div class="vertical-scroll"><div style="padding-bottom:500px;margin-bottom:500px">
+  <h3 id="addSupUserName"></h3>
   <form id="saveSupplement" class="form" method="post">
     <ul class="rounded userSelectToggle">
       <li><select placeholder="User Name" name="user_select" id="user_select"></select></li>
@@ -24,7 +22,7 @@
     <ul class="rounded">
       <li>
         <label for="unit">Unit:</label>
-        <select class="haslabel" name="unit" id="unit"
+        <select class="haslabel" name="unit" id="unit">
           <option>mg</option>
           <option>g</option>
           <option>IU</option>
@@ -91,7 +89,7 @@
       <p><a class="whiteButton submitProfile" href="#">Save</a></p>
     </div>
   </form>
-</div></div>
+</div></div></div>
 <?php
 $currentPage = 'addds';
 include PATH_TXT . 'includes/toolbar.php';
