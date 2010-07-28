@@ -3,7 +3,7 @@
   <a id="addDSProfileBtn" class="blueButton" href="#">Profiles</a>
   <a class="button submitProfile" href="#">Save</a>
 </div>
-<div class="hastoolbar"><div class="vertical-scroll"><div style="padding-bottom:500px;margin-bottom:500px">
+<div class="hastoolbar"><div class="vertical-scroll"><div>
   <h3 id="addSupUserName"></h3>
   <form id="saveSupplement" class="form" method="post">
     <ul class="rounded userSelectToggle">
@@ -89,6 +89,7 @@
       <p><a class="whiteButton submitProfile" href="#">Save</a></p>
     </div>
   </form>
+  <?php /*<div style="height:100px;clear:both;visibility:hidden;">&nbsp;</div>*/ ?>
 </div></div></div>
 <?php
 $currentPage = 'addds';

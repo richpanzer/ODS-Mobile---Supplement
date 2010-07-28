@@ -12,6 +12,10 @@ br.reset{clear:both}
 .hastoolbar {
   width:100%;
   overflow:auto;
+  height:306px;
+}
+.vertical-scroll > div {
+  padding-bottom:100px;
 }
 
 div.content {

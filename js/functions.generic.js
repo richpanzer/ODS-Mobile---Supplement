@@ -186,7 +186,7 @@ function setPageHeight() {
 
   //var tbh = ph - 156;//heading - infobar - headbar - footbar;
   var tbh = ph - heading - infobar - headbar - footbar - 77;
-  $('.hastoolbar').height(tbh);
+  //$('.hastoolbar').height(tbh);
 }
 
 

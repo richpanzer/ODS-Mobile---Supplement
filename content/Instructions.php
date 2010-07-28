@@ -2,14 +2,13 @@
   <h1>Instructions</h1>
   <a class="button back" href="#Start">Home</a>
 </div>
-<div class="hastoolbar">
+<div class="hastoolbar"><div class="vertical-scroll"><div>
   <div id="accordion">
     <div class="panel">
       <h2 id="instructProfile">Create a Profile</h2>
       <ol class="edgetoedge expandable">
         <li>Go to &quot;Add Profile&quot; on the Home screen to create a list of the dietary supplements one person is taking.  Or, go to the &quot;Profiles&quot; screen and select &quot;Add&quot; in the upper right corner.</li>
-<li>Enter a unique profile name and click &quot;Save&quot; or select &quot;Add Dietary Supplement.&quot;
-</li>
+        <li>Enter a unique profile name and click &quot;Save&quot; or select &quot;Add Dietary Supplement.&quot;</li>
       </ol>
     </div>
     <div class="panel">
@@ -22,7 +21,6 @@
         <li>Add a photo of the dietary supplement.</li>
         <li>Enter relevant information in the &quot;Notes&quot; field to assist with discussions with your doctor.</li>
         <li>Continue to add other dietary supplements to your profile by selecting &quot;Add.&quot;</li>
-
       </ol>
     </div>
     <div class="panel">
@@ -31,7 +29,6 @@
         <li>Go to &quot;Email Profile&quot; from the Home screen, or select &quot;Email&quot; on the &quot;Profiles&quot; screen.</li>
         <li>Select &quot;Email&quot; in the upper right corner.</li>
         <li>Enter the email address of the account to which you want to send the list of dietary supplements and click &quot;Send.&quot;</li>
-
       </ol>
     </div>
     <div class="panel">
@@ -41,7 +38,7 @@
       </ol>
     </div>
   </div>
-</div>
+</div></div></div>
 <?php
 $currentPage = '';
 include PATH_TXT . 'includes/toolbar.php';

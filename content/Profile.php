@@ -9,9 +9,9 @@
     <ul id="profile_entries" class="rounded"><?php // Dynamically populated ?>
     </ul>
   </span>
-  <div class="content">
+<?php /*  <div class="content">
     <p><a href="#" id="updateUser" class="whiteButton">Edit Profile</a></p>
-  </div>
+  </div>*/ ?>
 </div>
 <?php
 $currentPage = '';
