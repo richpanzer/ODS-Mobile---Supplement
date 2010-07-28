@@ -38,6 +38,7 @@
       </ol>
     </div>
   </div>
+  <div class="scrollspacer">&nbsp;</div>
 </div></div></div>
 <?php
 $currentPage = '';

@@ -14,8 +14,10 @@ br.reset{clear:both}
   overflow:auto;
   height:306px;
 }
-.vertical-scroll > div > div {
-  padding-bottom:100px;
+.scrollspacer {
+  height:103px;
+  display:block;
+  clear:both
 }
 
 div.content {
@@ -225,7 +227,7 @@ ol.edgetoedge li {
 
 #startLinks {
   width:100%;
-  margin:1.5% 2%;
+  margin:1.4% 2%;
   padding:0;
 }
 

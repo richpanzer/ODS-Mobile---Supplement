@@ -156,6 +156,7 @@ function voidClick(link) {
 function goAccordion(clicked) {
   $('#accordion .expandable').slideUp(180,'swing');
   clicked.siblings('.expandable').slideDown(180,'swing');
+  $('.vertical-scroll').bind("reset", options.events.reset).bind("scrollTo", options.events.scrollTo);
 }
 
 // Go to the accordion with something pre-selected

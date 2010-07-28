@@ -21,6 +21,7 @@ $(document).ready(function() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(setPageHeight, 240);
   });
+
   //$('div.thisisapage').bind('pageAnimationEnd',setPageHeight);
   
   //$("#Profiles").bind('pageAnimationEnd',updateUserLists);

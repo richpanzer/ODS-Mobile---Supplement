@@ -4,7 +4,9 @@
   <a class="button submitProfile" href="#">Save</a>
 </div>
 <div class="hastoolbar"><div class="vertical-scroll"><div>
-  <h3 id="addSupUserName"></h3>
+  <div class="info">
+    <p id="addSupUserName"></p>
+  </div>
   <form id="saveSupplement" class="form" method="post">
     <ul class="rounded userSelectToggle">
       <li><select placeholder="User Name" name="user_select" id="user_select"></select></li>
@@ -89,7 +91,7 @@
       <p><a class="whiteButton submitProfile" href="#">Save</a></p>
     </div>
   </form>
-  <?php /*<div style="height:100px;clear:both;visibility:hidden;">&nbsp;</div>*/ ?>
+  <div class="scrollspacer">&nbsp;</div>
 </div></div></div>
 <?php
 $currentPage = 'addds';
