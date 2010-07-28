@@ -34,8 +34,20 @@
     <div class="panel">
       <h2 id="instructPassword">Password Protection</h2>
       <ol class="edgetoedge expandable">
-        <li>Go to the homescreen and select Settings. Select Password Protect and enter in a 4 digit pin.</li>
+        <li>Go to the homescreen and select Settings.</li>
+        <li>Select Password Protect and enter in a 4 digit pin.</li>
       </ol>
+    </div>
+    <div class="panel">
+      <h2 id="instructPassword">Update Profile Name</h2>
+      <ol class="edgetoedge expandable">
+        <li>Go to the homescreen and select Settings.</li>
+        <li>Select Update Profile Name.</li>
+        <li>Select the profile name from the dropdown list that you wish to update.</li>
+        <li>Select the Edit Profile button</li>
+        
+      </ol>
+      
     </div>
   </div>
 </div></div></div>

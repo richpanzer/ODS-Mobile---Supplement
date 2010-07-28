@@ -6,8 +6,8 @@
     <li><a href="#Profiles"><span class="start1"></span>Profiles</a></li>
     <li class="borderSides"><a href="#Add_Profile"><span class="start2"></span>Add Profiles</a></li>
     <li><a href="#Add_Dietary_Supplement"><span class="start3"></span>Add Dietary<br />Supplement</a></li>
-    <li class="borderTop"><a href="#Tips"><span class="start4"></span>Tips</a></li>
-    <li class="borderTopSides"><a href="#Dietary_Supplement_Info"><span class="start5"></span>Resources</a></li>
+    <li class="borderTop"><a href="#Tips"><span class="start5">Resources</span></a></li>
+    <li class="borderTopSides"><a href="#Dietary_Supplement_Info"><span class="start4"></span>About MyDS</a></li>
     <li class="borderTop"><a href="#Email_Profile"><span class="start6"></span>Email Profile</a></li>
     <li class="borderTop"><a href="#Instructions"><span class="start7"></span>Instructions</a></li>
     <li class="borderTopSides"><a href="#Learn_About_ODS"><span class="start8"></span>About</a></li>

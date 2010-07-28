@@ -8,8 +8,7 @@
     <li><a class="instructAddRef" href="#">Add photos of each dietary supplement</a></li>
     <li><a class="instructEmailRef" href="#">Email profiles</a></li>
     <li><a class="instructProfileRef" href="#">Create multiple profiles</a></li>
-    <li><a target="_blank" href="http://ods.od.nih.gov/">NIH Office of Dietary Supplements Web site</a></li> 
-    <li><a href="#Dietary_Supplement_Info">Read fact sheets on dietary supplements</a></li>
+    <li><a class="instructEditProfileRef" href="#">Edit your profile name</a></li>
   </ul>
 </div>
 <?php

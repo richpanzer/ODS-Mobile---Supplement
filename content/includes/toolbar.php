@@ -5,7 +5,7 @@
     <li><div><span class="footer2"></span>Profiles</div></li>
     <li><a href="#Add_Dietary_Supplement"><span class="footer3"></span>Add DS</a></li>
     <li><a href="#Learn_About_ODS"><span class="footer4"></span>About ODS</a></li>
-    <li><a href="#Settings"><span class="footer5"></span>More</a></li>
+    <li><a href="#more"><span class="footer5"></span>More</a></li>
   </ul>
 </div>
 <?php } elseif ($currentPage == 'addds') { ?>
@@ -15,7 +15,7 @@
     <li><a href="#Profiles"><span class="footer2"></span>Profiles</a></li>
     <li><div><span class="footer3"></span>Add DS</div></li>
     <li><a href="#Learn_About_ODS"><span class="footer4"></span>About ODS</a></li>
-    <li><a href="#Settings"><span class="footer5"></span>More</a></li>
+    <li><a href="#more"><span class="footer5"></span>More</a></li>
   </ul>
 </div>
 <?php } elseif ($currentPage == 'aboutods') { ?>
@@ -25,7 +25,7 @@
     <li><a href="#Profiles"><span class="footer2"></span>Profiles</a></li>
     <li><a href="#Add_Dietary_Supplement"><span class="footer3"></span>Add DS</a></li>
     <li><div><span class="footer4"></span>About ODS</div></li>
-    <li><a href="#Settings"><span class="footer5"></span>More</a></li>
+    <li><a href="#more"><span class="footer5"></span>More</a></li>
   </ul>
 </div>
 <?php } elseif ($currentPage == 'settings') { ?>
@@ -45,7 +45,7 @@
     <li><a href="#Profiles"><span class="footer2"></span>Profiles</a></li>
     <li><a href="#Add_Dietary_Supplement"><span class="footer3"></span>Add DS</a></li>
     <li><a href="#Learn_About_ODS"><span class="footer4"></span>About ODS</a></li>
-    <li><a href="#Settings"><span class="footer5"></span>More</a></li>
+    <li><a href="#more"><span class="footer5"></span>More</a></li>
   </ul>
 </div>
 <?php } ?>
