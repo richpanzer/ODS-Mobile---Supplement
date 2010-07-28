@@ -6,7 +6,7 @@ dbInfo['display'] = 'My Dietary Supplements'; // Display Name
 dbInfo['size']    = 65536; // Maximum size
 
 // Google Analytics
-var GACode = 'UX-AAAAAA';
+var GACode = 'UA-17691768-1';
 
 // Error messages...
 var noUsersError = 'No profiles exist';
