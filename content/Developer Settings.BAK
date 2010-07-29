@@ -2,7 +2,7 @@
   <h4>Developer Settings</h4>
   <a class="button goback" href="#Start">Done</a>
 </div>
-<div class="hastoolbar">
+<div class="hastoolbar"><div class="vertical-scroll"><div>
   <div class="info">
     <p>Need to start fresh?</p>
   </div>
@@ -10,7 +10,7 @@
     <p><a href="#Start" id="resetUserData" class="pop whiteButton">Reset User Data</a></p>
     <p><a href="#Start" id="populateUserData" class="pop whiteButton">Prepopulate Database</a></p>
   </div>
-</div>
+</div></div></div>
 <?php
 $currentPage = '';
 include PATH_TXT . 'includes/toolbar.php';

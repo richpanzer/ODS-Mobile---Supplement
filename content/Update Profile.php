@@ -3,10 +3,10 @@
   <a class="back" href="#Profile">Profile</a>
   <a class="button saveUserName" href="#">Save</a>
 </div>
-<div class="info">
-  <p>Edit Profile Name</p>
-</div>
-<div class="hastoolbar">
+<div class="hastoolbar"><div class="vertical-scroll"><div>
+  <div class="info">
+    <p>Edit Profile Name</p>
+  </div>
   <form>
   <ul class="rounded">
     <li id="updateUserUID"><input type="text" id="updateUserName" name="updateUser" value="" /></li>
@@ -15,7 +15,7 @@
   <div class="content">
     <p><a class="whiteButton saveUserName" href="#">Save Profile</a></p>
   </div>
-</div>
+</div></div></div>
 <?php
 $currentPage = '';
 include PATH_TXT . 'includes/toolbar.php';

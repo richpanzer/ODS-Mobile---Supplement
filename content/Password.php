@@ -6,7 +6,7 @@
 <div class="info">
   <p>Update Your Password For this.</p>
 </div>
-<div class="hastoolbar">
+<div class="hastoolbar"><div class="vertical-scroll"><div>
   <form>
   <ul class="rounded">
     <li>
@@ -19,7 +19,7 @@
   </form>
     <div class="error"></div>
     <div class="success"></div>
-</div>
+</div></div></div>
 <?php
 $currentPage = '';
 include PATH_TXT . 'includes/toolbar.php';

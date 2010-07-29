@@ -3,7 +3,7 @@
   <a class="button back" href="#Supplement">Back</a>
   <a class="button updateThisSupplement" href="#Profiles">Save</a>
 </div>
-<div class="hastoolbar">
+<div class="hastoolbar"><div class="vertical-scroll"><div>
   <form id="updateSupplement" class="rounded" method="post">
     <ul class="rounded" style="display:none">
       <li><select placeholder="User Name" name="user_select" id="user_select_update"></select></li>
@@ -80,7 +80,7 @@
       <textarea name="notes" id="notes_update"></textarea></li>
     </ul>
   </form>
-</div>
+</div></div></div>
 <?php
 $currentPage = '';
 include PATH_TXT . 'includes/toolbar.php';
