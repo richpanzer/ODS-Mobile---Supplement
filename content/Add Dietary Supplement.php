@@ -91,7 +91,7 @@
       <p><a class="whiteButton submitProfile" href="#">Save</a></p>
     </div>
   </form>
-  <?php /*<div class="scrollspacer">&nbsp;</div> */ ?>
+  <div class="scrollspacer">&nbsp;</div>
 </div></div></div>
 <?php
 $currentPage = 'addds';

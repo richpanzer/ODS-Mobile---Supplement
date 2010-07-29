@@ -20,14 +20,12 @@ br.reset{clear:both}
   clear:both
 }
 .vertical-scroll {
-  background:green;
   display:block;
   padding-top:0 !important;
 }
 .vertical-scroll > div {
   margin-top:0 !important;
   display:block;
-  background: blue
 }
 
 
