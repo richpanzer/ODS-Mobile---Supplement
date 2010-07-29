@@ -184,8 +184,9 @@ function setPageHeight() {
   var infobar = $('.info').height();
   var headbar = $('.toolbar').height();
   var footbar = $('.toolbar_bottom').height();
+
   var tbh = ph - heading - infobar - headbar - footbar - 77;
-  $('.hastoolbar, .vertical-scroll').height(tbh);
+  //$('.hastoolbar').height(tbh);
 }
 
 

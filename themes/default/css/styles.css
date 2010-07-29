@@ -19,14 +19,10 @@ br.reset{clear:both}
   display:block;
   clear:both
 }
-
-.hastoolbar {
-  background:black
-}
 .vertical-scroll {
   background:green
 }
-.vertical-scroll div {
+.vertical-scroll div{
   background: blue
 }
 
@@ -83,8 +79,6 @@ width:100%;
 }
 .toolbar_bottom {
   width:100%;
-  position:relative;
-  z-index:500;
 }
 
 .toolbar_bottom li {
