@@ -186,6 +186,7 @@ function setPageHeight() {
     tbh = 306;
   } else {
     ph = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
+    tbh = 306;
   }
 
   $('body, body > *, .thisisapage').height(ph);
@@ -197,6 +198,7 @@ function setPageHeight() {
 
   //var tbh = ph - heading - infobar - headbar - footbar - 77;
   $('.hastoolbar').height(tbh);
+  $('.vertical-scroll > div').css({minHeight: '850px'});
 }
 
 
