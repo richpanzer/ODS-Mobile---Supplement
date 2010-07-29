@@ -15,13 +15,13 @@ $(document).ready(function() {
   }*/
 
 
-  setPageHeight();
+/*  setPageHeight();
   var resizeTimer;
   $(window).resize(function() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(setPageHeight, 240);
   });
-
+*/
   $('div.thisisapage').bind('pageAnimationEnd',setPageHeight);
   
   //$("#Profiles").bind('pageAnimationEnd',updateUserLists);
