@@ -6,8 +6,8 @@ br.reset{clear:both}
 }
 .thisisapage,
 .hastoolbar {
-  padding:0;
-  margin:0;
+  padding:0 !important;
+  margin:0 !important;
 }
 .hastoolbar {
   width:100%;
@@ -20,12 +20,12 @@ br.reset{clear:both}
   clear:both
 }
 .vertical-scroll {
-  /*background:green;*/
+  background:green;
   padding-top:0 !important;
 }
 .vertical-scroll > div {
   margin-top:0 !important;
-  /*background: blue*/
+  background: blue
 }
 
 
