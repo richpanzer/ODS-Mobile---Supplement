@@ -169,15 +169,14 @@ function goToAccordion(clicked) {
 }
 
 function setPageHeight() {
-  /*var ph = 0;
+  var ph = 0;
   if (IsiPhone || IsiPod) {
     ph = 460;
   } else if (IsiPad) {
     ph = 1004;
-  } else {*/
+  } else {
     ph = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
-  //}
-  ph = 1004;
+  }
 
   $('body, body > *, .thisisapage').height(ph);
 
