@@ -156,9 +156,11 @@ function voidClick(link) {
 function goAccordion(clicked) {
   $('#accordion .expandable').slideUp(180,'swing');
   clicked.siblings('.expandable').slideDown(180,'swing');
-  $('.vertical-scroll')
-    .bind("reset", options.events.reset)
-    .bind("scrollTo", options.events.scrollTo);
+  // should add something to reset the vertical scroll functionality here
+  // similar to the following but i don't think the following is correct'
+  //$('.vertical-scroll')
+    //.bind("reset", options.events.reset)
+    //.bind("scrollTo", options.events.scrollTo);
 }
 
 // Go to the accordion with something pre-selected
@@ -200,9 +202,7 @@ function setPageHeight() {
   //var tbh = ph - heading - infobar - headbar - footbar - 77;
   $('.hastoolbar').height(tbh);
   $('.vertical-scroll > div').css({minHeight: tbh + 'px'});
-  $('.vertical-scroll')
-    .bind("reset", options.events.reset)
-    .bind("scrollTo", options.events.scrollTo);
+  // should add something to reset the vertical scroll functionality here
 }
 
 
