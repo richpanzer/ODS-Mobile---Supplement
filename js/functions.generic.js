@@ -183,7 +183,7 @@ function setPageHeight() {
     ph = 1004;
     tbh = 850;
   } else if (IsiPhone || IsiPod) {
-    tbh = 306;
+    tbh = 336;
   } else {
     ph = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
     tbh = 306;
