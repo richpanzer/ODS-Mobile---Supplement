@@ -26,6 +26,7 @@ br.reset{clear:both}
 }
 .vertical-scroll > div {
   margin-top:0 !important;
+  min-height:306px;
   display:block;
 }
 
