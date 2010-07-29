@@ -23,6 +23,7 @@ br.reset{clear:both}
   background:green
 }
 .vertical-scroll > div {
+  margin-top:0 !important;
   background: blue
 }
 
