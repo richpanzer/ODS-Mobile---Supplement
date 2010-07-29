@@ -11,7 +11,7 @@ br.reset{clear:both}
 }
 .hastoolbar {
   width:100%;
-  overflow:hidden;
+  overflow:auto;
   height:306px;
 }
 .scrollspacer {
@@ -21,10 +21,12 @@ br.reset{clear:both}
 }
 .vertical-scroll {
   background:green;
+  display:block;
   padding-top:0 !important;
 }
 .vertical-scroll > div {
   margin-top:0 !important;
+  display:block;
   background: blue
 }
 
