@@ -170,10 +170,20 @@ function goToAccordion(clicked) {
 
 function setPageHeight() {
   var ph = 0;
-  if (IsiPhone || IsiPod) {
+  var tbh = 0;
+  /*if (IsiPhone || IsiPod) {
     ph = 460;
   } else if (IsiPad) {
     ph = 1004;
+  } else {*/
+//    ph = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
+  //}
+
+  if (IsiPad) {
+    ph = 1004;
+    tbh = 850;
+  } else if (IsiPhone || IsiPod) {
+    tbh = 306;
   } else {
     ph = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
   }
@@ -185,8 +195,8 @@ function setPageHeight() {
   var headbar = $('.toolbar').height();
   var footbar = $('.toolbar_bottom').height();
 
-  var tbh = ph - heading - infobar - headbar - footbar - 77;
-  //$('.hastoolbar').height(tbh);
+  //var tbh = ph - heading - infobar - headbar - footbar - 77;
+  $('.hastoolbar').height(tbh);
 }
 
 
