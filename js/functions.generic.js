@@ -156,7 +156,9 @@ function voidClick(link) {
 function goAccordion(clicked) {
   $('#accordion .expandable').slideUp(180,'swing');
   clicked.siblings('.expandable').slideDown(180,'swing');
-  $('.vertical-scroll').bind("reset", options.events.reset).bind("scrollTo", options.events.scrollTo);
+  $('.vertical-scroll')
+    .bind("reset", options.events.reset)
+    .bind("scrollTo", options.events.scrollTo);
 }
 
 // Go to the accordion with something pre-selected
@@ -175,6 +177,7 @@ function setPageHeight() {
   } else {*/
     ph = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
   //}
+  ph = 1004;
 
   $('body, body > *, .thisisapage').height(ph);
 
@@ -187,7 +190,7 @@ function setPageHeight() {
 
   //var tbh = ph - 156;//heading - infobar - headbar - footbar;
   var tbh = ph - heading - infobar - headbar - footbar - 77;
-  //$('.hastoolbar').height(tbh);
+  $('.hastoolbar').height(tbh);
 }
 
 
