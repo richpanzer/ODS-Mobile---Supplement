@@ -5,6 +5,8 @@
     $freeformOutput =
       "if (typeof(PhoneGap) != 'undefined') {" .
         //$('body > *').css({minHeight: '460px !important'});
+        "$('body > *').css({'max-height': '1004px !important'});" .
+        "$('body > *').css({'max-width': '768px !important'});" .
         "var isPhoneGap = true;" .
       "}";
 
