@@ -200,13 +200,15 @@ function setPageHeight() {
   //var tbh = ph - heading - infobar - headbar - footbar - 77;
   $('.hastoolbar').height(tbh);
   $('.vertical-scroll > div').css({minHeight: tbh + 'px'});
+  $('.vertical-scroll')
+    .bind("reset", options.events.reset)
+    .bind("scrollTo", options.events.scrollTo);
 }
 
 
 function PictureSourceType() {}
 PictureSourceType.LIBRARY = 0;
 PictureSourceType.CAMERA = 1;
-
 function getPicture(callback,sourceType) {
   var options = { quality: 10 };
   if (sourceType != undefined) {
@@ -214,74 +216,18 @@ function getPicture(callback,sourceType) {
   }
   navigator.camera.getPicture(callback, null, options);
 }
-
-function getPicture_Success(imageData) {
-  $("#imageOne").attr('src', "data:image/jpeg;base64," + imageData);
-}
-function getPicture_Success2(imageData) {
-  $("#imageTwo").attr('src', "data:image/jpeg;base64," + imageData);
-}
-
-function getPicture_Success_update(imageData) {
-  $("#imageOne_update").attr('src', "data:image/jpeg;base64," + imageData);
-}
-function getPicture_Success2_update(imageData) {
-  $("#imageTwo_update").attr('src', "data:image/jpeg;base64," + imageData);
-}
-
-$('#getCamera_01').click(function(){
-  getPicture(getPicture_Success);
-});
-$('#getPicture_01').click(function(){
-  getPicture(getPicture_Success,PictureSourceType.LIBRARY);
-});
-
-$('#getCamera_02').click(function(){
-  getPicture(getPicture_Success2);
-});
-$('#getPicture_02').click(function(){
-  getPicture(getPicture_Success2,PictureSourceType.LIBRARY);
-});
-
-$('#getCamera_01_update').click(function(){
-  getPicture(getPicture_Success_update);
-});
-$('#getPicture_01_update').click(function(){
-  getPicture(getPicture_Success_update,PictureSourceType.LIBRARY);
-});
-
-$('#getCamera_02_update').click(function(){
-  getPicture(getPicture_Success2_update);
-});
-$('#getPicture_02_update').click(function(){
-  getPicture(getPicture_Success2_update,PictureSourceType.LIBRARY);
-});
-
-// Camera Roll Stuff
-/*
-function PictureSourceType() {};
-PictureSourceType.LIBRARY = 0;
-PictureSourceType.CAMERA = 1;
-
-function getPicture(sourceType) {
-  $("#addPhotoOne").attr('src') = "data:image/jpeg;base64," + imageData;
-  var options = { quality: 10 };
-  if (sourceType != undefined) {
-    options["sourceType"] = sourceType;
-  }
-  navigator.camera.getPicture(getPicture_Success, null, options);
-}
-
-function getPicture_Success(imageData) {
-  document.getElementById("addDSimgOne").src = "data:image/jpeg;base64," + imageData;
-}
-
-$('.getCamera').click(function(){
-  getPicture();
-});
-$('.getPicture').click(function(){
-  getPicture(PictureSourceType.LIBRARY);
-});
+function getPicture_Success(imageData) {$("#imageOne").attr('src', "data:image/jpeg;base64," + imageData);}
+function getPicture_Success2(imageData) {$("#imageTwo").attr('src', "data:image/jpeg;base64," + imageData);}
+function getPicture_Success_update(imageData) {$("#imageOne_update").attr('src', "data:image/jpeg;base64," + imageData);}
+function getPicture_Success2_update(imageData) {$("#imageTwo_update").attr('src', "data:image/jpeg;base64," + imageData);}
+$('#getCamera_01').click(function(){getPicture(getPicture_Success);});
+$('#getPicture_01').click(function(){getPicture(getPicture_Success,PictureSourceType.LIBRARY);});
+$('#getCamera_02').click(function(){getPicture(getPicture_Success2);});
+$('#getPicture_02').click(function(){getPicture(getPicture_Success2,PictureSourceType.LIBRARY);});
+$('#getCamera_01_update').click(function(){getPicture(getPicture_Success_update);});
+$('#getPicture_01_update').click(function(){getPicture(getPicture_Success_update,PictureSourceType.LIBRARY);});
+$('#getCamera_02_update').click(function(){getPicture(getPicture_Success2_update);});
+$('#getPicture_02_update').click(function(){getPicture(getPicture_Success2_update,PictureSourceType.LIBRARY);});
 
 /**
  * Function : dump()
