@@ -174,6 +174,7 @@ function setPageHeight() {
     ph = 460;
   } else if (IsiPad) {
     ph = 1004;
+    $('.hastoolbar').css('min-height','850px')
   } else {
     ph = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
   }
