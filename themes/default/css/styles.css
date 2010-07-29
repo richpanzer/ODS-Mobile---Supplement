@@ -19,6 +19,11 @@ br.reset{clear:both}
   display:block;
   clear:both
 }
+.vertical-scroll {
+  background:green
+}
+
+
 
 div.content {
 color:#000;
