@@ -431,7 +431,7 @@
     <li><a href="#Profiles"><span class="footer2"></span>Profiles</a></li>
     <li><a href="#Add_Dietary_Supplement"><span class="footer3"></span>Add DS</a></li>
     <li><a href="#Learn_About_ODS"><span class="footer4"></span>About ODS</a></li>
-    <li><a href="#more"><span class="footer5"></span>More</a></li>
+    <li><div><span class="footer5"></span>More</div></li>
   </ul>
 </div>
 </div><div id="Password" class="thisisapage"><div class="heading"><h1></h1></div><div class="toolbar">
@@ -519,7 +519,7 @@
     <li><a href="#Profiles"><span class="footer2"></span>Profiles</a></li>
     <li><a href="#Add_Dietary_Supplement"><span class="footer3"></span>Add DS</a></li>
     <li><a href="#Learn_About_ODS"><span class="footer4"></span>About ODS</a></li>
-    <li><a href="#more"><span class="footer5"></span>More</a></li>
+    <li><div><span class="footer5"></span>More</div></li>
   </ul>
 </div>
 </div><div id="Supplement" class="thisisapage"><div class="heading"><h1></h1></div><div class="toolbar">
@@ -662,7 +662,7 @@ function voidClick(link){link.click(function(e){e.preventDefault();return false;
 function goAccordion(clicked){$('#accordion .expandable').slideUp(180,'swing');clicked.siblings('.expandable').slideDown(180,'swing');$('.vertical-scroll').bind("reset",options.events.reset).bind("scrollTo",options.events.scrollTo);}
 function goToAccordion(clicked){$('#accordion .expandable').slideUp(240,'linear');jQT.goTo($('#Instructions'),'flip');clicked.siblings('.expandable').slideDown(240,'linear');}
 function setPageHeight(){var ph=0;var tbh=0;if(IsiPad){ph=1004;tbh=850;}else if(IsiPhone||IsiPod){ph=460;tbh=306;}else{ph=window.innerHeight!=null?window.innerHeight:document.documentElement&&document.documentElement.clientHeight?document.documentElement.clientHeight:document.body!=null?document.body.clientHeight:null;tbh=306;}
-$('body, body > *, .thisisapage').height(ph);var heading=$('.heading').height();var infobar=$('.info').height();var headbar=$('.toolbar').height();var footbar=$('.toolbar_bottom').height();$('.hastoolbar').height(tbh);$('.vertical-scroll > div').css({minHeight:'850px'});}
+$('body, body > *, .thisisapage').height(ph);var heading=$('.heading').height();var infobar=$('.info').height();var headbar=$('.toolbar').height();var footbar=$('.toolbar_bottom').height();$('.hastoolbar').height(tbh);$('.vertical-scroll > div').css({minHeight:tbh+'px'});}
 function PictureSourceType(){}
 PictureSourceType.LIBRARY=0;PictureSourceType.CAMERA=1;function getPicture(callback,sourceType){var options={quality:10};if(sourceType!=undefined){options["sourceType"]=sourceType;}
 navigator.camera.getPicture(callback,null,options);}

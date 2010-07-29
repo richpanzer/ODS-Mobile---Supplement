@@ -199,7 +199,7 @@ function setPageHeight() {
 
   //var tbh = ph - heading - infobar - headbar - footbar - 77;
   $('.hastoolbar').height(tbh);
-  $('.vertical-scroll > div').css({minHeight: '850px'});
+  $('.vertical-scroll > div').css({minHeight: tbh + 'px'});
 }
 
 
