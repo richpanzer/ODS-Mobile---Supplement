@@ -19,8 +19,15 @@ br.reset{clear:both}
   display:block;
   clear:both
 }
+
+.hastoolbar {
+  background:black
+}
 .vertical-scroll {
   background:green
+}
+.vertical-scroll div {
+  background: blue
 }
 
 
