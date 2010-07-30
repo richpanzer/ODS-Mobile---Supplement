@@ -2,19 +2,21 @@
     <?php
     $const = get_defined_constants();
 
-    $freeformOutput =
-      "if (typeof(PhoneGap) != 'undefined') {" .
-        //$('body > *').css({minHeight: '460px !important'});
-        "$('body > *').css({'max-height': '1004px !important'});" .
-        "$('body > *').css({'max-width': '768px !important'});" .
-        "var isPhoneGap = true;" .
-      "}";
-
-    $freeformOutput .= <<<EOD
+    $freeformOutput = <<<EOD
     var IsiPhone = navigator.userAgent.indexOf("iPhone") != -1;
     var IsiPod = navigator.userAgent.indexOf("iPod") != -1;
     var IsiPad = navigator.userAgent.indexOf("iPad") != -1;
     var IsiPhoneOS = IsiPhone || IsiPad || IsiPod;
+    if (typeof(PhoneGap) != 'undefined') {
+      var isPhoneGap = true;
+    }
+    if (IsiPad) {
+      $('body > *').css({'max-height': '1004px !important'});
+      $('body > *').css({'max-width': '768px !important'});
+    } else {
+      $('body > *').css({'max-height': '460px !important'});
+      $('body > *').css({'max-width': '300px !important'});
+    }
     var jQT = new $.jQTouch({
       icon: '{$const['THEME_IMG']}icon.png',
       addGlossToIcon: false,

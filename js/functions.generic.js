@@ -171,37 +171,14 @@ function goToAccordion(clicked) {
 }
 
 function setPageHeight() {
-  var ph = 0;
-  var tbh = 0;
-  /*if (IsiPhone || IsiPod) {
-    ph = 460;
-  } else if (IsiPad) {
-    ph = 1004;
-  } else {*/
-//    ph = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
-  //}
-
   if (IsiPad) {
-    ph = 1004;
-    tbh = 850;
-  } else if (IsiPhone || IsiPod) {
-    ph = 460;
-    tbh = 306;
+    $('.hastoolbar').height(850);
+    $('.vertical-scroll > div').css({minHeight: '850px'});
   } else {
-    ph = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
-    tbh = 306;
+    //ph = window.innerHeight != null? window.innerHeight : document.documentElement && document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body != null? document.body.clientHeight : null;
+    $('.hastoolbar').height(306);
+    $('.vertical-scroll > div').css({minHeight: '306px'});
   }
-
-  $('body, body > *, .thisisapage').height(ph);
-
-  var heading = $('.heading').height();
-  var infobar = $('.info').height();
-  var headbar = $('.toolbar').height();
-  var footbar = $('.toolbar_bottom').height();
-
-  //var tbh = ph - heading - infobar - headbar - footbar - 77;
-  $('.hastoolbar').height(tbh);
-  $('.vertical-scroll > div').css({minHeight: tbh + 'px'});
   // should add something to reset the vertical scroll functionality here
 }
 
